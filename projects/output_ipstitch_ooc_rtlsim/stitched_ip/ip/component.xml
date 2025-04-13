@@ -260,21 +260,12 @@
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_MVAU_hls_4_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_MVAU_hls_5_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_MVAU_hls_6_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_hls_MVAU_hls_7_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>77a99a0f</spirit:value>
+            <spirit:value>d001f424</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -306,21 +297,12 @@
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_MVAU_hls_4_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_MVAU_hls_5_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_MVAU_hls_6_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_hls_MVAU_hls_7_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a76618b8</spirit:value>
+            <spirit:value>4d837559</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -350,19 +332,10 @@
         <spirit:fileSetRef>
           <spirit:localName>xilinx_implementation_xilinx_com_hls_MVAU_hls_4_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_implementation_xilinx_com_hls_MVAU_hls_5_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_implementation_xilinx_com_hls_MVAU_hls_6_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_implementation_xilinx_com_hls_MVAU_hls_7_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0ea6cbf4</spirit:value>
+            <spirit:value>9c9d3401</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -622,10 +595,14 @@
         <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_2_1/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_fifo_6/finn_design_fifo_6.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:name>src/StreamingFIFO_rtl_2_2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_2_2/fifo</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/finn_design_StreamingFIFO_rtl_2_2_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/StreamingFIFO_rtl_2_3.v</spirit:name>
@@ -653,52 +630,30 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_fifo_7/finn_design_fifo_7.xci</spirit:name>
+        <spirit:name>src/finn_design_fifo_6/finn_design_fifo_6.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_3_0/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_fifo_8/finn_design_fifo_8.xci</spirit:name>
+        <spirit:name>src/finn_design_fifo_7/finn_design_fifo_7.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_3_1/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_fifo_9/finn_design_fifo_9.xci</spirit:name>
+        <spirit:name>src/finn_design_fifo_8/finn_design_fifo_8.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_3_2/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_fifo_10/finn_design_fifo_10.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_3_3/fifo</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_fifo_11/finn_design_fifo_11.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_3_4/fifo</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_3_5.v</spirit:name>
+        <spirit:name>src/StreamingFIFO_rtl_3_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_StreamingFIFO_rtl_3_5_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_3_6.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_StreamingFIFO_rtl_3_6_0.v</spirit:name>
+        <spirit:name>src/finn_design_StreamingFIFO_rtl_3_3_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -740,7 +695,7 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_fifo_12/finn_design_fifo_12.xci</spirit:name>
+        <spirit:name>src/finn_design_fifo_9/finn_design_fifo_9.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_5_0/fifo</spirit:userFileType>
@@ -825,31 +780,6 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/ConvolutionInputGenerator_rtl_4_impl.sv</spirit:name>
-        <spirit:fileType>systemVerilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ConvolutionInputGenerator_rtl_4_wrapper.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_ConvolutionInputGenerator_rtl_4_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_9.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_StreamingFIFO_rtl_9_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/finn_design_MVAU_hls_4_0/finn_design_MVAU_hls_4_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
@@ -862,78 +792,12 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_4/MVAU_hls_4_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_10.v</spirit:name>
+        <spirit:name>src/StreamingFIFO_rtl_9.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_StreamingFIFO_rtl_10_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_5_0/finn_design_MVAU_hls_5_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_5/MVAU_hls_5</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_5_wstrm_0/finn_design_MVAU_hls_5_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_5/MVAU_hls_5_wstrm</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_11.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_StreamingFIFO_rtl_11_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_6_0/finn_design_MVAU_hls_6_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_6/MVAU_hls_6</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_6_wstrm_0/finn_design_MVAU_hls_6_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_6/MVAU_hls_6_wstrm</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_12.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_StreamingFIFO_rtl_12_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_7_0/finn_design_MVAU_hls_7_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_7/MVAU_hls_7</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_7_wstrm_0/finn_design_MVAU_hls_7_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_7/MVAU_hls_7_wstrm</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_13.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_StreamingFIFO_rtl_13_0.v</spirit:name>
+        <spirit:name>src/finn_design_StreamingFIFO_rtl_9_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -979,12 +843,12 @@
         <spirit:userFileType>CELL_NAME_MVAU_rtl_0/MVAU_rtl_0_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_14.v</spirit:name>
+        <spirit:name>src/StreamingFIFO_rtl_10.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_StreamingFIFO_rtl_14_0.v</spirit:name>
+        <spirit:name>src/finn_design_StreamingFIFO_rtl_10_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -998,7 +862,7 @@
       <spirit:file>
         <spirit:name>src/finn_design.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_360f3774</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_0e257aae</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1113,10 +977,14 @@
         <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_2_1/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_fifo_6/finn_design_fifo_6.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:name>src/StreamingFIFO_rtl_2_2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_2_2/fifo</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/finn_design_StreamingFIFO_rtl_2_2_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/StreamingFIFO_rtl_2_3.v</spirit:name>
@@ -1144,52 +1012,30 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_fifo_7/finn_design_fifo_7.xci</spirit:name>
+        <spirit:name>src/finn_design_fifo_6/finn_design_fifo_6.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_3_0/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_fifo_8/finn_design_fifo_8.xci</spirit:name>
+        <spirit:name>src/finn_design_fifo_7/finn_design_fifo_7.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_3_1/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_fifo_9/finn_design_fifo_9.xci</spirit:name>
+        <spirit:name>src/finn_design_fifo_8/finn_design_fifo_8.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_3_2/fifo</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_fifo_10/finn_design_fifo_10.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_3_3/fifo</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_fifo_11/finn_design_fifo_11.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_3_4/fifo</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_3_5.v</spirit:name>
+        <spirit:name>src/StreamingFIFO_rtl_3_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>sim/finn_design_StreamingFIFO_rtl_3_5_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_3_6.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/finn_design_StreamingFIFO_rtl_3_6_0.v</spirit:name>
+        <spirit:name>sim/finn_design_StreamingFIFO_rtl_3_3_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -1231,7 +1077,7 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/finn_design_fifo_12/finn_design_fifo_12.xci</spirit:name>
+        <spirit:name>src/finn_design_fifo_9/finn_design_fifo_9.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_StreamingFIFO_rtl_5_0/fifo</spirit:userFileType>
@@ -1316,31 +1162,6 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/ConvolutionInputGenerator_rtl_4_impl.sv</spirit:name>
-        <spirit:fileType>systemVerilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/ConvolutionInputGenerator_rtl_4_wrapper.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/finn_design_ConvolutionInputGenerator_rtl_4_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_9.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/finn_design_StreamingFIFO_rtl_9_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/finn_design_MVAU_hls_4_0/finn_design_MVAU_hls_4_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
@@ -1353,78 +1174,12 @@
         <spirit:userFileType>CELL_NAME_MVAU_hls_4/MVAU_hls_4_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_10.v</spirit:name>
+        <spirit:name>src/StreamingFIFO_rtl_9.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>sim/finn_design_StreamingFIFO_rtl_10_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_5_0/finn_design_MVAU_hls_5_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_5/MVAU_hls_5</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_5_wstrm_0/finn_design_MVAU_hls_5_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_5/MVAU_hls_5_wstrm</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_11.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/finn_design_StreamingFIFO_rtl_11_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_6_0/finn_design_MVAU_hls_6_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_6/MVAU_hls_6</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_6_wstrm_0/finn_design_MVAU_hls_6_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_6/MVAU_hls_6_wstrm</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_12.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/finn_design_StreamingFIFO_rtl_12_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_7_0/finn_design_MVAU_hls_7_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_7/MVAU_hls_7</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/finn_design_MVAU_hls_7_wstrm_0/finn_design_MVAU_hls_7_wstrm_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_MVAU_hls_7/MVAU_hls_7_wstrm</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_13.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>sim/finn_design_StreamingFIFO_rtl_13_0.v</spirit:name>
+        <spirit:name>sim/finn_design_StreamingFIFO_rtl_9_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -1470,12 +1225,12 @@
         <spirit:userFileType>CELL_NAME_MVAU_rtl_0/MVAU_rtl_0_wstrm</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/StreamingFIFO_rtl_14.v</spirit:name>
+        <spirit:name>src/StreamingFIFO_rtl_10.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>sim/finn_design_StreamingFIFO_rtl_14_0.v</spirit:name>
+        <spirit:name>sim/finn_design_StreamingFIFO_rtl_10_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -1524,7 +1279,7 @@
       <xilinx:displayName>finn_design_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-04-13T07:09:02Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-04-13T18:24:11Z</xilinx:coreCreationDateTime>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.AP_CLK.FREQ_HZ" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_0.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
@@ -1554,7 +1309,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="97d4eded"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b0c89f36"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="09520956"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="1d54d827"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="c89a5ebc"/>
       <xilinx:targetDRCs>

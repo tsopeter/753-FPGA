@@ -100,7 +100,7 @@ input wire out_V_TREADY;
     .IS_MVU(1),
     .COMPUTE_CORE("mvu_4sx4u_dsp48e1"),
     .PUMPED_COMPUTE(0),
-    .MW(6),
+    .MW(40),
     .MH(1),
     .PE(1),
     .SIMD(1),

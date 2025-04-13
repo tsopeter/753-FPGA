@@ -94,7 +94,7 @@ input wire awvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite AWPROT" *)
 input wire [2 : 0] awprot;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite AWADDR" *)
-input wire [4 : 0] awaddr;
+input wire [7 : 0] awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite WREADY" *)
 output wire wready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite WVALID" *)
@@ -116,14 +116,14 @@ input wire arvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite ARPROT" *)
 input wire [2 : 0] arprot;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite ARADDR" *)
-input wire [4 : 0] araddr;
+input wire [7 : 0] araddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite RREADY" *)
 input wire rready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite RVALID" *)
 output wire rvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite RRESP" *)
 output wire [1 : 0] rresp;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axilite, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 83333333, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN finn_design_ap_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREAD\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axilite, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 83333333, ID_WIDTH 0, ADDR_WIDTH 8, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN finn_design_ap_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREAD\
 S 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axilite RDATA" *)
 output wire [31 : 0] rdata;
@@ -136,11 +136,11 @@ output wire m_axis_0_tvalid;
 output wire [7 : 0] m_axis_0_tdata;
 
   memstream_axi_wrapper #(
-    .DEPTH(6),
+    .DEPTH(40),
     .WIDTH(8),
-    .INIT_FILE("/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_z579feaj/memblock.dat"),
+    .INIT_FILE("/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k/memblock.dat"),
     .RAM_STYLE("auto"),
-    .AXILITE_ADDR_WIDTH(5)
+    .AXILITE_ADDR_WIDTH(8)
   ) inst (
     .ap_clk(ap_clk),
     .ap_rst_n(ap_rst_n),

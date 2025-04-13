@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Sun Apr 13 07:09:01 2025
+//Date        : Sun Apr 13 18:24:11 2025
 //Host        : finn_dev_petertso running 64-bit Ubuntu 22.04.1 LTS
 //Command     : generate_target finn_design.bd
 //Design      : finn_design
@@ -62,10 +62,10 @@ module MVAU_hls_0_imp_7OH4JA
   finn_design_MVAU_hls_0_wstrm_0 MVAU_hls_0_wstrm
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
-        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .arprot({1'b0,1'b0,1'b0}),
         .arvalid(1'b0),
-        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .awprot({1'b0,1'b0,1'b0}),
         .awvalid(1'b0),
         .bready(1'b0),
@@ -131,10 +131,10 @@ module MVAU_hls_1_imp_ZIW0NT
   finn_design_MVAU_hls_1_wstrm_0 MVAU_hls_1_wstrm
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
-        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .arprot({1'b0,1'b0,1'b0}),
         .arvalid(1'b0),
-        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .awprot({1'b0,1'b0,1'b0}),
         .awvalid(1'b0),
         .bready(1'b0),
@@ -200,10 +200,10 @@ module MVAU_hls_2_imp_1WP2WTL
   finn_design_MVAU_hls_2_wstrm_0 MVAU_hls_2_wstrm
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
-        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .arprot({1'b0,1'b0,1'b0}),
         .arvalid(1'b0),
-        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .awprot({1'b0,1'b0,1'b0}),
         .awvalid(1'b0),
         .bready(1'b0),
@@ -269,10 +269,10 @@ module MVAU_hls_3_imp_U0RWZQ
   finn_design_MVAU_hls_3_wstrm_0 MVAU_hls_3_wstrm
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
-        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .arprot({1'b0,1'b0,1'b0}),
         .arvalid(1'b0),
-        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .awprot({1'b0,1'b0,1'b0}),
         .awvalid(1'b0),
         .bready(1'b0),
@@ -354,213 +354,6 @@ module MVAU_hls_4_imp_6UFUIX
         .wvalid(1'b0));
 endmodule
 
-module MVAU_hls_5_imp_10D3G9Y
-   (ap_clk,
-    ap_rst_n,
-    in0_V_tdata,
-    in0_V_tready,
-    in0_V_tvalid,
-    out_V_tdata,
-    out_V_tready,
-    out_V_tvalid);
-  input ap_clk;
-  input ap_rst_n;
-  input [7:0]in0_V_tdata;
-  output in0_V_tready;
-  input in0_V_tvalid;
-  output [7:0]out_V_tdata;
-  input out_V_tready;
-  output out_V_tvalid;
-
-  wire [7:0]MVAU_hls_5_out_V_TDATA;
-  wire MVAU_hls_5_out_V_TREADY;
-  wire MVAU_hls_5_out_V_TVALID;
-  wire [7:0]MVAU_hls_5_wstrm_m_axis_0_TDATA;
-  wire MVAU_hls_5_wstrm_m_axis_0_TREADY;
-  wire MVAU_hls_5_wstrm_m_axis_0_TVALID;
-  wire ap_clk_1;
-  wire ap_rst_n_1;
-  wire [7:0]in0_V_1_TDATA;
-  wire in0_V_1_TREADY;
-  wire in0_V_1_TVALID;
-
-  assign MVAU_hls_5_out_V_TREADY = out_V_tready;
-  assign ap_clk_1 = ap_clk;
-  assign ap_rst_n_1 = ap_rst_n;
-  assign in0_V_1_TDATA = in0_V_tdata[7:0];
-  assign in0_V_1_TVALID = in0_V_tvalid;
-  assign in0_V_tready = in0_V_1_TREADY;
-  assign out_V_tdata[7:0] = MVAU_hls_5_out_V_TDATA;
-  assign out_V_tvalid = MVAU_hls_5_out_V_TVALID;
-  finn_design_MVAU_hls_5_0 MVAU_hls_5
-       (.ap_clk(ap_clk_1),
-        .ap_rst_n(ap_rst_n_1),
-        .in0_V_TDATA(in0_V_1_TDATA),
-        .in0_V_TREADY(in0_V_1_TREADY),
-        .in0_V_TVALID(in0_V_1_TVALID),
-        .out_V_TDATA(MVAU_hls_5_out_V_TDATA),
-        .out_V_TREADY(MVAU_hls_5_out_V_TREADY),
-        .out_V_TVALID(MVAU_hls_5_out_V_TVALID),
-        .weights_V_TDATA(MVAU_hls_5_wstrm_m_axis_0_TDATA),
-        .weights_V_TREADY(MVAU_hls_5_wstrm_m_axis_0_TREADY),
-        .weights_V_TVALID(MVAU_hls_5_wstrm_m_axis_0_TVALID));
-  finn_design_MVAU_hls_5_wstrm_0 MVAU_hls_5_wstrm
-       (.ap_clk(ap_clk_1),
-        .ap_rst_n(ap_rst_n_1),
-        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .arprot({1'b0,1'b0,1'b0}),
-        .arvalid(1'b0),
-        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .awprot({1'b0,1'b0,1'b0}),
-        .awvalid(1'b0),
-        .bready(1'b0),
-        .m_axis_0_tdata(MVAU_hls_5_wstrm_m_axis_0_TDATA),
-        .m_axis_0_tready(MVAU_hls_5_wstrm_m_axis_0_TREADY),
-        .m_axis_0_tvalid(MVAU_hls_5_wstrm_m_axis_0_TVALID),
-        .rready(1'b0),
-        .wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .wstrb({1'b1,1'b1,1'b1,1'b1}),
-        .wvalid(1'b0));
-endmodule
-
-module MVAU_hls_6_imp_1VUVQAE
-   (ap_clk,
-    ap_rst_n,
-    in0_V_tdata,
-    in0_V_tready,
-    in0_V_tvalid,
-    out_V_tdata,
-    out_V_tready,
-    out_V_tvalid);
-  input ap_clk;
-  input ap_rst_n;
-  input [7:0]in0_V_tdata;
-  output in0_V_tready;
-  input in0_V_tvalid;
-  output [7:0]out_V_tdata;
-  input out_V_tready;
-  output out_V_tvalid;
-
-  wire [7:0]MVAU_hls_6_out_V_TDATA;
-  wire MVAU_hls_6_out_V_TREADY;
-  wire MVAU_hls_6_out_V_TVALID;
-  wire [7:0]MVAU_hls_6_wstrm_m_axis_0_TDATA;
-  wire MVAU_hls_6_wstrm_m_axis_0_TREADY;
-  wire MVAU_hls_6_wstrm_m_axis_0_TVALID;
-  wire ap_clk_1;
-  wire ap_rst_n_1;
-  wire [7:0]in0_V_1_TDATA;
-  wire in0_V_1_TREADY;
-  wire in0_V_1_TVALID;
-
-  assign MVAU_hls_6_out_V_TREADY = out_V_tready;
-  assign ap_clk_1 = ap_clk;
-  assign ap_rst_n_1 = ap_rst_n;
-  assign in0_V_1_TDATA = in0_V_tdata[7:0];
-  assign in0_V_1_TVALID = in0_V_tvalid;
-  assign in0_V_tready = in0_V_1_TREADY;
-  assign out_V_tdata[7:0] = MVAU_hls_6_out_V_TDATA;
-  assign out_V_tvalid = MVAU_hls_6_out_V_TVALID;
-  finn_design_MVAU_hls_6_0 MVAU_hls_6
-       (.ap_clk(ap_clk_1),
-        .ap_rst_n(ap_rst_n_1),
-        .in0_V_TDATA(in0_V_1_TDATA),
-        .in0_V_TREADY(in0_V_1_TREADY),
-        .in0_V_TVALID(in0_V_1_TVALID),
-        .out_V_TDATA(MVAU_hls_6_out_V_TDATA),
-        .out_V_TREADY(MVAU_hls_6_out_V_TREADY),
-        .out_V_TVALID(MVAU_hls_6_out_V_TVALID),
-        .weights_V_TDATA(MVAU_hls_6_wstrm_m_axis_0_TDATA),
-        .weights_V_TREADY(MVAU_hls_6_wstrm_m_axis_0_TREADY),
-        .weights_V_TVALID(MVAU_hls_6_wstrm_m_axis_0_TVALID));
-  finn_design_MVAU_hls_6_wstrm_0 MVAU_hls_6_wstrm
-       (.ap_clk(ap_clk_1),
-        .ap_rst_n(ap_rst_n_1),
-        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .arprot({1'b0,1'b0,1'b0}),
-        .arvalid(1'b0),
-        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .awprot({1'b0,1'b0,1'b0}),
-        .awvalid(1'b0),
-        .bready(1'b0),
-        .m_axis_0_tdata(MVAU_hls_6_wstrm_m_axis_0_TDATA),
-        .m_axis_0_tready(MVAU_hls_6_wstrm_m_axis_0_TREADY),
-        .m_axis_0_tvalid(MVAU_hls_6_wstrm_m_axis_0_TVALID),
-        .rready(1'b0),
-        .wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .wstrb({1'b1,1'b1,1'b1,1'b1}),
-        .wvalid(1'b0));
-endmodule
-
-module MVAU_hls_7_imp_UUTMEX
-   (ap_clk,
-    ap_rst_n,
-    in0_V_tdata,
-    in0_V_tready,
-    in0_V_tvalid,
-    out_V_tdata,
-    out_V_tready,
-    out_V_tvalid);
-  input ap_clk;
-  input ap_rst_n;
-  input [7:0]in0_V_tdata;
-  output in0_V_tready;
-  input in0_V_tvalid;
-  output [7:0]out_V_tdata;
-  input out_V_tready;
-  output out_V_tvalid;
-
-  wire [7:0]MVAU_hls_7_out_V_TDATA;
-  wire MVAU_hls_7_out_V_TREADY;
-  wire MVAU_hls_7_out_V_TVALID;
-  wire [7:0]MVAU_hls_7_wstrm_m_axis_0_TDATA;
-  wire MVAU_hls_7_wstrm_m_axis_0_TREADY;
-  wire MVAU_hls_7_wstrm_m_axis_0_TVALID;
-  wire ap_clk_1;
-  wire ap_rst_n_1;
-  wire [7:0]in0_V_1_TDATA;
-  wire in0_V_1_TREADY;
-  wire in0_V_1_TVALID;
-
-  assign MVAU_hls_7_out_V_TREADY = out_V_tready;
-  assign ap_clk_1 = ap_clk;
-  assign ap_rst_n_1 = ap_rst_n;
-  assign in0_V_1_TDATA = in0_V_tdata[7:0];
-  assign in0_V_1_TVALID = in0_V_tvalid;
-  assign in0_V_tready = in0_V_1_TREADY;
-  assign out_V_tdata[7:0] = MVAU_hls_7_out_V_TDATA;
-  assign out_V_tvalid = MVAU_hls_7_out_V_TVALID;
-  finn_design_MVAU_hls_7_0 MVAU_hls_7
-       (.ap_clk(ap_clk_1),
-        .ap_rst_n(ap_rst_n_1),
-        .in0_V_TDATA(in0_V_1_TDATA),
-        .in0_V_TREADY(in0_V_1_TREADY),
-        .in0_V_TVALID(in0_V_1_TVALID),
-        .out_V_TDATA(MVAU_hls_7_out_V_TDATA),
-        .out_V_TREADY(MVAU_hls_7_out_V_TREADY),
-        .out_V_TVALID(MVAU_hls_7_out_V_TVALID),
-        .weights_V_TDATA(MVAU_hls_7_wstrm_m_axis_0_TDATA),
-        .weights_V_TREADY(MVAU_hls_7_wstrm_m_axis_0_TREADY),
-        .weights_V_TVALID(MVAU_hls_7_wstrm_m_axis_0_TVALID));
-  finn_design_MVAU_hls_7_wstrm_0 MVAU_hls_7_wstrm
-       (.ap_clk(ap_clk_1),
-        .ap_rst_n(ap_rst_n_1),
-        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .arprot({1'b0,1'b0,1'b0}),
-        .arvalid(1'b0),
-        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .awprot({1'b0,1'b0,1'b0}),
-        .awvalid(1'b0),
-        .bready(1'b0),
-        .m_axis_0_tdata(MVAU_hls_7_wstrm_m_axis_0_TDATA),
-        .m_axis_0_tready(MVAU_hls_7_wstrm_m_axis_0_TREADY),
-        .m_axis_0_tvalid(MVAU_hls_7_wstrm_m_axis_0_TVALID),
-        .rready(1'b0),
-        .wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .wstrb({1'b1,1'b1,1'b1,1'b1}),
-        .wvalid(1'b0));
-endmodule
-
 module MVAU_rtl_0_imp_1DNJB9Y
    (ap_clk,
     ap_rst_n,
@@ -614,10 +407,10 @@ module MVAU_rtl_0_imp_1DNJB9Y
   finn_design_MVAU_rtl_0_wstrm_0 MVAU_rtl_0_wstrm
        (.ap_clk(ap_clk_1),
         .ap_rst_n(ap_rst_n_1),
-        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .arprot({1'b0,1'b0,1'b0}),
         .arvalid(1'b0),
-        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .awprot({1'b0,1'b0,1'b0}),
         .awvalid(1'b0),
         .bready(1'b0),
@@ -906,7 +699,7 @@ module StreamingFIFO_rtl_2_1_imp_1V31WB5
         .s_axis_tvalid(in0_V_1_TVALID));
 endmodule
 
-module StreamingFIFO_rtl_2_2_imp_119ZZ8H
+module StreamingFIFO_rtl_3_0_imp_1WNHJUW
    (ap_clk,
     ap_rst_n,
     in0_V_tdata,
@@ -952,7 +745,7 @@ module StreamingFIFO_rtl_2_2_imp_119ZZ8H
         .s_axis_tvalid(in0_V_1_TVALID));
 endmodule
 
-module StreamingFIFO_rtl_3_0_imp_1WNHJUW
+module StreamingFIFO_rtl_3_1_imp_U6M6QV
    (ap_clk,
     ap_rst_n,
     in0_V_tdata,
@@ -998,7 +791,7 @@ module StreamingFIFO_rtl_3_0_imp_1WNHJUW
         .s_axis_tvalid(in0_V_1_TVALID));
 endmodule
 
-module StreamingFIFO_rtl_3_1_imp_U6M6QV
+module StreamingFIFO_rtl_3_2_imp_7L1ZKN
    (ap_clk,
     ap_rst_n,
     in0_V_tdata,
@@ -1044,7 +837,7 @@ module StreamingFIFO_rtl_3_1_imp_U6M6QV
         .s_axis_tvalid(in0_V_1_TVALID));
 endmodule
 
-module StreamingFIFO_rtl_3_2_imp_7L1ZKN
+module StreamingFIFO_rtl_5_0_imp_4COUWU
    (ap_clk,
     ap_rst_n,
     in0_V_tdata,
@@ -1090,145 +883,7 @@ module StreamingFIFO_rtl_3_2_imp_7L1ZKN
         .s_axis_tvalid(in0_V_1_TVALID));
 endmodule
 
-module StreamingFIFO_rtl_3_3_imp_ZS1U7S
-   (ap_clk,
-    ap_rst_n,
-    in0_V_tdata,
-    in0_V_tready,
-    in0_V_tvalid,
-    out_V_tdata,
-    out_V_tready,
-    out_V_tvalid);
-  input ap_clk;
-  input ap_rst_n;
-  input [7:0]in0_V_tdata;
-  output in0_V_tready;
-  input in0_V_tvalid;
-  output [7:0]out_V_tdata;
-  input out_V_tready;
-  output out_V_tvalid;
-
-  wire ap_clk_1;
-  wire ap_rst_n_1;
-  wire [7:0]fifo_M_AXIS_TDATA;
-  wire fifo_M_AXIS_TREADY;
-  wire fifo_M_AXIS_TVALID;
-  wire [7:0]in0_V_1_TDATA;
-  wire in0_V_1_TREADY;
-  wire in0_V_1_TVALID;
-
-  assign ap_clk_1 = ap_clk;
-  assign ap_rst_n_1 = ap_rst_n;
-  assign fifo_M_AXIS_TREADY = out_V_tready;
-  assign in0_V_1_TDATA = in0_V_tdata[7:0];
-  assign in0_V_1_TVALID = in0_V_tvalid;
-  assign in0_V_tready = in0_V_1_TREADY;
-  assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
-  assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_design_fifo_10 fifo
-       (.m_axis_tdata(fifo_M_AXIS_TDATA),
-        .m_axis_tready(fifo_M_AXIS_TREADY),
-        .m_axis_tvalid(fifo_M_AXIS_TVALID),
-        .s_axis_aclk(ap_clk_1),
-        .s_axis_aresetn(ap_rst_n_1),
-        .s_axis_tdata(in0_V_1_TDATA),
-        .s_axis_tready(in0_V_1_TREADY),
-        .s_axis_tvalid(in0_V_1_TVALID));
-endmodule
-
-module StreamingFIFO_rtl_3_4_imp_1VTG9TJ
-   (ap_clk,
-    ap_rst_n,
-    in0_V_tdata,
-    in0_V_tready,
-    in0_V_tvalid,
-    out_V_tdata,
-    out_V_tready,
-    out_V_tvalid);
-  input ap_clk;
-  input ap_rst_n;
-  input [7:0]in0_V_tdata;
-  output in0_V_tready;
-  input in0_V_tvalid;
-  output [7:0]out_V_tdata;
-  input out_V_tready;
-  output out_V_tvalid;
-
-  wire ap_clk_1;
-  wire ap_rst_n_1;
-  wire [7:0]fifo_M_AXIS_TDATA;
-  wire fifo_M_AXIS_TREADY;
-  wire fifo_M_AXIS_TVALID;
-  wire [7:0]in0_V_1_TDATA;
-  wire in0_V_1_TREADY;
-  wire in0_V_1_TVALID;
-
-  assign ap_clk_1 = ap_clk;
-  assign ap_rst_n_1 = ap_rst_n;
-  assign fifo_M_AXIS_TREADY = out_V_tready;
-  assign in0_V_1_TDATA = in0_V_tdata[7:0];
-  assign in0_V_1_TVALID = in0_V_tvalid;
-  assign in0_V_tready = in0_V_1_TREADY;
-  assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
-  assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_design_fifo_11 fifo
-       (.m_axis_tdata(fifo_M_AXIS_TDATA),
-        .m_axis_tready(fifo_M_AXIS_TREADY),
-        .m_axis_tvalid(fifo_M_AXIS_TVALID),
-        .s_axis_aclk(ap_clk_1),
-        .s_axis_aresetn(ap_rst_n_1),
-        .s_axis_tdata(in0_V_1_TDATA),
-        .s_axis_tready(in0_V_1_TREADY),
-        .s_axis_tvalid(in0_V_1_TVALID));
-endmodule
-
-module StreamingFIFO_rtl_5_0_imp_4COUWU
-   (ap_clk,
-    ap_rst_n,
-    in0_V_tdata,
-    in0_V_tready,
-    in0_V_tvalid,
-    out_V_tdata,
-    out_V_tready,
-    out_V_tvalid);
-  input ap_clk;
-  input ap_rst_n;
-  input [7:0]in0_V_tdata;
-  output in0_V_tready;
-  input in0_V_tvalid;
-  output [7:0]out_V_tdata;
-  input out_V_tready;
-  output out_V_tvalid;
-
-  wire ap_clk_1;
-  wire ap_rst_n_1;
-  wire [7:0]fifo_M_AXIS_TDATA;
-  wire fifo_M_AXIS_TREADY;
-  wire fifo_M_AXIS_TVALID;
-  wire [7:0]in0_V_1_TDATA;
-  wire in0_V_1_TREADY;
-  wire in0_V_1_TVALID;
-
-  assign ap_clk_1 = ap_clk;
-  assign ap_rst_n_1 = ap_rst_n;
-  assign fifo_M_AXIS_TREADY = out_V_tready;
-  assign in0_V_1_TDATA = in0_V_tdata[7:0];
-  assign in0_V_1_TVALID = in0_V_tvalid;
-  assign in0_V_tready = in0_V_1_TREADY;
-  assign out_V_tdata[7:0] = fifo_M_AXIS_TDATA;
-  assign out_V_tvalid = fifo_M_AXIS_TVALID;
-  finn_design_fifo_12 fifo
-       (.m_axis_tdata(fifo_M_AXIS_TDATA),
-        .m_axis_tready(fifo_M_AXIS_TREADY),
-        .m_axis_tvalid(fifo_M_AXIS_TVALID),
-        .s_axis_aclk(ap_clk_1),
-        .s_axis_aresetn(ap_rst_n_1),
-        .s_axis_tdata(in0_V_1_TDATA),
-        .s_axis_tready(in0_V_1_TREADY),
-        .s_axis_tvalid(in0_V_1_TVALID));
-endmodule
-
-(* CORE_GENERATION_INFO = "finn_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=finn_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=75,numReposBlks=53,numNonXlnxBlks=9,numHierBlks=22,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=8,numHdlrefBlks=23,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "finn_design.hwdef" *) 
+(* CORE_GENERATION_INFO = "finn_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=finn_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=55,numReposBlks=39,numNonXlnxBlks=6,numHierBlks=16,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=5,numHdlrefBlks=18,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "finn_design.hwdef" *) 
 module finn_design
    (ap_clk,
     ap_rst_n,
@@ -1259,9 +914,6 @@ module finn_design
   wire [7:0]ConvolutionInputGenerator_rtl_3_out_V_TDATA;
   wire ConvolutionInputGenerator_rtl_3_out_V_TREADY;
   wire ConvolutionInputGenerator_rtl_3_out_V_TVALID;
-  wire [7:0]ConvolutionInputGenerator_rtl_4_out_V_TDATA;
-  wire ConvolutionInputGenerator_rtl_4_out_V_TREADY;
-  wire ConvolutionInputGenerator_rtl_4_out_V_TVALID;
   wire [7:0]MVAU_hls_0_out_V_TDATA;
   wire MVAU_hls_0_out_V_TREADY;
   wire MVAU_hls_0_out_V_TVALID;
@@ -1277,36 +929,15 @@ module finn_design
   wire [7:0]MVAU_hls_4_out_V_TDATA;
   wire MVAU_hls_4_out_V_TREADY;
   wire MVAU_hls_4_out_V_TVALID;
-  wire [7:0]MVAU_hls_5_out_V_TDATA;
-  wire MVAU_hls_5_out_V_TREADY;
-  wire MVAU_hls_5_out_V_TVALID;
-  wire [7:0]MVAU_hls_6_out_V_TDATA;
-  wire MVAU_hls_6_out_V_TREADY;
-  wire MVAU_hls_6_out_V_TVALID;
-  wire [7:0]MVAU_hls_7_out_V_TDATA;
-  wire MVAU_hls_7_out_V_TREADY;
-  wire MVAU_hls_7_out_V_TVALID;
   wire [15:0]MVAU_rtl_0_out_V_TDATA;
   wire MVAU_rtl_0_out_V_TREADY;
   wire MVAU_rtl_0_out_V_TVALID;
   wire [7:0]StreamingFIFO_rtl_0_out_V_TDATA;
   wire StreamingFIFO_rtl_0_out_V_TREADY;
   wire StreamingFIFO_rtl_0_out_V_TVALID;
-  wire [7:0]StreamingFIFO_rtl_10_out_V_TDATA;
+  wire [15:0]StreamingFIFO_rtl_10_out_V_TDATA;
   wire StreamingFIFO_rtl_10_out_V_TREADY;
   wire StreamingFIFO_rtl_10_out_V_TVALID;
-  wire [7:0]StreamingFIFO_rtl_11_out_V_TDATA;
-  wire StreamingFIFO_rtl_11_out_V_TREADY;
-  wire StreamingFIFO_rtl_11_out_V_TVALID;
-  wire [7:0]StreamingFIFO_rtl_12_out_V_TDATA;
-  wire StreamingFIFO_rtl_12_out_V_TREADY;
-  wire StreamingFIFO_rtl_12_out_V_TVALID;
-  wire [7:0]StreamingFIFO_rtl_13_out_V_TDATA;
-  wire StreamingFIFO_rtl_13_out_V_TREADY;
-  wire StreamingFIFO_rtl_13_out_V_TVALID;
-  wire [15:0]StreamingFIFO_rtl_14_out_V_TDATA;
-  wire StreamingFIFO_rtl_14_out_V_TREADY;
-  wire StreamingFIFO_rtl_14_out_V_TVALID;
   wire [7:0]StreamingFIFO_rtl_1_0_out_V_TDATA;
   wire StreamingFIFO_rtl_1_0_out_V_TREADY;
   wire StreamingFIFO_rtl_1_0_out_V_TVALID;
@@ -1349,15 +980,6 @@ module finn_design
   wire [7:0]StreamingFIFO_rtl_3_3_out_V_TDATA;
   wire StreamingFIFO_rtl_3_3_out_V_TREADY;
   wire StreamingFIFO_rtl_3_3_out_V_TVALID;
-  wire [7:0]StreamingFIFO_rtl_3_4_out_V_TDATA;
-  wire StreamingFIFO_rtl_3_4_out_V_TREADY;
-  wire StreamingFIFO_rtl_3_4_out_V_TVALID;
-  wire [7:0]StreamingFIFO_rtl_3_5_out_V_TDATA;
-  wire StreamingFIFO_rtl_3_5_out_V_TREADY;
-  wire StreamingFIFO_rtl_3_5_out_V_TVALID;
-  wire [7:0]StreamingFIFO_rtl_3_6_out_V_TDATA;
-  wire StreamingFIFO_rtl_3_6_out_V_TREADY;
-  wire StreamingFIFO_rtl_3_6_out_V_TVALID;
   wire [7:0]StreamingFIFO_rtl_4_out_V_TDATA;
   wire StreamingFIFO_rtl_4_out_V_TREADY;
   wire StreamingFIFO_rtl_4_out_V_TVALID;
@@ -1385,13 +1007,13 @@ module finn_design
   wire in0_V_0_1_TREADY;
   wire in0_V_0_1_TVALID;
 
-  assign StreamingFIFO_rtl_14_out_V_TREADY = m_axis_0_tready;
+  assign StreamingFIFO_rtl_10_out_V_TREADY = m_axis_0_tready;
   assign ap_clk_0_1 = ap_clk;
   assign ap_rst_n_0_1 = ap_rst_n;
   assign in0_V_0_1_TDATA = s_axis_0_tdata[7:0];
   assign in0_V_0_1_TVALID = s_axis_0_tvalid;
-  assign m_axis_0_tdata[15:0] = StreamingFIFO_rtl_14_out_V_TDATA;
-  assign m_axis_0_tvalid = StreamingFIFO_rtl_14_out_V_TVALID;
+  assign m_axis_0_tdata[15:0] = StreamingFIFO_rtl_10_out_V_TDATA;
+  assign m_axis_0_tvalid = StreamingFIFO_rtl_10_out_V_TVALID;
   assign s_axis_0_tready = in0_V_0_1_TREADY;
   finn_design_ConvolutionInputGenerator_rtl_0_0 ConvolutionInputGenerator_rtl_0
        (.ap_clk(ap_clk_0_1),
@@ -1429,15 +1051,6 @@ module finn_design
         .out_V_TDATA(ConvolutionInputGenerator_rtl_3_out_V_TDATA),
         .out_V_TREADY(ConvolutionInputGenerator_rtl_3_out_V_TREADY),
         .out_V_TVALID(ConvolutionInputGenerator_rtl_3_out_V_TVALID));
-  finn_design_ConvolutionInputGenerator_rtl_4_0 ConvolutionInputGenerator_rtl_4
-       (.ap_clk(ap_clk_0_1),
-        .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_TDATA(StreamingFIFO_rtl_8_out_V_TDATA),
-        .in0_V_TREADY(StreamingFIFO_rtl_8_out_V_TREADY),
-        .in0_V_TVALID(StreamingFIFO_rtl_8_out_V_TVALID),
-        .out_V_TDATA(ConvolutionInputGenerator_rtl_4_out_V_TDATA),
-        .out_V_TREADY(ConvolutionInputGenerator_rtl_4_out_V_TREADY),
-        .out_V_TVALID(ConvolutionInputGenerator_rtl_4_out_V_TVALID));
   MVAU_hls_0_imp_7OH4JA MVAU_hls_0
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
@@ -1450,9 +1063,9 @@ module finn_design
   MVAU_hls_1_imp_ZIW0NT MVAU_hls_1
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_tdata(StreamingFIFO_rtl_3_6_out_V_TDATA),
-        .in0_V_tready(StreamingFIFO_rtl_3_6_out_V_TREADY),
-        .in0_V_tvalid(StreamingFIFO_rtl_3_6_out_V_TVALID),
+        .in0_V_tdata(StreamingFIFO_rtl_3_3_out_V_TDATA),
+        .in0_V_tready(StreamingFIFO_rtl_3_3_out_V_TREADY),
+        .in0_V_tvalid(StreamingFIFO_rtl_3_3_out_V_TVALID),
         .out_V_tdata(MVAU_hls_1_out_V_TDATA),
         .out_V_tready(MVAU_hls_1_out_V_TREADY),
         .out_V_tvalid(MVAU_hls_1_out_V_TVALID));
@@ -1477,45 +1090,18 @@ module finn_design
   MVAU_hls_4_imp_6UFUIX MVAU_hls_4
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_tdata(StreamingFIFO_rtl_9_out_V_TDATA),
-        .in0_V_tready(StreamingFIFO_rtl_9_out_V_TREADY),
-        .in0_V_tvalid(StreamingFIFO_rtl_9_out_V_TVALID),
+        .in0_V_tdata(StreamingFIFO_rtl_8_out_V_TDATA),
+        .in0_V_tready(StreamingFIFO_rtl_8_out_V_TREADY),
+        .in0_V_tvalid(StreamingFIFO_rtl_8_out_V_TVALID),
         .out_V_tdata(MVAU_hls_4_out_V_TDATA),
         .out_V_tready(MVAU_hls_4_out_V_TREADY),
         .out_V_tvalid(MVAU_hls_4_out_V_TVALID));
-  MVAU_hls_5_imp_10D3G9Y MVAU_hls_5
-       (.ap_clk(ap_clk_0_1),
-        .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_tdata(StreamingFIFO_rtl_10_out_V_TDATA),
-        .in0_V_tready(StreamingFIFO_rtl_10_out_V_TREADY),
-        .in0_V_tvalid(StreamingFIFO_rtl_10_out_V_TVALID),
-        .out_V_tdata(MVAU_hls_5_out_V_TDATA),
-        .out_V_tready(MVAU_hls_5_out_V_TREADY),
-        .out_V_tvalid(MVAU_hls_5_out_V_TVALID));
-  MVAU_hls_6_imp_1VUVQAE MVAU_hls_6
-       (.ap_clk(ap_clk_0_1),
-        .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_tdata(StreamingFIFO_rtl_11_out_V_TDATA),
-        .in0_V_tready(StreamingFIFO_rtl_11_out_V_TREADY),
-        .in0_V_tvalid(StreamingFIFO_rtl_11_out_V_TVALID),
-        .out_V_tdata(MVAU_hls_6_out_V_TDATA),
-        .out_V_tready(MVAU_hls_6_out_V_TREADY),
-        .out_V_tvalid(MVAU_hls_6_out_V_TVALID));
-  MVAU_hls_7_imp_UUTMEX MVAU_hls_7
-       (.ap_clk(ap_clk_0_1),
-        .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_tdata(StreamingFIFO_rtl_12_out_V_TDATA),
-        .in0_V_tready(StreamingFIFO_rtl_12_out_V_TREADY),
-        .in0_V_tvalid(StreamingFIFO_rtl_12_out_V_TVALID),
-        .out_V_tdata(MVAU_hls_7_out_V_TDATA),
-        .out_V_tready(MVAU_hls_7_out_V_TREADY),
-        .out_V_tvalid(MVAU_hls_7_out_V_TVALID));
   MVAU_rtl_0_imp_1DNJB9Y MVAU_rtl_0
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_tdata(StreamingFIFO_rtl_13_out_V_TDATA),
-        .in0_V_tready(StreamingFIFO_rtl_13_out_V_TREADY),
-        .in0_V_tvalid(StreamingFIFO_rtl_13_out_V_TVALID),
+        .in0_V_tdata(StreamingFIFO_rtl_9_out_V_TDATA),
+        .in0_V_tready(StreamingFIFO_rtl_9_out_V_TREADY),
+        .in0_V_tvalid(StreamingFIFO_rtl_9_out_V_TVALID),
         .out_V_tdata(MVAU_rtl_0_out_V_TDATA),
         .out_V_tready(MVAU_rtl_0_out_V_TREADY),
         .out_V_tvalid(MVAU_rtl_0_out_V_TVALID));
@@ -1531,48 +1117,12 @@ module finn_design
   finn_design_StreamingFIFO_rtl_10_0 StreamingFIFO_rtl_10
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_TDATA(MVAU_hls_4_out_V_TDATA),
-        .in0_V_TREADY(MVAU_hls_4_out_V_TREADY),
-        .in0_V_TVALID(MVAU_hls_4_out_V_TVALID),
-        .out_V_TDATA(StreamingFIFO_rtl_10_out_V_TDATA),
-        .out_V_TREADY(StreamingFIFO_rtl_10_out_V_TREADY),
-        .out_V_TVALID(StreamingFIFO_rtl_10_out_V_TVALID));
-  finn_design_StreamingFIFO_rtl_11_0 StreamingFIFO_rtl_11
-       (.ap_clk(ap_clk_0_1),
-        .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_TDATA(MVAU_hls_5_out_V_TDATA),
-        .in0_V_TREADY(MVAU_hls_5_out_V_TREADY),
-        .in0_V_TVALID(MVAU_hls_5_out_V_TVALID),
-        .out_V_TDATA(StreamingFIFO_rtl_11_out_V_TDATA),
-        .out_V_TREADY(StreamingFIFO_rtl_11_out_V_TREADY),
-        .out_V_TVALID(StreamingFIFO_rtl_11_out_V_TVALID));
-  finn_design_StreamingFIFO_rtl_12_0 StreamingFIFO_rtl_12
-       (.ap_clk(ap_clk_0_1),
-        .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_TDATA(MVAU_hls_6_out_V_TDATA),
-        .in0_V_TREADY(MVAU_hls_6_out_V_TREADY),
-        .in0_V_TVALID(MVAU_hls_6_out_V_TVALID),
-        .out_V_TDATA(StreamingFIFO_rtl_12_out_V_TDATA),
-        .out_V_TREADY(StreamingFIFO_rtl_12_out_V_TREADY),
-        .out_V_TVALID(StreamingFIFO_rtl_12_out_V_TVALID));
-  finn_design_StreamingFIFO_rtl_13_0 StreamingFIFO_rtl_13
-       (.ap_clk(ap_clk_0_1),
-        .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_TDATA(MVAU_hls_7_out_V_TDATA),
-        .in0_V_TREADY(MVAU_hls_7_out_V_TREADY),
-        .in0_V_TVALID(MVAU_hls_7_out_V_TVALID),
-        .out_V_TDATA(StreamingFIFO_rtl_13_out_V_TDATA),
-        .out_V_TREADY(StreamingFIFO_rtl_13_out_V_TREADY),
-        .out_V_TVALID(StreamingFIFO_rtl_13_out_V_TVALID));
-  finn_design_StreamingFIFO_rtl_14_0 StreamingFIFO_rtl_14
-       (.ap_clk(ap_clk_0_1),
-        .ap_rst_n(ap_rst_n_0_1),
         .in0_V_TDATA(MVAU_rtl_0_out_V_TDATA),
         .in0_V_TREADY(MVAU_rtl_0_out_V_TREADY),
         .in0_V_TVALID(MVAU_rtl_0_out_V_TVALID),
-        .out_V_TDATA(StreamingFIFO_rtl_14_out_V_TDATA),
-        .out_V_TREADY(StreamingFIFO_rtl_14_out_V_TREADY),
-        .out_V_TVALID(StreamingFIFO_rtl_14_out_V_TVALID));
+        .out_V_TDATA(StreamingFIFO_rtl_10_out_V_TDATA),
+        .out_V_TREADY(StreamingFIFO_rtl_10_out_V_TREADY),
+        .out_V_TVALID(StreamingFIFO_rtl_10_out_V_TVALID));
   StreamingFIFO_rtl_1_0_imp_63VN1H StreamingFIFO_rtl_1_0
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
@@ -1645,15 +1195,15 @@ module finn_design
         .out_V_tdata(StreamingFIFO_rtl_2_1_out_V_TDATA),
         .out_V_tready(StreamingFIFO_rtl_2_1_out_V_TREADY),
         .out_V_tvalid(StreamingFIFO_rtl_2_1_out_V_TVALID));
-  StreamingFIFO_rtl_2_2_imp_119ZZ8H StreamingFIFO_rtl_2_2
+  finn_design_StreamingFIFO_rtl_2_2_0 StreamingFIFO_rtl_2_2
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_tdata(StreamingFIFO_rtl_2_1_out_V_TDATA),
-        .in0_V_tready(StreamingFIFO_rtl_2_1_out_V_TREADY),
-        .in0_V_tvalid(StreamingFIFO_rtl_2_1_out_V_TVALID),
-        .out_V_tdata(StreamingFIFO_rtl_2_2_out_V_TDATA),
-        .out_V_tready(StreamingFIFO_rtl_2_2_out_V_TREADY),
-        .out_V_tvalid(StreamingFIFO_rtl_2_2_out_V_TVALID));
+        .in0_V_TDATA(StreamingFIFO_rtl_2_1_out_V_TDATA),
+        .in0_V_TREADY(StreamingFIFO_rtl_2_1_out_V_TREADY),
+        .in0_V_TVALID(StreamingFIFO_rtl_2_1_out_V_TVALID),
+        .out_V_TDATA(StreamingFIFO_rtl_2_2_out_V_TDATA),
+        .out_V_TREADY(StreamingFIFO_rtl_2_2_out_V_TREADY),
+        .out_V_TVALID(StreamingFIFO_rtl_2_2_out_V_TVALID));
   finn_design_StreamingFIFO_rtl_2_3_0 StreamingFIFO_rtl_2_3
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
@@ -1690,42 +1240,15 @@ module finn_design
         .out_V_tdata(StreamingFIFO_rtl_3_2_out_V_TDATA),
         .out_V_tready(StreamingFIFO_rtl_3_2_out_V_TREADY),
         .out_V_tvalid(StreamingFIFO_rtl_3_2_out_V_TVALID));
-  StreamingFIFO_rtl_3_3_imp_ZS1U7S StreamingFIFO_rtl_3_3
+  finn_design_StreamingFIFO_rtl_3_3_0 StreamingFIFO_rtl_3_3
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_tdata(StreamingFIFO_rtl_3_2_out_V_TDATA),
-        .in0_V_tready(StreamingFIFO_rtl_3_2_out_V_TREADY),
-        .in0_V_tvalid(StreamingFIFO_rtl_3_2_out_V_TVALID),
-        .out_V_tdata(StreamingFIFO_rtl_3_3_out_V_TDATA),
-        .out_V_tready(StreamingFIFO_rtl_3_3_out_V_TREADY),
-        .out_V_tvalid(StreamingFIFO_rtl_3_3_out_V_TVALID));
-  StreamingFIFO_rtl_3_4_imp_1VTG9TJ StreamingFIFO_rtl_3_4
-       (.ap_clk(ap_clk_0_1),
-        .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_tdata(StreamingFIFO_rtl_3_3_out_V_TDATA),
-        .in0_V_tready(StreamingFIFO_rtl_3_3_out_V_TREADY),
-        .in0_V_tvalid(StreamingFIFO_rtl_3_3_out_V_TVALID),
-        .out_V_tdata(StreamingFIFO_rtl_3_4_out_V_TDATA),
-        .out_V_tready(StreamingFIFO_rtl_3_4_out_V_TREADY),
-        .out_V_tvalid(StreamingFIFO_rtl_3_4_out_V_TVALID));
-  finn_design_StreamingFIFO_rtl_3_5_0 StreamingFIFO_rtl_3_5
-       (.ap_clk(ap_clk_0_1),
-        .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_TDATA(StreamingFIFO_rtl_3_4_out_V_TDATA),
-        .in0_V_TREADY(StreamingFIFO_rtl_3_4_out_V_TREADY),
-        .in0_V_TVALID(StreamingFIFO_rtl_3_4_out_V_TVALID),
-        .out_V_TDATA(StreamingFIFO_rtl_3_5_out_V_TDATA),
-        .out_V_TREADY(StreamingFIFO_rtl_3_5_out_V_TREADY),
-        .out_V_TVALID(StreamingFIFO_rtl_3_5_out_V_TVALID));
-  finn_design_StreamingFIFO_rtl_3_6_0 StreamingFIFO_rtl_3_6
-       (.ap_clk(ap_clk_0_1),
-        .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_TDATA(StreamingFIFO_rtl_3_5_out_V_TDATA),
-        .in0_V_TREADY(StreamingFIFO_rtl_3_5_out_V_TREADY),
-        .in0_V_TVALID(StreamingFIFO_rtl_3_5_out_V_TVALID),
-        .out_V_TDATA(StreamingFIFO_rtl_3_6_out_V_TDATA),
-        .out_V_TREADY(StreamingFIFO_rtl_3_6_out_V_TREADY),
-        .out_V_TVALID(StreamingFIFO_rtl_3_6_out_V_TVALID));
+        .in0_V_TDATA(StreamingFIFO_rtl_3_2_out_V_TDATA),
+        .in0_V_TREADY(StreamingFIFO_rtl_3_2_out_V_TREADY),
+        .in0_V_TVALID(StreamingFIFO_rtl_3_2_out_V_TVALID),
+        .out_V_TDATA(StreamingFIFO_rtl_3_3_out_V_TDATA),
+        .out_V_TREADY(StreamingFIFO_rtl_3_3_out_V_TREADY),
+        .out_V_TVALID(StreamingFIFO_rtl_3_3_out_V_TVALID));
   finn_design_StreamingFIFO_rtl_4_0 StreamingFIFO_rtl_4
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
@@ -1783,9 +1306,9 @@ module finn_design
   finn_design_StreamingFIFO_rtl_9_0 StreamingFIFO_rtl_9
        (.ap_clk(ap_clk_0_1),
         .ap_rst_n(ap_rst_n_0_1),
-        .in0_V_TDATA(ConvolutionInputGenerator_rtl_4_out_V_TDATA),
-        .in0_V_TREADY(ConvolutionInputGenerator_rtl_4_out_V_TREADY),
-        .in0_V_TVALID(ConvolutionInputGenerator_rtl_4_out_V_TVALID),
+        .in0_V_TDATA(MVAU_hls_4_out_V_TDATA),
+        .in0_V_TREADY(MVAU_hls_4_out_V_TREADY),
+        .in0_V_TVALID(MVAU_hls_4_out_V_TVALID),
         .out_V_TDATA(StreamingFIFO_rtl_9_out_V_TDATA),
         .out_V_TREADY(StreamingFIFO_rtl_9_out_V_TREADY),
         .out_V_TVALID(StreamingFIFO_rtl_9_out_V_TVALID));

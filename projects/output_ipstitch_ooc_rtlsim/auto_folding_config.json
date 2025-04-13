@@ -52,36 +52,7 @@
     "mem_mode": "internal_decoupled",
     "runtime_writeable_weights": 0
   },
-  "ConvolutionInputGenerator_rtl_4": {
-    "SIMD": 1,
-    "parallel_window": 0,
-    "ram_style": "distributed"
-  },
   "MVAU_hls_4": {
-    "PE": 1,
-    "SIMD": 1,
-    "ram_style": "auto",
-    "resType": "auto",
-    "mem_mode": "internal_decoupled",
-    "runtime_writeable_weights": 0
-  },
-  "MVAU_hls_5": {
-    "PE": 1,
-    "SIMD": 1,
-    "ram_style": "auto",
-    "resType": "auto",
-    "mem_mode": "internal_decoupled",
-    "runtime_writeable_weights": 0
-  },
-  "MVAU_hls_6": {
-    "PE": 1,
-    "SIMD": 1,
-    "ram_style": "auto",
-    "resType": "auto",
-    "mem_mode": "internal_decoupled",
-    "runtime_writeable_weights": 0
-  },
-  "MVAU_hls_7": {
     "PE": 1,
     "SIMD": 1,
     "ram_style": "auto",

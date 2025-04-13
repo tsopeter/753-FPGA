@@ -28,7 +28,7 @@
   "MVAU_hls_0": [
     {
       "BRAM_18K": 1,
-      "BRAM_efficiency": 0.0759548611111111,
+      "BRAM_efficiency": 0.13020833333333334,
       "LUT": 330,
       "URAM": 0,
       "URAM_efficiency": 1,
@@ -36,7 +36,7 @@
     },
     {
       "BRAM_18K": 1,
-      "BRAM_efficiency": 0.0759548611111111,
+      "BRAM_efficiency": 0.13020833333333334,
       "LUT": 370,
       "URAM": 0,
       "URAM_efficiency": 1,
@@ -55,7 +55,7 @@
     {
       "BRAM_18K": 0,
       "BRAM_efficiency": 1,
-      "LUT": 492,
+      "LUT": 632,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 0
@@ -71,17 +71,17 @@
   ],
   "MVAU_hls_1": [
     {
-      "BRAM_18K": 2,
-      "BRAM_efficiency": 0.7975260416666666,
-      "LUT": 325,
+      "BRAM_18K": 6,
+      "BRAM_efficiency": 0.78125,
+      "LUT": 326,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 1
     },
     {
-      "BRAM_18K": 2,
-      "BRAM_efficiency": 0.7975260416666666,
-      "LUT": 351,
+      "BRAM_18K": 6,
+      "BRAM_efficiency": 0.78125,
+      "LUT": 352,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 0
@@ -99,7 +99,7 @@
     {
       "BRAM_18K": 0,
       "BRAM_efficiency": 1,
-      "LUT": 428,
+      "LUT": 516,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 0
@@ -115,17 +115,17 @@
   ],
   "MVAU_hls_2": [
     {
-      "BRAM_18K": 4,
-      "BRAM_efficiency": 0.7975260416666666,
-      "LUT": 325,
+      "BRAM_18K": 11,
+      "BRAM_efficiency": 0.8522727272727273,
+      "LUT": 326,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 1
     },
     {
-      "BRAM_18K": 4,
-      "BRAM_efficiency": 0.7975260416666666,
-      "LUT": 351,
+      "BRAM_18K": 11,
+      "BRAM_efficiency": 0.8522727272727273,
+      "LUT": 352,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 0
@@ -143,7 +143,7 @@
     {
       "BRAM_18K": 0,
       "BRAM_efficiency": 1,
-      "LUT": 340,
+      "LUT": 368,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 0
@@ -159,17 +159,17 @@
   ],
   "MVAU_hls_3": [
     {
-      "BRAM_18K": 3,
-      "BRAM_efficiency": 0.6927083333333334,
-      "LUT": 324,
+      "BRAM_18K": 7,
+      "BRAM_efficiency": 0.8571428571428571,
+      "LUT": 325,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 1
     },
     {
-      "BRAM_18K": 3,
-      "BRAM_efficiency": 0.6927083333333334,
-      "LUT": 350,
+      "BRAM_18K": 7,
+      "BRAM_efficiency": 0.8571428571428571,
+      "LUT": 351,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 0
@@ -187,7 +187,7 @@
     {
       "BRAM_18K": 0,
       "BRAM_efficiency": 1,
-      "LUT": 336,
+      "LUT": 364,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 0
@@ -203,17 +203,17 @@
   ],
   "MVAU_hls_4": [
     {
-      "BRAM_18K": 4,
-      "BRAM_efficiency": 0.705078125,
-      "LUT": 325,
+      "BRAM_18K": 9,
+      "BRAM_efficiency": 0.8888888888888888,
+      "LUT": 326,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 1
     },
     {
-      "BRAM_18K": 4,
-      "BRAM_efficiency": 0.705078125,
-      "LUT": 351,
+      "BRAM_18K": 9,
+      "BRAM_efficiency": 0.8888888888888888,
+      "LUT": 352,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 0
@@ -221,17 +221,17 @@
   ],
   "MVAU_hls_5": [
     {
-      "BRAM_18K": 1,
-      "BRAM_efficiency": 0.4947916666666667,
-      "LUT": 322,
+      "BRAM_18K": 2,
+      "BRAM_efficiency": 0.6944444444444444,
+      "LUT": 323,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 1
     },
     {
-      "BRAM_18K": 1,
-      "BRAM_efficiency": 0.4947916666666667,
-      "LUT": 348,
+      "BRAM_18K": 2,
+      "BRAM_efficiency": 0.6944444444444444,
+      "LUT": 349,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 0
@@ -239,17 +239,17 @@
   ],
   "MVAU_hls_6": [
     {
-      "BRAM_18K": 1,
-      "BRAM_efficiency": 0.390625,
-      "LUT": 323,
+      "BRAM_18K": 2,
+      "BRAM_efficiency": 0.5425347222222222,
+      "LUT": 324,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 1
     },
     {
-      "BRAM_18K": 1,
-      "BRAM_efficiency": 0.390625,
-      "LUT": 349,
+      "BRAM_18K": 2,
+      "BRAM_efficiency": 0.5425347222222222,
+      "LUT": 350,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 0
@@ -258,7 +258,7 @@
   "MVAU_hls_7": [
     {
       "BRAM_18K": 1,
-      "BRAM_efficiency": 0.0390625,
+      "BRAM_efficiency": 0.10850694444444445,
       "LUT": 322,
       "URAM": 0,
       "URAM_efficiency": 1,
@@ -266,7 +266,7 @@
     },
     {
       "BRAM_18K": 1,
-      "BRAM_efficiency": 0.0390625,
+      "BRAM_efficiency": 0.10850694444444445,
       "LUT": 348,
       "URAM": 0,
       "URAM_efficiency": 1,
@@ -276,7 +276,7 @@
   "MVAU_rtl_0": [
     {
       "BRAM_18K": 1,
-      "BRAM_efficiency": 0.0013020833333333333,
+      "BRAM_efficiency": 0.002170138888888889,
       "LUT": 0,
       "URAM": 0,
       "URAM_efficiency": 1,
@@ -284,7 +284,7 @@
     },
     {
       "BRAM_18K": 1,
-      "BRAM_efficiency": 0.0013020833333333333,
+      "BRAM_efficiency": 0.002170138888888889,
       "LUT": 0,
       "URAM": 0,
       "URAM_efficiency": 1,

@@ -37,9 +37,7 @@
       "StreamingFIFO_rtl_2_1": {
         "fifo": ""
       },
-      "StreamingFIFO_rtl_2_2": {
-        "fifo": ""
-      },
+      "StreamingFIFO_rtl_2_2": "",
       "StreamingFIFO_rtl_2_3": "",
       "ConvolutionInputGenerator_rtl_1": "",
       "StreamingFIFO_rtl_3_0": {
@@ -51,14 +49,7 @@
       "StreamingFIFO_rtl_3_2": {
         "fifo": ""
       },
-      "StreamingFIFO_rtl_3_3": {
-        "fifo": ""
-      },
-      "StreamingFIFO_rtl_3_4": {
-        "fifo": ""
-      },
-      "StreamingFIFO_rtl_3_5": "",
-      "StreamingFIFO_rtl_3_6": "",
+      "StreamingFIFO_rtl_3_3": "",
       "MVAU_hls_1": {
         "MVAU_hls_1": "",
         "MVAU_hls_1_wstrm": ""
@@ -81,33 +72,16 @@
         "MVAU_hls_3_wstrm": ""
       },
       "StreamingFIFO_rtl_8": "",
-      "ConvolutionInputGenerator_rtl_4": "",
-      "StreamingFIFO_rtl_9": "",
       "MVAU_hls_4": {
         "MVAU_hls_4": "",
         "MVAU_hls_4_wstrm": ""
       },
-      "StreamingFIFO_rtl_10": "",
-      "MVAU_hls_5": {
-        "MVAU_hls_5": "",
-        "MVAU_hls_5_wstrm": ""
-      },
-      "StreamingFIFO_rtl_11": "",
-      "MVAU_hls_6": {
-        "MVAU_hls_6": "",
-        "MVAU_hls_6_wstrm": ""
-      },
-      "StreamingFIFO_rtl_12": "",
-      "MVAU_hls_7": {
-        "MVAU_hls_7": "",
-        "MVAU_hls_7_wstrm": ""
-      },
-      "StreamingFIFO_rtl_13": "",
+      "StreamingFIFO_rtl_9": "",
       "MVAU_rtl_0": {
         "MVAU_rtl_0": "",
         "MVAU_rtl_0_wstrm": ""
       },
-      "StreamingFIFO_rtl_14": ""
+      "StreamingFIFO_rtl_10": ""
     },
     "interface_ports": {
       "s_axis_0": {
@@ -1347,10 +1321,10 @@
             "inst_hier_path": "MVAU_hls_0/MVAU_hls_0_wstrm",
             "parameters": {
               "DEPTH": {
-                "value": "350"
+                "value": "225"
               },
               "INIT_FILE": {
-                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_6txpompt/memblock.dat"
+                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/memblock.dat"
               },
               "RAM_STYLE": {
                 "value": "auto"
@@ -1436,7 +1410,7 @@
             "inst_hier_path": "StreamingFIFO_rtl_2_0/fifo",
             "parameters": {
               "FIFO_DEPTH": {
-                "value": "4096"
+                "value": "1024"
               },
               "FIFO_MEMORY_TYPE": {
                 "value": "auto"
@@ -1507,7 +1481,7 @@
             "inst_hier_path": "StreamingFIFO_rtl_2_1/fifo",
             "parameters": {
               "FIFO_DEPTH": {
-                "value": "1024"
+                "value": "512"
               },
               "FIFO_MEMORY_TYPE": {
                 "value": "auto"
@@ -1548,73 +1522,185 @@
         }
       },
       "StreamingFIFO_rtl_2_2": {
+        "vlnv": "xilinx.com:module_ref:StreamingFIFO_rtl_2_2:1.0",
+        "xci_name": "finn_design_StreamingFIFO_rtl_2_2_0",
+        "xci_path": "ip/finn_design_StreamingFIFO_rtl_2_2_0/finn_design_StreamingFIFO_rtl_2_2_0.xci",
+        "inst_hier_path": "StreamingFIFO_rtl_2_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "StreamingFIFO_rtl_2_2",
+          "boundary_crc": "0x0"
+        },
         "interface_ports": {
-          "out_V": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          },
           "in0_V": {
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "83333333",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "finn_design_ap_clk_0",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "in0_V_TDATA",
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "in0_V_TVALID",
+                "direction": "I"
+              },
+              "TREADY": {
+                "physical_name": "in0_V_TREADY",
+                "direction": "O"
+              }
+            }
+          },
+          "out_V": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "83333333",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "finn_design_ap_clk_0",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "out_V_TDATA",
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "out_V_TVALID",
+                "direction": "O"
+              },
+              "TREADY": {
+                "physical_name": "out_V_TREADY",
+                "direction": "I"
+              }
+            }
           }
         },
         "ports": {
           "ap_clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "ap_rst_n",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_BUSIF": {
+                "value": "in0_V:out_V",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "83333333",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "finn_design_ap_clk_0",
+                "value_src": "default_prop"
+              }
+            }
           },
           "ap_rst_n": {
             "type": "rst",
-            "direction": "I"
-          }
-        },
-        "components": {
-          "fifo": {
-            "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-            "xci_name": "finn_design_fifo_6",
-            "xci_path": "ip/finn_design_fifo_6/finn_design_fifo_6.xci",
-            "inst_hier_path": "StreamingFIFO_rtl_2_2/fifo",
+            "direction": "I",
             "parameters": {
-              "FIFO_DEPTH": {
-                "value": "512"
-              },
-              "FIFO_MEMORY_TYPE": {
-                "value": "auto"
-              },
-              "TDATA_NUM_BYTES": {
-                "value": "1"
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
               }
             }
-          }
-        },
-        "interface_nets": {
-          "fifo_M_AXIS": {
-            "interface_ports": [
-              "out_V",
-              "fifo/M_AXIS"
-            ]
           },
-          "in0_V_1": {
-            "interface_ports": [
-              "in0_V",
-              "fifo/S_AXIS"
-            ]
-          }
-        },
-        "nets": {
-          "ap_clk_1": {
-            "ports": [
-              "ap_clk",
-              "fifo/s_axis_aclk"
-            ]
+          "count": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
           },
-          "ap_rst_n_1": {
-            "ports": [
-              "ap_rst_n",
-              "fifo/s_axis_aresetn"
-            ]
+          "maxcount": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
           }
         }
       },
@@ -1791,12 +1877,12 @@
           },
           "count": {
             "direction": "O",
-            "left": "5",
+            "left": "7",
             "right": "0"
           },
           "maxcount": {
             "direction": "O",
-            "left": "5",
+            "left": "7",
             "right": "0"
           }
         }
@@ -2000,8 +2086,8 @@
         "components": {
           "fifo": {
             "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-            "xci_name": "finn_design_fifo_7",
-            "xci_path": "ip/finn_design_fifo_7/finn_design_fifo_7.xci",
+            "xci_name": "finn_design_fifo_6",
+            "xci_path": "ip/finn_design_fifo_6/finn_design_fifo_6.xci",
             "inst_hier_path": "StreamingFIFO_rtl_3_0/fifo",
             "parameters": {
               "FIFO_DEPTH": {
@@ -2071,12 +2157,12 @@
         "components": {
           "fifo": {
             "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-            "xci_name": "finn_design_fifo_8",
-            "xci_path": "ip/finn_design_fifo_8/finn_design_fifo_8.xci",
+            "xci_name": "finn_design_fifo_7",
+            "xci_path": "ip/finn_design_fifo_7/finn_design_fifo_7.xci",
             "inst_hier_path": "StreamingFIFO_rtl_3_1/fifo",
             "parameters": {
               "FIFO_DEPTH": {
-                "value": "16384"
+                "value": "4096"
               },
               "FIFO_MEMORY_TYPE": {
                 "value": "auto"
@@ -2142,80 +2228,9 @@
         "components": {
           "fifo": {
             "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-            "xci_name": "finn_design_fifo_9",
-            "xci_path": "ip/finn_design_fifo_9/finn_design_fifo_9.xci",
+            "xci_name": "finn_design_fifo_8",
+            "xci_path": "ip/finn_design_fifo_8/finn_design_fifo_8.xci",
             "inst_hier_path": "StreamingFIFO_rtl_3_2/fifo",
-            "parameters": {
-              "FIFO_DEPTH": {
-                "value": "8192"
-              },
-              "FIFO_MEMORY_TYPE": {
-                "value": "auto"
-              },
-              "TDATA_NUM_BYTES": {
-                "value": "1"
-              }
-            }
-          }
-        },
-        "interface_nets": {
-          "fifo_M_AXIS": {
-            "interface_ports": [
-              "out_V",
-              "fifo/M_AXIS"
-            ]
-          },
-          "in0_V_1": {
-            "interface_ports": [
-              "in0_V",
-              "fifo/S_AXIS"
-            ]
-          }
-        },
-        "nets": {
-          "ap_clk_1": {
-            "ports": [
-              "ap_clk",
-              "fifo/s_axis_aclk"
-            ]
-          },
-          "ap_rst_n_1": {
-            "ports": [
-              "ap_rst_n",
-              "fifo/s_axis_aresetn"
-            ]
-          }
-        }
-      },
-      "StreamingFIFO_rtl_3_3": {
-        "interface_ports": {
-          "out_V": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          },
-          "in0_V": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          }
-        },
-        "ports": {
-          "ap_clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "ap_rst_n": {
-            "type": "rst",
-            "direction": "I"
-          }
-        },
-        "components": {
-          "fifo": {
-            "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-            "xci_name": "finn_design_fifo_10",
-            "xci_path": "ip/finn_design_fifo_10/finn_design_fifo_10.xci",
-            "inst_hier_path": "StreamingFIFO_rtl_3_3/fifo",
             "parameters": {
               "FIFO_DEPTH": {
                 "value": "1024"
@@ -2258,85 +2273,14 @@
           }
         }
       },
-      "StreamingFIFO_rtl_3_4": {
-        "interface_ports": {
-          "out_V": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          },
-          "in0_V": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          }
-        },
-        "ports": {
-          "ap_clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "ap_rst_n": {
-            "type": "rst",
-            "direction": "I"
-          }
-        },
-        "components": {
-          "fifo": {
-            "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-            "xci_name": "finn_design_fifo_11",
-            "xci_path": "ip/finn_design_fifo_11/finn_design_fifo_11.xci",
-            "inst_hier_path": "StreamingFIFO_rtl_3_4/fifo",
-            "parameters": {
-              "FIFO_DEPTH": {
-                "value": "512"
-              },
-              "FIFO_MEMORY_TYPE": {
-                "value": "auto"
-              },
-              "TDATA_NUM_BYTES": {
-                "value": "1"
-              }
-            }
-          }
-        },
-        "interface_nets": {
-          "fifo_M_AXIS": {
-            "interface_ports": [
-              "out_V",
-              "fifo/M_AXIS"
-            ]
-          },
-          "in0_V_1": {
-            "interface_ports": [
-              "in0_V",
-              "fifo/S_AXIS"
-            ]
-          }
-        },
-        "nets": {
-          "ap_clk_1": {
-            "ports": [
-              "ap_clk",
-              "fifo/s_axis_aclk"
-            ]
-          },
-          "ap_rst_n_1": {
-            "ports": [
-              "ap_rst_n",
-              "fifo/s_axis_aresetn"
-            ]
-          }
-        }
-      },
-      "StreamingFIFO_rtl_3_5": {
-        "vlnv": "xilinx.com:module_ref:StreamingFIFO_rtl_3_5:1.0",
-        "xci_name": "finn_design_StreamingFIFO_rtl_3_5_0",
-        "xci_path": "ip/finn_design_StreamingFIFO_rtl_3_5_0/finn_design_StreamingFIFO_rtl_3_5_0.xci",
-        "inst_hier_path": "StreamingFIFO_rtl_3_5",
+      "StreamingFIFO_rtl_3_3": {
+        "vlnv": "xilinx.com:module_ref:StreamingFIFO_rtl_3_3:1.0",
+        "xci_name": "finn_design_StreamingFIFO_rtl_3_3_0",
+        "xci_path": "ip/finn_design_StreamingFIFO_rtl_3_3_0/finn_design_StreamingFIFO_rtl_3_3_0.xci",
+        "inst_hier_path": "StreamingFIFO_rtl_3_3",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "StreamingFIFO_rtl_3_5",
+          "ref_name": "StreamingFIFO_rtl_3_3",
           "boundary_crc": "0x0"
         },
         "interface_ports": {
@@ -2502,195 +2446,12 @@
           },
           "count": {
             "direction": "O",
-            "left": "8",
+            "left": "7",
             "right": "0"
           },
           "maxcount": {
             "direction": "O",
-            "left": "8",
-            "right": "0"
-          }
-        }
-      },
-      "StreamingFIFO_rtl_3_6": {
-        "vlnv": "xilinx.com:module_ref:StreamingFIFO_rtl_3_6:1.0",
-        "xci_name": "finn_design_StreamingFIFO_rtl_3_6_0",
-        "xci_path": "ip/finn_design_StreamingFIFO_rtl_3_6_0/finn_design_StreamingFIFO_rtl_3_6_0.xci",
-        "inst_hier_path": "StreamingFIFO_rtl_3_6",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "StreamingFIFO_rtl_3_6",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "in0_V": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "in0_V_TDATA",
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "in0_V_TVALID",
-                "direction": "I"
-              },
-              "TREADY": {
-                "physical_name": "in0_V_TREADY",
-                "direction": "O"
-              }
-            }
-          },
-          "out_V": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "out_V_TDATA",
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "out_V_TVALID",
-                "direction": "O"
-              },
-              "TREADY": {
-                "physical_name": "out_V_TREADY",
-                "direction": "I"
-              }
-            }
-          }
-        },
-        "ports": {
-          "ap_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "ap_rst_n",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_BUSIF": {
-                "value": "in0_V:out_V",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "ap_rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "count": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "maxcount": {
-            "direction": "O",
-            "left": "3",
+            "left": "7",
             "right": "0"
           }
         }
@@ -2732,10 +2493,10 @@
             "inst_hier_path": "MVAU_hls_1/MVAU_hls_1_wstrm",
             "parameters": {
               "DEPTH": {
-                "value": "7350"
+                "value": "3150"
               },
               "INIT_FILE": {
-                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_aj2j29pu/memblock.dat"
+                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/memblock.dat"
               },
               "RAM_STYLE": {
                 "value": "auto"
@@ -3172,8 +2933,8 @@
         "components": {
           "fifo": {
             "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-            "xci_name": "finn_design_fifo_12",
-            "xci_path": "ip/finn_design_fifo_12/finn_design_fifo_12.xci",
+            "xci_name": "finn_design_fifo_9",
+            "xci_path": "ip/finn_design_fifo_9/finn_design_fifo_9.xci",
             "inst_hier_path": "StreamingFIFO_rtl_5_0/fifo",
             "parameters": {
               "FIFO_DEPTH": {
@@ -3390,12 +3151,12 @@
           },
           "count": {
             "direction": "O",
-            "left": "3",
+            "left": "7",
             "right": "0"
           },
           "maxcount": {
             "direction": "O",
-            "left": "3",
+            "left": "7",
             "right": "0"
           }
         }
@@ -3437,10 +3198,10 @@
             "inst_hier_path": "MVAU_hls_2/MVAU_hls_2_wstrm",
             "parameters": {
               "DEPTH": {
-                "value": "14700"
+                "value": "6650"
               },
               "INIT_FILE": {
-                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_30sn7bn5/memblock.dat"
+                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/memblock.dat"
               },
               "RAM_STYLE": {
                 "value": "auto"
@@ -4071,10 +3832,10 @@
             "inst_hier_path": "MVAU_hls_3/MVAU_hls_3_wstrm",
             "parameters": {
               "DEPTH": {
-                "value": "9576"
+                "value": "4275"
               },
               "INIT_FILE": {
-                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_blh7q7em/memblock.dat"
+                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/memblock.dat"
               },
               "RAM_STYLE": {
                 "value": "auto"
@@ -4312,362 +4073,6 @@
           }
         }
       },
-      "ConvolutionInputGenerator_rtl_4": {
-        "vlnv": "xilinx.com:module_ref:ConvolutionInputGenerator_rtl_4:1.0",
-        "xci_name": "finn_design_ConvolutionInputGenerator_rtl_4_0",
-        "xci_path": "ip/finn_design_ConvolutionInputGenerator_rtl_4_0/finn_design_ConvolutionInputGenerator_rtl_4_0.xci",
-        "inst_hier_path": "ConvolutionInputGenerator_rtl_4",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ConvolutionInputGenerator_rtl_4",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "in0_V": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "1",
-                "value_src": "auto"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "in0_V_TDATA",
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "in0_V_TVALID",
-                "direction": "I"
-              },
-              "TREADY": {
-                "physical_name": "in0_V_TREADY",
-                "direction": "O"
-              }
-            }
-          },
-          "out_V": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "1",
-                "value_src": "auto"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "out_V_TDATA",
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "out_V_TVALID",
-                "direction": "O"
-              },
-              "TREADY": {
-                "physical_name": "out_V_TREADY",
-                "direction": "I"
-              }
-            }
-          }
-        },
-        "ports": {
-          "ap_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "ap_rst_n",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_BUSIF": {
-                "value": "in0_V:out_V",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "ap_rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          }
-        }
-      },
-      "StreamingFIFO_rtl_9": {
-        "vlnv": "xilinx.com:module_ref:StreamingFIFO_rtl_9:1.0",
-        "xci_name": "finn_design_StreamingFIFO_rtl_9_0",
-        "xci_path": "ip/finn_design_StreamingFIFO_rtl_9_0/finn_design_StreamingFIFO_rtl_9_0.xci",
-        "inst_hier_path": "StreamingFIFO_rtl_9",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "StreamingFIFO_rtl_9",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "in0_V": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "in0_V_TDATA",
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "in0_V_TVALID",
-                "direction": "I"
-              },
-              "TREADY": {
-                "physical_name": "in0_V_TREADY",
-                "direction": "O"
-              }
-            }
-          },
-          "out_V": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "out_V_TDATA",
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "out_V_TVALID",
-                "direction": "O"
-              },
-              "TREADY": {
-                "physical_name": "out_V_TREADY",
-                "direction": "I"
-              }
-            }
-          }
-        },
-        "ports": {
-          "ap_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "ap_rst_n",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_BUSIF": {
-                "value": "in0_V:out_V",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "ap_rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "count": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "maxcount": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          }
-        }
-      },
       "MVAU_hls_4": {
         "interface_ports": {
           "out_V": {
@@ -4705,10 +4110,10 @@
             "inst_hier_path": "MVAU_hls_4/MVAU_hls_4_wstrm",
             "parameters": {
               "DEPTH": {
-                "value": "12996"
+                "value": "9000"
               },
               "INIT_FILE": {
-                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_u66y_2aw/memblock.dat"
+                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/memblock.dat"
               },
               "RAM_STYLE": {
                 "value": "auto"
@@ -4763,848 +4168,14 @@
           }
         }
       },
-      "StreamingFIFO_rtl_10": {
-        "vlnv": "xilinx.com:module_ref:StreamingFIFO_rtl_10:1.0",
-        "xci_name": "finn_design_StreamingFIFO_rtl_10_0",
-        "xci_path": "ip/finn_design_StreamingFIFO_rtl_10_0/finn_design_StreamingFIFO_rtl_10_0.xci",
-        "inst_hier_path": "StreamingFIFO_rtl_10",
+      "StreamingFIFO_rtl_9": {
+        "vlnv": "xilinx.com:module_ref:StreamingFIFO_rtl_9:1.0",
+        "xci_name": "finn_design_StreamingFIFO_rtl_9_0",
+        "xci_path": "ip/finn_design_StreamingFIFO_rtl_9_0/finn_design_StreamingFIFO_rtl_9_0.xci",
+        "inst_hier_path": "StreamingFIFO_rtl_9",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "StreamingFIFO_rtl_10",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "in0_V": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "in0_V_TDATA",
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "in0_V_TVALID",
-                "direction": "I"
-              },
-              "TREADY": {
-                "physical_name": "in0_V_TREADY",
-                "direction": "O"
-              }
-            }
-          },
-          "out_V": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "out_V_TDATA",
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "out_V_TVALID",
-                "direction": "O"
-              },
-              "TREADY": {
-                "physical_name": "out_V_TREADY",
-                "direction": "I"
-              }
-            }
-          }
-        },
-        "ports": {
-          "ap_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "ap_rst_n",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_BUSIF": {
-                "value": "in0_V:out_V",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "ap_rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "count": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "maxcount": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          }
-        }
-      },
-      "MVAU_hls_5": {
-        "interface_ports": {
-          "out_V": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          },
-          "in0_V": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          }
-        },
-        "ports": {
-          "ap_clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "ap_rst_n": {
-            "type": "rst",
-            "direction": "I"
-          }
-        },
-        "components": {
-          "MVAU_hls_5": {
-            "vlnv": "xilinx.com:hls:MVAU_hls_5:1.0",
-            "xci_name": "finn_design_MVAU_hls_5_0",
-            "xci_path": "ip/finn_design_MVAU_hls_5_0/finn_design_MVAU_hls_5_0.xci",
-            "inst_hier_path": "MVAU_hls_5/MVAU_hls_5"
-          },
-          "MVAU_hls_5_wstrm": {
-            "vlnv": "amd.com:finn:memstream:1.0",
-            "xci_name": "finn_design_MVAU_hls_5_wstrm_0",
-            "xci_path": "ip/finn_design_MVAU_hls_5_wstrm_0/finn_design_MVAU_hls_5_wstrm_0.xci",
-            "inst_hier_path": "MVAU_hls_5/MVAU_hls_5_wstrm",
-            "parameters": {
-              "DEPTH": {
-                "value": "2280"
-              },
-              "INIT_FILE": {
-                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_5_4c3l5p92/memblock.dat"
-              },
-              "RAM_STYLE": {
-                "value": "auto"
-              },
-              "WIDTH": {
-                "value": "8"
-              }
-            },
-            "interface_ports": {
-              "s_axilite": {
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                "mode": "Slave",
-                "memory_map_ref": "interface_aximm"
-              }
-            }
-          }
-        },
-        "interface_nets": {
-          "MVAU_hls_5_out_V": {
-            "interface_ports": [
-              "out_V",
-              "MVAU_hls_5/out_V"
-            ]
-          },
-          "MVAU_hls_5_wstrm_m_axis_0": {
-            "interface_ports": [
-              "MVAU_hls_5_wstrm/m_axis_0",
-              "MVAU_hls_5/weights_V"
-            ]
-          },
-          "in0_V_1": {
-            "interface_ports": [
-              "in0_V",
-              "MVAU_hls_5/in0_V"
-            ]
-          }
-        },
-        "nets": {
-          "ap_clk_1": {
-            "ports": [
-              "ap_clk",
-              "MVAU_hls_5_wstrm/ap_clk",
-              "MVAU_hls_5/ap_clk"
-            ]
-          },
-          "ap_rst_n_1": {
-            "ports": [
-              "ap_rst_n",
-              "MVAU_hls_5_wstrm/ap_rst_n",
-              "MVAU_hls_5/ap_rst_n"
-            ]
-          }
-        }
-      },
-      "StreamingFIFO_rtl_11": {
-        "vlnv": "xilinx.com:module_ref:StreamingFIFO_rtl_11:1.0",
-        "xci_name": "finn_design_StreamingFIFO_rtl_11_0",
-        "xci_path": "ip/finn_design_StreamingFIFO_rtl_11_0/finn_design_StreamingFIFO_rtl_11_0.xci",
-        "inst_hier_path": "StreamingFIFO_rtl_11",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "StreamingFIFO_rtl_11",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "in0_V": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "in0_V_TDATA",
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "in0_V_TVALID",
-                "direction": "I"
-              },
-              "TREADY": {
-                "physical_name": "in0_V_TREADY",
-                "direction": "O"
-              }
-            }
-          },
-          "out_V": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "out_V_TDATA",
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "out_V_TVALID",
-                "direction": "O"
-              },
-              "TREADY": {
-                "physical_name": "out_V_TREADY",
-                "direction": "I"
-              }
-            }
-          }
-        },
-        "ports": {
-          "ap_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "ap_rst_n",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_BUSIF": {
-                "value": "in0_V:out_V",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "ap_rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "count": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "maxcount": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          }
-        }
-      },
-      "MVAU_hls_6": {
-        "interface_ports": {
-          "out_V": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          },
-          "in0_V": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          }
-        },
-        "ports": {
-          "ap_clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "ap_rst_n": {
-            "type": "rst",
-            "direction": "I"
-          }
-        },
-        "components": {
-          "MVAU_hls_6": {
-            "vlnv": "xilinx.com:hls:MVAU_hls_6:1.0",
-            "xci_name": "finn_design_MVAU_hls_6_0",
-            "xci_path": "ip/finn_design_MVAU_hls_6_0/finn_design_MVAU_hls_6_0.xci",
-            "inst_hier_path": "MVAU_hls_6/MVAU_hls_6"
-          },
-          "MVAU_hls_6_wstrm": {
-            "vlnv": "amd.com:finn:memstream:1.0",
-            "xci_name": "finn_design_MVAU_hls_6_wstrm_0",
-            "xci_path": "ip/finn_design_MVAU_hls_6_wstrm_0/finn_design_MVAU_hls_6_wstrm_0.xci",
-            "inst_hier_path": "MVAU_hls_6/MVAU_hls_6_wstrm",
-            "parameters": {
-              "DEPTH": {
-                "value": "1800"
-              },
-              "INIT_FILE": {
-                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_6_udmnk1zx/memblock.dat"
-              },
-              "RAM_STYLE": {
-                "value": "auto"
-              },
-              "WIDTH": {
-                "value": "8"
-              }
-            },
-            "interface_ports": {
-              "s_axilite": {
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                "mode": "Slave",
-                "memory_map_ref": "interface_aximm"
-              }
-            }
-          }
-        },
-        "interface_nets": {
-          "MVAU_hls_6_out_V": {
-            "interface_ports": [
-              "out_V",
-              "MVAU_hls_6/out_V"
-            ]
-          },
-          "MVAU_hls_6_wstrm_m_axis_0": {
-            "interface_ports": [
-              "MVAU_hls_6_wstrm/m_axis_0",
-              "MVAU_hls_6/weights_V"
-            ]
-          },
-          "in0_V_1": {
-            "interface_ports": [
-              "in0_V",
-              "MVAU_hls_6/in0_V"
-            ]
-          }
-        },
-        "nets": {
-          "ap_clk_1": {
-            "ports": [
-              "ap_clk",
-              "MVAU_hls_6_wstrm/ap_clk",
-              "MVAU_hls_6/ap_clk"
-            ]
-          },
-          "ap_rst_n_1": {
-            "ports": [
-              "ap_rst_n",
-              "MVAU_hls_6_wstrm/ap_rst_n",
-              "MVAU_hls_6/ap_rst_n"
-            ]
-          }
-        }
-      },
-      "StreamingFIFO_rtl_12": {
-        "vlnv": "xilinx.com:module_ref:StreamingFIFO_rtl_12:1.0",
-        "xci_name": "finn_design_StreamingFIFO_rtl_12_0",
-        "xci_path": "ip/finn_design_StreamingFIFO_rtl_12_0/finn_design_StreamingFIFO_rtl_12_0.xci",
-        "inst_hier_path": "StreamingFIFO_rtl_12",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "StreamingFIFO_rtl_12",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "in0_V": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "in0_V_TDATA",
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "in0_V_TVALID",
-                "direction": "I"
-              },
-              "TREADY": {
-                "physical_name": "in0_V_TREADY",
-                "direction": "O"
-              }
-            }
-          },
-          "out_V": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "out_V_TDATA",
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "out_V_TVALID",
-                "direction": "O"
-              },
-              "TREADY": {
-                "physical_name": "out_V_TREADY",
-                "direction": "I"
-              }
-            }
-          }
-        },
-        "ports": {
-          "ap_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "ap_rst_n",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_BUSIF": {
-                "value": "in0_V:out_V",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "83333333",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "finn_design_ap_clk_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "ap_rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "count": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "maxcount": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          }
-        }
-      },
-      "MVAU_hls_7": {
-        "interface_ports": {
-          "out_V": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          },
-          "in0_V": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          }
-        },
-        "ports": {
-          "ap_clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "ap_rst_n": {
-            "type": "rst",
-            "direction": "I"
-          }
-        },
-        "components": {
-          "MVAU_hls_7": {
-            "vlnv": "xilinx.com:hls:MVAU_hls_7:1.0",
-            "xci_name": "finn_design_MVAU_hls_7_0",
-            "xci_path": "ip/finn_design_MVAU_hls_7_0/finn_design_MVAU_hls_7_0.xci",
-            "inst_hier_path": "MVAU_hls_7/MVAU_hls_7"
-          },
-          "MVAU_hls_7_wstrm": {
-            "vlnv": "amd.com:finn:memstream:1.0",
-            "xci_name": "finn_design_MVAU_hls_7_wstrm_0",
-            "xci_path": "ip/finn_design_MVAU_hls_7_wstrm_0/finn_design_MVAU_hls_7_wstrm_0.xci",
-            "inst_hier_path": "MVAU_hls_7/MVAU_hls_7_wstrm",
-            "parameters": {
-              "DEPTH": {
-                "value": "180"
-              },
-              "INIT_FILE": {
-                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_7_gyj60ih8/memblock.dat"
-              },
-              "RAM_STYLE": {
-                "value": "auto"
-              },
-              "WIDTH": {
-                "value": "8"
-              }
-            },
-            "interface_ports": {
-              "s_axilite": {
-                "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                "mode": "Slave",
-                "memory_map_ref": "interface_aximm"
-              }
-            }
-          }
-        },
-        "interface_nets": {
-          "MVAU_hls_7_out_V": {
-            "interface_ports": [
-              "out_V",
-              "MVAU_hls_7/out_V"
-            ]
-          },
-          "MVAU_hls_7_wstrm_m_axis_0": {
-            "interface_ports": [
-              "MVAU_hls_7_wstrm/m_axis_0",
-              "MVAU_hls_7/weights_V"
-            ]
-          },
-          "in0_V_1": {
-            "interface_ports": [
-              "in0_V",
-              "MVAU_hls_7/in0_V"
-            ]
-          }
-        },
-        "nets": {
-          "ap_clk_1": {
-            "ports": [
-              "ap_clk",
-              "MVAU_hls_7_wstrm/ap_clk",
-              "MVAU_hls_7/ap_clk"
-            ]
-          },
-          "ap_rst_n_1": {
-            "ports": [
-              "ap_rst_n",
-              "MVAU_hls_7_wstrm/ap_rst_n",
-              "MVAU_hls_7/ap_rst_n"
-            ]
-          }
-        }
-      },
-      "StreamingFIFO_rtl_13": {
-        "vlnv": "xilinx.com:module_ref:StreamingFIFO_rtl_13:1.0",
-        "xci_name": "finn_design_StreamingFIFO_rtl_13_0",
-        "xci_path": "ip/finn_design_StreamingFIFO_rtl_13_0/finn_design_StreamingFIFO_rtl_13_0.xci",
-        "inst_hier_path": "StreamingFIFO_rtl_13",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "StreamingFIFO_rtl_13",
+          "ref_name": "StreamingFIFO_rtl_9",
           "boundary_crc": "0x0"
         },
         "interface_ports": {
@@ -6047,10 +4618,10 @@
             "inst_hier_path": "MVAU_rtl_0/MVAU_rtl_0_wstrm",
             "parameters": {
               "DEPTH": {
-                "value": "6"
+                "value": "40"
               },
               "INIT_FILE": {
-                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_z579feaj/memblock.dat"
+                "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k/memblock.dat"
               },
               "RAM_STYLE": {
                 "value": "auto"
@@ -6105,14 +4676,14 @@
           }
         }
       },
-      "StreamingFIFO_rtl_14": {
-        "vlnv": "xilinx.com:module_ref:StreamingFIFO_rtl_14:1.0",
-        "xci_name": "finn_design_StreamingFIFO_rtl_14_0",
-        "xci_path": "ip/finn_design_StreamingFIFO_rtl_14_0/finn_design_StreamingFIFO_rtl_14_0.xci",
-        "inst_hier_path": "StreamingFIFO_rtl_14",
+      "StreamingFIFO_rtl_10": {
+        "vlnv": "xilinx.com:module_ref:StreamingFIFO_rtl_10:1.0",
+        "xci_name": "finn_design_StreamingFIFO_rtl_10_0",
+        "xci_path": "ip/finn_design_StreamingFIFO_rtl_10_0/finn_design_StreamingFIFO_rtl_10_0.xci",
+        "inst_hier_path": "StreamingFIFO_rtl_10",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "StreamingFIFO_rtl_14",
+          "ref_name": "StreamingFIFO_rtl_10",
           "boundary_crc": "0x0"
         },
         "interface_ports": {
@@ -6314,12 +4885,6 @@
           "StreamingFIFO_rtl_7/in0_V"
         ]
       },
-      "ConvolutionInputGenerator_rtl_4_out_V": {
-        "interface_ports": [
-          "ConvolutionInputGenerator_rtl_4/out_V",
-          "StreamingFIFO_rtl_9/in0_V"
-        ]
-      },
       "MVAU_hls_0_out_V": {
         "interface_ports": [
           "MVAU_hls_0/out_V",
@@ -6347,31 +4912,13 @@
       "MVAU_hls_4_out_V": {
         "interface_ports": [
           "MVAU_hls_4/out_V",
-          "StreamingFIFO_rtl_10/in0_V"
-        ]
-      },
-      "MVAU_hls_5_out_V": {
-        "interface_ports": [
-          "MVAU_hls_5/out_V",
-          "StreamingFIFO_rtl_11/in0_V"
-        ]
-      },
-      "MVAU_hls_6_out_V": {
-        "interface_ports": [
-          "MVAU_hls_6/out_V",
-          "StreamingFIFO_rtl_12/in0_V"
-        ]
-      },
-      "MVAU_hls_7_out_V": {
-        "interface_ports": [
-          "MVAU_hls_7/out_V",
-          "StreamingFIFO_rtl_13/in0_V"
+          "StreamingFIFO_rtl_9/in0_V"
         ]
       },
       "MVAU_rtl_0_out_V": {
         "interface_ports": [
           "MVAU_rtl_0/out_V",
-          "StreamingFIFO_rtl_14/in0_V"
+          "StreamingFIFO_rtl_10/in0_V"
         ]
       },
       "StreamingFIFO_rtl_0_out_V": {
@@ -6382,32 +4929,8 @@
       },
       "StreamingFIFO_rtl_10_out_V": {
         "interface_ports": [
-          "StreamingFIFO_rtl_10/out_V",
-          "MVAU_hls_5/in0_V"
-        ]
-      },
-      "StreamingFIFO_rtl_11_out_V": {
-        "interface_ports": [
-          "StreamingFIFO_rtl_11/out_V",
-          "MVAU_hls_6/in0_V"
-        ]
-      },
-      "StreamingFIFO_rtl_12_out_V": {
-        "interface_ports": [
-          "StreamingFIFO_rtl_12/out_V",
-          "MVAU_hls_7/in0_V"
-        ]
-      },
-      "StreamingFIFO_rtl_13_out_V": {
-        "interface_ports": [
-          "StreamingFIFO_rtl_13/out_V",
-          "MVAU_rtl_0/in0_V"
-        ]
-      },
-      "StreamingFIFO_rtl_14_out_V": {
-        "interface_ports": [
           "m_axis_0",
-          "StreamingFIFO_rtl_14/out_V"
+          "StreamingFIFO_rtl_10/out_V"
         ]
       },
       "StreamingFIFO_rtl_1_0_out_V": {
@@ -6491,24 +5014,6 @@
       "StreamingFIFO_rtl_3_3_out_V": {
         "interface_ports": [
           "StreamingFIFO_rtl_3_3/out_V",
-          "StreamingFIFO_rtl_3_4/in0_V"
-        ]
-      },
-      "StreamingFIFO_rtl_3_4_out_V": {
-        "interface_ports": [
-          "StreamingFIFO_rtl_3_4/out_V",
-          "StreamingFIFO_rtl_3_5/in0_V"
-        ]
-      },
-      "StreamingFIFO_rtl_3_5_out_V": {
-        "interface_ports": [
-          "StreamingFIFO_rtl_3_5/out_V",
-          "StreamingFIFO_rtl_3_6/in0_V"
-        ]
-      },
-      "StreamingFIFO_rtl_3_6_out_V": {
-        "interface_ports": [
-          "StreamingFIFO_rtl_3_6/out_V",
           "MVAU_hls_1/in0_V"
         ]
       },
@@ -6545,13 +5050,13 @@
       "StreamingFIFO_rtl_8_out_V": {
         "interface_ports": [
           "StreamingFIFO_rtl_8/out_V",
-          "ConvolutionInputGenerator_rtl_4/in0_V"
+          "MVAU_hls_4/in0_V"
         ]
       },
       "StreamingFIFO_rtl_9_out_V": {
         "interface_ports": [
           "StreamingFIFO_rtl_9/out_V",
-          "MVAU_hls_4/in0_V"
+          "MVAU_rtl_0/in0_V"
         ]
       },
       "in0_V_0_1": {
@@ -6583,9 +5088,6 @@
           "StreamingFIFO_rtl_3_1/ap_clk",
           "StreamingFIFO_rtl_3_2/ap_clk",
           "StreamingFIFO_rtl_3_3/ap_clk",
-          "StreamingFIFO_rtl_3_4/ap_clk",
-          "StreamingFIFO_rtl_3_5/ap_clk",
-          "StreamingFIFO_rtl_3_6/ap_clk",
           "MVAU_hls_1/ap_clk",
           "StreamingFIFO_rtl_4/ap_clk",
           "ConvolutionInputGenerator_rtl_2/ap_clk",
@@ -6597,18 +5099,10 @@
           "StreamingFIFO_rtl_7/ap_clk",
           "MVAU_hls_3/ap_clk",
           "StreamingFIFO_rtl_8/ap_clk",
-          "ConvolutionInputGenerator_rtl_4/ap_clk",
-          "StreamingFIFO_rtl_9/ap_clk",
           "MVAU_hls_4/ap_clk",
-          "StreamingFIFO_rtl_10/ap_clk",
-          "MVAU_hls_5/ap_clk",
-          "StreamingFIFO_rtl_11/ap_clk",
-          "MVAU_hls_6/ap_clk",
-          "StreamingFIFO_rtl_12/ap_clk",
-          "MVAU_hls_7/ap_clk",
-          "StreamingFIFO_rtl_13/ap_clk",
+          "StreamingFIFO_rtl_9/ap_clk",
           "MVAU_rtl_0/ap_clk",
-          "StreamingFIFO_rtl_14/ap_clk"
+          "StreamingFIFO_rtl_10/ap_clk"
         ]
       },
       "ap_rst_n_0_1": {
@@ -6632,9 +5126,6 @@
           "StreamingFIFO_rtl_3_1/ap_rst_n",
           "StreamingFIFO_rtl_3_2/ap_rst_n",
           "StreamingFIFO_rtl_3_3/ap_rst_n",
-          "StreamingFIFO_rtl_3_4/ap_rst_n",
-          "StreamingFIFO_rtl_3_5/ap_rst_n",
-          "StreamingFIFO_rtl_3_6/ap_rst_n",
           "MVAU_hls_1/ap_rst_n",
           "StreamingFIFO_rtl_4/ap_rst_n",
           "ConvolutionInputGenerator_rtl_2/ap_rst_n",
@@ -6646,18 +5137,10 @@
           "StreamingFIFO_rtl_7/ap_rst_n",
           "MVAU_hls_3/ap_rst_n",
           "StreamingFIFO_rtl_8/ap_rst_n",
-          "ConvolutionInputGenerator_rtl_4/ap_rst_n",
-          "StreamingFIFO_rtl_9/ap_rst_n",
           "MVAU_hls_4/ap_rst_n",
-          "StreamingFIFO_rtl_10/ap_rst_n",
-          "MVAU_hls_5/ap_rst_n",
-          "StreamingFIFO_rtl_11/ap_rst_n",
-          "MVAU_hls_6/ap_rst_n",
-          "StreamingFIFO_rtl_12/ap_rst_n",
-          "MVAU_hls_7/ap_rst_n",
-          "StreamingFIFO_rtl_13/ap_rst_n",
+          "StreamingFIFO_rtl_9/ap_rst_n",
           "MVAU_rtl_0/ap_rst_n",
-          "StreamingFIFO_rtl_14/ap_rst_n"
+          "StreamingFIFO_rtl_10/ap_rst_n"
         ]
       }
     }

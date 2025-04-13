@@ -4,7 +4,7 @@
     "xci_name": "finn_design_MVAU_hls_1_0",
     "cell_name": "MVAU_hls_1/MVAU_hls_1",
     "component_reference": "xilinx.com:hls:MVAU_hls_1:1.0",
-    "ip_revision": "2114037903",
+    "ip_revision": "2114038580",
     "gen_directory": "../../../../../../finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/ip/finn_design_MVAU_hls_1_0",
     "parameters": {
       "component_parameters": {
@@ -12,7 +12,7 @@
         "clk_period": [ { "value": "12", "enabled": false, "usage": "all" } ],
         "machine": [ { "value": "64", "enabled": false, "usage": "all" } ],
         "combinational": [ { "value": "0", "enabled": false, "usage": "all" } ],
-        "latency": [ { "value": "1242159", "enabled": false, "usage": "all" } ],
+        "latency": [ { "value": "532359", "enabled": false, "usage": "all" } ],
         "II": [ { "value": "x", "enabled": false, "usage": "all" } ]
       },
       "project_parameters": {
@@ -32,7 +32,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2114037903" } ],
+        "IPREVISION": [ { "value": "2114038580" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "./" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

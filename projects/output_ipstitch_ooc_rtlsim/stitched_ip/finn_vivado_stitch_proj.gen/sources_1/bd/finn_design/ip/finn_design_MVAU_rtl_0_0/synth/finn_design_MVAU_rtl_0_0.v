@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "MVAU_rtl_0,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "finn_design_MVAU_rtl_0_0,MVAU_rtl_0,{}" *)
-(* CORE_GENERATION_INFO = "finn_design_MVAU_rtl_0_0,MVAU_rtl_0,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=MVAU_rtl_0,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,IS_MVU=1,COMPUTE_CORE=mvu_4sx4u_dsp48e1,PUMPED_COMPUTE=0,MW=6,MH=1,PE=1,SIMD=1,ACTIVATION_WIDTH=4,WEIGHT_WIDTH=4,ACCU_WIDTH=16,NARROW_WEIGHTS=1,SIGNED_ACTIVATIONS=0,SEGMENTLEN=1,FORCE_BEHAVIORAL=0,WEIGHT_STREAM_WIDTH_BA=8,INPUT_STREAM_WIDTH_BA=8,OUTPUT_STREAM_WIDTH_BA=16}" *)
+(* CORE_GENERATION_INFO = "finn_design_MVAU_rtl_0_0,MVAU_rtl_0,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=MVAU_rtl_0,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,IS_MVU=1,COMPUTE_CORE=mvu_4sx4u_dsp48e1,PUMPED_COMPUTE=0,MW=40,MH=1,PE=1,SIMD=1,ACTIVATION_WIDTH=4,WEIGHT_WIDTH=4,ACCU_WIDTH=16,NARROW_WEIGHTS=1,SIGNED_ACTIVATIONS=0,SEGMENTLEN=1,FORCE_BEHAVIORAL=0,WEIGHT_STREAM_WIDTH_BA=8,INPUT_STREAM_WIDTH_BA=8,OUTPUT_STREAM_WIDTH_BA=16}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module finn_design_MVAU_rtl_0_0 (
@@ -101,7 +101,7 @@ input wire out_V_TREADY;
     .IS_MVU(1),
     .COMPUTE_CORE("mvu_4sx4u_dsp48e1"),
     .PUMPED_COMPUTE(0),
-    .MW(6),
+    .MW(40),
     .MH(1),
     .PE(1),
     .SIMD(1),

@@ -125,7 +125,7 @@ cfg_estimates = build.DataflowBuildConfig(
 
 for n_densez_layers in range(1,4):
     for n_convz_layers in range(1,6):
-        for n_width_m in [0.2, 0.4, 0.8, 1.0]:
+        for n_width_m in [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]:
             print(f'Running: {n_width_m:.2f}.{n_convz_layers}.{n_densez_layers}')
             model = PilotNet(input_shape[0], input_shape[1], convz = n_convz_layers, densez = n_densez_layers, width_multiplier=n_width_m, weight_bit_width=4, act_bit_width=4)
        
