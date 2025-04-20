@@ -14,8 +14,12 @@ network_params = {
 ## Data parameters
     "dataset_dir"          : '../deeppicar/',
 
+## Model contribution parameters
+    "lstats"               : "../projects/layer_stats",
+
 ## Learning parameters
     "epoch"                : 16,
     "lr"                   : 1e-4,
     "bsz"                  : 64,
+
 }

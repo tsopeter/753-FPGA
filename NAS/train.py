@@ -4,6 +4,9 @@ import cv2
 from model import PilotNet
 from params import network_params
 from dataset import ImageDataset
+from contrib import PerformanceContrib
+import numpy as np
+
 
 image_height = network_params["image_height"]
 image_width  = network_params["image_width"]
@@ -16,7 +19,6 @@ max_width    = network_params['maximum_width']
 bit_width    = network_params['bit_width']
 
 device       = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
 
 def get_network(n_conv : int, n_dense : int, width : int)->PilotNet:
     # check network parameters are valid
@@ -38,7 +40,10 @@ def get_network(n_conv : int, n_dense : int, width : int)->PilotNet:
         densez=n_dense
     )
 
-def train(model : PilotNet, dataloader : DataLoader)->PilotNet:
+def evaluate(model : PilotNet, val_loader : DataLoader)->None:
+    pass
+
+def train(model : PilotNet, train_loader : DataLoader, test_loader : DataLoader)->None:
     epochs = network_params['epoch']
     lr     = network_params['lr']
 
@@ -46,20 +51,41 @@ def train(model : PilotNet, dataloader : DataLoader)->PilotNet:
     lossfn = torch.nn.MSELoss()
 
     for epoch in range(epochs):
-        for images, turns in dataloader:
+        model.train()
+        for images, turns in train_loader:
             images, turns = images.to(device), turns.to(device)
-            model.train()
 
             preds = model(images)
             loss  = lossfn(turns, preds)
 
-    return model
+        model.eval()
+        for images, turns in test_loader:
+            images, turns = images.to(device), turns.to(device)
+
+            preds = model(images)
+            loss  = lossfn(turns, preds)
             
-def evolution(n_generations : int = 50):
+def evolution(n_generations : int, train_loader : DataLoader, test_loader :DataLoader, val_loader : DataLoader):
     pass
 
+def brute(train_loader : DataLoader, test_loader : DataLoader, val_loader : DataLoader):
+    n_convs = np.arange(min_conv, max_conv+1)
+    n_dense = np.arange(min_dense, max_dense+1)
+    widths  = np.arange(min_width, max_width, 5)
 
-dataset = ImageDataset(f'{network_params["dataset_dir"]}', file_range=[0,7])
+    for conv in n_convs:
+        for dense in n_dense:
+            for width in widths:
+                model = get_network(conv, dense, width)
+
+                model = train(model, train_loader, test_loader)
+                evaluate(model, val_loader)
+
+
+
+stats   = PerformanceContrib(network_params["lstats"])
+print(stats.get_stats(0.1,5,3))
+dataset = ImageDataset(network_params["dataset_dir"], file_range=[0,7])
 print(f'Dataset length: {len(dataset)}')
 
 
