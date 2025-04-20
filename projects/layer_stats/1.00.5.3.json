@@ -90,7 +90,7 @@
   "MVAU_hls_6": {
     "BRAM_18K": 2,
     "BRAM_efficiency": 0.5425347222222222,
-    "LUT": 350,
+    "LUT": 349,
     "URAM": 0,
     "URAM_efficiency": 1,
     "DSP": 0
@@ -113,7 +113,7 @@
   },
   "total": {
     "BRAM_18K": 40.0,
-    "LUT": 5068.0,
+    "LUT": 5067.0,
     "URAM": 0.0,
     "DSP": 1.0
   }

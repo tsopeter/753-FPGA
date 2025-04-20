@@ -24,10 +24,22 @@
   "MVAU_3": {
     "preferred_impl_style": ""
   },
+  "ConvolutionInputGenerator_4": {
+    "preferred_impl_style": ""
+  },
   "MVAU_4": {
     "preferred_impl_style": ""
   },
   "MVAU_5": {
+    "preferred_impl_style": ""
+  },
+  "MVAU_6": {
+    "preferred_impl_style": ""
+  },
+  "MVAU_7": {
+    "preferred_impl_style": ""
+  },
+  "MVAU_8": {
     "preferred_impl_style": ""
   }
 }

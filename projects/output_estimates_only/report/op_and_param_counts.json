@@ -37,7 +37,7 @@
   "MVAU_hls_6": {
     "op_mac_4bx4b": 5000,
     "param_weight_4b": 5000,
-    "param_threshold_14b": 50
+    "param_threshold_13b": 50
   },
   "MVAU_hls_7": {
     "op_mac_4bx4b": 500,
@@ -54,8 +54,7 @@
     "param_threshold_16b": 172.0,
     "op_mac_4bx4b": 5028006.0,
     "param_threshold_15b": 64.0,
-    "param_threshold_13b": 100.0,
-    "param_threshold_14b": 50.0,
+    "param_threshold_13b": 150.0,
     "param_threshold_12b": 10.0
   }
 }

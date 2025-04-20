@@ -152,3 +152,8 @@ for n_densez_layers in range(1,4):
                 json.dump(ret, f, indent=2)
             print(f'{n_width_m:.2f}.{n_convz_layers}.{n_densez_layers}:\tLUT: {total_lut}, BRAM: {total_bram}')
 
+            ret = read_json_dict(estimates_output_dir + '/report/estimate_network_performance.json')
+            
+            with open(f'{model_dir}/layer_stats/{n_width_m:.2f}.{n_convz_layers}.{n_densez_layers}.perf.json', 'w') as f:
+                json.dump(ret, f, indent=2)
+

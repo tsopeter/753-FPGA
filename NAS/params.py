@@ -1,0 +1,21 @@
+network_params = {
+## Network Parameters
+    "image_width"          : 64,
+    "image_height"         : 64,
+    "minimum_conv_layers"  : 3,
+    "maximum_conv_layers"  : 5,
+    "minimum_dense_layers" : 1,
+    "maximum_dense_layers" : 3,
+    "minimum_width"        : 0.1,
+    "maximum_width"        : 0.5,
+    "bit_width"            : 4,
+
+
+## Data parameters
+    "dataset_dir"          : '../deeppicar/',
+
+## Learning parameters
+    "epoch"                : 16,
+    "lr"                   : 1e-4,
+    "bsz"                  : 64,
+}

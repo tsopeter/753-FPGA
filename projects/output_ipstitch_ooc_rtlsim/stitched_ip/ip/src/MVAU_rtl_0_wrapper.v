@@ -35,7 +35,7 @@ module MVAU_rtl_0 #(
 	parameter	IS_MVU = 1,
 	parameter	COMPUTE_CORE = "mvu_4sx4u_dsp48e1",
 	parameter	PUMPED_COMPUTE = 0,
-	parameter	MW = 40,
+	parameter	MW = 5,
 	parameter	MH = 1,
 	parameter	PE = 1,
 	parameter	SIMD = 1,

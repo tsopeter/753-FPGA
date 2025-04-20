@@ -1,13 +1,24 @@
 #-----------------------------------------------------------
-# Vivado v2022.2 (64-bit)
-# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
-# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sun Apr 13 18:22:53 2025
-# Process ID: 1834
-# Current directory: /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4
-# Command line: vivado -mode batch -source make_project.tcl
-# Log file: /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/vivado.log
-# Journal file: /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/vivado.jou
-# Running On: finn_dev_petertso, OS: Linux, CPU Frequency: 2304.008 MHz, CPU Physical cores: 8, Host memory: 33586 MB
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Apr 20 02:17:02 2025
+# Process ID         : 2117
+# Current directory  : /tmp/finn_dev_root/vivado_stitch_proj_4g29v702
+# Command line       : vivado -mode batch -source make_project.tcl
+# Log file           : /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/vivado.log
+# Journal file       : /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/vivado.jou
+# Running On         : finn_dev_root
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.1 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13700K
+# CPU Frequency      : 2032.750 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 100975 MB
+# Swap memory        : 37179 MB
+# Total Virtual      : 138155 MB
+# Available Virtual  : 131267 MB
 #-----------------------------------------------------------
 source make_project.tcl

@@ -29,6 +29,16 @@ def read_layer_stats(dir: str = './projects/layer_stats') -> List[Dict[str, Unio
                 data = json.load(f)
 
             total = data.get("total", {})
+
+            # get the perf file
+            perf_file = f'{width:.2f}.{conv}.{dense}.perf.json'
+            perf_file = os.path.join(dir, perf_file)
+            with open(perf_file, 'r') as f:
+                perf = json.load(f)
+
+            latency = perf.get("estimated_latency_ns", 0)
+
+
             results.append({
                 "Width": width,
                 "Conv": conv,
@@ -36,7 +46,8 @@ def read_layer_stats(dir: str = './projects/layer_stats') -> List[Dict[str, Unio
                 "Total_LUT": total.get("LUT", 0),
                 "Total_BRAM": total.get("BRAM_18K", 0),
                 "Total_URAM": total.get("URAM", 0),
-                "Total_DSP": total.get("DSP", 0)
+                "Total_DSP": total.get("DSP", 0),
+                "Latency" : latency
             })
 
     return results
@@ -64,45 +75,40 @@ def plot_resource_heatmaps(
         bram_input = df[["Total_BRAM"]].to_numpy()
         df["Total_BRAM"] = np.ceil(model_bram.predict(bram_input))
 
+    # give as ms
+    latency = df[["Latency"]].to_numpy()
+    df["Latency"] = np.ceil(latency * 1e-6)
+
     dense_vals = sorted(df["Dense"].unique())
 
     for dense in dense_vals:
         df_d = df[df["Dense"] == dense]
         pivot_lut = df_d.pivot(index="Conv", columns="Width", values="Total_LUT")
         pivot_bram = df_d.pivot(index="Conv", columns="Width", values="Total_BRAM")
+        pivot_latency = df_d.pivot(index="Conv", columns="Width", values="Latency")
 
         plt.figure(figsize=(12, 5))
 
         # --- LUT Heatmap ---
-        plt.subplot(1, 2, 1)
+        plt.subplot(2, 2, 1)
         ax1 = sns.heatmap(pivot_lut, annot=True, fmt=".0f", cmap="YlGnBu", cbar=True)
         plt.title(f"{'Predicted' if model_lut else 'Total'} LUT (Dense = {dense})")
         plt.xlabel("Width Multiplier")
         plt.ylabel("Conv Layers")
 
-        #for y, row in enumerate(pivot_lut.index):
-        #    for x, col in enumerate(pivot_lut.columns):
-        #        val = pivot_lut.loc[row, col]
-        #        if val >= lut_limit or row <= 2:
-        #            # Draw red box around the cell (x, y)
-        #            ax1.add_patch(Rectangle((x, y), 1, 1, fill=False, edgecolor='red', lw=2))
-        #        else:
-        #            ax1.add_patch(Rectangle((x, y), 1, 1, fill=False, edgecolor='green', lw=2))
-
         # --- BRAM Heatmap ---
-        plt.subplot(1, 2, 2)
+        plt.subplot(2, 2, 2)
         ax2 = sns.heatmap(pivot_bram, annot=True, fmt=".1f", cmap="YlOrBr", cbar=True)
         plt.title(f"{'Predicted' if model_bram else 'Total'} BRAM (Dense = {dense})")
         plt.xlabel("Width Multiplier")
         plt.ylabel("Conv Layers")
 
-        #for y, row in enumerate(pivot_bram.index):
-        #    for x, col in enumerate(pivot_bram.columns):
-        #        val = pivot_bram.loc[row, col]
-        #        if val >= bram_limit or row <= 2:
-        #            ax2.add_patch(Rectangle((x, y), 1, 1, fill=False, edgecolor='red', lw=2))
-        #        else:
-        #            ax2.add_patch(Rectangle((x, y), 1, 1, fill=False, edgecolor='green', lw=2))
+        # --- Latency Heatmap ---
+        plt.subplot(2, 2, 3)
+        ax2 = sns.heatmap(pivot_latency, annot=True, fmt=".1f", cmap="YlOrBr", cbar=True)
+        plt.title(f"Predicted Latency (ms) (Dense = {dense})")
+        plt.xlabel("Width Multiplier")
+        plt.ylabel("Conv Layers")
 
         plt.tight_layout()
         plt.show()

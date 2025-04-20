@@ -5,22 +5,22 @@
     "cell_name": "MVAU_hls_1/MVAU_hls_1_wstrm",
     "component_reference": "amd.com:finn:memstream:1.0",
     "ip_revision": "5",
-    "gen_directory": "../../../../../../finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/ip/finn_design_MVAU_hls_1_wstrm_0",
+    "gen_directory": "./",
     "parameters": {
       "component_parameters": {
-        "DEPTH": [ { "value": "3150", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "DEPTH": [ { "value": "5400", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "WIDTH": [ { "value": "8", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "INIT_FILE": [ { "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/memblock.dat", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "INIT_FILE": [ { "value": "/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_1_tzf29ljv/memblock.dat", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "RAM_STYLE": [ { "value": "auto", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
-        "AXILITE_ADDR_WIDTH": [ { "value": "14", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "AXILITE_ADDR_WIDTH": [ { "value": "15", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "Component_Name": [ { "value": "finn_design_MVAU_hls_1_wstrm_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "DEPTH": [ { "value": "3150", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "DEPTH": [ { "value": "5400", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "WIDTH": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "INIT_FILE": [ { "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/memblock.dat", "resolve_type": "generated", "usage": "all" } ],
+        "INIT_FILE": [ { "value": "/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_1_tzf29ljv/memblock.dat", "resolve_type": "generated", "usage": "all" } ],
         "RAM_STYLE": [ { "value": "auto", "resolve_type": "generated", "usage": "all" } ],
-        "AXILITE_ADDR_WIDTH": [ { "value": "14", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+        "AXILITE_ADDR_WIDTH": [ { "value": "15", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "spartan7" } ],
@@ -33,9 +33,7 @@
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
         "SPEEDGRADE": [ { "value": "-1" } ],
         "STATIC_POWER": [ { "value": "" } ],
-        "TEMPERATURE_GRADE": [ { "value": "" } ],
-        "USE_RDI_CUSTOMIZATION": [ { "value": "TRUE" } ],
-        "USE_RDI_GENERATION": [ { "value": "TRUE" } ]
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
@@ -43,8 +41,8 @@
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "./" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
-        "SHAREDDIR": [ { "value": "./" } ],
-        "SWVERSION": [ { "value": "2022.2" } ],
+        "SHAREDDIR": [ { "value": "." } ],
+        "SWVERSION": [ { "value": "2024.2" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
@@ -55,7 +53,7 @@
         "awready": [ { "direction": "out" } ],
         "awvalid": [ { "direction": "in", "driver_value": "0" } ],
         "awprot": [ { "direction": "in", "size_left": "2", "size_right": "0", "driver_value": "0" } ],
-        "awaddr": [ { "direction": "in", "size_left": "13", "size_right": "0", "driver_value": "0" } ],
+        "awaddr": [ { "direction": "in", "size_left": "14", "size_right": "0", "driver_value": "0" } ],
         "wready": [ { "direction": "out" } ],
         "wvalid": [ { "direction": "in", "driver_value": "0" } ],
         "wdata": [ { "direction": "in", "size_left": "31", "size_right": "0", "driver_value": "0" } ],
@@ -66,7 +64,7 @@
         "arready": [ { "direction": "out" } ],
         "arvalid": [ { "direction": "in", "driver_value": "0" } ],
         "arprot": [ { "direction": "in", "size_left": "2", "size_right": "0", "driver_value": "0" } ],
-        "araddr": [ { "direction": "in", "size_left": "13", "size_right": "0", "driver_value": "0" } ],
+        "araddr": [ { "direction": "in", "size_left": "14", "size_right": "0", "driver_value": "0" } ],
         "rready": [ { "direction": "in", "driver_value": "0" } ],
         "rvalid": [ { "direction": "out" } ],
         "rresp": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
@@ -111,7 +109,7 @@
             "PROTOCOL": [ { "value": "AXI4LITE", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "FREQ_HZ": [ { "value": "83333333", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "ID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "ADDR_WIDTH": [ { "value": "14", "value_src": "auto", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ADDR_WIDTH": [ { "value": "15", "value_src": "auto", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "AWUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "ARUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "WUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
@@ -198,7 +196,7 @@
           "address_blocks": {
             "reg0": {
               "base_address": "0x0",
-              "range": "16384",
+              "range": "32768",
               "display_name": "reg0",
               "usage": "register"
             }

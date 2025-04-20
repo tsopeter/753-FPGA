@@ -241,7 +241,7 @@
     {
       "BRAM_18K": 2,
       "BRAM_efficiency": 0.5425347222222222,
-      "LUT": 324,
+      "LUT": 323,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 1
@@ -249,7 +249,7 @@
     {
       "BRAM_18K": 2,
       "BRAM_efficiency": 0.5425347222222222,
-      "LUT": 350,
+      "LUT": 349,
       "URAM": 0,
       "URAM_efficiency": 1,
       "DSP": 0

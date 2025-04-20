@@ -1,60 +1,78 @@
 #-----------------------------------------------------------
-# Vivado v2022.2 (64-bit)
-# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
-# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sun Apr 13 18:22:53 2025
-# Process ID: 1834
-# Current directory: /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4
-# Command line: vivado -mode batch -source make_project.tcl
-# Log file: /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/vivado.log
-# Journal file: /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/vivado.jou
-# Running On: finn_dev_petertso, OS: Linux, CPU Frequency: 2304.008 MHz, CPU Physical cores: 8, Host memory: 33586 MB
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Apr 20 02:17:02 2025
+# Process ID         : 2117
+# Current directory  : /tmp/finn_dev_root/vivado_stitch_proj_4g29v702
+# Command line       : vivado -mode batch -source make_project.tcl
+# Log file           : /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/vivado.log
+# Journal file       : /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/vivado.jou
+# Running On         : finn_dev_root
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.1 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13700K
+# CPU Frequency      : 2032.750 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 100975 MB
+# Swap memory        : 37179 MB
+# Total Virtual      : 138155 MB
+# Available Virtual  : 131267 MB
 #-----------------------------------------------------------
 source make_project.tcl
-# create_project finn_vivado_stitch_proj /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4 -part xc7s25csga225-1
+# create_project finn_vivado_stitch_proj /tmp/finn_dev_root/vivado_stitch_proj_4g29v702 -part xc7s25csga225-1
 # set_msg_config -id {[BD 41-1753]} -suppress
-# set_property ip_repo_paths [list $::env(FINN_ROOT)/finn-rtllib/memstream /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8 /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07 /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq /tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4 /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e /tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn /tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1 /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga /tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx /tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg /tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo] [current_project]
+# set_property ip_repo_paths [list $::env(FINN_ROOT)/finn-rtllib/memstream /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_0_6oncw52d /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_9ue28ch7 /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_0_q4ylkh8o /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_1_uslq6kd9 /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_2_gq8rbv62 /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_3_tjpjdy6j /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_4_8pcqgtdz /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_5_y2vvzh9v /tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_0_9tmw50rx/project_MVAU_hls_0/sol1/impl/ip /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_2_0__32roo90 /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_2_1_0y8wxh5i /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_37dsiurb /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_3_0_y2b3e0u7 /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_3_1_ravub1m9 /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_3_2_uh35zon9 /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_3_3_rgze098l /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_3_4_6rkwbdlt /tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_1_tzf29ljv/project_MVAU_hls_1/sol1/impl/ip /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_4_ip56qb54 /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_z930jqzx /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_5_0_9nn8xc1s /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_5_1_f58d_l7s /tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_2_r07ns4_z/project_MVAU_hls_2/sol1/impl/ip /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_6_v7cg0zqn /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_k9ymzjjy /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_7_sp00r4m7 /tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_3_en1zw_ib/project_MVAU_hls_3/sol1/impl/ip /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_8__c8hfmk8 /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_4_52uw0bzh /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_9__vo3ww3y /tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_4_99q9woyy/project_MVAU_hls_4/sol1/impl/ip /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_10_egvbypl6 /tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_5_nvq94m66/project_MVAU_hls_5/sol1/impl/ip /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_11_dhav8tsd /tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_6_bel7uuog/project_MVAU_hls_6/sol1/impl/ip /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_12_vpvgfggy /tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_7_ptwujrl6/project_MVAU_hls_7/sol1/impl/ip /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_13_jw6ncvct /tmp/finn_dev_root/code_gen_ipgen_MVAU_rtl_0_8lvb43ez /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_14_iwhfydh4] [current_project]
 # update_ip_catalog
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
-# create_bd_design "finn_design"
-Wrote  : </tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8/StreamingFIFO_rtl_0.v
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/Documents/finn/finn-rtllib/memstream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_0_6oncw52d'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_9ue28ch7'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_0_q4ylkh8o'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_1_uslq6kd9'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_2_gq8rbv62'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_3_tjpjdy6j'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_4_8pcqgtdz'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_5_y2vvzh9v'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_0_9tmw50rx/project_MVAU_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_2_0__32roo90'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_2_1_0y8wxh5i'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_37dsiurb'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_3_0_y2b3e0u7'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_3_1_ravub1m9'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_3_2_uh35zon9'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_3_3_rgze098l'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_3_4_6rkwbdlt'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_1_tzf29ljv/project_MVAU_hls_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_4_ip56qb54'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_z930jqzx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_5_0_9nn8xc1s'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_5_1_f58d_l7s'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_2_r07ns4_z/project_MVAU_hls_2/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_6_v7cg0zqn'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_k9ymzjjy'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_7_sp00r4m7'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_3_en1zw_ib/project_MVAU_hls_3/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_8__c8hfmk8'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_4_52uw0bzh'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_9__vo3ww3y'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_4_99q9woyy/project_MVAU_hls_4/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_10_egvbypl6'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_5_nvq94m66/project_MVAU_hls_5/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_11_dhav8tsd'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_6_bel7uuog/project_MVAU_hls_6/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_12_vpvgfggy'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_7_ptwujrl6/project_MVAU_hls_7/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_13_jw6ncvct'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_MVAU_rtl_0_8lvb43ez'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_14_iwhfydh4'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.2/data/ip'.
+# create_bd_design finn_design
+Wrote  : </tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_0_6oncw52d/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_0_6oncw52d/StreamingFIFO_rtl_0.v
 # create_bd_cell -type module -reference StreamingFIFO_rtl_0 StreamingFIFO_rtl_0
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
@@ -64,46 +82,11 @@ INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm/swg_pkg.sv
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm/ConvolutionInputGenerator_rtl_0_wrapper.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm/ConvolutionInputGenerator_rtl_0_impl.sv
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm/swg_common.sv
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_9ue28ch7/swg_pkg.sv
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_9ue28ch7/ConvolutionInputGenerator_rtl_0_wrapper.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_9ue28ch7/ConvolutionInputGenerator_rtl_0_impl.sv
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_9ue28ch7/swg_common.sv
 # create_bd_cell -type module -reference ConvolutionInputGenerator_rtl_0 ConvolutionInputGenerator_rtl_0
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
@@ -115,42 +98,7 @@ INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOC
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
 INFO: [IP_Flow 19-818] Not transferring value dependency attribute "((spirit:decode(id('MODELPARAM_VALUE.BIT_WIDTH')) * spirit:decode(id('MODELPARAM_VALUE.SIMD'))) * spirit:decode(id('MODELPARAM_VALUE.MMV_IN')))" into user parameter "BUF_IN_WIDTH".
 INFO: [IP_Flow 19-818] Not transferring value dependency attribute "((spirit:decode(id('MODELPARAM_VALUE.BIT_WIDTH')) * spirit:decode(id('MODELPARAM_VALUE.SIMD'))) * spirit:decode(id('MODELPARAM_VALUE.MMV_OUT')))" into user parameter "BUF_OUT_WIDTH".
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
 # create_bd_cell -type hier StreamingFIFO_rtl_1_0
 # create_bd_pin -dir I -type clk /StreamingFIFO_rtl_1_0/ap_clk
 # create_bd_pin -dir I -type rst /StreamingFIFO_rtl_1_0/ap_rst_n
@@ -203,8 +151,8 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_g
 # connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_1_3/fifo/S_AXIS] [get_bd_intf_pins StreamingFIFO_rtl_1_3/in0_V]
 # connect_bd_net [get_bd_pins StreamingFIFO_rtl_1_3/ap_rst_n] [get_bd_pins StreamingFIFO_rtl_1_3/fifo/s_axis_aresetn]
 # connect_bd_net [get_bd_pins StreamingFIFO_rtl_1_3/ap_clk] [get_bd_pins StreamingFIFO_rtl_1_3/fifo/s_axis_aclk]
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta/StreamingFIFO_rtl_1_4.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_4_8pcqgtdz/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_4_8pcqgtdz/StreamingFIFO_rtl_1_4.v
 # create_bd_cell -type module -reference StreamingFIFO_rtl_1_4 StreamingFIFO_rtl_1_4
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
@@ -214,44 +162,9 @@ INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq/StreamingFIFO_rtl_1_5.v
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_5_y2vvzh9v/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_1_5_y2vvzh9v/StreamingFIFO_rtl_1_5.v
 # create_bd_cell -type module -reference StreamingFIFO_rtl_1_5 StreamingFIFO_rtl_1_5
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
@@ -261,42 +174,7 @@ INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
 # create_bd_cell -type hier MVAU_hls_0
 # create_bd_pin -dir I -type clk /MVAU_hls_0/ap_clk
 # create_bd_pin -dir I -type rst /MVAU_hls_0/ap_rst_n
@@ -304,9 +182,9 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_g
 # create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_0/in0_V
 # create_bd_cell -type ip -vlnv xilinx.com:hls:MVAU_hls_0:1.0 /MVAU_hls_0/MVAU_hls_0
 # create_bd_cell -type ip -vlnv amd.com:finn:memstream:1.0 /MVAU_hls_0/MVAU_hls_0_wstrm
-# set_property -dict [list CONFIG.DEPTH {225} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_0/MVAU_hls_0_wstrm]
+# set_property -dict [list CONFIG.DEPTH {300} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_0_9tmw50rx/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_0/MVAU_hls_0_wstrm]
 WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
-WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 10.0 is provided. The value is converted to long type(10)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_0/MVAU_hls_0_wstrm/m_axis_0] [get_bd_intf_pins MVAU_hls_0/MVAU_hls_0/weights_V]
 # connect_bd_net [get_bd_pins MVAU_hls_0/ap_rst_n] [get_bd_pins MVAU_hls_0/MVAU_hls_0_wstrm/ap_rst_n]
 # connect_bd_net [get_bd_pins MVAU_hls_0/ap_clk] [get_bd_pins MVAU_hls_0/MVAU_hls_0_wstrm/ap_clk]
@@ -315,36 +193,23 @@ WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but,
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_0/in0_V] [get_bd_intf_pins MVAU_hls_0/MVAU_hls_0/in0_V]
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_0/out_V] [get_bd_intf_pins MVAU_hls_0/MVAU_hls_0/out_V]
 # save_bd_design
-Wrote  : </tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+Wrote  : </tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
 # create_bd_cell -type hier StreamingFIFO_rtl_2_0
 # create_bd_pin -dir I -type clk /StreamingFIFO_rtl_2_0/ap_clk
 # create_bd_pin -dir I -type rst /StreamingFIFO_rtl_2_0/ap_rst_n
 # create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingFIFO_rtl_2_0/out_V
 # create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingFIFO_rtl_2_0/in0_V
 # create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 /StreamingFIFO_rtl_2_0/fifo
-# set_property -dict [list CONFIG.FIFO_DEPTH {1024}] [get_bd_cells /StreamingFIFO_rtl_2_0/fifo]
+# set_property -dict [list CONFIG.FIFO_DEPTH {4096}] [get_bd_cells /StreamingFIFO_rtl_2_0/fifo]
 # set_property -dict [list CONFIG.FIFO_MEMORY_TYPE {auto}] [get_bd_cells /StreamingFIFO_rtl_2_0/fifo]
 # set_property -dict [list CONFIG.TDATA_NUM_BYTES {1}] [get_bd_cells /StreamingFIFO_rtl_2_0/fifo]
 # connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_2_0/fifo/M_AXIS] [get_bd_intf_pins StreamingFIFO_rtl_2_0/out_V]
 # connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_2_0/fifo/S_AXIS] [get_bd_intf_pins StreamingFIFO_rtl_2_0/in0_V]
 # connect_bd_net [get_bd_pins StreamingFIFO_rtl_2_0/ap_rst_n] [get_bd_pins StreamingFIFO_rtl_2_0/fifo/s_axis_aresetn]
 # connect_bd_net [get_bd_pins StreamingFIFO_rtl_2_0/ap_clk] [get_bd_pins StreamingFIFO_rtl_2_0/fifo/s_axis_aclk]
-# create_bd_cell -type hier StreamingFIFO_rtl_2_1
-# create_bd_pin -dir I -type clk /StreamingFIFO_rtl_2_1/ap_clk
-# create_bd_pin -dir I -type rst /StreamingFIFO_rtl_2_1/ap_rst_n
-# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingFIFO_rtl_2_1/out_V
-# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingFIFO_rtl_2_1/in0_V
-# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 /StreamingFIFO_rtl_2_1/fifo
-# set_property -dict [list CONFIG.FIFO_DEPTH {512}] [get_bd_cells /StreamingFIFO_rtl_2_1/fifo]
-# set_property -dict [list CONFIG.FIFO_MEMORY_TYPE {auto}] [get_bd_cells /StreamingFIFO_rtl_2_1/fifo]
-# set_property -dict [list CONFIG.TDATA_NUM_BYTES {1}] [get_bd_cells /StreamingFIFO_rtl_2_1/fifo]
-# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_2_1/fifo/M_AXIS] [get_bd_intf_pins StreamingFIFO_rtl_2_1/out_V]
-# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_2_1/fifo/S_AXIS] [get_bd_intf_pins StreamingFIFO_rtl_2_1/in0_V]
-# connect_bd_net [get_bd_pins StreamingFIFO_rtl_2_1/ap_rst_n] [get_bd_pins StreamingFIFO_rtl_2_1/fifo/s_axis_aresetn]
-# connect_bd_net [get_bd_pins StreamingFIFO_rtl_2_1/ap_clk] [get_bd_pins StreamingFIFO_rtl_2_1/fifo/s_axis_aclk]
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm/StreamingFIFO_rtl_2_2.v
-# create_bd_cell -type module -reference StreamingFIFO_rtl_2_2 StreamingFIFO_rtl_2_2
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_2_1_0y8wxh5i/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_2_1_0y8wxh5i/StreamingFIFO_rtl_2_1.v
+# create_bd_cell -type module -reference StreamingFIFO_rtl_2_1 StreamingFIFO_rtl_2_1
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
@@ -353,93 +218,11 @@ INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf/StreamingFIFO_rtl_2_3.v
-# create_bd_cell -type module -reference StreamingFIFO_rtl_2_3 StreamingFIFO_rtl_2_3
-INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'out_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
-INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
-INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru/swg_pkg.sv
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru/ConvolutionInputGenerator_rtl_1_wrapper.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru/ConvolutionInputGenerator_rtl_1_impl.sv
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru/swg_common.sv
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_37dsiurb/swg_pkg.sv
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_37dsiurb/ConvolutionInputGenerator_rtl_1_wrapper.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_37dsiurb/ConvolutionInputGenerator_rtl_1_impl.sv
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_37dsiurb/swg_common.sv
 # create_bd_cell -type module -reference ConvolutionInputGenerator_rtl_1 ConvolutionInputGenerator_rtl_1
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
@@ -451,44 +234,7 @@ INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOC
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
 INFO: [IP_Flow 19-818] Not transferring value dependency attribute "((spirit:decode(id('MODELPARAM_VALUE.BIT_WIDTH')) * spirit:decode(id('MODELPARAM_VALUE.SIMD'))) * spirit:decode(id('MODELPARAM_VALUE.MMV_IN')))" into user parameter "BUF_IN_WIDTH".
 INFO: [IP_Flow 19-818] Not transferring value dependency attribute "((spirit:decode(id('MODELPARAM_VALUE.BIT_WIDTH')) * spirit:decode(id('MODELPARAM_VALUE.SIMD'))) * spirit:decode(id('MODELPARAM_VALUE.MMV_OUT')))" into user parameter "BUF_OUT_WIDTH".
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-WARNING: [IP_Flow 19-3571] IP 'finn_design_ConvolutionInputGenerator_rtl_1_0' is restricted:
-* Detected changes to module reference file(s).
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
 # create_bd_cell -type hier StreamingFIFO_rtl_3_0
 # create_bd_pin -dir I -type clk /StreamingFIFO_rtl_3_0/ap_clk
 # create_bd_pin -dir I -type rst /StreamingFIFO_rtl_3_0/ap_rst_n
@@ -508,7 +254,7 @@ WARNING: [IP_Flow 19-3571] IP 'finn_design_ConvolutionInputGenerator_rtl_1_0' is
 # create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingFIFO_rtl_3_1/out_V
 # create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingFIFO_rtl_3_1/in0_V
 # create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 /StreamingFIFO_rtl_3_1/fifo
-# set_property -dict [list CONFIG.FIFO_DEPTH {4096}] [get_bd_cells /StreamingFIFO_rtl_3_1/fifo]
+# set_property -dict [list CONFIG.FIFO_DEPTH {16384}] [get_bd_cells /StreamingFIFO_rtl_3_1/fifo]
 # set_property -dict [list CONFIG.FIFO_MEMORY_TYPE {auto}] [get_bd_cells /StreamingFIFO_rtl_3_1/fifo]
 # set_property -dict [list CONFIG.TDATA_NUM_BYTES {1}] [get_bd_cells /StreamingFIFO_rtl_3_1/fifo]
 # connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_3_1/fifo/M_AXIS] [get_bd_intf_pins StreamingFIFO_rtl_3_1/out_V]
@@ -528,9 +274,22 @@ WARNING: [IP_Flow 19-3571] IP 'finn_design_ConvolutionInputGenerator_rtl_1_0' is
 # connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_3_2/fifo/S_AXIS] [get_bd_intf_pins StreamingFIFO_rtl_3_2/in0_V]
 # connect_bd_net [get_bd_pins StreamingFIFO_rtl_3_2/ap_rst_n] [get_bd_pins StreamingFIFO_rtl_3_2/fifo/s_axis_aresetn]
 # connect_bd_net [get_bd_pins StreamingFIFO_rtl_3_2/ap_clk] [get_bd_pins StreamingFIFO_rtl_3_2/fifo/s_axis_aclk]
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e/StreamingFIFO_rtl_3_3.v
-# create_bd_cell -type module -reference StreamingFIFO_rtl_3_3 StreamingFIFO_rtl_3_3
+# create_bd_cell -type hier StreamingFIFO_rtl_3_3
+# create_bd_pin -dir I -type clk /StreamingFIFO_rtl_3_3/ap_clk
+# create_bd_pin -dir I -type rst /StreamingFIFO_rtl_3_3/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingFIFO_rtl_3_3/out_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingFIFO_rtl_3_3/in0_V
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 /StreamingFIFO_rtl_3_3/fifo
+# set_property -dict [list CONFIG.FIFO_DEPTH {512}] [get_bd_cells /StreamingFIFO_rtl_3_3/fifo]
+# set_property -dict [list CONFIG.FIFO_MEMORY_TYPE {auto}] [get_bd_cells /StreamingFIFO_rtl_3_3/fifo]
+# set_property -dict [list CONFIG.TDATA_NUM_BYTES {1}] [get_bd_cells /StreamingFIFO_rtl_3_3/fifo]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_3_3/fifo/M_AXIS] [get_bd_intf_pins StreamingFIFO_rtl_3_3/out_V]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_3_3/fifo/S_AXIS] [get_bd_intf_pins StreamingFIFO_rtl_3_3/in0_V]
+# connect_bd_net [get_bd_pins StreamingFIFO_rtl_3_3/ap_rst_n] [get_bd_pins StreamingFIFO_rtl_3_3/fifo/s_axis_aresetn]
+# connect_bd_net [get_bd_pins StreamingFIFO_rtl_3_3/ap_clk] [get_bd_pins StreamingFIFO_rtl_3_3/fifo/s_axis_aclk]
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_3_4_6rkwbdlt/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_3_4_6rkwbdlt/StreamingFIFO_rtl_3_4.v
+# create_bd_cell -type module -reference StreamingFIFO_rtl_3_4 StreamingFIFO_rtl_3_4
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
@@ -539,44 +298,7 @@ INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-WARNING: [IP_Flow 19-3571] IP 'finn_design_StreamingFIFO_rtl_3_3_0' is restricted:
-* Detected changes to module reference file(s).
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
 # create_bd_cell -type hier MVAU_hls_1
 # create_bd_pin -dir I -type clk /MVAU_hls_1/ap_clk
 # create_bd_pin -dir I -type rst /MVAU_hls_1/ap_rst_n
@@ -584,9 +306,9 @@ WARNING: [IP_Flow 19-3571] IP 'finn_design_StreamingFIFO_rtl_3_3_0' is restricte
 # create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_1/in0_V
 # create_bd_cell -type ip -vlnv xilinx.com:hls:MVAU_hls_1:1.0 /MVAU_hls_1/MVAU_hls_1
 # create_bd_cell -type ip -vlnv amd.com:finn:memstream:1.0 /MVAU_hls_1/MVAU_hls_1_wstrm
-# set_property -dict [list CONFIG.DEPTH {3150} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_1/MVAU_hls_1_wstrm]
+# set_property -dict [list CONFIG.DEPTH {5400} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_1_tzf29ljv/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_1/MVAU_hls_1_wstrm]
 WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
-WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 14.0 is provided. The value is converted to long type(14)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 15.0 is provided. The value is converted to long type(15)
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_1/MVAU_hls_1_wstrm/m_axis_0] [get_bd_intf_pins MVAU_hls_1/MVAU_hls_1/weights_V]
 # connect_bd_net [get_bd_pins MVAU_hls_1/ap_rst_n] [get_bd_pins MVAU_hls_1/MVAU_hls_1_wstrm/ap_rst_n]
 # connect_bd_net [get_bd_pins MVAU_hls_1/ap_clk] [get_bd_pins MVAU_hls_1/MVAU_hls_1_wstrm/ap_clk]
@@ -595,9 +317,9 @@ WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but,
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_1/in0_V] [get_bd_intf_pins MVAU_hls_1/MVAU_hls_1/in0_V]
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_1/out_V] [get_bd_intf_pins MVAU_hls_1/MVAU_hls_1/out_V]
 # save_bd_design
-Wrote  : </tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt/StreamingFIFO_rtl_4.v
+Wrote  : </tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_4_ip56qb54/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_4_ip56qb54/StreamingFIFO_rtl_4.v
 # create_bd_cell -type module -reference StreamingFIFO_rtl_4 StreamingFIFO_rtl_4
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
@@ -607,48 +329,11 @@ INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-WARNING: [IP_Flow 19-3571] IP 'finn_design_StreamingFIFO_rtl_4_0' is restricted:
-* Detected changes to module reference file(s).
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y/swg_pkg.sv
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y/ConvolutionInputGenerator_rtl_2_wrapper.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y/ConvolutionInputGenerator_rtl_2_impl.sv
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y/swg_common.sv
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_z930jqzx/swg_pkg.sv
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_z930jqzx/ConvolutionInputGenerator_rtl_2_wrapper.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_z930jqzx/ConvolutionInputGenerator_rtl_2_impl.sv
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_z930jqzx/swg_common.sv
 # create_bd_cell -type module -reference ConvolutionInputGenerator_rtl_2 ConvolutionInputGenerator_rtl_2
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
@@ -660,59 +345,21 @@ INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOC
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
 INFO: [IP_Flow 19-818] Not transferring value dependency attribute "((spirit:decode(id('MODELPARAM_VALUE.BIT_WIDTH')) * spirit:decode(id('MODELPARAM_VALUE.SIMD'))) * spirit:decode(id('MODELPARAM_VALUE.MMV_IN')))" into user parameter "BUF_IN_WIDTH".
 INFO: [IP_Flow 19-818] Not transferring value dependency attribute "((spirit:decode(id('MODELPARAM_VALUE.BIT_WIDTH')) * spirit:decode(id('MODELPARAM_VALUE.SIMD'))) * spirit:decode(id('MODELPARAM_VALUE.MMV_OUT')))" into user parameter "BUF_OUT_WIDTH".
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-WARNING: [IP_Flow 19-3571] IP 'finn_design_ConvolutionInputGenerator_rtl_2_0' is restricted:
-* Detected changes to module reference file(s).
-# create_bd_cell -type hier StreamingFIFO_rtl_5_0
-# create_bd_pin -dir I -type clk /StreamingFIFO_rtl_5_0/ap_clk
-# create_bd_pin -dir I -type rst /StreamingFIFO_rtl_5_0/ap_rst_n
-# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingFIFO_rtl_5_0/out_V
-# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingFIFO_rtl_5_0/in0_V
-# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 /StreamingFIFO_rtl_5_0/fifo
-# set_property -dict [list CONFIG.FIFO_DEPTH {512}] [get_bd_cells /StreamingFIFO_rtl_5_0/fifo]
-# set_property -dict [list CONFIG.FIFO_MEMORY_TYPE {auto}] [get_bd_cells /StreamingFIFO_rtl_5_0/fifo]
-# set_property -dict [list CONFIG.TDATA_NUM_BYTES {1}] [get_bd_cells /StreamingFIFO_rtl_5_0/fifo]
-# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_5_0/fifo/M_AXIS] [get_bd_intf_pins StreamingFIFO_rtl_5_0/out_V]
-# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_5_0/fifo/S_AXIS] [get_bd_intf_pins StreamingFIFO_rtl_5_0/in0_V]
-# connect_bd_net [get_bd_pins StreamingFIFO_rtl_5_0/ap_rst_n] [get_bd_pins StreamingFIFO_rtl_5_0/fifo/s_axis_aresetn]
-# connect_bd_net [get_bd_pins StreamingFIFO_rtl_5_0/ap_clk] [get_bd_pins StreamingFIFO_rtl_5_0/fifo/s_axis_aclk]
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn/StreamingFIFO_rtl_5_1.v
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_5_0_9nn8xc1s/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_5_0_9nn8xc1s/StreamingFIFO_rtl_5_0.v
+# create_bd_cell -type module -reference StreamingFIFO_rtl_5_0 StreamingFIFO_rtl_5_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'out_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_5_1_f58d_l7s/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_5_1_f58d_l7s/StreamingFIFO_rtl_5_1.v
 # create_bd_cell -type module -reference StreamingFIFO_rtl_5_1 StreamingFIFO_rtl_5_1
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
@@ -722,44 +369,7 @@ INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-WARNING: [IP_Flow 19-3571] IP 'finn_design_StreamingFIFO_rtl_5_1_0' is restricted:
-* Detected changes to module reference file(s).
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
 # create_bd_cell -type hier MVAU_hls_2
 # create_bd_pin -dir I -type clk /MVAU_hls_2/ap_clk
 # create_bd_pin -dir I -type rst /MVAU_hls_2/ap_rst_n
@@ -767,9 +377,9 @@ WARNING: [IP_Flow 19-3571] IP 'finn_design_StreamingFIFO_rtl_5_1_0' is restricte
 # create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_2/in0_V
 # create_bd_cell -type ip -vlnv xilinx.com:hls:MVAU_hls_2:1.0 /MVAU_hls_2/MVAU_hls_2
 # create_bd_cell -type ip -vlnv amd.com:finn:memstream:1.0 /MVAU_hls_2/MVAU_hls_2_wstrm
-# set_property -dict [list CONFIG.DEPTH {6650} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_2/MVAU_hls_2_wstrm]
+# set_property -dict [list CONFIG.DEPTH {10800} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_2_r07ns4_z/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_2/MVAU_hls_2_wstrm]
 WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
-WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 15.0 is provided. The value is converted to long type(15)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 16.0 is provided. The value is converted to long type(16)
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_2/MVAU_hls_2_wstrm/m_axis_0] [get_bd_intf_pins MVAU_hls_2/MVAU_hls_2/weights_V]
 # connect_bd_net [get_bd_pins MVAU_hls_2/ap_rst_n] [get_bd_pins MVAU_hls_2/MVAU_hls_2_wstrm/ap_rst_n]
 # connect_bd_net [get_bd_pins MVAU_hls_2/ap_clk] [get_bd_pins MVAU_hls_2/MVAU_hls_2_wstrm/ap_clk]
@@ -778,9 +388,9 @@ WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but,
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_2/in0_V] [get_bd_intf_pins MVAU_hls_2/MVAU_hls_2/in0_V]
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_2/out_V] [get_bd_intf_pins MVAU_hls_2/MVAU_hls_2/out_V]
 # save_bd_design
-Wrote  : </tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme/StreamingFIFO_rtl_6.v
+Wrote  : </tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_6_v7cg0zqn/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_6_v7cg0zqn/StreamingFIFO_rtl_6.v
 # create_bd_cell -type module -reference StreamingFIFO_rtl_6 StreamingFIFO_rtl_6
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
@@ -790,48 +400,11 @@ INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-WARNING: [IP_Flow 19-3571] IP 'finn_design_StreamingFIFO_rtl_6_0' is restricted:
-* Detected changes to module reference file(s).
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1/swg_pkg.sv
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1/ConvolutionInputGenerator_rtl_3_wrapper.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1/ConvolutionInputGenerator_rtl_3_impl.sv
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1/swg_common.sv
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_k9ymzjjy/swg_pkg.sv
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_k9ymzjjy/ConvolutionInputGenerator_rtl_3_wrapper.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_k9ymzjjy/ConvolutionInputGenerator_rtl_3_impl.sv
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_k9ymzjjy/swg_common.sv
 # create_bd_cell -type module -reference ConvolutionInputGenerator_rtl_3 ConvolutionInputGenerator_rtl_3
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
@@ -843,47 +416,9 @@ INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOC
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
 INFO: [IP_Flow 19-818] Not transferring value dependency attribute "((spirit:decode(id('MODELPARAM_VALUE.BIT_WIDTH')) * spirit:decode(id('MODELPARAM_VALUE.SIMD'))) * spirit:decode(id('MODELPARAM_VALUE.MMV_IN')))" into user parameter "BUF_IN_WIDTH".
 INFO: [IP_Flow 19-818] Not transferring value dependency attribute "((spirit:decode(id('MODELPARAM_VALUE.BIT_WIDTH')) * spirit:decode(id('MODELPARAM_VALUE.SIMD'))) * spirit:decode(id('MODELPARAM_VALUE.MMV_OUT')))" into user parameter "BUF_OUT_WIDTH".
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-WARNING: [IP_Flow 19-3571] IP 'finn_design_ConvolutionInputGenerator_rtl_3_0' is restricted:
-* Detected changes to module reference file(s).
-create_bd_cell: Time (s): cpu = 00:00:20 ; elapsed = 00:00:05 . Memory (MB): peak = 1574.418 ; gain = 24.004 ; free physical = 25015 ; free virtual = 36809
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga/StreamingFIFO_rtl_7.v
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_7_sp00r4m7/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_7_sp00r4m7/StreamingFIFO_rtl_7.v
 # create_bd_cell -type module -reference StreamingFIFO_rtl_7 StreamingFIFO_rtl_7
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
@@ -893,45 +428,7 @@ INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-WARNING: [IP_Flow 19-3571] IP 'finn_design_StreamingFIFO_rtl_7_0' is restricted:
-* Detected changes to module reference file(s).
-create_bd_cell: Time (s): cpu = 00:00:19 ; elapsed = 00:00:05 . Memory (MB): peak = 1590.426 ; gain = 16.008 ; free physical = 25024 ; free virtual = 36818
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
 # create_bd_cell -type hier MVAU_hls_3
 # create_bd_pin -dir I -type clk /MVAU_hls_3/ap_clk
 # create_bd_pin -dir I -type rst /MVAU_hls_3/ap_rst_n
@@ -939,7 +436,7 @@ create_bd_cell: Time (s): cpu = 00:00:19 ; elapsed = 00:00:05 . Memory (MB): pea
 # create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_3/in0_V
 # create_bd_cell -type ip -vlnv xilinx.com:hls:MVAU_hls_3:1.0 /MVAU_hls_3/MVAU_hls_3
 # create_bd_cell -type ip -vlnv amd.com:finn:memstream:1.0 /MVAU_hls_3/MVAU_hls_3_wstrm
-# set_property -dict [list CONFIG.DEPTH {4275} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_3/MVAU_hls_3_wstrm]
+# set_property -dict [list CONFIG.DEPTH {6912} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_3_en1zw_ib/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_3/MVAU_hls_3_wstrm]
 WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
 WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 15.0 is provided. The value is converted to long type(15)
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_3/MVAU_hls_3_wstrm/m_axis_0] [get_bd_intf_pins MVAU_hls_3/MVAU_hls_3/weights_V]
@@ -950,9 +447,9 @@ WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but,
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_3/in0_V] [get_bd_intf_pins MVAU_hls_3/MVAU_hls_3/in0_V]
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_3/out_V] [get_bd_intf_pins MVAU_hls_3/MVAU_hls_3/out_V]
 # save_bd_design
-Wrote  : </tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx/StreamingFIFO_rtl_8.v
+Wrote  : </tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_8__c8hfmk8/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_8__c8hfmk8/StreamingFIFO_rtl_8.v
 # create_bd_cell -type module -reference StreamingFIFO_rtl_8 StreamingFIFO_rtl_8
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
@@ -962,45 +459,35 @@ INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-WARNING: [IP_Flow 19-3571] IP 'finn_design_StreamingFIFO_rtl_8_0' is restricted:
-* Detected changes to module reference file(s).
-create_bd_cell: Time (s): cpu = 00:00:25 ; elapsed = 00:00:06 . Memory (MB): peak = 1630.445 ; gain = 40.020 ; free physical = 25027 ; free virtual = 36822
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_4_52uw0bzh/swg_pkg.sv
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_4_52uw0bzh/ConvolutionInputGenerator_rtl_4_wrapper.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_4_52uw0bzh/ConvolutionInputGenerator_rtl_4_impl.sv
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_ConvolutionInputGenerator_rtl_4_52uw0bzh/swg_common.sv
+# create_bd_cell -type module -reference ConvolutionInputGenerator_rtl_4 ConvolutionInputGenerator_rtl_4
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'out_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
+INFO: [IP_Flow 19-818] Not transferring value dependency attribute "((spirit:decode(id('MODELPARAM_VALUE.BIT_WIDTH')) * spirit:decode(id('MODELPARAM_VALUE.SIMD'))) * spirit:decode(id('MODELPARAM_VALUE.MMV_IN')))" into user parameter "BUF_IN_WIDTH".
+INFO: [IP_Flow 19-818] Not transferring value dependency attribute "((spirit:decode(id('MODELPARAM_VALUE.BIT_WIDTH')) * spirit:decode(id('MODELPARAM_VALUE.SIMD'))) * spirit:decode(id('MODELPARAM_VALUE.MMV_OUT')))" into user parameter "BUF_OUT_WIDTH".
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_9__vo3ww3y/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_9__vo3ww3y/StreamingFIFO_rtl_9.v
+# create_bd_cell -type module -reference StreamingFIFO_rtl_9 StreamingFIFO_rtl_9
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'out_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
 # create_bd_cell -type hier MVAU_hls_4
 # create_bd_pin -dir I -type clk /MVAU_hls_4/ap_clk
 # create_bd_pin -dir I -type rst /MVAU_hls_4/ap_rst_n
@@ -1008,7 +495,7 @@ create_bd_cell: Time (s): cpu = 00:00:25 ; elapsed = 00:00:06 . Memory (MB): pea
 # create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_4/in0_V
 # create_bd_cell -type ip -vlnv xilinx.com:hls:MVAU_hls_4:1.0 /MVAU_hls_4/MVAU_hls_4
 # create_bd_cell -type ip -vlnv amd.com:finn:memstream:1.0 /MVAU_hls_4/MVAU_hls_4_wstrm
-# set_property -dict [list CONFIG.DEPTH {9000} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_4/MVAU_hls_4_wstrm]
+# set_property -dict [list CONFIG.DEPTH {9216} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_4_99q9woyy/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_4/MVAU_hls_4_wstrm]
 WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
 WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 16.0 is provided. The value is converted to long type(16)
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_4/MVAU_hls_4_wstrm/m_axis_0] [get_bd_intf_pins MVAU_hls_4/MVAU_hls_4/weights_V]
@@ -1019,10 +506,10 @@ WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but,
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_4/in0_V] [get_bd_intf_pins MVAU_hls_4/MVAU_hls_4/in0_V]
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_4/out_V] [get_bd_intf_pins MVAU_hls_4/MVAU_hls_4/out_V]
 # save_bd_design
-Wrote  : </tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg/StreamingFIFO_rtl_9.v
-# create_bd_cell -type module -reference StreamingFIFO_rtl_9 StreamingFIFO_rtl_9
+Wrote  : </tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_10_egvbypl6/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_10_egvbypl6/StreamingFIFO_rtl_10.v
+# create_bd_cell -type module -reference StreamingFIFO_rtl_10 StreamingFIFO_rtl_10
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
@@ -1031,56 +518,112 @@ INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-WARNING: [IP_Flow 19-3571] IP 'finn_design_StreamingFIFO_rtl_9_0' is restricted:
-* Detected changes to module reference file(s).
-create_bd_cell: Time (s): cpu = 00:00:25 ; elapsed = 00:00:06 . Memory (MB): peak = 1630.445 ; gain = 0.000 ; free physical = 25010 ; free virtual = 36805
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# create_bd_cell -type hier MVAU_hls_5
+# create_bd_pin -dir I -type clk /MVAU_hls_5/ap_clk
+# create_bd_pin -dir I -type rst /MVAU_hls_5/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_5/out_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_5/in0_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:MVAU_hls_5:1.0 /MVAU_hls_5/MVAU_hls_5
+# create_bd_cell -type ip -vlnv amd.com:finn:memstream:1.0 /MVAU_hls_5/MVAU_hls_5_wstrm
+# set_property -dict [list CONFIG.DEPTH {1600} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_5_nvq94m66/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_5/MVAU_hls_5_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 13.0 is provided. The value is converted to long type(13)
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_5/MVAU_hls_5_wstrm/m_axis_0] [get_bd_intf_pins MVAU_hls_5/MVAU_hls_5/weights_V]
+# connect_bd_net [get_bd_pins MVAU_hls_5/ap_rst_n] [get_bd_pins MVAU_hls_5/MVAU_hls_5_wstrm/ap_rst_n]
+# connect_bd_net [get_bd_pins MVAU_hls_5/ap_clk] [get_bd_pins MVAU_hls_5/MVAU_hls_5_wstrm/ap_clk]
+# connect_bd_net [get_bd_pins MVAU_hls_5/ap_rst_n] [get_bd_pins MVAU_hls_5/MVAU_hls_5/ap_rst_n]
+# connect_bd_net [get_bd_pins MVAU_hls_5/ap_clk] [get_bd_pins MVAU_hls_5/MVAU_hls_5/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_5/in0_V] [get_bd_intf_pins MVAU_hls_5/MVAU_hls_5/in0_V]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_5/out_V] [get_bd_intf_pins MVAU_hls_5/MVAU_hls_5/out_V]
+# save_bd_design
+Wrote  : </tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_11_dhav8tsd/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_11_dhav8tsd/StreamingFIFO_rtl_11.v
+# create_bd_cell -type module -reference StreamingFIFO_rtl_11 StreamingFIFO_rtl_11
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'out_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# create_bd_cell -type hier MVAU_hls_6
+# create_bd_pin -dir I -type clk /MVAU_hls_6/ap_clk
+# create_bd_pin -dir I -type rst /MVAU_hls_6/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_6/out_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_6/in0_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:MVAU_hls_6:1.0 /MVAU_hls_6/MVAU_hls_6
+# create_bd_cell -type ip -vlnv amd.com:finn:memstream:1.0 /MVAU_hls_6/MVAU_hls_6_wstrm
+# set_property -dict [list CONFIG.DEPTH {1250} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_6_bel7uuog/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_6/MVAU_hls_6_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 13.0 is provided. The value is converted to long type(13)
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_6/MVAU_hls_6_wstrm/m_axis_0] [get_bd_intf_pins MVAU_hls_6/MVAU_hls_6/weights_V]
+# connect_bd_net [get_bd_pins MVAU_hls_6/ap_rst_n] [get_bd_pins MVAU_hls_6/MVAU_hls_6_wstrm/ap_rst_n]
+# connect_bd_net [get_bd_pins MVAU_hls_6/ap_clk] [get_bd_pins MVAU_hls_6/MVAU_hls_6_wstrm/ap_clk]
+# connect_bd_net [get_bd_pins MVAU_hls_6/ap_rst_n] [get_bd_pins MVAU_hls_6/MVAU_hls_6/ap_rst_n]
+# connect_bd_net [get_bd_pins MVAU_hls_6/ap_clk] [get_bd_pins MVAU_hls_6/MVAU_hls_6/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_6/in0_V] [get_bd_intf_pins MVAU_hls_6/MVAU_hls_6/in0_V]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_6/out_V] [get_bd_intf_pins MVAU_hls_6/MVAU_hls_6/out_V]
+# save_bd_design
+Wrote  : </tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_12_vpvgfggy/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_12_vpvgfggy/StreamingFIFO_rtl_12.v
+CRITICAL WARNING: [Vivado 12-3645] Please note that adding or importing multiple files, one at a time, can be performance intensive.  Both add_files and import_files commands accept multiple files as input, and passing a collection of multiple files to a single add_files or import_files commands can offer significant performance improvement.
+# create_bd_cell -type module -reference StreamingFIFO_rtl_12 StreamingFIFO_rtl_12
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'out_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
+# create_bd_cell -type hier MVAU_hls_7
+# create_bd_pin -dir I -type clk /MVAU_hls_7/ap_clk
+# create_bd_pin -dir I -type rst /MVAU_hls_7/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_7/out_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_hls_7/in0_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:MVAU_hls_7:1.0 /MVAU_hls_7/MVAU_hls_7
+# create_bd_cell -type ip -vlnv amd.com:finn:memstream:1.0 /MVAU_hls_7/MVAU_hls_7_wstrm
+# set_property -dict [list CONFIG.DEPTH {125} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_7_ptwujrl6/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_hls_7/MVAU_hls_7_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 9.0 is provided. The value is converted to long type(9)
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_7/MVAU_hls_7_wstrm/m_axis_0] [get_bd_intf_pins MVAU_hls_7/MVAU_hls_7/weights_V]
+# connect_bd_net [get_bd_pins MVAU_hls_7/ap_rst_n] [get_bd_pins MVAU_hls_7/MVAU_hls_7_wstrm/ap_rst_n]
+# connect_bd_net [get_bd_pins MVAU_hls_7/ap_clk] [get_bd_pins MVAU_hls_7/MVAU_hls_7_wstrm/ap_clk]
+# connect_bd_net [get_bd_pins MVAU_hls_7/ap_rst_n] [get_bd_pins MVAU_hls_7/MVAU_hls_7/ap_rst_n]
+# connect_bd_net [get_bd_pins MVAU_hls_7/ap_clk] [get_bd_pins MVAU_hls_7/MVAU_hls_7/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_7/in0_V] [get_bd_intf_pins MVAU_hls_7/MVAU_hls_7/in0_V]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_7/out_V] [get_bd_intf_pins MVAU_hls_7/MVAU_hls_7/out_V]
+# save_bd_design
+Wrote  : </tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_13_jw6ncvct/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_13_jw6ncvct/StreamingFIFO_rtl_13.v
+# create_bd_cell -type module -reference StreamingFIFO_rtl_13 StreamingFIFO_rtl_13
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'out_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
 # create_bd_cell -type hier MVAU_rtl_0
 # create_bd_pin -dir I -type clk /MVAU_rtl_0/ap_clk
 # create_bd_pin -dir I -type rst /MVAU_rtl_0/ap_rst_n
 # create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_rtl_0/out_V
 # create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /MVAU_rtl_0/in0_V
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k/MVAU_rtl_0_wrapper.v
-# add_files -norecurse /home/petertso/finn/finn-rtllib/mvu/mvu_vvu_axi.sv
-# add_files -norecurse /home/petertso/finn/finn-rtllib/mvu/replay_buffer.sv
-# add_files -norecurse /home/petertso/finn/finn-rtllib/mvu/mvu_4sx4u.sv
-# add_files -norecurse /home/petertso/finn/finn-rtllib/mvu/mvu_vvu_8sx9_dsp58.sv
-# add_files -norecurse /home/petertso/finn/finn-rtllib/mvu/mvu_8sx8u_dsp48.sv
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_MVAU_rtl_0_8lvb43ez/MVAU_rtl_0_wrapper.v
+# add_files -norecurse /home/petertso/Documents/finn/finn-rtllib/mvu/mvu_vvu_axi.sv
+# add_files -norecurse /home/petertso/Documents/finn/finn-rtllib/mvu/replay_buffer.sv
+# add_files -norecurse /home/petertso/Documents/finn/finn-rtllib/mvu/mvu_4sx4u.sv
+# add_files -norecurse /home/petertso/Documents/finn/finn-rtllib/mvu/mvu_vvu_8sx9_dsp58.sv
+# add_files -norecurse /home/petertso/Documents/finn/finn-rtllib/mvu/mvu_8sx8u_dsp48.sv
 # create_bd_cell -type hier -reference MVAU_rtl_0 /MVAU_rtl_0/MVAU_rtl_0
 INFO: [BD 41-1695] Exec TCL: Specified '-reference' and/or '-hier' option will be ignored while creating 'hier' cell 'MVAU_rtl_0'.
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
@@ -1095,49 +638,11 @@ INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOC
 INFO: [IP_Flow 19-818] Not transferring value dependency attribute "(((((spirit:decode(id('MODELPARAM_VALUE.PE')) * spirit:decode(id('MODELPARAM_VALUE.SIMD'))) * spirit:decode(id('MODELPARAM_VALUE.WEIGHT_WIDTH'))) + 7) / 8) * 8)" into user parameter "WEIGHT_STREAM_WIDTH_BA".
 INFO: [IP_Flow 19-818] Not transferring value dependency attribute "(((((((spirit:decode(id('MODELPARAM_VALUE.IS_MVU')) = 1) ? 1 : spirit:decode(id('MODELPARAM_VALUE.PE'))) * spirit:decode(id('MODELPARAM_VALUE.SIMD'))) * spirit:decode(id('MODELPARAM_VALUE.ACTIVATION_WIDTH'))) + 7) / 8) * 8)" into user parameter "INPUT_STREAM_WIDTH_BA".
 INFO: [IP_Flow 19-818] Not transferring value dependency attribute "((((spirit:decode(id('MODELPARAM_VALUE.PE')) * spirit:decode(id('MODELPARAM_VALUE.ACCU_WIDTH'))) + 7) / 8) * 8)" into user parameter "OUTPUT_STREAM_WIDTH_BA".
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-WARNING: [IP_Flow 19-3571] IP 'finn_design_MVAU_rtl_0_0' is restricted:
-* Detected changes to module reference file(s).
-create_bd_cell: Time (s): cpu = 00:00:26 ; elapsed = 00:00:06 . Memory (MB): peak = 1638.449 ; gain = 8.004 ; free physical = 25000 ; free virtual = 36795
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
 # create_bd_cell -type ip -vlnv amd.com:finn:memstream:1.0 /MVAU_rtl_0/MVAU_rtl_0_wstrm
-# set_property -dict [list CONFIG.DEPTH {40} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_rtl_0/MVAU_rtl_0_wstrm]
+# set_property -dict [list CONFIG.DEPTH {5} CONFIG.WIDTH {8} CONFIG.INIT_FILE {/tmp/finn_dev_root/code_gen_ipgen_MVAU_rtl_0_8lvb43ez/memblock.dat} CONFIG.RAM_STYLE {auto} ] [get_bd_cells /MVAU_rtl_0/MVAU_rtl_0_wstrm]
 WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 11.0 is provided. The value is converted to long type(11)
-WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 8.0 is provided. The value is converted to long type(8)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 5.0 is provided. The value is converted to long type(5)
 # connect_bd_intf_net [get_bd_intf_pins MVAU_rtl_0/MVAU_rtl_0_wstrm/m_axis_0] [get_bd_intf_pins MVAU_rtl_0/MVAU_rtl_0/weights_V]
 # connect_bd_net [get_bd_pins MVAU_rtl_0/ap_rst_n] [get_bd_pins MVAU_rtl_0/MVAU_rtl_0_wstrm/ap_rst_n]
 # connect_bd_net [get_bd_pins MVAU_rtl_0/ap_clk] [get_bd_pins MVAU_rtl_0/MVAU_rtl_0_wstrm/ap_clk]
@@ -1146,10 +651,10 @@ WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but,
 # connect_bd_intf_net [get_bd_intf_pins MVAU_rtl_0/in0_V] [get_bd_intf_pins MVAU_rtl_0/MVAU_rtl_0/in0_V]
 # connect_bd_intf_net [get_bd_intf_pins MVAU_rtl_0/out_V] [get_bd_intf_pins MVAU_rtl_0/MVAU_rtl_0/out_V]
 # save_bd_design
-Wrote  : </tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo/Q_srl.v
-# add_files -norecurse /tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo/StreamingFIFO_rtl_10.v
-# create_bd_cell -type module -reference StreamingFIFO_rtl_10 StreamingFIFO_rtl_10
+Wrote  : </tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_14_iwhfydh4/Q_srl.v
+# add_files -norecurse /tmp/finn_dev_root/code_gen_ipgen_StreamingFIFO_rtl_14_iwhfydh4/StreamingFIFO_rtl_14.v
+# create_bd_cell -type module -reference StreamingFIFO_rtl_14 StreamingFIFO_rtl_14
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'in0_V' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
@@ -1158,45 +663,7 @@ INFO: [IP_Flow 19-5107] Inferred bus interface 'ap_rst_n' of definition 'xilinx.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'ap_rst_n'.
 INFO: [IP_Flow 19-4728] Bus Interface 'ap_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'in0_V'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'ap_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/petertso/finn/finn-rtllib/memstream'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_0_ead086z8'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_0_s_ojggnm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_0_qiayqkqq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_1_xzf4gw07'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_2_13yaclnt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_3__77t3xcg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_4_8i0ixbta'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_1_5_m2hkq4yq'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_0_yuvaobx1/project_MVAU_hls_0/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_0_6i1jv2jt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_1_lbu7a_e4'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_2_3gci8mbm'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_2_3_rjqem9qf'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_1_4fr2puru'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_0_8vue2d2w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_1_oxkic11w'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_2_dp7xlskh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_3_3_mg_avk4e'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_1_bb0ppeni/project_MVAU_hls_1/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_4_ef03r5gt'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_2_b8raby7y'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_0_2q3fmhbh'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_5_1_sboomhrn'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_2_bdz84rn8/project_MVAU_hls_2/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_6_vz06thme'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_ConvolutionInputGenerator_rtl_3_9oaq_0a1'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_7_utm4p4ga'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/project_MVAU_hls_3/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_8_b3f46rnx'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_4_a07lv9n8/project_MVAU_hls_4/sol1/impl/ip'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_9_xm4vm7gg'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_rtl_0_4jah_i4k'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_petertso/code_gen_ipgen_StreamingFIFO_rtl_10_njglzgbo'.
-WARNING: [IP_Flow 19-3571] IP 'finn_design_StreamingFIFO_rtl_10_0' is restricted:
-* Detected changes to module reference file(s).
-create_bd_cell: Time (s): cpu = 00:00:30 ; elapsed = 00:00:07 . Memory (MB): peak = 1638.449 ; gain = 0.000 ; free physical = 25001 ; free virtual = 36797
+WARNING: [IP_Flow 19-11770] Clock interface 'ap_clk' has no FREQ_HZ parameter.
 # make_bd_pins_external [get_bd_pins StreamingFIFO_rtl_0/ap_clk]
 # set_property name ap_clk [get_bd_ports ap_clk_0]
 # make_bd_pins_external [get_bd_pins StreamingFIFO_rtl_0/ap_rst_n]
@@ -1231,15 +698,9 @@ create_bd_cell: Time (s): cpu = 00:00:30 ; elapsed = 00:00:07 . Memory (MB): pea
 # connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_2_1/ap_rst_n]
 # connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_2_1/ap_clk]
 # connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_2_0/out_V] [get_bd_intf_pins StreamingFIFO_rtl_2_1/in0_V]
-# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_2_2/ap_rst_n]
-# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_2_2/ap_clk]
-# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_2_1/out_V] [get_bd_intf_pins StreamingFIFO_rtl_2_2/in0_V]
-# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_2_3/ap_rst_n]
-# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_2_3/ap_clk]
-# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_2_2/out_V] [get_bd_intf_pins StreamingFIFO_rtl_2_3/in0_V]
 # connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins ConvolutionInputGenerator_rtl_1/ap_rst_n]
 # connect_bd_net [get_bd_ports ap_clk] [get_bd_pins ConvolutionInputGenerator_rtl_1/ap_clk]
-# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_2_3/out_V] [get_bd_intf_pins ConvolutionInputGenerator_rtl_1/in0_V]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_2_1/out_V] [get_bd_intf_pins ConvolutionInputGenerator_rtl_1/in0_V]
 # connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_3_0/ap_rst_n]
 # connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_3_0/ap_clk]
 # connect_bd_intf_net [get_bd_intf_pins ConvolutionInputGenerator_rtl_1/out_V] [get_bd_intf_pins StreamingFIFO_rtl_3_0/in0_V]
@@ -1252,9 +713,12 @@ create_bd_cell: Time (s): cpu = 00:00:30 ; elapsed = 00:00:07 . Memory (MB): pea
 # connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_3_3/ap_rst_n]
 # connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_3_3/ap_clk]
 # connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_3_2/out_V] [get_bd_intf_pins StreamingFIFO_rtl_3_3/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_3_4/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_3_4/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_3_3/out_V] [get_bd_intf_pins StreamingFIFO_rtl_3_4/in0_V]
 # connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins MVAU_hls_1/ap_rst_n]
 # connect_bd_net [get_bd_ports ap_clk] [get_bd_pins MVAU_hls_1/ap_clk]
-# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_3_3/out_V] [get_bd_intf_pins MVAU_hls_1/in0_V]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_3_4/out_V] [get_bd_intf_pins MVAU_hls_1/in0_V]
 # connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_4/ap_rst_n]
 # connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_4/ap_clk]
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_1/out_V] [get_bd_intf_pins StreamingFIFO_rtl_4/in0_V]
@@ -1285,58 +749,64 @@ create_bd_cell: Time (s): cpu = 00:00:30 ; elapsed = 00:00:07 . Memory (MB): pea
 # connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_8/ap_rst_n]
 # connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_8/ap_clk]
 # connect_bd_intf_net [get_bd_intf_pins MVAU_hls_3/out_V] [get_bd_intf_pins StreamingFIFO_rtl_8/in0_V]
-# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins MVAU_hls_4/ap_rst_n]
-# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins MVAU_hls_4/ap_clk]
-# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_8/out_V] [get_bd_intf_pins MVAU_hls_4/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins ConvolutionInputGenerator_rtl_4/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins ConvolutionInputGenerator_rtl_4/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_8/out_V] [get_bd_intf_pins ConvolutionInputGenerator_rtl_4/in0_V]
 # connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_9/ap_rst_n]
 # connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_9/ap_clk]
-# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_4/out_V] [get_bd_intf_pins StreamingFIFO_rtl_9/in0_V]
-# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins MVAU_rtl_0/ap_rst_n]
-# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins MVAU_rtl_0/ap_clk]
-# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_9/out_V] [get_bd_intf_pins MVAU_rtl_0/in0_V]
+# connect_bd_intf_net [get_bd_intf_pins ConvolutionInputGenerator_rtl_4/out_V] [get_bd_intf_pins StreamingFIFO_rtl_9/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins MVAU_hls_4/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins MVAU_hls_4/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_9/out_V] [get_bd_intf_pins MVAU_hls_4/in0_V]
 # connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_10/ap_rst_n]
 # connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_10/ap_clk]
-# connect_bd_intf_net [get_bd_intf_pins MVAU_rtl_0/out_V] [get_bd_intf_pins StreamingFIFO_rtl_10/in0_V]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_4/out_V] [get_bd_intf_pins StreamingFIFO_rtl_10/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins MVAU_hls_5/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins MVAU_hls_5/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_10/out_V] [get_bd_intf_pins MVAU_hls_5/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_11/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_11/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_5/out_V] [get_bd_intf_pins StreamingFIFO_rtl_11/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins MVAU_hls_6/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins MVAU_hls_6/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_11/out_V] [get_bd_intf_pins MVAU_hls_6/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_12/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_12/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_6/out_V] [get_bd_intf_pins StreamingFIFO_rtl_12/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins MVAU_hls_7/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins MVAU_hls_7/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_12/out_V] [get_bd_intf_pins MVAU_hls_7/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_13/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_13/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_hls_7/out_V] [get_bd_intf_pins StreamingFIFO_rtl_13/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins MVAU_rtl_0/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins MVAU_rtl_0/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingFIFO_rtl_13/out_V] [get_bd_intf_pins MVAU_rtl_0/in0_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingFIFO_rtl_14/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingFIFO_rtl_14/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins MVAU_rtl_0/out_V] [get_bd_intf_pins StreamingFIFO_rtl_14/in0_V]
 # make_bd_intf_pins_external [get_bd_intf_pins StreamingFIFO_rtl_0/in0_V]
 # set_property name s_axis_0 [get_bd_intf_ports in0_V_0]
-# make_bd_intf_pins_external [get_bd_intf_pins StreamingFIFO_rtl_10/out_V]
+# make_bd_intf_pins_external [get_bd_intf_pins StreamingFIFO_rtl_14/out_V]
 # set_property name m_axis_0 [get_bd_intf_ports out_V_0]
 # set_property CONFIG.FREQ_HZ 83333333 [get_bd_ports /ap_clk]
 # validate_bd_design
-WARNING: [BD 41-927] Following properties on pin /MVAU_hls_0/MVAU_hls_0_wstrm/ap_clk have been updated from connected ip, but BD cell '/MVAU_hls_0/MVAU_hls_0_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
-	FREQ_HZ = 83333333 
-Please resolve any mismatches by directly setting properties on BD cell </MVAU_hls_0/MVAU_hls_0_wstrm> to completely resolve these warnings.
-WARNING: [BD 41-927] Following properties on pin /MVAU_hls_1/MVAU_hls_1_wstrm/ap_clk have been updated from connected ip, but BD cell '/MVAU_hls_1/MVAU_hls_1_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
-	FREQ_HZ = 83333333 
-Please resolve any mismatches by directly setting properties on BD cell </MVAU_hls_1/MVAU_hls_1_wstrm> to completely resolve these warnings.
-WARNING: [BD 41-927] Following properties on pin /MVAU_hls_2/MVAU_hls_2_wstrm/ap_clk have been updated from connected ip, but BD cell '/MVAU_hls_2/MVAU_hls_2_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
-	FREQ_HZ = 83333333 
-Please resolve any mismatches by directly setting properties on BD cell </MVAU_hls_2/MVAU_hls_2_wstrm> to completely resolve these warnings.
-WARNING: [BD 41-927] Following properties on pin /MVAU_hls_3/MVAU_hls_3_wstrm/ap_clk have been updated from connected ip, but BD cell '/MVAU_hls_3/MVAU_hls_3_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
-	FREQ_HZ = 83333333 
-Please resolve any mismatches by directly setting properties on BD cell </MVAU_hls_3/MVAU_hls_3_wstrm> to completely resolve these warnings.
-WARNING: [BD 41-927] Following properties on pin /MVAU_hls_4/MVAU_hls_4_wstrm/ap_clk have been updated from connected ip, but BD cell '/MVAU_hls_4/MVAU_hls_4_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
-	FREQ_HZ = 83333333 
-Please resolve any mismatches by directly setting properties on BD cell </MVAU_hls_4/MVAU_hls_4_wstrm> to completely resolve these warnings.
-WARNING: [BD 41-927] Following properties on pin /MVAU_rtl_0/MVAU_rtl_0_wstrm/ap_clk have been updated from connected ip, but BD cell '/MVAU_rtl_0/MVAU_rtl_0_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
-	FREQ_HZ = 83333333 
-Please resolve any mismatches by directly setting properties on BD cell </MVAU_rtl_0/MVAU_rtl_0_wstrm> to completely resolve these warnings.
 # save_bd_design
-Wrote  : </tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
-# make_wrapper -files [get_files /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd] -top
+Wrote  : </tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd> 
+# make_wrapper -files [get_files /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/finn_design.bd] -top
 INFO: [BD 41-1662] The design 'finn_design.bd' is already validated. Therefore parameter propagation will not be re-run.
-Verilog Output written to : /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/synth/finn_design.v
-Verilog Output written to : /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/sim/finn_design.v
-Verilog Output written to : /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/hdl/finn_design_wrapper.v
-# add_files -norecurse /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/hdl/finn_design_wrapper.v
-INFO: [Project 1-1716] Could not find the wrapper file /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/hdl/finn_design_wrapper.v, checking in project .gen location instead.
-INFO: [Vivado 12-12390] Found file /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/hdl/finn_design_wrapper.v, adding it to Project
+Verilog Output written to : /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/synth/finn_design.v
+Verilog Output written to : /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/sim/finn_design.v
+Verilog Output written to : /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/hdl/finn_design_wrapper.v
+# add_files -norecurse /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/hdl/finn_design_wrapper.v
+INFO: [Project 1-1716] Could not find the wrapper file /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.srcs/sources_1/bd/finn_design/hdl/finn_design_wrapper.v, checking in project .gen location instead.
+INFO: [Vivado 12-12390] Found file /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/hdl/finn_design_wrapper.v, adding it to Project
 # set_property top finn_design_wrapper [current_fileset]
-# ipx::package_project -root_dir /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/ip -vendor xilinx_finn -library finn -taxonomy /UserIP -module finn_design -import_files
+# ipx::package_project -root_dir /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/ip -vendor xilinx_finn -library finn -taxonomy /UserIP -module finn_design -import_files
 INFO: [BD 41-1662] The design 'finn_design.bd' is already validated. Therefore parameter propagation will not be re-run.
-Verilog Output written to : /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/synth/finn_design.v
-Verilog Output written to : /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/sim/finn_design.v
-Verilog Output written to : /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/hdl/finn_design_wrapper.v
+Verilog Output written to : /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/synth/finn_design.v
+Verilog Output written to : /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/sim/finn_design.v
+Verilog Output written to : /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/hdl/finn_design_wrapper.v
 INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_0 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ConvolutionInputGenerator_rtl_0 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_1_0/fifo .
@@ -1348,19 +818,18 @@ INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIF
 INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_0/MVAU_hls_0 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_0/MVAU_hls_0_wstrm .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_2_0/fifo .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_2_1/fifo .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_2_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_2_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_2_1 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ConvolutionInputGenerator_rtl_1 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_3_0/fifo .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_3_1/fifo .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_3_2/fifo .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_3_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_3_3/fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_3_4 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_1/MVAU_hls_1 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_1/MVAU_hls_1_wstrm .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_4 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ConvolutionInputGenerator_rtl_2 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_5_0/fifo .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_5_0 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_5_1 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_2/MVAU_hls_2 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_2/MVAU_hls_2_wstrm .
@@ -1370,27 +839,32 @@ INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIF
 INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_3/MVAU_hls_3 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_3/MVAU_hls_3_wstrm .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ConvolutionInputGenerator_rtl_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_9 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_4/MVAU_hls_4 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_4/MVAU_hls_4_wstrm .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_9 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_5/MVAU_hls_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_5/MVAU_hls_5_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_11 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_6/MVAU_hls_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_6/MVAU_hls_6_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_12 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_7/MVAU_hls_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_hls_7/MVAU_hls_7_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_13 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_rtl_0/MVAU_rtl_0 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block MVAU_rtl_0/MVAU_rtl_0_wstrm .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_10 .
-Exporting to file /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/hw_handoff/finn_design.hwh
-Generated Hardware Definition File /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/synth/finn_design.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingFIFO_rtl_14 .
+Exporting to file /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/hw_handoff/finn_design.hwh
+Generated Hardware Definition File /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/synth/finn_design.hwdef
 INFO: [IP_Flow 19-5654] Module 'finn_design' uses SystemVerilog sources with a Verilog top file. These SystemVerilog files will not be analysed by the packager.
-CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 m_axis_0'
-CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 m_axis_0'
-CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 m_axis_0'
-CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 s_axis_0'
-CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 s_axis_0'
-CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 s_axis_0'
+WARNING: [IP_Flow 19-11888] Component Definition 'xilinx_finn:finn:finn_design:1.0 (finn_design_v1_0)': IP description "finn_design_v1_0" is not meaningful: same as name or display name
 INFO: [IP_Flow 19-7067] Note that bus interface 's_axis_0' has a fixed FREQ_HZ of '83333333'. This value will be respected whenever this IP is instantiated in IP Integrator.
 INFO: [IP_Flow 19-7067] Note that bus interface 'm_axis_0' has a fixed FREQ_HZ of '83333333'. This value will be respected whenever this IP is instantiated in IP Integrator.
 INFO: [IP_Flow 19-7067] Note that bus interface 'CLK.AP_CLK' has a fixed FREQ_HZ of '83333333'. This value will be respected whenever this IP is instantiated in IP Integrator.
-WARNING: [IP_Flow 19-3157] Bus Interface 'RST.AP_RST_N': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
-INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
-INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [IP_Flow 19-2181] Payment is not required for this core.
+WARNING: [IP_Flow 19-2187] The Product Guide file is missing.
 # set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
 # ipx::remove_segment -quiet m_axi_gmem0:APERTURE_0 [ipx::get_address_spaces m_axi_gmem0 -of_objects [ipx::current_core]]
 # set_property core_revision 2 [ipx::find_open_core xilinx_finn:finn:finn_design:1.0]
@@ -1458,7 +932,7 @@ WARNING: [BD 5-233] No interface ports matched 'get_bd_intf_ports -filter CONFIG
 # close $ifile
 # close $ofile
 # set all_v_files [get_files -filter {USED_IN_SYNTHESIS == 1 && (FILE_TYPE == Verilog || FILE_TYPE == SystemVerilog || FILE_TYPE =="Verilog Header")}]
-# set fp [open /tmp/finn_dev_petertso/vivado_stitch_proj_j1huvqm4/all_verilog_srcs.txt w]
+# set fp [open /tmp/finn_dev_root/vivado_stitch_proj_4g29v702/all_verilog_srcs.txt w]
 # foreach vf $all_v_files {puts $fp $vf}
 # close $fp
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 13 18:24:11 2025...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 20 02:17:32 2025...

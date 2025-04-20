@@ -5,20 +5,20 @@
     "cell_name": "MVAU_hls_3/MVAU_hls_3_wstrm",
     "component_reference": "amd.com:finn:memstream:1.0",
     "ip_revision": "5",
-    "gen_directory": "../../../../../../finn_vivado_stitch_proj.gen/sources_1/bd/finn_design/ip/finn_design_MVAU_hls_3_wstrm_0",
+    "gen_directory": "./",
     "parameters": {
       "component_parameters": {
-        "DEPTH": [ { "value": "4275", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "DEPTH": [ { "value": "6912", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "WIDTH": [ { "value": "8", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "INIT_FILE": [ { "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/memblock.dat", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "INIT_FILE": [ { "value": "/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_3_en1zw_ib/memblock.dat", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "RAM_STYLE": [ { "value": "auto", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "AXILITE_ADDR_WIDTH": [ { "value": "15", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "Component_Name": [ { "value": "finn_design_MVAU_hls_3_wstrm_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "DEPTH": [ { "value": "4275", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "DEPTH": [ { "value": "6912", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "WIDTH": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "INIT_FILE": [ { "value": "/tmp/finn_dev_petertso/code_gen_ipgen_MVAU_hls_3_xi9q_6zb/memblock.dat", "resolve_type": "generated", "usage": "all" } ],
+        "INIT_FILE": [ { "value": "/tmp/finn_dev_root/code_gen_ipgen_MVAU_hls_3_en1zw_ib/memblock.dat", "resolve_type": "generated", "usage": "all" } ],
         "RAM_STYLE": [ { "value": "auto", "resolve_type": "generated", "usage": "all" } ],
         "AXILITE_ADDR_WIDTH": [ { "value": "15", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
@@ -33,9 +33,7 @@
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
         "SPEEDGRADE": [ { "value": "-1" } ],
         "STATIC_POWER": [ { "value": "" } ],
-        "TEMPERATURE_GRADE": [ { "value": "" } ],
-        "USE_RDI_CUSTOMIZATION": [ { "value": "TRUE" } ],
-        "USE_RDI_GENERATION": [ { "value": "TRUE" } ]
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
@@ -43,8 +41,8 @@
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "./" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
-        "SHAREDDIR": [ { "value": "./" } ],
-        "SWVERSION": [ { "value": "2022.2" } ],
+        "SHAREDDIR": [ { "value": "." } ],
+        "SWVERSION": [ { "value": "2024.2" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },

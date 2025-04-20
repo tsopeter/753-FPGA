@@ -52,7 +52,7 @@ output  [7:0] out_V_TDATA
 );
 
 Q_srl #(
-.depth(161),
+.depth(190),
 .width(8)
 )
 impl
