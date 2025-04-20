@@ -23,18 +23,17 @@ class PilotNet(nn.Module):
         self.conv5  = QuantConv2d(int(64*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width)
         self.flatten = nn.Flatten()
 
+        cvz = [
+            self.conv1,
+            self.conv2,
+            self.conv3,
+            self.conv4,
+            self.conv5,
+        ]
+
         self.cvz = nn.ModuleList()
-        for i in range(min(5, convz)):
-            if (i == 0):
-                self.cvz.append(self.conv1)
-            elif (i == 1):
-                self.cvz.append(self.conv2)
-            elif (i == 2):
-                self.cvz.append(self.conv3)
-            elif (i == 3):
-                self.cvz.append(self.conv4)
-            else:
-                self.cvz.append(self.conv5)
+        for i in range(min(len(cvz), convz)):
+            self.cvz.append(cvz[i])
 
         self.flattened_size = self._get_flattened_size()
 
