@@ -22,16 +22,32 @@ bit_width    = network_params['bit_width']
 
 device       = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-def get_network(n_conv : int, n_dense : int, width : int)->PilotNet:
+def map_to_labels(x: torch.Tensor) -> torch.Tensor:
+    return torch.where(
+        x < -0.15, -1,
+        torch.where(x > 0.15, 1, 0)
+    )
+
+def get_dataset_distribution(dataset: ImageDataset):
+    turns = dataset.turns
+
+    left   = torch.sum(turns < -0.15)
+    right  = torch.sum(turns > 0.15)
+    center = torch.sum((turns >= -0.15) & (turns <= 0.15))
+
+    return int(left), int(center), int(right)
+
+def get_network(n_conv : int, n_dense : int, width : int, check_inputs : bool = True)->PilotNet:
     # check network parameters are valid
-    if (n_conv < min_conv or n_conv > max_conv):
-        raise ValueError(f"n_conv must be in range {min_conv} and {max_conv}")
-    
-    if (n_dense < min_dense or n_dense > max_dense):
-        raise ValueError(f"n_dense must be in range {min_dense} and {max_dense}")
-    
-    if (width < min_width or width > max_width):
-        raise ValueError(f"width must be in range {min_width} and {max_width}")
+    if check_inputs:
+        if (n_conv < min_conv or n_conv > max_conv):
+            raise ValueError(f"n_conv must be in range {min_conv} and {max_conv}")
+        
+        if (n_dense < min_dense or n_dense > max_dense):
+            raise ValueError(f"n_dense must be in range {min_dense} and {max_dense}")
+        
+        if (width < min_width or width > max_width):
+            raise ValueError(f"width must be in range {min_width} and {max_width}")
     
     return PilotNet(
         width=image_width, height=image_height,
@@ -45,7 +61,9 @@ def get_network(n_conv : int, n_dense : int, width : int)->PilotNet:
 def evaluate(model : PilotNet, val_loader : DataLoader)->None:
     pass
 
-def train(model : PilotNet, stats : Stats, train_loader : DataLoader, test_loader : DataLoader)->None:
+from collections import defaultdict
+
+def train(model : PilotNet, train_loader : DataLoader, test_loader : DataLoader)->None:
     epochs = network_params['epoch']
     lr     = network_params['lr']
 
@@ -54,19 +72,64 @@ def train(model : PilotNet, stats : Stats, train_loader : DataLoader, test_loade
 
     for epoch in range(epochs):
         model.train()
+        training_loss = 0.0
         for images, turns in train_loader:
             images, turns = images.to(device), turns.to(device)
+            images = images / 255
 
+            optim.zero_grad()
             preds = model(images)
-            loss  = lossfn(turns, preds)
+            loss  = lossfn(preds, turns)
+
+            loss.backward()
+            optim.step()
+
+            training_loss += loss.item() * images.size(0)
+        average_training_loss = training_loss / len(train_loader.dataset)
 
         model.eval()
+        testing_loss = 0.0
+        total_correct = 0
+        total_count   = 0
+
+        class_correct = defaultdict(int)
+        class_total   = defaultdict(int)
+
         for images, turns in test_loader:
             images, turns = images.to(device), turns.to(device)
+            images = images / 255
+            turns  = turns.unsqueeze(1)
 
             preds = model(images)
-            loss  = lossfn(turns, preds)
-            
+            loss  = lossfn(preds, turns)
+            testing_loss += loss.item() * images.size(0)
+
+            expected = map_to_labels(preds)  # <- must output {-1, 0, 1}
+            true     = map_to_labels(turns)
+
+            for label in [-1, 0, 1]:
+                mask = (true == label)
+                class_correct[label] += torch.sum((expected == true) & mask).item()
+                class_total[label]   += mask.sum().item()
+
+            total_correct += torch.sum(expected == true).item()
+            total_count   += len(true)
+
+        average_testing_loss = testing_loss / len(test_loader.dataset)
+        accuracy = total_correct / total_count
+
+        print(f'Epoch: {epoch+1}: Training Loss: {average_training_loss:.4f}, Testing Loss: {average_testing_loss:.4f}, Accuracy: {100*accuracy:.2f}%')
+
+        for label in [-1, 0, 1]:
+            total = class_total[label]
+            correct = class_correct[label]
+            if total > 0:
+                acc = 100 * correct / total
+                print(f"  Class {label}: {correct}/{total} correct ({acc:.2f}%)")
+            else:
+                print(f"  Class {label}: No samples")
+
+
 def evolution(n_generations : int, stats : PerformanceContrib, train_loader : DataLoader, test_loader :DataLoader, val_loader : DataLoader):
     pass
 
@@ -78,15 +141,31 @@ def brute(stats : PerformanceContrib, train_loader : DataLoader, test_loader : D
     for conv in n_convs:
         for dense in n_dense:
             for width in widths:
-                model = get_network(conv, dense, width)
+                model = get_network(conv, dense, width).to(device)
 
-                train(model, stats.get_stats(width, conv, dense), train_loader, test_loader)
+                train(model, train_loader, test_loader)
                 evaluate(model, val_loader)
 
 stats   = PerformanceContrib(network_params["lstats"])
-dataset = ImageDataset(network_params["dataset_dir"], file_range=[0,7])
-model = get_network(5,3,0.3)
-print(f'Dataset length: {len(dataset)}')
+train_dataset = ImageDataset(network_params["dataset_dir"], file_range=[0,7])
+test_dataset  = ImageDataset(network_params["dataset_dir"], file_range=[8,8])
+val_dataset   = ImageDataset(network_params["dataset_dir"], file_range=[9,9])
+
+train_loader  = DataLoader(train_dataset, network_params["bsz"], shuffle=True)
+test_loader   = DataLoader(test_dataset, network_params["bsz"], shuffle=False)
+val_loader    = DataLoader(val_dataset, network_params["bsz"], shuffle=False)
+
+model = get_network(5,3,0.5, check_inputs=False).to(device)
+
+print(f'Training Data')
+print(f'\tTraining Dataset: {len(train_dataset)}, {get_dataset_distribution(train_dataset)}')
+print(f'\tTesting Dataset: {len(test_dataset)}, {get_dataset_distribution(test_dataset)}')
+print(f'\tValidation Dataset: {len(val_dataset)}, {get_dataset_distribution(val_dataset)}')
+
+train(model, train_loader, test_loader)
+
+
+
 
 
 

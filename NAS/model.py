@@ -6,7 +6,7 @@ from   brevitas.nn import QuantConv2d, QuantReLU, QuantLinear
 class PilotNet(nn.Module):
     def __init__(self, width : int = 320, height : int = 240,
                 weight_bit_width : int = 4, act_bit_width : int = 4, width_multiplier : float = 1.0,
-                convz : int = 5, densez : str = 3):
+                convz : int = 5, densez : str = 3, out_features : int=1):
         super(PilotNet, self).__init__()
 
         self.height = height
@@ -51,7 +51,7 @@ class PilotNet(nn.Module):
             self.fcs.append(QuantLinear(in_features, hidden_sizes[i], bias=True, weight_bit_width=self.weight_bit_width))
             in_features = hidden_sizes[i]
             
-        self.output = QuantLinear(in_features, 1, bias=True, weight_bit_width=self.weight_bit_width)
+        self.output = QuantLinear(in_features, out_features=out_features, bias=True, weight_bit_width=self.weight_bit_width)
 
     def _get_flattened_size(self):
         x = torch.zeros(1,1,self.height,self.width)

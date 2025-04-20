@@ -43,8 +43,7 @@ def parse_file(dir: str, image_size=(64, 64)) -> tuple[np.ndarray, np.ndarray]:
     if 'wheel' not in df.columns:
         raise ValueError("CSV must contain a 'wheel' column.")
 
-    wheel_vals = df['wheel'].values
-    labels = np.where(wheel_vals > 0, 1, np.where(wheel_vals < 0, -1, 0)).astype(np.int8)
+    labels = df['wheel'].values
 
     # Align lengths
     min_len = min(len(frames), len(labels))
