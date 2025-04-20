@@ -6,7 +6,8 @@ from   brevitas.nn import QuantConv2d, QuantReLU, QuantLinear
 class PilotNet(nn.Module):
     def __init__(self, width : int = 320, height : int = 240,
                 weight_bit_width : int = 4, act_bit_width : int = 4, width_multiplier : float = 1.0,
-                convz : int = 5, densez : str = 3, out_features : int=1):
+                convz : int = 5, densez : str = 3, out_features : int=1, use_softmax : bool=False,
+                non_quantized : bool = False):
         super(PilotNet, self).__init__()
 
         self.height = height
@@ -16,11 +17,22 @@ class PilotNet(nn.Module):
         self.weight_bit_width = weight_bit_width
         self.act_bit_width    = act_bit_width
 
-        self.conv1  = QuantConv2d(1,  int(24*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width)
-        self.conv2  = QuantConv2d(int(24*self.width_multiplier), int(36*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width)
-        self.conv3  = QuantConv2d(int(36*self.width_multiplier), int(48*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width)
-        self.conv4  = QuantConv2d(int(48*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width)
-        self.conv5  = QuantConv2d(int(64*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width)
+        self.use_softmax = use_softmax
+
+
+        if not non_quantized:      
+            self.conv1  = QuantConv2d(1,  int(24*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width)
+            self.conv2  = QuantConv2d(int(24*self.width_multiplier), int(36*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width)
+            self.conv3  = QuantConv2d(int(36*self.width_multiplier), int(48*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width)
+            self.conv4  = QuantConv2d(int(48*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width)
+            self.conv5  = QuantConv2d(int(64*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width)
+        else:
+            self.conv1  = nn.Conv2d(1,  int(24*self.width_multiplier), kernel_size=5, stride=2)
+            self.conv2  = nn.Conv2d(int(24*self.width_multiplier), int(36*self.width_multiplier), kernel_size=5, stride=2)
+            self.conv3  = nn.Conv2d(int(36*self.width_multiplier), int(48*self.width_multiplier), kernel_size=5, stride=2)
+            self.conv4  = nn.Conv2d(int(48*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1)
+            self.conv5  = nn.Conv2d(int(64*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1)
+
         self.flatten = nn.Flatten()
 
         cvz = [
@@ -37,7 +49,10 @@ class PilotNet(nn.Module):
 
         self.flattened_size = self._get_flattened_size()
 
-        self.relu1  = QuantReLU(bit_width=self.act_bit_width)
+        if not non_quantized:
+            self.relu1  = QuantReLU(bit_width=self.act_bit_width)
+        else:
+            self.relu1  = nn.ReLU()
 
         hidden_sizes = [100, 50, 10]
 
@@ -48,10 +63,17 @@ class PilotNet(nn.Module):
         in_features = self.flattened_size
 
         for i in range(min(densez, len(hidden_sizes))):
-            self.fcs.append(QuantLinear(in_features, hidden_sizes[i], bias=True, weight_bit_width=self.weight_bit_width))
+            if not non_quantized:
+                self.fcs.append(QuantLinear(in_features, hidden_sizes[i], bias=True, weight_bit_width=self.weight_bit_width))
+            else:
+                self.fcs.append(nn.Linear(in_features, hidden_sizes[i], bias=True))
             in_features = hidden_sizes[i]
             
-        self.output = QuantLinear(in_features, out_features=out_features, bias=True, weight_bit_width=self.weight_bit_width)
+        if not non_quantized:
+            self.output = QuantLinear(in_features, out_features=out_features, bias=True, weight_bit_width=self.weight_bit_width)
+        else:
+            self.output = nn.Linear(in_features, out_features=out_features, bias=True)
+        self.softmax = nn.Softmax(dim=1)
 
     def _get_flattened_size(self):
         x = torch.zeros(1,1,self.height,self.width)
@@ -67,4 +89,8 @@ class PilotNet(nn.Module):
         for fc in self.fcs:
             x = self.relu1(fc(x))
         x = self.output(x)
+
+        if self.use_softmax:
+            x = self.softmax(x)
+
         return x

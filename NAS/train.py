@@ -6,62 +6,15 @@ from params import network_params
 from dataset import ImageDataset
 from contrib import PerformanceContrib, Stats
 import numpy as np
+from collections import defaultdict
+from unified import *
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
-
-image_height = network_params["image_height"]
-image_width  = network_params["image_width"]
-min_conv     = network_params['minimum_conv_layers']
-max_conv     = network_params['maximum_conv_layers']
-min_dense    = network_params['minimum_dense_layers']
-max_dense    = network_params['maximum_dense_layers']
-min_width    = network_params['minimum_width']
-max_width    = network_params['maximum_width']
-bit_width    = network_params['bit_width']
-
 device       = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-def map_to_labels(x: torch.Tensor) -> torch.Tensor:
-    return torch.where(
-        x < -0.15, -1,
-        torch.where(x > 0.15, 1, 0)
-    )
-
-def get_dataset_distribution(dataset: ImageDataset):
-    turns = dataset.turns
-
-    left   = torch.sum(turns < -0.15)
-    right  = torch.sum(turns > 0.15)
-    center = torch.sum((turns >= -0.15) & (turns <= 0.15))
-
-    return int(left), int(center), int(right)
-
-def get_network(n_conv : int, n_dense : int, width : int, check_inputs : bool = True)->PilotNet:
-    # check network parameters are valid
-    if check_inputs:
-        if (n_conv < min_conv or n_conv > max_conv):
-            raise ValueError(f"n_conv must be in range {min_conv} and {max_conv}")
-        
-        if (n_dense < min_dense or n_dense > max_dense):
-            raise ValueError(f"n_dense must be in range {min_dense} and {max_dense}")
-        
-        if (width < min_width or width > max_width):
-            raise ValueError(f"width must be in range {min_width} and {max_width}")
-    
-    return PilotNet(
-        width=image_width, height=image_height,
-        weight_bit_width=bit_width,
-        act_bit_width=bit_width,
-        width_multiplier=width,
-        convz=n_conv,
-        densez=n_dense
-    )
 
 def evaluate(model : PilotNet, val_loader : DataLoader)->None:
     pass
-
-from collections import defaultdict
 
 def train(model : PilotNet, train_loader : DataLoader, test_loader : DataLoader)->None:
     epochs = network_params['epoch']
@@ -128,7 +81,6 @@ def train(model : PilotNet, train_loader : DataLoader, test_loader : DataLoader)
                 print(f"  Class {label}: {correct}/{total} correct ({acc:.2f}%)")
             else:
                 print(f"  Class {label}: No samples")
-
 
 def evolution(n_generations : int, stats : PerformanceContrib, train_loader : DataLoader, test_loader :DataLoader, val_loader : DataLoader):
     pass
