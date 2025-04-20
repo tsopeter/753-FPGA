@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 from typing import List, Dict, Union, Optional
 import numpy as np
 from params import network_params
+from sklearn.linear_model import LinearRegression
+from device import device_limits
 
 class Stats:
     def __init__(self, bram, lut, latency):
@@ -17,10 +19,8 @@ class Stats:
         return f'bram: {self.bram}, lut: {self.lut}, latency: {self.latency}'
 
 class PerformanceContrib:
-    def __init__(self, stats_dir : str = '../projects/layer_stats')->None:
-        self.stats : pd.DataFrame = read_layer_stats(stats_dir)
-
-
+    def __init__(self, stats_dir : str = '../projects/layer_stats', mapping_dir : str = '../mapping.csv')->None:
+        self.stats : pd.DataFrame = estimate_results(read_layer_stats(stats_dir), mapping_dir)
 
     def get_stats(self, width: float, conv: int, dense: int) -> Stats:
         df_filtered = self.stats[
@@ -39,11 +39,24 @@ class PerformanceContrib:
             latency=row["Latency"]
         )
     
-    def get_max(self) -> Stats:
-        max_bram = self.stats["Total_BRAM"].max()
-        max_lut = self.stats["Total_LUT"].max()
-        max_latency = self.stats["Latency"].max()
+    def get_max(self, device_limited: bool = False) -> Stats:
+        if not device_limited:
+            max_bram = self.stats["Total_BRAM"].max()
+            max_lut = self.stats["Total_LUT"].max()
+            max_latency = self.stats["Latency"].max()
+        else:
+            filtered = self.stats[
+                (self.stats["Total_BRAM"] <= device_limits["Max_BRAM"]) &
+                (self.stats["Total_LUT"] <= device_limits["Max_LUT"])
+            ]
+            if filtered.empty:
+                raise ValueError("No stats satisfy the device limits.")
+            max_bram = filtered["Total_BRAM"].max()
+            max_lut = filtered["Total_LUT"].max()
+            max_latency = filtered["Latency"].max()
+
         return Stats(bram=max_bram, lut=max_lut, latency=max_latency)
+    
 
 def read_layer_stats(dir: str = './projects/layer_stats'):
     results = []
@@ -87,3 +100,35 @@ def read_layer_stats(dir: str = './projects/layer_stats'):
             })
 
     return pd.DataFrame(results)
+
+def get_models (mapping : str):
+    # Load CSV
+    df = pd.read_csv(mapping)
+    X = df[["Estimated_BRAM", "Estimated_LUT"]].values
+    y_bram = df["Actual_BRAM"].values
+    y_lut = df["Actual_LUT"].values
+
+    estimated_bram = df['Estimated_BRAM'].to_numpy().reshape(-1,1)
+    estimated_lut  = df['Estimated_LUT'].to_numpy().reshape(-1,1)
+
+    model_bram = LinearRegression()
+    model_lut  = LinearRegression()
+
+    # Fit models
+    model_bram.fit(estimated_bram, y_bram)
+    model_lut.fit(estimated_lut, y_lut)
+
+    return model_bram, model_lut
+
+def estimate_results(results: pd.DataFrame, mapping: str) -> pd.DataFrame:
+    model_bram, model_lut = get_models(mapping)
+
+    # Predict actual BRAM
+    bram_input = results[["Total_BRAM"]].to_numpy()
+    results["Total_BRAM"] = model_bram.predict(bram_input)
+
+    # Predict actual LUT
+    lut_input = results[["Total_LUT"]].to_numpy()
+    results["Total_LUT"] = model_lut.predict(lut_input)
+
+    return results
