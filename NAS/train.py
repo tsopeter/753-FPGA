@@ -6,6 +6,8 @@ from params import network_params
 from dataset import ImageDataset
 from contrib import PerformanceContrib, Stats
 import numpy as np
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
 
 
 image_height = network_params["image_height"]
@@ -83,6 +85,7 @@ def brute(stats : PerformanceContrib, train_loader : DataLoader, test_loader : D
 
 stats   = PerformanceContrib(network_params["lstats"])
 dataset = ImageDataset(network_params["dataset_dir"], file_range=[0,7])
+model = get_network(5,3,0.3)
 print(f'Dataset length: {len(dataset)}')
 
 
