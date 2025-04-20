@@ -111,6 +111,7 @@ def brute(stats : PerformanceContrib, train_loader : DataLoader, test_loader : D
 stats   = PerformanceContrib(network_params["lstats"])
 
 dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,9])
+print(f'Unique Turn values: {torch.unique(dataset.turns)}')
 turns = map_to_labels(dataset.turns).cpu().detach().numpy() + 1
 class_weights = torch.tensor(class_weight.compute_class_weight('balanced', classes=np.array([0, 1, 2]), y=turns)).to(device).to(torch.float32)
 #class_weights = torch.clamp(class_weights, min=0, max=2)
