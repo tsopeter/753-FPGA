@@ -161,6 +161,6 @@ print(f'\tTesting Dataset: {len(test_dataset)}, {get_dataset_distribution(test_d
 print(f'\tValidation Dataset: {len(val_dataset)}, {get_dataset_distribution(val_dataset.turns)}')
 
 # Create and train model
-model = get_network(5, 3, 0.5, check_inputs=False, use_softmax=False).to(device)
+model = get_network(5, 3, 0.5, check_inputs=False, use_softmax=False, quantized=True).to(device)
 train(model, train_loader, test_loader)
 evaluate(model, val_loader)
