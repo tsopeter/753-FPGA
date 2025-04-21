@@ -28,10 +28,10 @@ def get_dataset_distribution(x: torch.Tensor):
 
     return int(left), int(center), int(right)
 
-def map_to_labels(x: torch.Tensor) -> torch.Tensor:
+def map_to_labels(x: torch.Tensor, limit : float=0.52/2) -> torch.Tensor:
     return torch.where(
-        x < -0.15, -1,
-        torch.where(x > 0.15, 1, 0)
+        x < -limit, -1,
+        torch.where(x > limit, 1, 0)
     )
 
 def get_network(n_conv : int, n_dense : int, width : int, output_features : int = 1,

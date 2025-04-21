@@ -7,21 +7,36 @@ from dataset import ImageDataset
 from contrib import PerformanceContrib, Stats
 import numpy as np
 from collections import defaultdict
+from sklearn.utils import class_weight
 from unified import *
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 device       = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+def weighted_mse_loss(preds: torch.Tensor, targets: torch.Tensor, class_weights: torch.Tensor) -> torch.Tensor:
+    """
+    Weighted MSE Loss where class_weights is a tensor of shape [3], for class -1, 0, 1
+    - class_weights[0] → for label -1
+    - class_weights[1] → for label  0
+    - class_weights[2] → for label  1
+    """
+    labels = map_to_labels(targets.view(-1))      # shape (N,), values in {-1, 0, 1}
+    weight_indices = labels + 1                    # map {-1, 0, 1} → {0, 1, 2}
+    weights = class_weights[weight_indices]        # shape (N,)
+
+    errors = (preds.view(-1) - targets.view(-1)) ** 2
+    return torch.mean(weights * errors)
+
 def evaluate(model : PilotNet, val_loader : DataLoader)->None:
     pass
 
-def train(model : PilotNet, train_loader : DataLoader, test_loader : DataLoader)->None:
+def train(model : PilotNet, train_loader : DataLoader, test_loader : DataLoader, weights=None)->None:
     epochs = network_params['epoch']
     lr     = network_params['lr']
 
     optim  = torch.optim.Adam(model.parameters(), lr=lr)
-    lossfn = torch.nn.MSELoss()
+    lossfn = weighted_mse_loss
 
     for epoch in range(epochs):
         model.train()
@@ -32,7 +47,7 @@ def train(model : PilotNet, train_loader : DataLoader, test_loader : DataLoader)
 
             optim.zero_grad()
             preds = model(images)
-            loss  = lossfn(preds, turns)
+            loss  = lossfn(preds, turns, weights)
 
             loss.backward()
             optim.step()
@@ -54,7 +69,7 @@ def train(model : PilotNet, train_loader : DataLoader, test_loader : DataLoader)
             turns  = turns.unsqueeze(1)
 
             preds = model(images)
-            loss  = lossfn(preds, turns)
+            loss  = lossfn(preds, turns, weights)
             testing_loss += loss.item() * images.size(0)
 
             expected = map_to_labels(preds)  # <- must output {-1, 0, 1}
@@ -107,14 +122,18 @@ train_loader  = DataLoader(train_dataset, network_params["bsz"], shuffle=True)
 test_loader   = DataLoader(test_dataset, network_params["bsz"], shuffle=False)
 val_loader    = DataLoader(val_dataset, network_params["bsz"], shuffle=False)
 
+print(f'Unique Turn values: {torch.unique(train_dataset.turns)}')
+turns = map_to_labels(train_dataset.turns).cpu().detach().numpy() + 1
+class_weights = torch.tensor(class_weight.compute_class_weight('balanced', classes=np.array([0, 1, 2]), y=turns)).to(device).to(torch.float32)
+
 model = get_network(5,3,0.5, check_inputs=False).to(device)
 
 print(f'Training Data')
-print(f'\tTraining Dataset: {len(train_dataset)}, {get_dataset_distribution(train_dataset)}')
-print(f'\tTesting Dataset: {len(test_dataset)}, {get_dataset_distribution(test_dataset)}')
-print(f'\tValidation Dataset: {len(val_dataset)}, {get_dataset_distribution(val_dataset)}')
+print(f'\tTraining Dataset: {len(train_dataset)}, {get_dataset_distribution(train_dataset.turns)}')
+print(f'\tTesting Dataset: {len(test_dataset)}, {get_dataset_distribution(test_dataset.turns)}')
+print(f'\tValidation Dataset: {len(val_dataset)}, {get_dataset_distribution(val_dataset.turns)}')
 
-train(model, train_loader, test_loader)
+train(model, train_loader, test_loader, weights=class_weights)
 
 
 

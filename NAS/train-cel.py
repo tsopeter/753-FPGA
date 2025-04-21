@@ -16,8 +16,53 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 device       = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-def evaluate(model : PilotNet, val_loader : DataLoader)->None:
-    pass
+def evaluate(model : PilotNet, stats : Stats, val_loader : DataLoader, weights=None)->None:
+    model.eval()
+
+    lossfn = torch.nn.CrossEntropyLoss(weight=weights)
+
+    with torch.no_grad():
+        model.eval()
+        testing_loss = 0.0
+        total_correct = 0
+        total_count = 0
+
+        class_correct = defaultdict(int)
+        class_total = defaultdict(int)
+
+        for images, turns in test_loader:
+            images, turns = images.to(device), turns.to(device)
+            images = images / 255.0
+
+            labels = map_to_labels(turns.view(-1)) + 1  # ground truth class indices
+
+            logits = model(images)
+            loss = lossfn(logits, labels)
+            testing_loss += loss.item() * images.size(0)
+
+            preds = torch.argmax(logits, dim=1)
+            for cls in [0, 1, 2]:
+                mask = (labels == cls)
+                class_correct[cls] += (preds[mask] == cls).sum().item()
+                class_total[cls] += mask.sum().item()
+
+            total_correct += (preds == labels).sum().item()
+            total_count += labels.size(0)
+
+        average_testing_loss = testing_loss / len(test_loader.dataset)
+        accuracy = 100 * total_correct / total_count
+
+        print(f"Validation Loss = {average_testing_loss:.4f}, Accuracy = {accuracy:.2f}%")
+
+        for cls, label in zip([0, 1, 2], [-1, 0, 1]):
+            correct = class_correct[cls]
+            total = class_total[cls]
+            if total > 0:
+                acc = 100 * correct / total
+                print(f"  Class {label}: {correct}/{total} correct ({acc:.2f}%)")
+            else:
+                print(f"  Class {label}: No samples")
+
 
 def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, weights=None) -> None:
     epochs = network_params['epoch']
@@ -110,11 +155,11 @@ def brute(stats : PerformanceContrib, train_loader : DataLoader, test_loader : D
 
 stats   = PerformanceContrib(network_params["lstats"])
 
-dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,1])
+dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,8])
+val_dataset = ImageDataset(network_params['dataset_dir'], file_range=[9,9])
 print(f'Unique Turn values: {torch.unique(dataset.turns)}')
 turns = map_to_labels(dataset.turns).cpu().detach().numpy() + 1
 class_weights = torch.tensor(class_weight.compute_class_weight('balanced', classes=np.array([0, 1, 2]), y=turns)).to(device).to(torch.float32)
-#class_weights = torch.clamp(class_weights, min=0, max=2)
 
 labels = map_to_labels(dataset.turns) + 1  # {−1,0,1} → {0,1,2}
 
@@ -137,7 +182,7 @@ print(f'\tTraining Dataset: {len(train_dataset)}, {get_dataset_distribution(trai
 print(f'\tTesting Dataset: {len(test_dataset)}, {get_dataset_distribution(test_dataset.dataset.turns)}')
 
 train(model, train_loader, test_loader, weights=class_weights)
-
+evaluate(model, stats.get_stats(0.5,5,3), DataLoader(val_dataset, network_params["bsz"], shuffle=False))
 
 
 
