@@ -209,12 +209,7 @@ print(f'\tTesting Dataset: {len(test_dataset)}, {get_dataset_distribution(test_d
 print(f'Running brute force')
 
 class_weights[class_weights<1]=0.5
-#best_model, best_loss, config = brute(stats, train_loader, test_loader, val_loader, weight=class_weights)
-
-
-best_model = get_network(5,3,0.5,output_features=3,use_softmax=True)
-config = [0]
-best_loss = [0]
+best_model, best_loss, config = brute(stats, train_loader, test_loader, val_loader, weight=class_weights)
 
 name   = f'{datetime.now()}'.replace(' ', '-').replace(':', '-').replace('.', '-')
 ready_model_filename = model_dir + f'/{name}.onnx'
