@@ -1,4 +1,6 @@
 import torch
+from sklearn.model_selection import train_test_split
+from torch.utils.data import Subset
 import onnx
 import qonnx
 import qonnx.core
@@ -19,7 +21,23 @@ if len(argv) != 2:
 model_filename = argv[1]
 model = ModelWrapper(model_filename)
 
-val_dataset = ImageDataset(network_params["dataset_dir"], file_range=[9,9])
+
+dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,9])
+labels = map_to_labels(dataset.turns) + 1
+indicies = list(range(len(dataset)))
+train_idx, test_idx = train_test_split(
+    indicies, test_size=0.25, stratify=labels.numpy(), random_state=42
+)
+
+test_idx, val_idx = train_test_split(
+    test_idx, test_size=0.5, stratify=labels[test_idx].numpy(), random_state=42
+)
+
+train_dataset = Subset(dataset, train_idx)
+test_dataset  = Subset(dataset, test_idx)
+val_dataset   = Subset(dataset, val_idx)
+
+
 input_name  = model.graph.input[0].name
 output_name = model.graph.output[0].name
 output_shape = model.graph.output[0].type.tensor_type.shape.dim
