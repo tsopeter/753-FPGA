@@ -222,12 +222,22 @@ model = ModelWrapper(ready_model_filename)
 model.set_tensor_datatype(model.graph.input[0].name, DataType[f'UINT{network_params["bit_width"]}'])
 model.save(ready_model_filename)
 
+name   = f'{datetime.now()}'.replace(' ', '-').replace(':', '-').replace('.', '-')
+ready_model_filename = model_dir + f'/{name}.onnx'
+input_a = np.random.randint(0, 255, size=(1,1,network_params["image_height"], network_params["image_width"])).astype(np.float32)
+input_t = torch.from_numpy(input_a)
+
+
+best_model.cpu()
+export_qonnx(best_model, export_path=ready_model_filename, input_t=input_t)
+qonnx_cleanup(ready_model_filename, out_file=ready_model_filename)
+
+model = ModelWrapper(ready_model_filename)
+model.set_tensor_datatype(model.graph.input[0].name, DataType[f'UINT{network_params["bit_width"]}'])
+model.save(ready_model_filename)
+
 config = np.array(config)
 loss   = np.array(best_loss)
 np.save(f"{model_dir}/{name}-loss.npy", loss)
 np.save(f"{model_dir}/{name}-config.npy", config)
-
-
-
-
 
