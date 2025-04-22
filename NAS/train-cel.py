@@ -21,7 +21,7 @@ from torch.utils.data import Subset
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
-model_dir    = f'./{network_params["bit_width"]}-bit'
+model_dir    = f'./{network_params["bit_width"]}-bit-cel'
 device       = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def evaluate(model : PilotNet, stats : Stats, val_loader : DataLoader, weights=None):

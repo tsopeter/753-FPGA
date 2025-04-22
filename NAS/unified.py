@@ -60,3 +60,8 @@ def get_network(n_conv : int, n_dense : int, width : int, output_features : int 
         use_softmax=use_softmax,
         non_quantized=not quantized
     )
+
+def write_dict_to_txt(d: dict, filename: str) -> None:
+    with open(filename, 'w') as f:
+        for key, value in d.items():
+            f.write(f"{key}: {value}\n")
