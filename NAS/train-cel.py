@@ -1,4 +1,11 @@
 import torch
+import onnx
+from datetime import datetime
+from brevitas.export import export_qonnx
+from brevitas.export import export_qonnx
+from qonnx.util.cleanup import cleanup as qonnx_cleanup
+from qonnx.core.modelwrapper import ModelWrapper
+from qonnx.core.datatype import DataType
 from torch.utils.data import DataLoader
 import cv2
 from model import PilotNet
@@ -14,6 +21,7 @@ from torch.utils.data import Subset
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
+model_dir    = f'./{network_params["bit_width"]}-bit'
 device       = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def evaluate(model : PilotNet, stats : Stats, val_loader : DataLoader, weights=None):
@@ -158,7 +166,7 @@ def brute(stats : PerformanceContrib, train_loader : DataLoader, test_loader : D
                     model = get_network(conv, dense, width, output_features=3, use_softmax=True).to(device)
 
                     train(model, train_loader, test_loader, weights=weight)
-                    loss = evaluate(model, stats.get_stats(width, conv, dense), val_loader, weights=weight)
+                    loss = evaluate(model, stats.get_stats(np.round(width, decimals=1), conv, dense), val_loader, weights=weight)
 
                     # obtain the best model in 5-passes (which has the lowest validation loss)
                     if loss < best_loss:
@@ -201,14 +209,30 @@ print(f'\tTesting Dataset: {len(test_dataset)}, {get_dataset_distribution(test_d
 print(f'Running brute force')
 
 class_weights[class_weights<1]=0.5
-best_model, best_loss, config = brute(stats, train_loader, test_loader, val_loader, weight=class_weights)
+#best_model, best_loss, config = brute(stats, train_loader, test_loader, val_loader, weight=class_weights)
 
-scripted_model = torch.jit.script(best_model)
-scripted_model.save("best_model.pt")
+
+best_model = get_network(5,3,0.5,output_features=3,use_softmax=True)
+config = [0]
+best_loss = [0]
+
+name   = f'{datetime.now()}'.replace(' ', '-').replace(':', '-').replace('.', '-')
+ready_model_filename = model_dir + f'/{name}.onnx'
+input_a = np.random.randint(0, 255, size=(1,1,network_params["image_height"], network_params["image_width"])).astype(np.float32)
+input_t = torch.from_numpy(input_a).to(device)
+
+best_model.cpu()
+export_qonnx(model, export_path=ready_model_filename, input_t=input_t)
+qonnx_cleanup(ready_model_filename, out_file=ready_model_filename)
+
+model = ModelWrapper(ready_model_filename)
+model.set_tensor_datatype(model.graph.input[0].name, DataType[f'UINT{network_params["bit_width"]}'])
+model.save(ready_model_filename)
+
 config = np.array(config)
 loss   = np.array(best_loss)
-np.save("loss.npy", loss)
-np.save("config.npy", config)
+np.save(f"{model_dir}/{name}-loss.npy", loss)
+np.save(f"{model_dir}/{name}-config.npy", config)
 
 
 
