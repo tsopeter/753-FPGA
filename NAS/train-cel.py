@@ -200,8 +200,6 @@ train_loader  = DataLoader(train_dataset, network_params["bsz"], shuffle=True)
 test_loader   = DataLoader(test_dataset, network_params["bsz"], shuffle=False)
 val_loader    = DataLoader(val_dataset, network_params["bsz"], shuffle=False)
 
-model = get_network(3,2,0.5, output_features=3, use_softmax=True, check_inputs=False, quantized=True).to(device)
-
 print(f'Training Data')
 print(f'\tTraining Dataset: {len(train_dataset)}, {get_dataset_distribution(train_dataset.dataset.turns)}')
 print(f'\tTesting Dataset: {len(test_dataset)}, {get_dataset_distribution(test_dataset.dataset.turns)}')
@@ -214,10 +212,10 @@ best_model, best_loss, config = brute(stats, train_loader, test_loader, val_load
 name   = f'{datetime.now()}'.replace(' ', '-').replace(':', '-').replace('.', '-')
 ready_model_filename = model_dir + f'/{name}.onnx'
 input_a = np.random.randint(0, 255, size=(1,1,network_params["image_height"], network_params["image_width"])).astype(np.float32)
-input_t = torch.from_numpy(input_a).to(device)
+input_t = torch.from_numpy(input_a)
 
 best_model.cpu()
-export_qonnx(model, export_path=ready_model_filename, input_t=input_t)
+export_qonnx(best_model, export_path=ready_model_filename, input_t=input_t)
 qonnx_cleanup(ready_model_filename, out_file=ready_model_filename)
 
 model = ModelWrapper(ready_model_filename)
@@ -228,3 +226,4 @@ config = np.array(config)
 loss   = np.array(best_loss)
 np.save(f"{model_dir}/{name}-loss.npy", loss)
 np.save(f"{model_dir}/{name}-config.npy", config)
+
