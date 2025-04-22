@@ -158,7 +158,7 @@ def brute(stats : PerformanceContrib, train_loader : DataLoader, test_loader : D
                     model = get_network(conv, dense, width, output_features=3, use_softmax=True).to(device)
 
                     train(model, train_loader, test_loader, weights=weight)
-                    loss = evaluate(model, stats.get_stats(width, conv, dense), val_loader, weights=weight)
+                    loss = evaluate(model, stats.get_stats(np.round(width, decimals=1), conv, dense), val_loader, weights=weight)
 
                     # obtain the best model in 5-passes (which has the lowest validation loss)
                     if loss < best_loss:
@@ -204,11 +204,11 @@ class_weights[class_weights<1]=0.5
 best_model, best_loss, config = brute(stats, train_loader, test_loader, val_loader, weight=class_weights)
 
 scripted_model = torch.jit.script(best_model)
-scripted_model.save("best_model.pt")
+scripted_model.save("best_model_2bit.pt")
 config = np.array(config)
 loss   = np.array(best_loss)
-np.save("loss.npy", loss)
-np.save("config.npy", config)
+np.save("loss_2bit.npy", loss)
+np.save("config_2bit.npy", config)
 
 
 
