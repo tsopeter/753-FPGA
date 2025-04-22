@@ -53,9 +53,3 @@ right  = (targets==2)
 print(f'Class -1: {100*np.sum(predictions[left]==targets[left])/len(left)}%')
 print(f'Class  0: {100*np.sum(predictions[center]==targets[center])/len(center)}%')
 print(f'Class +1: {100*np.sum(predictions[right]==targets[right])/len(right)}%')
-
-
-
-
-    
-    
