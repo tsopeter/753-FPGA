@@ -220,7 +220,7 @@ input_a = np.random.randint(0, 255, size=(1,1,network_params["image_height"], ne
 input_t = torch.from_numpy(input_a).to(device)
 
 best_model.cpu()
-export_qonnx(model, export_path=ready_model_filename, input_t=input_t)
+export_qonnx(best_model, export_path=ready_model_filename, input_t=input_t)
 qonnx_cleanup(ready_model_filename, out_file=ready_model_filename)
 
 model = ModelWrapper(ready_model_filename)
