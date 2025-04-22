@@ -1,3 +1,4 @@
+import torch
 import onnx
 import qonnx
 import qonnx.core
@@ -21,6 +22,8 @@ model = ModelWrapper(model_filename)
 val_dataset = ImageDataset(network_params["dataset_dir"], file_range=[9,9])
 input_name  = model.graph.input[0].name
 output_name = model.graph.output[0].name
+output_shape = model.graph.output[0].type.tensor_type.shape.dim
+output_shape = output_shape[-1].dim_value
 
 predictions = np.zeros(shape=(len(val_dataset,)))
 targets     = np.zeros(shape=(len(val_dataset,)))
@@ -35,7 +38,10 @@ for i, (images, turns) in enumerate(val_dataset):
     outputs = qonnx.core.onnx_exec.execute_onnx(model, input_dict={input_name : images})
     results = np.squeeze(np.array(outputs[output_name]))
 
-    predictions[i]=np.argmax(results)
+    if output_shape != 3:
+        predictions[i]=((map_to_labels(torch.from_numpy(results)))+1).numpy()
+    else:
+        predictions[i]=np.argmax(results)
     targets[i]=labels
 
     if (i % steps == 0):
