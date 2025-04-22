@@ -16,7 +16,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 device       = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-def evaluate(model : PilotNet, stats : Stats, val_loader : DataLoader, weights=None)->None:
+def evaluate(model : PilotNet, stats : Stats, val_loader : DataLoader, weights=None):
     model.eval()
 
     lossfn = torch.nn.CrossEntropyLoss(weight=weights)
@@ -30,7 +30,7 @@ def evaluate(model : PilotNet, stats : Stats, val_loader : DataLoader, weights=N
         class_correct = defaultdict(int)
         class_total = defaultdict(int)
 
-        for images, turns in test_loader:
+        for images, turns in val_loader:
             images, turns = images.to(device), turns.to(device)
             images = images / 255.0
 
@@ -62,9 +62,10 @@ def evaluate(model : PilotNet, stats : Stats, val_loader : DataLoader, weights=N
                 print(f"  Class {label}: {correct}/{total} correct ({acc:.2f}%)")
             else:
                 print(f"  Class {label}: No samples")
+    return average_testing_loss
 
 
-def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, weights=None) -> None:
+def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, weights=None)->None:
     epochs = network_params['epoch']
     lr     = network_params['lr']
 
@@ -140,18 +141,33 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
 def evolution(n_generations : int, stats : PerformanceContrib, train_loader : DataLoader, test_loader :DataLoader, val_loader : DataLoader):
     pass
 
-def brute(stats : PerformanceContrib, train_loader : DataLoader, test_loader : DataLoader, val_loader : DataLoader):
+def brute(stats : PerformanceContrib, train_loader : DataLoader, test_loader : DataLoader, val_loader : DataLoader, weight=None):
     n_convs = np.arange(min_conv, max_conv+1)
     n_dense = np.arange(min_dense, max_dense+1)
-    widths  = np.arange(min_width, max_width, 5)
+    widths  = np.linspace(min_width, max_width, 5)
+
+
+    best_loss = np.inf
+    best_model = None
+    config = (-1, -1, -1)
 
     for conv in n_convs:
         for dense in n_dense:
             for width in widths:
-                model = get_network(conv, dense, width).to(device)
+                for i in range(5):
+                    model = get_network(conv, dense, width, output_features=3, use_softmax=True).to(device)
 
-                train(model, train_loader, test_loader)
-                evaluate(model, val_loader)
+                    train(model, train_loader, test_loader, weights=weight)
+                    loss = evaluate(model, stats.get_stats(width, conv, dense), val_loader, weights=weight)
+
+                    # obtain the best model in 5-passes (which has the lowest validation loss)
+                    if loss < best_loss:
+                        best_loss  = loss
+                        best_model = model
+                        config = (conv, dense, width)
+    
+    return best_model, best_loss, config
+
 
 stats   = PerformanceContrib(network_params["lstats"])
 
@@ -174,15 +190,25 @@ test_dataset  = Subset(dataset, test_idx)
 
 train_loader  = DataLoader(train_dataset, network_params["bsz"], shuffle=True)
 test_loader   = DataLoader(test_dataset, network_params["bsz"], shuffle=False)
+val_loader    = DataLoader(val_dataset, network_params["bsz"], shuffle=False)
 
-model = get_network(5,3,0.5, output_features=3, use_softmax=True, check_inputs=False, quantized=True).to(device)
+model = get_network(3,2,0.5, output_features=3, use_softmax=True, check_inputs=False, quantized=True).to(device)
 
 print(f'Training Data')
 print(f'\tTraining Dataset: {len(train_dataset)}, {get_dataset_distribution(train_dataset.dataset.turns)}')
 print(f'\tTesting Dataset: {len(test_dataset)}, {get_dataset_distribution(test_dataset.dataset.turns)}')
 
-train(model, train_loader, test_loader, weights=class_weights)
-evaluate(model, stats.get_stats(0.5,5,3), DataLoader(val_dataset, network_params["bsz"], shuffle=False))
+print(f'Running brute force')
+
+class_weights[class_weights<1]=0.5
+best_model, best_loss, config = brute(stats, train_loader, test_loader, val_loader, weight=class_weights)
+
+scripted_model = torch.jit.script(best_model)
+scripted_model.save("best_model.pt")
+config = np.array(config)
+loss   = np.array(best_loss)
+np.save("loss.npy", loss)
+np.save("config.npy", config)
 
 
 
