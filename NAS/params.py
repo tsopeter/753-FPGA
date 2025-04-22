@@ -8,7 +8,7 @@ network_params = {
     "maximum_dense_layers" : 3,
     "minimum_width"        : 0.1,
     "maximum_width"        : 0.5,
-    "bit_width"            : 4,
+    "bit_width"            : 2,
 
 
 ## Data parameters
