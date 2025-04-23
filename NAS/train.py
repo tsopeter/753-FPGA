@@ -23,7 +23,10 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model_dir = f'./{network_params["bit_width"]}-bit-mse'
+model_dir = f'./{network_params["bit_width"]}-bit-mse-quant'
+
+bit_width = network_params['bit_width']
+max_value = (2**bit_width)-1
 
 def get_weighted_mse_loss(weights: torch.Tensor):
     if weights is None:
@@ -52,7 +55,8 @@ def evaluate(model: PilotNet, val_loader: DataLoader, weights=None) -> None:
 
         for images, turns in val_loader:
             images, turns = images.to(device), turns.to(device)
-            images = images / 255.0
+            images = torch.round(images / 255.0 * max_value)
+            images = torch.clip(images, 0, max_value)
             turns = turns.unsqueeze(1)
 
             preds = model(images)
@@ -98,7 +102,8 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
         training_loss = 0.0
         for images, turns in train_loader:
             images, turns = images.to(device), turns.to(device)
-            images = images / 255.0 # normalization
+            images = torch.round(images / 255.0 * max_value)
+            images = torch.clip(images, 0, max_value)
 
             optim.zero_grad()
             preds = model(images)
@@ -120,7 +125,8 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
 
             for images, turns in test_loader:
                 images, turns = images.to(device), turns.to(device)
-                images = images / 255.0
+                images = torch.round(images / 255.0 * max_value)
+                images = torch.clip(images, 0, max_value)
                 turns = turns.unsqueeze(1)
 
                 preds = model(images)
@@ -159,8 +165,13 @@ def evolution(n_generations: int, stats: PerformanceContrib, train_loader: DataL
 def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: DataLoader, val_loader: DataLoader, weights=None):
     n_convs = np.arange(min_conv, max_conv + 1)
     n_dense = np.arange(min_dense, max_dense + 1)
-    widths = np.linspace(min_width, max_width, 5)
+
+    n_widths = int(10*np.round(max_width-min_width+0.1,decimals=1))
+
+    widths = np.linspace(min_width, max_width, n_widths)
     widths = np.round(widths, decimals=1)
+
+    print(f'Number of combinations: {len(n_convs)*len(n_dense)*len(widths)*5}')
 
     config = (-1, -1, -1)
     best_loss = np.inf
@@ -190,7 +201,8 @@ def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: Data
     return (best_model, best_loss, best_acc, config, history)
 
 # Load datasets
-stats = PerformanceContrib(network_params["lstats"])
+#stats = PerformanceContrib(network_params["lstats"])
+stats = None
 dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,9])
 labels = map_to_labels(dataset.turns) + 1
 indicies = list(range(len(dataset)))
@@ -219,6 +231,7 @@ train_loader  = DataLoader(train_dataset, network_params["bsz"], shuffle=True)
 test_loader   = DataLoader(test_dataset, network_params["bsz"], shuffle=False)
 val_loader    = DataLoader(val_dataset, network_params["bsz"], shuffle=False)
 
+print(f"Maximums={network_params['maximum_conv_layers'], network_params['maximum_dense_layers'], network_params['maximum_width']}")
 
 # Show dataset distribution
 print(f'Unique Turn values: {torch.unique(train_dataset.dataset.turns)}')
