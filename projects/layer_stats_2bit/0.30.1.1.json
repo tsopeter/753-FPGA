@@ -1,0 +1,40 @@
+{
+  "ConvolutionInputGenerator_rtl_0": {
+    "BRAM_18K": 0,
+    "BRAM_efficiency": 1,
+    "LUT": 364,
+    "URAM": 0,
+    "URAM_efficiency": 1,
+    "DSP": 0
+  },
+  "MVAU_hls_0": {
+    "BRAM_18K": 1,
+    "BRAM_efficiency": 0.018988715277777776,
+    "LUT": 358,
+    "URAM": 0,
+    "URAM_efficiency": 1,
+    "DSP": 0
+  },
+  "MVAU_hls_1": {
+    "BRAM_18K": 24,
+    "BRAM_efficiency": 0.8544921875,
+    "LUT": 324,
+    "URAM": 0,
+    "URAM_efficiency": 1,
+    "DSP": 0
+  },
+  "MVAU_hls_2": {
+    "BRAM_18K": 1,
+    "BRAM_efficiency": 0.0032552083333333335,
+    "LUT": 317,
+    "URAM": 0,
+    "URAM_efficiency": 1,
+    "DSP": 0
+  },
+  "total": {
+    "BRAM_18K": 26.0,
+    "LUT": 1363.0,
+    "URAM": 0.0,
+    "DSP": 0.0
+  }
+}
