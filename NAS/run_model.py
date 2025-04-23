@@ -24,7 +24,6 @@ bit_width_used = int(argv[1][0])
 model_filename = argv[1]
 model = ModelWrapper(model_filename)
 model.set_tensor_datatype(model.graph.input[0].name, DataType[f"UINT{bit_width_used}"])
-#model.set_tensor_datatype(model.graph.input[0].name, DataType[f"FLOAT32"])
 
 dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,9])
 labels = map_to_labels(dataset.turns) + 1
