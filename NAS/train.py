@@ -23,7 +23,10 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model_dir = f'./{network_params["bit_width"]}-bit-mse'
+model_dir = f'./{network_params["bit_width"]}-bit-mse-quant'
+
+bit_width = network_params['bit_width']
+max_value = (2**bit_width)-1
 
 def get_weighted_mse_loss(weights: torch.Tensor):
     if weights is None:
@@ -52,7 +55,8 @@ def evaluate(model: PilotNet, val_loader: DataLoader, weights=None) -> None:
 
         for images, turns in val_loader:
             images, turns = images.to(device), turns.to(device)
-            images = images / 255.0
+            images = torch.round(images / 255.0 * max_value)
+            images = torch.clip(images, 0, max_value)
             turns = turns.unsqueeze(1)
 
             preds = model(images)
@@ -98,7 +102,8 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
         training_loss = 0.0
         for images, turns in train_loader:
             images, turns = images.to(device), turns.to(device)
-            images = images / 255.0 # normalization
+            images = torch.round(images / 255.0 * max_value)
+            images = torch.clip(images, 0, max_value)
 
             optim.zero_grad()
             preds = model(images)
@@ -120,7 +125,8 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
 
             for images, turns in test_loader:
                 images, turns = images.to(device), turns.to(device)
-                images = images / 255.0
+                images = torch.round(images / 255.0 * max_value)
+                images = torch.clip(images, 0, max_value)
                 turns = turns.unsqueeze(1)
 
                 preds = model(images)
