@@ -10,7 +10,6 @@ network_params = {
     "maximum_width"        : 0.5,
     "bit_width"            : 2,
 
-
 ## Data parameters
     "dataset_dir"          : '../deeppicar/',
 
@@ -23,3 +22,8 @@ network_params = {
     "bsz"                  : 128,
 
 }
+
+if network_params['bit_width'] == 2:
+    network_params['maximum_width'] = 0.8
+else:
+    network_params['maximum_width'] = 0.5
