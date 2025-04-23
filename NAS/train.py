@@ -190,7 +190,8 @@ def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: Data
     return (best_model, best_loss, best_acc, config, history)
 
 # Load datasets
-stats = PerformanceContrib(network_params["lstats"])
+#stats = PerformanceContrib(network_params["lstats"])
+stats = None
 dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,9])
 labels = map_to_labels(dataset.turns) + 1
 indicies = list(range(len(dataset)))
@@ -219,6 +220,7 @@ train_loader  = DataLoader(train_dataset, network_params["bsz"], shuffle=True)
 test_loader   = DataLoader(test_dataset, network_params["bsz"], shuffle=False)
 val_loader    = DataLoader(val_dataset, network_params["bsz"], shuffle=False)
 
+print(f"Maximums={network_params['maximum_conv_layers'], network_params['maximum_dense_layers'], network_params['maximum_width']}")
 
 # Show dataset distribution
 print(f'Unique Turn values: {torch.unique(train_dataset.dataset.turns)}')
