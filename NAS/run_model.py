@@ -43,8 +43,8 @@ output_name = model.graph.output[0].name
 output_shape = model.graph.output[0].type.tensor_type.shape.dim
 output_shape = output_shape[-1].dim_value
 
-predictions = np.zeros(shape=(len(val_dataset,)))
-targets     = np.zeros(shape=(len(val_dataset,)))
+predictions = np.zeros(shape=(len(val_dataset),))
+targets     = np.zeros(shape=(len(val_dataset),))
 
 steps = len(val_dataset)//10
 for i, (images, turns) in enumerate(val_dataset):
@@ -74,6 +74,6 @@ center = (targets==1)
 right  = (targets==2)
 
 # per class accuracy
-print(f'Class -1: {100*np.sum(predictions[left]==targets[left])/len(left)}%')
-print(f'Class  0: {100*np.sum(predictions[center]==targets[center])/len(center)}%')
-print(f'Class +1: {100*np.sum(predictions[right]==targets[right])/len(right)}%')
+print(f'Class -1: {100*np.sum(predictions[left]==targets[left])/np.sum(left)}%')
+print(f'Class  0: {100*np.sum(predictions[center]==targets[center])/np.sum(center)}%')
+print(f'Class +1: {100*np.sum(predictions[right]==targets[right])/np.sum(right)}%')
