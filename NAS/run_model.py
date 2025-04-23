@@ -23,7 +23,8 @@ bit_width_used = int(argv[1][0])
 
 model_filename = argv[1]
 model = ModelWrapper(model_filename)
-model.set_tensor_datatype(model.graph.input[0].name, DataType[f"UINT{bit_width_used}"])
+#model.set_tensor_datatype(model.graph.input[0].name, DataType[f"UINT{bit_width_used}"])
+#model.set_tensor_datatype(model.graph.input[0].name, DataType[f"FLOAT32"])
 
 dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,9])
 labels = map_to_labels(dataset.turns) + 1
@@ -62,7 +63,7 @@ for i, (images, turns) in enumerate(val_dataset):
     
     # images = np.clip(np.round(images / 255.0 * max_value), 0, max_value).astype(np.float32)
     images = images / 255.0
-    images = np.clip(np.round(images * max_value), 0, max_value)
+    #images = np.clip(np.round(images * max_value), 0, max_value)
 
     outputs = qonnx.core.onnx_exec.execute_onnx(model, input_dict={input_name : images})
     results = np.squeeze(np.array(outputs[output_name]))
