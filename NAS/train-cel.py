@@ -21,7 +21,7 @@ from torch.utils.data import Subset
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
-model_dir    = f'./{network_params["bit_width"]}-bit'
+model_dir    = f'./{network_params["bit_width"]}-bit-cel'
 device       = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def evaluate(model : PilotNet, stats : Stats, val_loader : DataLoader, weights=None):
@@ -207,17 +207,12 @@ print(f'\tTesting Dataset: {len(test_dataset)}, {get_dataset_distribution(test_d
 print(f'Running brute force')
 
 class_weights[class_weights<1]=0.5
-#best_model, best_loss, config = brute(stats, train_loader, test_loader, val_loader, weight=class_weights)
-
-
-best_model = get_network(5,3,0.5,output_features=3,use_softmax=True)
-config = [0]
-best_loss = [0]
+best_model, best_loss, config = brute(stats, train_loader, test_loader, val_loader, weight=class_weights)
 
 name   = f'{datetime.now()}'.replace(' ', '-').replace(':', '-').replace('.', '-')
 ready_model_filename = model_dir + f'/{name}.onnx'
 input_a = np.random.randint(0, 255, size=(1,1,network_params["image_height"], network_params["image_width"])).astype(np.float32)
-input_t = torch.from_numpy(input_a).to(device)
+input_t = torch.from_numpy(input_a)
 
 best_model.cpu()
 export_qonnx(best_model, export_path=ready_model_filename, input_t=input_t)
