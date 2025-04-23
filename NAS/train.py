@@ -159,8 +159,13 @@ def evolution(n_generations: int, stats: PerformanceContrib, train_loader: DataL
 def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: DataLoader, val_loader: DataLoader, weights=None):
     n_convs = np.arange(min_conv, max_conv + 1)
     n_dense = np.arange(min_dense, max_dense + 1)
-    widths = np.linspace(min_width, max_width, 5)
+
+    n_widths = int(10*np.round(max_width-min_width+0.1,decimals=1))
+
+    widths = np.linspace(min_width, max_width, n_widths)
     widths = np.round(widths, decimals=1)
+
+    print(f'Number of combinations: {len(n_convs)*len(n_dense)*len(widths)*5}')
 
     config = (-1, -1, -1)
     best_loss = np.inf
