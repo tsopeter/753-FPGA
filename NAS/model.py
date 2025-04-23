@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from   brevitas.nn import QuantConv2d, QuantReLU, QuantLinear, QuantIdentity
-from brevitas.quant import Int32Bias, fixed_point
+from brevitas.quant import Int32Bias, fixed_point, Int8ActPerTensorFloat
 
 # PilotNet model
 class PilotNet(nn.Module):
@@ -18,13 +18,21 @@ class PilotNet(nn.Module):
         self.weight_bit_width = weight_bit_width
         self.act_bit_width    = act_bit_width
 
+        self.used_quantized = not non_quantized
+
+        self.quant_inp = QuantIdentity(
+            bit_width=self.act_bit_width,
+            act_quant=Int8ActPerTensorFloat,
+            return_quant_tensor=True
+        )
+
         self.use_softmax = use_softmax
         if not non_quantized:      
-            self.conv1  = QuantConv2d(1,  int(24*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width)
-            self.conv2  = QuantConv2d(int(24*self.width_multiplier), int(36*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width)
-            self.conv3  = QuantConv2d(int(36*self.width_multiplier), int(48*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width)
-            self.conv4  = QuantConv2d(int(48*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width)
-            self.conv5  = QuantConv2d(int(64*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width)
+            self.conv1  = QuantConv2d(1,  int(24*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width, bias_quant=Int32Bias, return_quant_tensor=True)
+            self.conv2  = QuantConv2d(int(24*self.width_multiplier), int(36*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width, bias_quant=Int32Bias, return_quant_tensor=True)
+            self.conv3  = QuantConv2d(int(36*self.width_multiplier), int(48*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width, bias_quant=Int32Bias, return_quant_tensor=True)
+            self.conv4  = QuantConv2d(int(48*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width, bias_quant=Int32Bias, return_quant_tensor=True)
+            self.conv5  = QuantConv2d(int(64*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width, bias_quant=Int32Bias, return_quant_tensor=True)
         else:
             self.conv1  = nn.Conv2d(1,  int(24*self.width_multiplier), kernel_size=5, stride=2)
             self.conv2  = nn.Conv2d(int(24*self.width_multiplier), int(36*self.width_multiplier), kernel_size=5, stride=2)
@@ -49,7 +57,7 @@ class PilotNet(nn.Module):
         self.flattened_size = self._get_flattened_size()
 
         if not non_quantized:
-            self.relu1  = QuantReLU(bit_width=self.act_bit_width)
+            self.relu1  = QuantReLU(bit_width=self.act_bit_width, return_quant_tensor=True)
         else:
             self.relu1  = nn.ReLU()
 
@@ -63,7 +71,7 @@ class PilotNet(nn.Module):
 
         for i in range(min(densez, len(hidden_sizes))):
             if not non_quantized:
-                self.fcs.append(QuantLinear(in_features, hidden_sizes[i], bias=True, weight_bit_width=self.weight_bit_width))
+                self.fcs.append(QuantLinear(in_features, hidden_sizes[i], bias=True, weight_bit_width=self.weight_bit_width, return_quant_tensor=True))
             else:
                 self.fcs.append(nn.Linear(in_features, hidden_sizes[i], bias=True))
             in_features = hidden_sizes[i]
@@ -76,12 +84,20 @@ class PilotNet(nn.Module):
 
     def _get_flattened_size(self):
         x = torch.zeros(1,1,self.height,self.width)
+
+        if self.used_quantized:
+            x = self.quant_inp(x)
+
         for cvz in self.cvz:
             x = cvz(x)
         x = self.flatten(x)
         return x.shape[1]
 
     def forward(self, x):
+
+        if self.used_quantized:
+            x = self.quant_inp(x)
+
         for cvz in self.cvz:
             x = self.relu1(cvz(x))
         x = self.flatten(x)
