@@ -23,7 +23,7 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model_dir = f'./{network_params["bit_width"]}-bit-mse-quant'
+model_dir = f'./{network_params["bit_width"]}-bit-mse-quant-8-bit-in-quant-inp'
 
 bit_width = network_params['bit_width']
 max_value = (2**bit_width)-1
@@ -55,8 +55,9 @@ def evaluate(model: PilotNet, val_loader: DataLoader, weights=None) -> None:
 
         for images, turns in val_loader:
             images, turns = images.to(device), turns.to(device)
-            images = torch.round(images / 255.0 * max_value)
-            images = torch.clip(images, 0, max_value)
+            images = images / 255
+            #images = torch.round(images / 255.0 * max_value)
+            #images = torch.clip(images, 0, max_value)
             turns = turns.unsqueeze(1)
 
             preds = model(images)
@@ -102,8 +103,9 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
         training_loss = 0.0
         for images, turns in train_loader:
             images, turns = images.to(device), turns.to(device)
-            images = torch.round(images / 255.0 * max_value)
-            images = torch.clip(images, 0, max_value)
+            images = images / 255
+            #images = torch.round(images / 255.0 * max_value)
+            #images = torch.clip(images, 0, max_value)
 
             optim.zero_grad()
             preds = model(images)
@@ -125,8 +127,9 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
 
             for images, turns in test_loader:
                 images, turns = images.to(device), turns.to(device)
-                images = torch.round(images / 255.0 * max_value)
-                images = torch.clip(images, 0, max_value)
+                images = images / 255
+                #images = torch.round(images / 255.0 * max_value)
+                #images = torch.clip(images, 0, max_value)
                 turns = turns.unsqueeze(1)
 
                 preds = model(images)
@@ -255,7 +258,7 @@ export_qonnx(model, export_path=ready_model_filename, input_t=input_t)
 qonnx_cleanup(ready_model_filename, out_file=ready_model_filename)
 
 model = ModelWrapper(ready_model_filename)
-model.set_tensor_datatype(model.graph.input[0].name, DataType[f'UINT{network_params["bit_width"]}'])
+#model.set_tensor_datatype(model.graph.input[0].name, DataType[f'UINT{network_params["bit_width"]}'])
 model.save(ready_model_filename)
 
 config = np.array(config)
