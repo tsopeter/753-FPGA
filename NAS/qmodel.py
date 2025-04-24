@@ -71,12 +71,13 @@ class PilotNet(nn.Module):
 
         for i in range(min(densez, len(hidden_sizes))):
             if not non_quantized:
-                self.fcs.append(QuantLinear(in_features, hidden_sizes[i], bias=True, weight_bit_width=self.weight_bit_width, return_quant_tensor=True))
+                self.fcs.append(QuantLinear(in_features, hidden_sizes[i], bias=True, weight_bit_width=self.weight_bit_width, bias_quant=Int32Bias, return_quant_tensor=True))
             else:
                 self.fcs.append(nn.Linear(in_features, hidden_sizes[i], bias=True))
             in_features = hidden_sizes[i]
             
         if not non_quantized:
+            self.output = QuantLinear(in_features, out_features=out_features, bias=True, weight_bit_width=self.weight_bit_width, bias_quant=Int32Bias, return_quant_tensor=True)
         else:
             self.output = nn.Linear(in_features, out_features=out_features, bias=True)
         self.softmax = nn.Softmax(dim=1)
