@@ -34,6 +34,8 @@ module base(
     wire tvalid;
     wire tlast;
     
+    wire capture_done;
+    
     design_1_wrapper design_1 (
         .clk_in1_0(sysclk),
         .clk_out1_0(clk),
@@ -43,18 +45,20 @@ module base(
         .clk_0(clk)
     );
 
-    spi_camera_controller controller (
-        .clk(clk),
+    spi_camera_axis_wrapper spi_camera (
+        .clk(sysclk),
         .rst(1'h0),
-        .start_capture(start_capture),
         .spi_clk(spi_clk),
         .spi_cs_n(spi_cs_n),
         .spi_mosi(spi_mosi),
         .spi_miso(spi_miso),
+        
+        .start_capture(start_capture),
+        .capture_done(capture_done),
         .m_axis_tdata(tdata),
         .m_axis_tvalid(tvalid),
-        .m_axis_tready(1'h1),
-        .m_axis_tlast(tlast)
+        .m_axis_tlast(tlast),
+        .m_axis_tready(1'h1)
     );
     
 endmodule
