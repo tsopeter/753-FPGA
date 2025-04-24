@@ -29,7 +29,9 @@ module spi_camera_axis_wrapper(
     input  wire spi_miso,
     
     input  wire start_capture,
+    input  wire reset_camera,
     output wire capture_done,
+    output wire camera_ready_to_capture,
     
     input  wire m_axis_tready,
     output wire [7:0] m_axis_tdata,
@@ -41,21 +43,25 @@ module spi_camera_axis_wrapper(
     output wire pixel_last,
     output wire pixel_valid,
     
-    output wire send
+    output wire send,
+    output wire [7:0] states
 );
 
     spi_camera_controller (
         .clk(clk),
         .rst(rst),
         .start_capture(start_capture),
+        .reset_camera(reset_camera),
         .capture_done(capture_done),
+        .camera_ready_to_capture(camera_ready_to_capture),
         .spi_sclk(spi_clk),
         .spi_cs_n(spi_cs_n),
         .spi_mosi(spi_mosi),
         .spi_miso(spi_miso),
         .pixel_data(pixel_data),
         .pixel_valid(pixel_valid),
-        .pixel_last(pixel_last)
+        .pixel_last(pixel_last),
+        .output_states(states)
     );    
     
     spi_camera_stream_bridge bridge (

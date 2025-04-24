@@ -12,6 +12,7 @@ module spi_camera_test_wr #(
     input  wire clk,
     input  wire rst,
     input  wire start_capture,
+    input  wire reset_camera,
 
     // SPI interface
     output wire spi_sclk,
@@ -70,12 +71,47 @@ module spi_camera_test_wr #(
                RES_FMT_0     = 42,
                INIT_9        = 43,
                INIT_10       = 44,
-               INIT_11       = 45;
-               
+               INIT_11       = 45,
+               SET_CAPTURE_0 = 46,
+               CAMERA_FLUSH_FIFO_0 = 47,
+               CLEAR_FIFO_FLAG_0 = 48,
+               START_CAPTURE_0 = 49,
+               WAIT_TRIGGER_0 = 50,
+               WAIT_TRIGGER_1 = 51,
+               CAPTURE_IMAGE_0 = 52,
+               CAPTURE_IMAGE_1 = 53,
+               CAPTURE_IMAGE_2 = 54,
+               CAPTURE_IMAGE_3 = 55,
+               CAPTURE_IMAGE_4 = 56,
+               CAPTURE_IMAGE_5 = 57,
+               CAPTURE_IMAGE_6 = 58,
+               READ_FIFO_LENGTH_0 = 59,
+               READ_FIFO_LENGTH_1 = 60,
+               READ_FIFO_LENGTH_2 = 61,
+               READ_FIFO_LENGTH_3 = 62,
+               READ_BUFFER_0 = 63,
+               READ_BUFFER_1 = 64,
+               READ_BUFFER_2 = 65,
+               READ_BUFFER_3 = 66,
+               SET_FIFO_BURST = 67,
+               SET_FIFO_BURST_1 = 68,
+               READ_BURST = 69,
+               READ_BURST_1 = 70,
+               DUMMY_READ_0 = 71,
+               FIFO_READ_0 = 72,
+               FIFO_READ_1 = 73,
+               FIFO_READ_2 = 74,
+               FIFO_READ_3 = 75,
+               SM0 = 76,
+               SM1 = 77,
+               SM2 = 78,
+               SM3 = 79,
+               SM4 = 80;
+              
     localparam WAIT_LIMIT   = 10;
 
-    reg [31:0] state;
-    reg [13:0] byte_count;
+    reg [31:0] state = SM0;
+    reg [31:0] byte_count;
     reg [6:0] row, col;
     
     reg [31:0] wait_counter = 0;
@@ -83,6 +119,9 @@ module spi_camera_test_wr #(
     
     reg [31:0] return_state;
     reg [31:0] func_return_state;
+    reg [31:0] camera_set_capture_return_state;
+    reg [31:0] camera_read_buffer_return_state;
+    reg [31:0] camera_init_return_state;
     
     reg [7:0] tx_addr_buf;
     reg [7:0] tx_data_buf;
@@ -103,7 +142,24 @@ module spi_camera_test_wr #(
     wire [7:0] CAM_IMG_PIX_FMT_RGB565 = 8'h02;
     wire [7:0] CAM_IMG_PIX_FMT_GRAY8  = 8'h00;
     
+    wire [7:0] ARDUCHIP_FIFO = 8'h04;
+    wire [7:0] ARDUCHIP_TRIG = 8'h44;
+    
+    wire [7:0] FIFO_CLEAR_MASK = 8'h01;
+    wire [7:0] FIFO_START_MASK = 8'h02;
+    
+    wire [7:0] FIFO_SIZE1 = 8'h45;
+    wire [7:0] FIFO_SIZE2 = 8'h46;
+    wire [7:0] FIFO_SIZE3 = 8'h47;
+    
+    reg read_burst_set_last_flag = 0;
+    
     wire [7:0] CAM_RES_96x96 = 8'd12;
+    
+    wire [7:0] CAP_DONE_MASK = 8'h04;
+    
+    reg camera_burst_first_flag = 0;
+    reg [31:0] fifo_length = 0;
     
     localparam MAX_EXPOSURE = 1400;
     localparam MIN_EXPOSURE = 100;
@@ -127,7 +183,7 @@ module spi_camera_test_wr #(
 
     always @(posedge clk) begin
         if (rst) begin
-            state        <= INIT_0;
+            state        <= SM0;
             spi_din_vld  <= 0;
             spi_din_last <= 0;
             byte_count   <= 0;
@@ -145,6 +201,40 @@ module spi_camera_test_wr #(
             capture_done <= 0;
 
             case (state)
+                //////// Implementation for setting FIFO to burst
+                SET_FIFO_BURST: begin
+                    if (spi_din_rdy) begin
+                        spi_din <= tx_addr_buf;
+                        spi_din_vld <= 1;
+                        spi_din_last <= 0;
+                        
+                        state <= WAIT;
+                        ret_state <= SET_FIFO_BURST_1;
+                        wait_counter <= 0;
+                    end
+                end
+                
+                SET_FIFO_BURST_1: begin
+                    state <= return_state;
+                end
+                
+                READ_BURST: begin
+                    if (spi_din_rdy) begin
+                        spi_din <= EMPTY;
+                        spi_din_vld <= 1;
+                        spi_din_last <= read_burst_set_last_flag;
+                        
+                        state <= READ_BURST_1;
+                    end
+                end
+                
+                READ_BURST_1: begin
+                    if (spi_dout_vld) begin
+                        rx_data_buf <= spi_dout;
+                        state <= return_state;
+                    end
+                end
+            
                 /////// Implementation for writing to registers
                 WRITE_REG: begin
                     if (spi_din_rdy) begin
@@ -219,10 +309,7 @@ module spi_camera_test_wr #(
                     end
                 end
                 
-                ////////////////////////////////////////////////////////////////////
-                // State Machine ///////////////////////////////////////////////////
-                ////////////////////////////////////////////////////////////////////
-            
+                ///////////////////////////// Camera Initialization //////////////////////////////////////
                 // reset
                 INIT_0: begin
                     state <= RESET_0;
@@ -244,19 +331,7 @@ module spi_camera_test_wr #(
                 // wait
                 INIT_3: begin
                     state <= WAIT_FOR_I2C_0;
-                    func_return_state <= INIT_4;
-                end
-                
-                // set resolution (do nothing now)
-                INIT_4: begin
-                    state <= INIT_5;
-                end
-                
-                // wait (do nothing now)
-                INIT_5: begin
-                    //state <= WAIT_FOR_I2C_0;
-                    //func_return_state <= INIT_6;
-                    state <= INIT_6;
+                    func_return_state <= INIT_6;
                 end
                 
                 // set pixel format
@@ -282,7 +357,7 @@ module spi_camera_test_wr #(
                 end
                 
                 INIT_10: begin
-                
+                    state <= camera_init_return_state;
                 end
                 
                 RESET_0: begin
@@ -327,85 +402,198 @@ module spi_camera_test_wr #(
                     return_state <= func_return_state;
                 end
                 
-
+                ////////////////////////////////////// Image Setup //////////////////////////////////////////////
                 
-
-                SEND_BURST: begin
-                    if (spi_din_rdy) begin
-                        spi_din      <= BURST_RD;
-                        spi_din_vld  <= 1;
-                        spi_din_last <= 0;
-                        state        <= WAIT;
-                        ret_state    <= WAIT_DUMMY;
-                        wait_counter <= 0;
-                    end
-                end
-
-                WAIT_DUMMY: begin
-                    if (spi_din_rdy) begin
-                        spi_din    <= EMPTY;
-                        spi_din_vld <= 1;
-                        spi_din_last <= 0;
-                        
-                        col        <= 0;
-                        row        <= 0;
-                        byte_count <= 0;
-                        state      <= WAIT;
-                        ret_state  <= GET_PIXELS;
-                        wait_counter <= 0;
-                        skip_first_byte <= 1;
-                    end
+                CAMERA_FLUSH_FIFO_0: begin
+                    tx_addr_buf <= ARDUCHIP_FIFO;
+                    tx_data_buf <= FIFO_CLEAR_MASK;
+                    state       <= WRITE_REG;
+                    return_state <= func_return_state;
                 end
                 
-                GET_PIXELS: begin
-                    if (spi_dout_vld) begin
-                        rx_buf <= spi_dout;
-                        state <= STREAM_PIXELS;
-                    end
-                    if (spi_din_rdy) begin
-                        spi_din      <= EMPTY;
-                        spi_din_vld  <= 1;
-                        spi_din_last <= (byte_count >= 9215);
-                        
-                        state      <= WAIT;
-                        ret_state  <= GET_PIXELS;
-                        wait_counter <= 0;
-                    end
+                CLEAR_FIFO_FLAG_0: begin
+                    tx_addr_buf <= ARDUCHIP_FIFO;
+                    tx_data_buf <= FIFO_CLEAR_MASK;
+                    state       <= WRITE_REG;
+                    return_state <= func_return_state;
                 end
                 
-                STREAM_PIXELS: begin
-                    if (~skip_first_byte) begin
-                        byte_count <= byte_count + 1;
-                       
-                            
-                        if (col == 95) begin
-                            col <= 0;
-                            row <= row + 1;
-                        end else begin
-                            col <= col + 1;
-                        end
-    
-                        if ((row % 3 != 2) && (col % 3 != 2)) begin
-                            pixel_data  <= rx_buf;
-                            pixel_valid <= 1;
-                            pixel_last  <= (row == 95 && col == 95);
-                        end
-    
-                        if (byte_count == 9215) begin
-                            state <= DONE;
-                        end
-                        else begin
-                            state <= GET_PIXELS;
-                        end
+                START_CAPTURE_0: begin
+                    tx_addr_buf <= ARDUCHIP_FIFO;
+                    tx_data_buf <= FIFO_START_MASK;
+                    state       <= WRITE_REG;
+                    return_state <= func_return_state;
+                end
+                
+                WAIT_TRIGGER_0: begin
+                    rx_addr_buf <= ARDUCHIP_TRIG;
+                    state       <= READ_REG;
+                    return_state <= WAIT_TRIGGER_1;
+                end
+                
+                WAIT_TRIGGER_1: begin
+                    if (rx_data_buf & CAP_DONE_MASK == 0) begin
+                        state <= func_return_state;
                     end else begin
-                        skip_first_byte <= 0;
-                        state <= GET_PIXELS;
+                        state <= WAIT_TRIGGER_0;
                     end
                 end
-
-                DONE: begin
+                
+                READ_FIFO_LENGTH_0: begin
+                    fifo_length <= 0;
+                    rx_addr_buf <= FIFO_SIZE1;
+                    state       <= READ_REG;
+                    return_state <= READ_FIFO_LENGTH_1;
+                end
+                
+                READ_FIFO_LENGTH_1: begin
+                    fifo_length <= fifo_length + rx_data_buf;
+                    rx_addr_buf <= FIFO_SIZE2;
+                    state       <= READ_REG;
+                    return_state <= READ_FIFO_LENGTH_2;
+                end
+                
+                READ_FIFO_LENGTH_2: begin
+                    fifo_length <= fifo_length + rx_data_buf;
+                    rx_addr_buf <= FIFO_SIZE3;
+                    state       <= READ_REG;
+                    return_state <= READ_FIFO_LENGTH_3;
+                end
+                
+                READ_FIFO_LENGTH_3: begin
+                    fifo_length <= fifo_length + (rx_data_buf & 8'h7f);
+                    return_state <= func_return_state;
+                end
+                
+                CAPTURE_IMAGE_0: begin
+                    state <= CAMERA_FLUSH_FIFO_0;
+                    func_return_state <= CAPTURE_IMAGE_1;
+                end
+                
+                CAPTURE_IMAGE_1: begin
+                    state <= CLEAR_FIFO_FLAG_0;
+                    func_return_state <= CAPTURE_IMAGE_2;
+                end
+                
+                CAPTURE_IMAGE_2: begin
+                    state <= START_CAPTURE_0;
+                    func_return_state <= CAPTURE_IMAGE_3;
+                end
+                
+                CAPTURE_IMAGE_3: begin
+                    state <= WAIT_TRIGGER_0;
+                    func_return_state <= CAPTURE_IMAGE_4;
+                end
+                
+                CAPTURE_IMAGE_4: begin
+                    state <= READ_FIFO_LENGTH_0;
+                    func_return_state <= CAPTURE_IMAGE_5;
+                end
+                
+                CAPTURE_IMAGE_5: begin
+                    camera_burst_first_flag <= 0;
+                    state <= camera_set_capture_return_state;
+                end
+                
+                /////////////////////////////////////// Reading Image /////////////////////////////////////////////////
+                
+                READ_BUFFER_0: begin
+                    if (fifo_length == 0) begin
+                        state <= camera_read_buffer_return_state;
+                    end else begin
+                        if (camera_burst_first_flag == 0) begin
+                            camera_burst_first_flag <= 1;
+                            state <= DUMMY_READ_0;
+                        end else begin
+                            state <= FIFO_READ_0;
+                        end
+                    end
+                end
+                
+                READ_BUFFER_1: begin
+                    state <= camera_read_buffer_return_state;
+                end
+                
+                DUMMY_READ_0: begin
+                    state <= READ_BURST;
+                    read_burst_set_last_flag <= 0;
+                    return_state <= FIFO_READ_0;
+                end
+                
+                FIFO_READ_0: begin
+                    state <= READ_BURST;
+                    byte_count <= byte_count + 1;
+                    return_state <= FIFO_READ_1;
+                end
+                
+                FIFO_READ_1: begin
+                    if (read_burst_set_last_flag) begin
+                        pixel_data <= rx_data_buf;
+                        pixel_valid <= 1;
+                        pixel_last <= 1;
+                        
+                        state <= FIFO_READ_3;
+                    end else begin
+                        
+                        pixel_data  <= rx_data_buf;
+                        pixel_valid <= 1;
+                        pixel_last <= 0;
+                        
+                        if (byte_count == (fifo_length - 1)) begin
+                            read_burst_set_last_flag <= 1;
+                        end
+                        state <= FIFO_READ_2;
+                    end
+                end
+                
+                FIFO_READ_2: begin
+                    pixel_valid <= 0;
+                    pixel_last  <= 0;
+                    state <= FIFO_READ_0;
+                end
+                
+                FIFO_READ_3: begin
+                    pixel_valid <= 0;
+                    pixel_last <= 0;
+                    state <= READ_BUFFER_1;
+                end
+                
+                
+                ///////////////////////////////////////////// Program //////////////////////////////////////////////
+                
+                //// Initialize the cameras
+                SM0: begin
+                    state <= INIT_0;
+                    camera_init_return_state <= SM1;
+                end
+                
+                //// Program starting point
+                SM1: begin
+                    capture_done <= 0;
+                    if (reset_camera) begin
+                        state <= SM0;
+                    end else begin
+                        if (start_capture) begin
+                            state <= SM2;
+                        end
+                    end
+                end
+                
+                //// Setup capture
+                SM2: begin
+                    state <= CAPTURE_IMAGE_0;
+                    camera_set_capture_return_state <= SM3;
+                end
+                
+                //// Read buffer
+                SM3: begin
+                    state <= READ_BUFFER_0;
+                    camera_read_buffer_return_state <= SM4;
+                end
+                
+                SM4: begin
                     capture_done <= 1;
-                    state <= IDLE;
+                    state <= SM1;
                 end
             endcase
         end

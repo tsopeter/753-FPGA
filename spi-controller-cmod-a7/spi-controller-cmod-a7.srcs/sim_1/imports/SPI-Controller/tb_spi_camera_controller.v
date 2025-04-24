@@ -70,9 +70,11 @@ module tb_spi_camera_controller;
         // Wait and trigger capture
         #500;
         rst = 0;
-        //start_capture = 1;
-        #100;
-        //start_capture = 0;
+        
+        #40000
+        start_capture = 1;
+        #1000;
+        start_capture = 0;
 
         // Wait until frame capture is done
         #100000;

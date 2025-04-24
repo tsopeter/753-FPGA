@@ -26,7 +26,9 @@ module base(
     output wire spi_cs_n,
     output wire spi_mosi,
     input  wire spi_miso,
-    input  wire start_capture
+    input  wire start_capture,
+    input  wire reset_camera,
+    output wire camera_ready_to_capture
     );
     
     wire clk;
@@ -39,6 +41,8 @@ module base(
     wire [7:0] pdata;
     wire pvalid;
     wire plast;
+    
+    wire [7:0] states;
     
     wire capture_done;
     
@@ -58,7 +62,8 @@ module base(
         .probe1_0(spi_cs_n),
         .probe2_0(spi_mosi),
         .probe3_0(spi_miso),
-        .probe4_0(start_capture)
+        .probe4_0(start_capture),
+        .probe5_0(states)
     );
 
     spi_camera_axis_wrapper spi_camera (
@@ -70,6 +75,8 @@ module base(
         .spi_miso(spi_miso),
         
         .start_capture(start_capture),
+        .reset_camera(reset_camera),
+        .camera_ready_to_capture(camera_ready_to_capture),
         .capture_done(capture_done),
         .m_axis_tdata(tdata),
         .m_axis_tvalid(tvalid),
@@ -80,7 +87,8 @@ module base(
         .pixel_last(plast),
         .pixel_valid(pvalid),
         
-        .send(send)
+        .send(send),
+        .states(states)
     );
     
 endmodule

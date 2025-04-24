@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF0C895184C9E35C3",
+      "boundary_crc": "0xE004E7A068723E24",
       "device": "xc7a35tcpg236-1",
       "gen_directory": "../../../../spi-controller-cmod-a7.gen/sources_1/bd/design_2",
       "name": "design_2",
@@ -64,6 +64,11 @@
         "direction": "I",
         "left": "0",
         "right": "0"
+      },
+      "probe5_0": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
       }
     },
     "components": {
@@ -80,7 +85,10 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "5"
+            "value": "6"
+          },
+          "C_PROBE5_WIDTH": {
+            "value": "8"
           }
         }
       }
@@ -120,6 +128,12 @@
         "ports": [
           "probe4_0",
           "ila_0/probe4"
+        ]
+      },
+      "probe5_0_1": {
+        "ports": [
+          "probe5_0",
+          "ila_0/probe5"
         ]
       }
     }

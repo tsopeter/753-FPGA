@@ -9,17 +9,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="682"></ZoomStartTime>
-      <ZoomEndTime time="4,779"></ZoomEndTime>
+      <ZoomStartTime time="0"></ZoomStartTime>
+      <ZoomEndTime time="11"></ZoomEndTime>
       <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="252"></NameColumnWidth>
-      <ValueColumnWidth column_width="153"></ValueColumnWidth>
+      <ValueColumnWidth column_width="148"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="3" />
-   <wave_markers>
-   </wave_markers>
    <wvobject fp_name="design_1/design_1_i/probe0_0_1" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_1/design_1_i/probe0_0_1</obj_property>

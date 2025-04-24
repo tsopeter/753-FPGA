@@ -24,7 +24,9 @@ module spi_camera_controller #(
     output reg [7:0] pixel_data,
     output reg       pixel_valid,
     output reg       pixel_last,
-    output reg       capture_done
+    output reg       capture_done,
+    output reg       camera_ready_to_capture,
+    output wire [7:0] output_states
 );
 
     // SPI master interface
@@ -570,10 +572,13 @@ module spi_camera_controller #(
                 //// Program starting point
                 SM1: begin
                     capture_done <= 0;
+                    camera_ready_to_capture <= 1;
                     if (reset_camera) begin
+                        camera_ready_to_capture <= 0;
                         state <= SM0;
                     end else begin
                         if (start_capture) begin
+                            camera_ready_to_capture <= 0;
                             state <= SM2;
                         end
                     end
@@ -598,6 +603,8 @@ module spi_camera_controller #(
             endcase
         end
     end
+    
+    assign output_states = state;
 
     spi_master #(
         .CLK_FREQ(CLK_FREQ),

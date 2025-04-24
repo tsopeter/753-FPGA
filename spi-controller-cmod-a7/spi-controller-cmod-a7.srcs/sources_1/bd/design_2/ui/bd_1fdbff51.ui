@@ -1,25 +1,27 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.25",
-   "Default View_TopLeft":"-401,-240",
+   "Default View_TopLeft":"-394,-230",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_clk_0 -pg 1 -lvl 0 -x -30 -y -130 -defaultsOSRD
-preplace portBus probe0_0 -pg 1 -lvl 0 -x -30 -y -100 -defaultsOSRD
-preplace portBus probe1_0 -pg 1 -lvl 0 -x -30 -y -70 -defaultsOSRD
-preplace portBus probe2_0 -pg 1 -lvl 0 -x -30 -y -40 -defaultsOSRD
-preplace portBus probe3_0 -pg 1 -lvl 0 -x -30 -y -10 -defaultsOSRD
-preplace portBus probe4_0 -pg 1 -lvl 0 -x -30 -y 20 -defaultsOSRD
-preplace inst ila_0 -pg 1 -lvl 1 -x 110 -y -30 -defaultsOSRD
-preplace netloc clk_0_1 1 0 1 20 -130n
-preplace netloc probe0_0_1 1 0 1 10 -100n
-preplace netloc probe1_0_1 1 0 1 0J -70n
-preplace netloc probe2_0_1 1 0 1 -10J -40n
-preplace netloc probe3_0_1 1 0 1 20J -10n
-preplace netloc probe4_0_1 1 0 1 N 20
-levelinfo -pg 1 -30 110 200
-pagesize -pg 1 -db -bbox -sgen -170 -150 200 140
+preplace port port-id_clk_0 -pg 1 -lvl 0 -x -30 -y -150 -defaultsOSRD
+preplace portBus probe0_0 -pg 1 -lvl 0 -x -30 -y -120 -defaultsOSRD
+preplace portBus probe1_0 -pg 1 -lvl 0 -x -30 -y -90 -defaultsOSRD
+preplace portBus probe2_0 -pg 1 -lvl 0 -x -30 -y -60 -defaultsOSRD
+preplace portBus probe3_0 -pg 1 -lvl 0 -x -30 -y -30 -defaultsOSRD
+preplace portBus probe4_0 -pg 1 -lvl 0 -x -30 -y 0 -defaultsOSRD
+preplace portBus probe5_0 -pg 1 -lvl 0 -x -30 -y 30 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 1 -x 120 -y -30 -defaultsOSRD
+preplace netloc clk_0_1 1 0 1 30 -150n
+preplace netloc probe0_0_1 1 0 1 20 -120n
+preplace netloc probe1_0_1 1 0 1 10J -90n
+preplace netloc probe2_0_1 1 0 1 0J -60n
+preplace netloc probe3_0_1 1 0 1 -10J -30n
+preplace netloc probe4_0_1 1 0 1 30 0n
+preplace netloc probe5_0_1 1 0 1 N 30
+levelinfo -pg 1 -30 120 210
+pagesize -pg 1 -db -bbox -sgen -170 -170 210 140
 "
 }
 
