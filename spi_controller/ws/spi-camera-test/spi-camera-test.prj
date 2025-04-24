@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="spi-camera-test" location="D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test" platform="D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/base_uart.xpfm" platformUID="xilinx:kv260_som::0.0(custom)" systemProject="spi-camera-test_system" sysConfig="base_uart" runtime="C/C++" cpu="standalone_domain" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="046f0ca7ddc7c8b01e3d2050a65c07cb">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.82911657" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.945698579" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

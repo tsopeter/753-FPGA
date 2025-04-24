@@ -1,0 +1,28 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.08061",
+   "Default View_TopLeft":"-140,-440",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port M_AVALON_0 -pg 1 -lvl 3 -x 1070 -y -70 -defaultsOSRD
+preplace port port-id_FCLK -pg 1 -lvl 3 -x 1070 -y -180 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 610 -y -10 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -x 160 -y -300 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 2 -x 610 -y -310 -defaultsOSRD
+preplace inst axi_amm_bridge_0 -pg 1 -lvl 1 -x 160 -y -70 -defaultsOSRD
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 3 -10 -150 310J -180 940
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 2 320 -410 920
+preplace netloc ARESETN_1 1 0 3 -20 -430 NJ -430 910J
+preplace netloc S00_ARESETN_1 1 0 3 0 -160 NJ -160 910
+preplace netloc S00_AXI_1 1 0 3 20 -170 NJ -170 900
+preplace netloc axi_interconnect_0_M00_AXI 1 0 2 10 -420 300
+preplace netloc axi_amm_bridge_0_M_AVALON 1 1 2 320J -100 930J
+levelinfo -pg 1 -40 160 610 1070
+pagesize -pg 1 -db -bbox -sgen -40 -440 1270 180
+"
+}
+{
+   "da_clkrst_cnt":"2",
+   "da_zynq_ultra_ps_e_cnt":"1"
+}

@@ -1,0 +1,666 @@
+18:35:26 DEBUG : Logs will be stored at 'D:/GitHub/753-FPGA/spi_controller/ws/IDE.log'.
+18:37:17 DEBUG : Logs will be stored at 'D:/GitHub/753-FPGA/spi_controller/ws/IDE.log'.
+18:38:26 DEBUG : Logs will be stored at 'D:/GitHub/753-FPGA/spi_controller/ws/IDE.log'.
+18:38:38 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\GitHub\753-FPGA\spi_controller\ws\temp_xsdb_launch_script.tcl
+18:38:40 INFO  : Registering command handlers for Vitis TCF services
+18:38:42 INFO  : Platform repository initialization has completed.
+18:38:47 INFO  : XSCT server has started successfully.
+18:38:52 INFO  : plnx-install-location is set to ''
+18:38:52 INFO  : Successfully done setting XSCT server connection channel  
+18:38:52 INFO  : Successfully done query RDI_DATADIR 
+18:38:52 INFO  : Successfully done setting workspace for the tool. 
+18:40:38 INFO  : Result from executing command 'getProjects': base_0
+18:40:38 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_202310_1/xilinx_zcu102_base_202310_1.xpfm;xilinx_zcu102_base_dfx_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_dfx_202310_1/xilinx_zcu102_base_dfx_202310_1.xpfm;xilinx_zcu104_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu104_base_202310_1/xilinx_zcu104_base_202310_1.xpfm
+18:42:10 INFO  : Result from executing command 'getProjects': base_0
+18:42:10 INFO  : Result from executing command 'getPlatforms': base_0|D:/GitHub/753-FPGA/spi_controller/ws/base_0/export/base_0/base_0.xpfm;xilinx_zcu102_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_202310_1/xilinx_zcu102_base_202310_1.xpfm;xilinx_zcu102_base_dfx_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_dfx_202310_1/xilinx_zcu102_base_dfx_202310_1.xpfm;xilinx_zcu104_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu104_base_202310_1/xilinx_zcu104_base_202310_1.xpfm
+19:23:59 INFO  : Result from executing command 'getProjects': base_0;base_uart
+19:23:59 INFO  : Result from executing command 'getPlatforms': base_0|D:/GitHub/753-FPGA/spi_controller/ws/base_0/export/base_0/base_0.xpfm;xilinx_zcu102_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_202310_1/xilinx_zcu102_base_202310_1.xpfm;xilinx_zcu102_base_dfx_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_dfx_202310_1/xilinx_zcu102_base_dfx_202310_1.xpfm;xilinx_zcu104_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu104_base_202310_1/xilinx_zcu104_base_202310_1.xpfm
+19:24:54 INFO  : Result from executing command 'getProjects': base_0;base_uart
+19:24:54 INFO  : Result from executing command 'getPlatforms': base_0|D:/GitHub/753-FPGA/spi_controller/ws/base_0/export/base_0/base_0.xpfm;base_uart|D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/base_uart.xpfm;xilinx_zcu102_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_202310_1/xilinx_zcu102_base_202310_1.xpfm;xilinx_zcu102_base_dfx_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_dfx_202310_1/xilinx_zcu102_base_dfx_202310_1.xpfm;xilinx_zcu104_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu104_base_202310_1/xilinx_zcu104_base_202310_1.xpfm
+19:26:21 INFO  : Checking for BSP changes to sync application flags for project 'spi-camera-test'...
+19:27:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:27:32 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:27:32 INFO  : 'jtag frequency' command is executed.
+19:27:32 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:27:33 INFO  : Context for 'APU' is selected.
+19:27:33 INFO  : System reset is completed.
+19:27:36 INFO  : 'after 3000' command is executed.
+19:27:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:27:41 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:27:41 INFO  : Context for 'APU' is selected.
+19:27:41 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:27:41 INFO  : 'configparams force-mem-access 1' command is executed.
+19:27:42 INFO  : Context for 'APU' is selected.
+19:27:42 INFO  : Boot mode is read from the target.
+19:27:48 INFO  : Boot mode of the target is set to jtag.
+19:27:48 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:27:48 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:27:49 INFO  : The application 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+19:27:49 INFO  : 'set bp_27_49_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+19:27:50 INFO  : 'con -block -timeout 60' command is executed.
+19:27:50 INFO  : 'bpremove $bp_27_49_fsbl_bp' command is executed.
+19:27:50 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:27:50 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:27:50 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:27:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+mask_write 0xFF5E0200 0xf000 0
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf
+set bp_27_49_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_27_49_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/Debug/spi-camera-test.elf
+----------------End of Script----------------
+
+19:27:50 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:27:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:27:56 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:27:56 INFO  : 'jtag frequency' command is executed.
+19:27:56 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:27:56 INFO  : Context for 'APU' is selected.
+19:27:57 INFO  : System reset is completed.
+19:28:00 INFO  : 'after 3000' command is executed.
+19:28:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:28:05 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:28:05 INFO  : Context for 'APU' is selected.
+19:28:05 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:28:05 INFO  : 'configparams force-mem-access 1' command is executed.
+19:28:05 INFO  : Context for 'APU' is selected.
+19:28:05 INFO  : Boot mode is read from the target.
+19:28:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+----------------End of Script----------------
+
+19:28:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:28:24 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:28:24 INFO  : 'jtag frequency' command is executed.
+19:28:24 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:28:24 INFO  : Context for 'APU' is selected.
+19:28:24 INFO  : System reset is completed.
+19:28:27 INFO  : 'after 3000' command is executed.
+19:28:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:28:32 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:28:32 INFO  : Context for 'APU' is selected.
+19:28:32 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:28:32 INFO  : 'configparams force-mem-access 1' command is executed.
+19:28:32 INFO  : Context for 'APU' is selected.
+19:28:32 INFO  : Boot mode is read from the target.
+19:28:34 INFO  : Boot mode of the target is set to jtag.
+19:28:34 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:28:34 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:28:35 INFO  : The application 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+19:28:35 INFO  : 'set bp_28_35_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+19:28:36 INFO  : 'con -block -timeout 60' command is executed.
+19:28:36 INFO  : 'bpremove $bp_28_35_fsbl_bp' command is executed.
+19:28:36 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:28:36 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:28:36 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:28:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+mask_write 0xFF5E0200 0xf000 0
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf
+set bp_28_35_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_28_35_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/Debug/spi-camera-test.elf
+----------------End of Script----------------
+
+19:28:36 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:31:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:31:37 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:31:37 INFO  : 'jtag frequency' command is executed.
+19:31:37 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:31:37 INFO  : Context for 'APU' is selected.
+19:31:37 INFO  : System reset is completed.
+19:31:40 INFO  : 'after 3000' command is executed.
+19:31:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:31:45 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:31:45 INFO  : Context for 'APU' is selected.
+19:31:45 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:31:45 INFO  : 'configparams force-mem-access 1' command is executed.
+19:31:45 INFO  : Context for 'APU' is selected.
+19:31:45 INFO  : Boot mode is read from the target.
+19:31:46 INFO  : Boot mode of the target is set to jtag.
+19:31:46 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:31:46 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:31:47 INFO  : The application 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+19:31:47 INFO  : 'set bp_31_47_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+19:31:48 INFO  : 'con -block -timeout 60' command is executed.
+19:31:48 INFO  : 'bpremove $bp_31_47_fsbl_bp' command is executed.
+19:31:48 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:31:48 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:31:48 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:31:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+mask_write 0xFF5E0200 0xf000 0
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf
+set bp_31_47_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_31_47_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/Debug/spi-camera-test.elf
+----------------End of Script----------------
+
+19:31:48 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:34:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:34:09 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:34:09 INFO  : 'jtag frequency' command is executed.
+19:34:10 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:34:10 INFO  : Context for 'APU' is selected.
+19:34:10 INFO  : System reset is completed.
+19:34:13 INFO  : 'after 3000' command is executed.
+19:34:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:34:18 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:34:18 INFO  : Context for 'APU' is selected.
+19:34:18 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:34:18 INFO  : 'configparams force-mem-access 1' command is executed.
+19:34:18 INFO  : Context for 'APU' is selected.
+19:34:18 INFO  : Boot mode is read from the target.
+19:34:21 INFO  : Boot mode of the target is set to jtag.
+19:34:21 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:34:21 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:34:21 INFO  : The application 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+19:34:21 INFO  : 'set bp_34_21_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+19:34:22 INFO  : 'con -block -timeout 60' command is executed.
+19:34:22 INFO  : 'bpremove $bp_34_21_fsbl_bp' command is executed.
+19:34:22 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:34:22 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:34:22 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:34:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+mask_write 0xFF5E0200 0xf000 0
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf
+set bp_34_21_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_34_21_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/Debug/spi-camera-test.elf
+----------------End of Script----------------
+
+19:34:22 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:34:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:34:54 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:34:54 INFO  : 'jtag frequency' command is executed.
+19:34:54 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:34:54 INFO  : Context for 'APU' is selected.
+19:34:54 INFO  : System reset is completed.
+19:34:57 INFO  : 'after 3000' command is executed.
+19:34:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:35:02 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:35:02 INFO  : Context for 'APU' is selected.
+19:35:02 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:35:02 INFO  : 'configparams force-mem-access 1' command is executed.
+19:35:02 INFO  : Context for 'APU' is selected.
+19:35:02 INFO  : Boot mode is read from the target.
+19:35:03 INFO  : Boot mode of the target is set to jtag.
+19:35:03 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:35:03 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:35:03 INFO  : The application 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+19:35:03 INFO  : 'set bp_35_3_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+19:35:04 INFO  : 'con -block -timeout 60' command is executed.
+19:35:04 INFO  : 'bpremove $bp_35_3_fsbl_bp' command is executed.
+19:35:05 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:35:05 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:35:05 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:35:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+mask_write 0xFF5E0200 0xf000 0
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf
+set bp_35_3_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_35_3_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/Debug/spi-camera-test.elf
+----------------End of Script----------------
+
+19:35:05 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:37:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:37:11 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:37:11 INFO  : 'jtag frequency' command is executed.
+19:37:11 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:37:11 INFO  : Context for 'APU' is selected.
+19:37:12 INFO  : System reset is completed.
+19:37:15 INFO  : 'after 3000' command is executed.
+19:37:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:37:20 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:37:20 INFO  : Context for 'APU' is selected.
+19:37:20 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:37:20 INFO  : 'configparams force-mem-access 1' command is executed.
+19:37:20 INFO  : Context for 'APU' is selected.
+19:37:20 INFO  : Boot mode is read from the target.
+19:37:21 INFO  : Boot mode of the target is set to jtag.
+19:37:21 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:37:21 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:37:21 INFO  : The application 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+19:37:21 INFO  : 'set bp_37_21_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+19:37:22 INFO  : 'con -block -timeout 60' command is executed.
+19:37:22 INFO  : 'bpremove $bp_37_21_fsbl_bp' command is executed.
+19:37:22 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:37:22 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:37:22 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:37:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+mask_write 0xFF5E0200 0xf000 0
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf
+set bp_37_21_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_37_21_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/Debug/spi-camera-test.elf
+----------------End of Script----------------
+
+19:37:22 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:39:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:39:33 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:39:33 INFO  : 'jtag frequency' command is executed.
+19:39:33 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:39:33 INFO  : Context for 'APU' is selected.
+19:39:33 INFO  : System reset is completed.
+19:39:36 INFO  : 'after 3000' command is executed.
+19:39:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:39:41 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:39:41 INFO  : Context for 'APU' is selected.
+19:39:41 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:39:41 INFO  : 'configparams force-mem-access 1' command is executed.
+19:39:41 INFO  : Context for 'APU' is selected.
+19:39:41 INFO  : Boot mode is read from the target.
+19:39:42 INFO  : Boot mode of the target is set to jtag.
+19:39:42 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:39:42 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:39:43 INFO  : The application 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+19:39:43 INFO  : 'set bp_39_43_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+19:39:44 INFO  : 'con -block -timeout 60' command is executed.
+19:39:44 INFO  : 'bpremove $bp_39_43_fsbl_bp' command is executed.
+19:39:44 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:39:44 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:39:44 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:39:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+mask_write 0xFF5E0200 0xf000 0
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf
+set bp_39_43_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_39_43_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/Debug/spi-camera-test.elf
+----------------End of Script----------------
+
+19:39:44 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:40:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:40:12 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:40:12 INFO  : 'jtag frequency' command is executed.
+19:40:12 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:40:12 INFO  : Context for 'APU' is selected.
+19:40:13 INFO  : System reset is completed.
+19:40:16 INFO  : 'after 3000' command is executed.
+19:40:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:40:20 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:40:20 INFO  : Context for 'APU' is selected.
+19:40:20 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:40:20 INFO  : 'configparams force-mem-access 1' command is executed.
+19:40:20 INFO  : Context for 'APU' is selected.
+19:40:20 INFO  : Boot mode is read from the target.
+19:40:21 INFO  : Boot mode of the target is set to jtag.
+19:40:21 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:40:22 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:40:22 INFO  : The application 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+19:40:22 INFO  : 'set bp_40_22_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+19:41:22 WARN  : Exit breakpoint of FSBL (XFsbl_Exit) is not hit within allocated wait time of '60' seconds.
+Note: To wait for a fixed amount of time specify the FSBL function as empty in launch configuration. Use 'IDE_FSBL_BP_HIT_WAIT_TIME' environment variable in launch configuration to modify the wait time (seconds).
+Reason: timeout: target has not halted
+19:41:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:41:22 INFO  : 'bpremove $bp_40_22_fsbl_bp' command is executed.
+19:41:22 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:41:22 INFO  : 'jtag frequency' command is executed.
+19:41:22 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:41:22 INFO  : Context for 'APU' is selected.
+19:41:23 INFO  : System reset is completed.
+19:41:26 INFO  : 'after 3000' command is executed.
+19:41:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:41:31 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:41:31 INFO  : Context for 'APU' is selected.
+19:41:31 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:41:31 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:41:31 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:41:31 INFO  : 'configparams force-mem-access 1' command is executed.
+19:41:31 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:41:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+mask_write 0xFF5E0200 0xf000 0
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf
+set bp_40_22_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_40_22_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/Debug/spi-camera-test.elf
+----------------End of Script----------------
+
+19:41:31 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:41:31 INFO  : Context for 'APU' is selected.
+19:41:31 INFO  : Boot mode is read from the target.
+19:41:34 INFO  : Boot mode of the target is set to jtag.
+19:41:34 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:41:34 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:41:34 ERROR : Memory write error at 0xFFFC0000. Cannot read sctlr_el3. Cannot read r0. Cortex-A53 #0: EDITR not ready
+19:41:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+mask_write 0xFF5E0200 0xf000 0
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf
+----------------End of Script----------------
+
+19:41:34 ERROR : Memory write error at 0xFFFC0000. Cannot read sctlr_el3. Cannot read r0. Cortex-A53 #0: EDITR not ready
+19:41:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:41:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:41:58 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:42:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:42:39 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:42:39 INFO  : 'jtag frequency' command is executed.
+19:42:39 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:42:39 INFO  : Context for 'APU' is selected.
+19:42:40 INFO  : System reset is completed.
+19:42:43 INFO  : 'after 3000' command is executed.
+19:42:43 INFO  : Context for 'APU' is selected.
+19:42:43 INFO  : Cleared APU and A53 resets
+19:42:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:42:47 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:42:47 INFO  : Context for 'APU' is selected.
+19:42:47 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:42:47 INFO  : 'configparams force-mem-access 1' command is executed.
+19:42:47 INFO  : Context for 'APU' is selected.
+19:42:47 INFO  : Boot mode is read from the target.
+19:42:49 INFO  : Boot mode of the target is set to jtag.
+19:42:49 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:42:49 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:42:50 INFO  : The application 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+19:42:50 INFO  : 'set bp_42_50_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+19:43:50 WARN  : Exit breakpoint of FSBL (XFsbl_Exit) is not hit within allocated wait time of '60' seconds.
+Note: To wait for a fixed amount of time specify the FSBL function as empty in launch configuration. Use 'IDE_FSBL_BP_HIT_WAIT_TIME' environment variable in launch configuration to modify the wait time (seconds).
+Reason: timeout: target has not halted
+19:43:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:43:50 INFO  : 'bpremove $bp_42_50_fsbl_bp' command is executed.
+19:43:50 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:43:50 INFO  : 'jtag frequency' command is executed.
+19:43:50 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:43:50 INFO  : Context for 'APU' is selected.
+19:43:51 INFO  : System reset is completed.
+19:43:54 INFO  : 'after 3000' command is executed.
+19:43:54 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:43:54 INFO  : Context for 'APU' is selected.
+19:43:54 ERROR : Invalid reset type
+19:43:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+reset_apu
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+mask_write 0xFF5E0200 0xf000 0
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf
+set bp_42_50_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_42_50_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+----------------End of Script----------------
+
+19:43:54 ERROR : Invalid reset type
+19:43:54 INFO  : Cleared APU and A53 resets
+19:43:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:43:58 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:43:58 INFO  : Context for 'APU' is selected.
+19:43:58 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:43:58 INFO  : 'configparams force-mem-access 1' command is executed.
+19:43:59 INFO  : Context for 'APU' is selected.
+19:43:59 INFO  : Boot mode is read from the target.
+19:44:00 INFO  : Boot mode of the target is set to jtag.
+19:44:00 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:44:00 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:44:00 INFO  : The application 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+19:44:00 INFO  : 'set bp_44_0_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+19:44:01 INFO  : 'con -block -timeout 60' command is executed.
+19:44:01 INFO  : 'bpremove $bp_44_0_fsbl_bp' command is executed.
+19:44:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:44:02 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:44:02 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:44:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+reset_apu
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+mask_write 0xFF5E0200 0xf000 0
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf
+set bp_44_0_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_44_0_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/Debug/spi-camera-test.elf
+----------------End of Script----------------
+
+19:44:02 ERROR : Memory write error at 0x0. Cortex-A53 #0: EDITR not ready
+19:44:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:44:06 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL13Y1UTXG1A' is selected.
+19:44:06 INFO  : 'jtag frequency' command is executed.
+19:44:06 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+19:44:06 INFO  : Context for 'APU' is selected.
+19:44:07 INFO  : System reset is completed.
+19:44:10 INFO  : 'after 3000' command is executed.
+19:44:10 INFO  : Context for 'APU' is selected.
+19:44:10 INFO  : Cleared APU and A53 resets
+19:44:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}' command is executed.
+19:44:15 INFO  : Device configured successfully with "D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit"
+19:44:15 INFO  : Context for 'APU' is selected.
+19:44:15 INFO  : Hardware design and registers information is loaded from 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa'.
+19:44:15 INFO  : 'configparams force-mem-access 1' command is executed.
+19:44:15 INFO  : Context for 'APU' is selected.
+19:44:15 INFO  : Boot mode is read from the target.
+19:44:16 INFO  : Boot mode of the target is set to jtag.
+19:44:16 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:44:16 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:44:16 INFO  : The application 'D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+19:44:16 INFO  : 'set bp_44_16_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+19:45:17 WARN  : Exit breakpoint of FSBL (XFsbl_Exit) is not hit within allocated wait time of '60' seconds.
+Note: To wait for a fixed amount of time specify the FSBL function as empty in launch configuration. Use 'IDE_FSBL_BP_HIT_WAIT_TIME' environment variable in launch configuration to modify the wait time (seconds).
+Reason: timeout: target has not halted
+19:45:17 INFO  : 'bpremove $bp_44_16_fsbl_bp' command is executed.
+19:45:22 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:45:22 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+19:45:22 INFO  : The application 'D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/Debug/spi-camera-test.elf' is downloaded to processor 'psu_cortexa53_0'.
+19:45:22 INFO  : 'configparams force-mem-access 0' command is executed.
+19:45:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+reset_apu
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL13Y1UTXG1A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL13Y1UTXG1A-04724093-0"}
+fpga -file D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/hw/base_uart.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+mask_write 0xFF5E0200 0xf000 0
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/boot/fsbl.elf
+set bp_44_16_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_44_16_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/Debug/spi-camera-test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:45:22 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+19:45:22 INFO  : 'con' command is executed.
+19:45:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+19:45:22 INFO  : Launch script is exported to file 'D:\GitHub\753-FPGA\spi_controller\ws\spi-camera-test_system\_ide\scripts\systemdebugger_spi-camera-test_system_standalone.tcl'
+19:49:23 INFO  : Disconnected from the channel tcfchan#4.
