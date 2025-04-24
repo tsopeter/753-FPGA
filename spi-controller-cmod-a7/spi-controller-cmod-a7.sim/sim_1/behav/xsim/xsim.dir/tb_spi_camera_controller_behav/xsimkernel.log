@@ -1,4 +1,4 @@
-Running: xsim.dir/tb_spi_camera_controller_behav/xsimk.exe -simmode gui -wdb tb_spi_camera_controller_behav.wdb -simrunnum 0 -socket 51085
+Running: xsim.dir/tb_spi_camera_controller_behav/xsimk.exe -simmode gui -wdb tb_spi_camera_controller_behav.wdb -simrunnum 0 -socket 54513
 Design successfully loaded
-Design Loading Memory Usage: 8356 KB (Peak: 8356 KB)
+Design Loading Memory Usage: 8388 KB (Peak: 8388 KB)
 Design Loading CPU Usage: 0 ms

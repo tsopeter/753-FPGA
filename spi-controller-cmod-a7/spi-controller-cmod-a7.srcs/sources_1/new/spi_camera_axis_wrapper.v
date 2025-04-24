@@ -34,19 +34,22 @@ module spi_camera_axis_wrapper(
     input  wire m_axis_tready,
     output wire [7:0] m_axis_tdata,
     output wire m_axis_tvalid,
-    output wire m_axis_tlast
+    output wire m_axis_tlast,
+    
+    // debug
+    output wire [7:0] pixel_data,
+    output wire pixel_last,
+    output wire pixel_valid,
+    
+    output wire send
 );
 
-    wire [7:0] pixel_data;
-    wire pixel_valid;
-    wire pixel_last;
-    
     spi_camera_controller (
         .clk(clk),
         .rst(rst),
         .start_capture(start_capture),
         .capture_done(capture_done),
-        .spi_clk(spi_clk),
+        .spi_sclk(spi_clk),
         .spi_cs_n(spi_cs_n),
         .spi_mosi(spi_mosi),
         .spi_miso(spi_miso),
@@ -64,7 +67,9 @@ module spi_camera_axis_wrapper(
         .m_axis_tdata(m_axis_data),
         .m_axis_tvalid(m_axis_tvalid),
         .m_axis_tlast(m_axis_tlast),
-        .m_axis_tready(m_axis_tready)
+        .m_axis_tready(m_axis_tready),
+        
+        .send(send)
     );
     
     

@@ -8,7 +8,9 @@ module spi_camera_stream_bridge (
     output wire [7:0]  m_axis_tdata,
     output wire        m_axis_tvalid,
     output wire        m_axis_tlast,
-    input  wire        m_axis_tready
+    input  wire        m_axis_tready,
+    
+    output wire send
 );
 
     localparam FIFO_DEPTH = 4096;
@@ -30,7 +32,7 @@ module spi_camera_stream_bridge (
 
     always @(posedge clk) begin
         // Capture pixels into FIFO until pixel_last
-        if (!sending && pixel_valid) begin
+        if (~sending && pixel_valid) begin
             fifo_data[wr_ptr] <= pixel_data;
             wr_ptr <= wr_ptr + 1;
 
@@ -59,5 +61,7 @@ module spi_camera_stream_bridge (
             tlast_reg  <= 1'b0;
         end
     end
+    
+    assign send = sending;
 
 endmodule

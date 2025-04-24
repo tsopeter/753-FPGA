@@ -15,7 +15,7 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package ieee.math_real
 Compiling architecture rtl of entity xil_defaultlib.SPI_MASTER [\SPI_MASTER(clk_freq=100000000)\]
-Compiling module xil_defaultlib.spi_camera_controller
+Compiling module xil_defaultlib.spi_camera_test_wr
 Compiling module xil_defaultlib.tb_spi_camera_controller
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_spi_camera_controller_behav
