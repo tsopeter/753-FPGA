@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/imports/SPI-Controller/spi_camera_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_camera_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sim_1/imports/SPI-Controller/tb_spi_camera_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_spi_camera_controller

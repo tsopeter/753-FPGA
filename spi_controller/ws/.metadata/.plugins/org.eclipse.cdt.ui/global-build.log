@@ -1,0 +1,36 @@
+Nothing to build in platform 'base_uart'
+
+19:26:22 **** Build of configuration Debug for project spi-camera-test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -ID:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -ID:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: spi-camera-test.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/standalone_domain/bsplib/lib -o "spi-camera-test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi-camera-test.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size spi-camera-test.elf  |tee "spi-camera-test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30348	   2176	  20692	  53216	   cfe0	spi-camera-test.elf
+'Finished building: spi-camera-test.elf.size'
+' '
+19:26:23 **** Build of configuration Debug for project spi-camera-test_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 51198 D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/base_uart.xpfm standalone_domain D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test_system/Debug/system.bif
+ECHO is off.
+ECHO is off.
+sdcard_gen --xpfm D:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/base_uart.xpfm --sys_config base_uart --bif D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test_system/Debug/system.bif --bitstream D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit --elf D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/Debug/spi-camera-test.elf,psu_cortexa53_0
+ECHO is off.
+ECHO is off.
+creating BOOT.BIN using D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test/_ide/bitstream/base_uart.bit
+Running C:/Xilinx/Vitis/2023.1/bin/bootgen -arch zynqmp -image D:/GitHub/753-FPGA/spi_controller/ws/spi-camera-test_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

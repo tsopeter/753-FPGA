@@ -1,0 +1,26 @@
+19:26:22 **** Build of configuration Debug for project spi-camera-test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -ID:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -ID:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: spi-camera-test.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/GitHub/753-FPGA/spi_controller/ws/base_uart/export/base_uart/sw/base_uart/standalone_domain/bsplib/lib -o "spi-camera-test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi-camera-test.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size spi-camera-test.elf  |tee "spi-camera-test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30348	   2176	  20692	  53216	   cfe0	spi-camera-test.elf
+'Finished building: spi-camera-test.elf.size'
+' '
+
+19:26:22 Build Finished (took 969ms)
+

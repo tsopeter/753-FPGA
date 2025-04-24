@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Apr 23 20:28:26 2025
+# Process ID: 22664
+# Current directory: D:/GitHub/753-FPGA/spi_controller/spi_controller.runs/impl_1
+# Command line: vivado.exe -log base.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source base.tcl -notrace
+# Log file: D:/GitHub/753-FPGA/spi_controller/spi_controller.runs/impl_1/base.vdi
+# Journal file: D:/GitHub/753-FPGA/spi_controller/spi_controller.runs/impl_1\vivado.jou
+# Running On: LAPTOP-3I9GNI1F, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 68575 MB
+#-----------------------------------------------------------
+source base.tcl -notrace
