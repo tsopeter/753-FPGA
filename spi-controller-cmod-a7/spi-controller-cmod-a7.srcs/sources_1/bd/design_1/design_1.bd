@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE7531E573DBDC3A6",
+      "boundary_crc": "0x61E8833522AAF759",
       "device": "xc7a35tcpg236-1",
       "gen_directory": "../../../../spi-controller-cmod-a7.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -62,7 +62,7 @@
             "value_src": "ip_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "50000000",
             "value_src": "ip_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -114,6 +114,11 @@
             "value_src": "default"
           }
         }
+      },
+      "probe2_0": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
       }
     },
     "components": {
@@ -121,7 +126,18 @@
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "design_1_clk_wiz_0_0",
         "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
-        "inst_hier_path": "clk_wiz_0"
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "522.315"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "15.000"
+          }
+        }
       },
       "ila_0": {
         "vlnv": "xilinx.com:ip:ila:6.2",
@@ -139,7 +155,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "2"
+            "value": "3"
           },
           "C_PROBE1_WIDTH": {
             "value": "8"
@@ -176,6 +192,12 @@
         "ports": [
           "probe1_0",
           "ila_0/probe1"
+        ]
+      },
+      "probe2_0_1": {
+        "ports": [
+          "probe2_0",
+          "ila_0/probe2"
         ]
       },
       "reset_0_1": {

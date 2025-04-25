@@ -22,7 +22,7 @@ module tb_spi_camera_controller;
     always #5 clk = ~clk;
 
     // Instantiate DUT
-    spi_camera_controller dut (
+    spi_camera_test_wr dut (
         .clk(clk),
         .rst(rst),
         .start_capture(start_capture),
@@ -67,15 +67,13 @@ module tb_spi_camera_controller;
     initial begin
         $display("Starting SPI Camera Controller Testbench");
 
-        // Reset
-        rst = 1;
-        #100;
-        rst = 0;
-
         // Wait and trigger capture
         #500;
+        rst = 0;
+        
+        #40000
         start_capture = 1;
-        #100;
+        #1000;
         start_capture = 0;
 
         // Wait until frame capture is done

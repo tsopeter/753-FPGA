@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Wed Apr 23 20:48:05 2025
+// Date        : Thu Apr 24 10:13:44 2025
 // Host        : LAPTOP-3I9GNI1F running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0_stub.v
@@ -15,10 +15,11 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "ila,Vivado 2023.1" *)
-module design_1_ila_0_0(clk, probe0, probe1)
-/* synthesis syn_black_box black_box_pad_pin="probe0[0:0],probe1[7:0]" */
+module design_1_ila_0_0(clk, probe0, probe1, probe2)
+/* synthesis syn_black_box black_box_pad_pin="probe0[0:0],probe1[7:0],probe2[0:0]" */
 /* synthesis syn_force_seq_prim="clk" */;
   input clk /* synthesis syn_isclock = 1 */;
   input [0:0]probe0;
   input [7:0]probe1;
+  input [0:0]probe2;
 endmodule
