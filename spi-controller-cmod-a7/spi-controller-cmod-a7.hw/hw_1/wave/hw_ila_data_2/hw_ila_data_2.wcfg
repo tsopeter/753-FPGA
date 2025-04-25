@@ -10,16 +10,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="8,193"></ZoomEndTime>
-      <Cursor1Time time="3,053"></Cursor1Time>
+      <ZoomEndTime time="11"></ZoomEndTime>
+      <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="252"></NameColumnWidth>
-      <ValueColumnWidth column_width="143"></ValueColumnWidth>
+      <ValueColumnWidth column_width="133"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
-   <wave_markers>
-   </wave_markers>
+   <WVObjectSize size="9" />
    <wvobject fp_name="design_2/design_2_i/probe0_0_1" type="logic">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">design_2/design_2_i/probe0_0_1</obj_property>
@@ -70,6 +68,31 @@
       <obj_property name="ObjectShortName">probe5_0_1[7:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="label">states</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_2/design_2_i/probe6_0_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_2/design_2_i/probe6_0_1</obj_property>
+      <obj_property name="ObjectShortName">probe6_0_1</obj_property>
+      <obj_property name="label">dout_vld</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_2/design_2_i/probe7_0_1" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_2/design_2_i/probe7_0_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe7_0_1[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">dout</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_2/design_2_i/probe8_0_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_2/design_2_i/probe8_0_1</obj_property>
+      <obj_property name="ObjectShortName">probe8_0_1</obj_property>
+      <obj_property name="label">last_flag</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

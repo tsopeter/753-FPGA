@@ -26,10 +26,13 @@ module base(
     output wire spi_cs_n,
     output wire spi_mosi,
     input  wire spi_miso,
-    input  wire start_capture,
-    input  wire reset_camera,
+    input  wire start_capture_in,
+    input  wire reset_camera_in,
     output wire camera_ready_to_capture
     );
+    
+    wire start_capture;
+    wire reset_camera;
     
     wire clk;
     wire [7:0] tdata;
@@ -45,6 +48,12 @@ module base(
     wire [7:0] states;
     
     wire capture_done;
+    
+    wire [7:0] spi_dout;
+    wire spi_dout_vld;
+    wire last_flag;
+    
+    wire [31:0] byte_count;
     
     design_1_wrapper design_1 (
         .clk_in1_0(sysclk),
@@ -63,7 +72,15 @@ module base(
         .probe2_0(spi_mosi),
         .probe3_0(spi_miso),
         .probe4_0(start_capture),
-        .probe5_0(states)
+        .probe5_0(states),
+        .probe6_0(spi_dout_vld),
+        .probe7_0(spi_dout),
+        .probe8_0(last_flag)
+    );
+    
+    design_3_wrapper design_3 (
+        .clk_0(clk),
+        .probe0_0(byte_count)
     );
 
     spi_camera_axis_wrapper spi_camera (
@@ -74,12 +91,12 @@ module base(
         .spi_mosi(spi_mosi),
         .spi_miso(spi_miso),
         
-        .start_capture(start_capture),
-        .reset_camera(reset_camera),
+        .start_capture(start_capture & camera_ready_to_capture),
+        .reset_camera(reset_camera & camera_ready_to_capture),
         .camera_ready_to_capture(camera_ready_to_capture),
         .capture_done(capture_done),
         .m_axis_tdata(tdata),
-        .m_axis_tvalid(tvalid),
+        .m_axis_tvalid(tvalid), 
         .m_axis_tlast(tlast),
         .m_axis_tready(1'h1),
         
@@ -88,7 +105,26 @@ module base(
         .pixel_valid(pvalid),
         
         .send(send),
-        .states(states)
+        .states(states),
+        .spi_dout_vld(spi_dout_vld),
+        .spi_dout(spi_dout),
+        .last_flag(last_flag),
+        .byte_count(byte_count)
     );
+    
+    debounce_pulse p1 ( 
+      .clk(clk),
+      .rst(1'h0),
+      .btn_in(start_capture_in),
+      .btn_pulse(start_capture)
+    );
+    
+    debounce_pulse p2 (
+      .clk(clk),
+      .rst(1'h0),
+      .btn_in(reset_camera_in),
+      .btn_pulse(reset_camera)
+    );
+    
     
 endmodule

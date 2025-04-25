@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE004E7A068723E24",
+      "boundary_crc": "0xED692C6909B288B4",
       "device": "xc7a35tcpg236-1",
       "gen_directory": "../../../../spi-controller-cmod-a7.gen/sources_1/bd/design_2",
       "name": "design_2",
@@ -69,6 +69,21 @@
         "direction": "I",
         "left": "7",
         "right": "0"
+      },
+      "probe6_0": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "probe7_0": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "probe8_0": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
       }
     },
     "components": {
@@ -81,13 +96,19 @@
           "C_DATA_DEPTH": {
             "value": "8192"
           },
+          "C_EN_STRG_QUAL": {
+            "value": "1"
+          },
           "C_MONITOR_TYPE": {
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "6"
+            "value": "9"
           },
           "C_PROBE5_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE7_WIDTH": {
             "value": "8"
           }
         }
@@ -134,6 +155,24 @@
         "ports": [
           "probe5_0",
           "ila_0/probe5"
+        ]
+      },
+      "probe6_0_1": {
+        "ports": [
+          "probe6_0",
+          "ila_0/probe6"
+        ]
+      },
+      "probe7_0_1": {
+        "ports": [
+          "probe7_0",
+          "ila_0/probe7"
+        ]
+      },
+      "probe8_0_1": {
+        "ports": [
+          "probe8_0",
+          "ila_0/probe8"
         ]
       }
     }

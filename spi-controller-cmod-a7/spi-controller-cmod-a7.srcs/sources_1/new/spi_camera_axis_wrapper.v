@@ -44,10 +44,14 @@ module spi_camera_axis_wrapper(
     output wire pixel_valid,
     
     output wire send,
-    output wire [7:0] states
+    output wire [7:0] states,
+    output wire [7:0] spi_dout,
+    output wire       spi_dout_vld,
+    output wire last_flag,
+    output wire [31:0] byte_count
 );
 
-    spi_camera_controller (
+    spi_camera_controller controller (
         .clk(clk),
         .rst(rst),
         .start_capture(start_capture),
@@ -61,7 +65,12 @@ module spi_camera_axis_wrapper(
         .pixel_data(pixel_data),
         .pixel_valid(pixel_valid),
         .pixel_last(pixel_last),
-        .output_states(states)
+        .output_states(states),
+        
+        .spi_dout_vld_dbg(spi_dout_vld),
+        .spi_dout_dbg(spi_dout),
+        .read_burst_set_last_flag_dbg(last_flag),
+        .byte_count_dbg(byte_count)
     );    
     
     spi_camera_stream_bridge bridge (
@@ -70,7 +79,7 @@ module spi_camera_axis_wrapper(
         .pixel_valid(pixel_valid),
         .pixel_last(pixel_last),
         
-        .m_axis_tdata(m_axis_data),
+        .m_axis_tdata(m_axis_tdata),
         .m_axis_tvalid(m_axis_tvalid),
         .m_axis_tlast(m_axis_tlast),
         .m_axis_tready(m_axis_tready),

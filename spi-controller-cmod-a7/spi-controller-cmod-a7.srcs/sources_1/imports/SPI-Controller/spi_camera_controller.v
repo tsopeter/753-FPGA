@@ -26,7 +26,12 @@ module spi_camera_controller #(
     output reg       pixel_last,
     output reg       capture_done,
     output reg       camera_ready_to_capture,
-    output wire [7:0] output_states
+    output wire [7:0] output_states,
+    
+    output wire spi_dout_vld_dbg,
+    output wire [7:0] spi_dout_dbg,
+    output wire read_burst_set_last_flag_dbg,
+    output wire [31:0] byte_count_dbg
 );
 
     // SPI master interface
@@ -37,7 +42,7 @@ module spi_camera_controller #(
     wire [7:0] spi_dout;
     wire       spi_dout_vld;
 
-    localparam IDLE         = 0,
+    localparam IDLE         = 81,
                SEND_RES_0   = 1,
                SEND_RES_1   = 2,
                SEND_CAP_0   = 3,
@@ -104,15 +109,18 @@ module spi_camera_controller #(
                FIFO_READ_1 = 73,
                FIFO_READ_2 = 74,
                FIFO_READ_3 = 75,
-               SM0 = 76,
+               SM0 = 0,
                SM1 = 77,
                SM2 = 78,
                SM3 = 79,
-               SM4 = 80;
+               SM4 = 80,
+               SM5 = 82,
+               SM6 = 83,
+               SM7 = 84;
               
     localparam WAIT_LIMIT   = 10;
 
-    reg [31:0] state;
+    reg [31:0] state = SM0;
     reg [31:0] byte_count;
     reg [6:0] row, col;
     
@@ -156,7 +164,7 @@ module spi_camera_controller #(
     
     reg read_burst_set_last_flag = 0;
     
-    wire [7:0] CAM_RES_96x96 = 8'd12;
+    wire [7:0] CAM_RES_96x96 = 8'd10;   // 01 -> 320x240
     
     wire [7:0] CAP_DONE_MASK = 8'h04;
     
@@ -182,6 +190,10 @@ module spi_camera_controller #(
     
     reg  [7:0] rx_buf   = 8'h00;
     reg  skip_first_byte = 1;
+    
+    reg [31:0] delay_timer = 32'h0;
+    
+    localparam COUNT_MAX = 3000000;
 
     always @(posedge clk) begin
         if (rst) begin
@@ -314,6 +326,19 @@ module spi_camera_controller #(
                 ///////////////////////////// Camera Initialization //////////////////////////////////////
                 // reset
                 INIT_0: begin
+                    read_burst_set_last_flag <= 0;  // reset
+                    camera_burst_first_flag <= 0;   // reset
+                    spi_din_vld  <= 0;
+                    spi_din_last <= 0;
+                    byte_count   <= 0;
+                    row          <= 0;
+                    col          <= 0;
+                    pixel_data   <= 0;
+                    pixel_valid  <= 0;
+                    pixel_last   <= 0;
+                    capture_done <= 0;
+                    fifo_length  <= 0;
+                    
                     state <= RESET_0;
                     func_return_state <= INIT_1;
                 end 
@@ -376,7 +401,7 @@ module spi_camera_controller #(
                 end
                 
                 WAIT_FOR_I2C_1: begin
-                    if (rx_data_buf & 8'h03 != CAM_REG_SENSOR_STATE_IDLE) begin
+                    if ((rx_data_buf & 8'h03) != CAM_REG_SENSOR_STATE_IDLE) begin
                         state <= WAIT_FOR_I2C_0;
                     end else begin
                         state <= func_return_state;
@@ -392,7 +417,7 @@ module spi_camera_controller #(
                 
                 PIX_FMT_0: begin
                     tx_addr_buf  <= PIXEL_FORMAT_CMD;
-                    tx_data_buf  <= CAM_IMG_PIX_FMT_GRAY8;
+                    tx_data_buf  <= CAM_IMG_PIX_FMT_RGB565;
                     state        <= WRITE_REG;
                     return_state <= func_return_state;
                 end
@@ -434,7 +459,7 @@ module spi_camera_controller #(
                 end
                 
                 WAIT_TRIGGER_1: begin
-                    if (rx_data_buf & CAP_DONE_MASK == 0) begin
+                    if ((rx_data_buf & CAP_DONE_MASK) == 8'h00) begin
                         state <= func_return_state;
                     end else begin
                         state <= WAIT_TRIGGER_0;
@@ -449,22 +474,22 @@ module spi_camera_controller #(
                 end
                 
                 READ_FIFO_LENGTH_1: begin
-                    fifo_length <= fifo_length + rx_data_buf;
+                    fifo_length <= rx_data_buf;
                     rx_addr_buf <= FIFO_SIZE2;
                     state       <= READ_REG;
                     return_state <= READ_FIFO_LENGTH_2;
                 end
                 
                 READ_FIFO_LENGTH_2: begin
-                    fifo_length <= fifo_length + rx_data_buf;
+                    fifo_length <= fifo_length | (rx_data_buf << 8);
                     rx_addr_buf <= FIFO_SIZE3;
                     state       <= READ_REG;
                     return_state <= READ_FIFO_LENGTH_3;
                 end
                 
                 READ_FIFO_LENGTH_3: begin
-                    fifo_length <= fifo_length + (rx_data_buf & 8'h7f);
-                    return_state <= func_return_state;
+                    fifo_length <= (fifo_length | ((rx_data_buf & 8'h7f) << 16)) & 32'h07fffff;
+                    state <= func_return_state;
                 end
                 
                 CAPTURE_IMAGE_0: begin
@@ -493,13 +518,19 @@ module spi_camera_controller #(
                 end
                 
                 CAPTURE_IMAGE_5: begin
-                    camera_burst_first_flag <= 0;
+                    tx_addr_buf <= BURST_RD;
+                    state <= SET_FIFO_BURST;
+                    return_state <= CAPTURE_IMAGE_6;
+                end
+                
+                CAPTURE_IMAGE_6: begin
                     state <= camera_set_capture_return_state;
                 end
                 
                 /////////////////////////////////////// Reading Image /////////////////////////////////////////////////
                 
                 READ_BUFFER_0: begin
+                    byte_count <= 0;
                     if (fifo_length == 0) begin
                         state <= camera_read_buffer_return_state;
                     end else begin
@@ -518,7 +549,7 @@ module spi_camera_controller #(
                 
                 DUMMY_READ_0: begin
                     state <= READ_BURST;
-                    read_burst_set_last_flag <= 0;
+                    camera_burst_first_flag <= 1;
                     return_state <= FIFO_READ_0;
                 end
                 
@@ -572,6 +603,9 @@ module spi_camera_controller #(
                 //// Program starting point
                 SM1: begin
                     capture_done <= 0;
+                    byte_count   <= 0;
+                    fifo_length  <= 0;
+                    read_burst_set_last_flag <= 0;
                     camera_ready_to_capture <= 1;
                     if (reset_camera) begin
                         camera_ready_to_capture <= 0;
@@ -579,7 +613,7 @@ module spi_camera_controller #(
                     end else begin
                         if (start_capture) begin
                             camera_ready_to_capture <= 0;
-                            state <= SM2;
+                            state <= SM5;
                         end
                     end
                 end
@@ -598,13 +632,36 @@ module spi_camera_controller #(
                 
                 SM4: begin
                     capture_done <= 1;
-                    state <= SM1;
+                    state <= SM6;
+                end
+                
+                SM5: begin
+                    state <= SM2;
+                    //state <= INIT_0;
+                    //camera_init_return_state <= SM2;
+                end
+                
+                SM6: begin
+                   delay_timer <= delay_timer + 1;
+                   if (delay_timer > COUNT_MAX) begin
+                        state <= SM1;
+                        delay_timer <= 0;
+                   end 
+                end
+                
+                SM7: begin
+                    state <= INIT_0;
+                    camera_init_return_state <= SM2;
                 end
             endcase
         end
     end
     
     assign output_states = state;
+    assign spi_dout_vld_dbg  = spi_dout_vld;
+    assign spi_dout_dbg      = spi_dout;
+    assign read_burst_set_last_flag_dbg = read_burst_set_last_flag;
+    assign byte_count_dbg = fifo_length;
 
     spi_master #(
         .CLK_FREQ(CLK_FREQ),

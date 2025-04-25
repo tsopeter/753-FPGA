@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Thu Apr 24 16:31:43 2025
+| Date             : Thu Apr 24 21:42:40 2025
 | Host             : LAPTOP-3I9GNI1F running 64-bit major release  (build 9200)
 | Command          : report_power -file base_power_routed.rpt -pb base_power_summary_routed.pb -rpx base_power_routed.rpx
 | Design           : base
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.195        |
+| Total On-Chip Power (W)  | 0.208        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.123        |
-| Device Static (W)        | 0.072        |
+| Dynamic (W)              | 0.135        |
+| Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.0         |
 | Junction Temperature (C) | 26.0         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.011 |        9 |       --- |             --- |
-| Slice Logic              |     0.002 |    11425 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     3473 |     20800 |           16.70 |
-|   Register               |    <0.001 |     5567 |     41600 |           13.38 |
-|   CARRY4                 |    <0.001 |      220 |      8150 |            2.70 |
+| Clocks                   |     0.015 |        9 |       --- |             --- |
+| Slice Logic              |     0.002 |    15555 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     4681 |     20800 |           22.50 |
+|   Register               |    <0.001 |     7594 |     41600 |           18.25 |
+|   CARRY4                 |    <0.001 |      286 |      8150 |            3.51 |
 |   LUT as Distributed RAM |    <0.001 |      152 |      9600 |            1.58 |
-|   LUT as Shift Register  |    <0.001 |      328 |      9600 |            3.42 |
-|   F7/F8 Muxes            |    <0.001 |      101 |     32600 |            0.31 |
-|   Others                 |     0.000 |      751 |       --- |             --- |
-| Signals                  |     0.003 |     7882 |       --- |             --- |
-| Block RAM                |     0.002 |        5 |        50 |           10.00 |
+|   LUT as Shift Register  |    <0.001 |      501 |      9600 |            5.22 |
+|   F7/F8 Muxes            |    <0.001 |      122 |     32600 |            0.37 |
+|   Others                 |     0.000 |     1062 |       --- |             --- |
+| Signals                  |     0.005 |    10852 |       --- |             --- |
+| Block RAM                |     0.008 |       26 |        50 |           52.00 |
 | MMCM                     |     0.104 |        1 |         5 |           20.00 |
 | I/O                      |    <0.001 |        8 |       106 |            7.55 |
-| Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.195 |          |           |                 |
+| Static Power             |     0.073 |          |           |                 |
+| Total                    |     0.208 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.028 |       0.019 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.040 |       0.030 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.070 |       0.058 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -85,7 +85,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.001 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -151,19 +151,23 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| base                     |     0.123 |
+| base                     |     0.135 |
 |   dbg_hub                |     0.002 |
 |     inst                 |     0.002 |
 |       BSCANID.u_xsdbm_id |     0.002 |
-|   design_1               |     0.114 |
-|     design_1_i           |     0.114 |
+|   design_1               |     0.113 |
+|     design_1_i           |     0.113 |
 |       clk_wiz_0          |     0.104 |
-|       ila_0              |     0.010 |
-|   design_2               |     0.005 |
-|     design_2_i           |     0.005 |
-|       ila_0              |     0.005 |
-|   spi_camera             |     0.002 |
-|     nolabel_line50       |     0.001 |
+|       ila_0              |     0.009 |
+|   design_2               |     0.008 |
+|     design_2_i           |     0.008 |
+|       ila_0              |     0.008 |
+|   design_3               |     0.007 |
+|     design_3_i           |     0.007 |
+|       ila_0              |     0.007 |
+|   spi_camera             |     0.004 |
+|     bridge               |     0.002 |
+|     controller           |     0.001 |
 +--------------------------+-----------+
 
 
