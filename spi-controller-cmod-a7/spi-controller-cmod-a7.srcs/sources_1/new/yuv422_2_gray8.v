@@ -68,7 +68,7 @@ module yuv422_2_gray8(
                         //temp
                     
                         // output
-                        data_out <= pixel_value;
+                        data_out <= temp;  
                         data_last <= pixel_last;
                         data_valid <= 1;
                        
