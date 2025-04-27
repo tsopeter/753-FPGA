@@ -461,9 +461,9 @@ module spi_camera_controller #(
                 
                 WAIT_TRIGGER_1: begin
                     if ((rx_data_buf & CAP_DONE_MASK) == 8'h00) begin
-                        state <= func_return_state;
-                    end else begin
                         state <= WAIT_TRIGGER_0;
+                    end else begin
+                        state <= func_return_state;
                     end
                 end
                 
@@ -662,7 +662,7 @@ module spi_camera_controller #(
     assign spi_dout_vld_dbg  = spi_dout_vld;
     assign spi_dout_dbg      = spi_dout;
     assign read_burst_set_last_flag_dbg = read_burst_set_last_flag;
-    assign byte_count_dbg = fifo_length;
+    assign byte_count_dbg = byte_count;
 
     spi_master #(
         .CLK_FREQ(CLK_FREQ),
