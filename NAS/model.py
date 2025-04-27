@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
-from   brevitas.nn import QuantConv2d, QuantReLU, QuantLinear
+from   brevitas.nn import QuantConv2d, QuantReLU, QuantLinear, QuantIdentity
+from brevitas.quant import Int32Bias, fixed_point
 
 # PilotNet model
 class PilotNet(nn.Module):
@@ -18,8 +19,6 @@ class PilotNet(nn.Module):
         self.act_bit_width    = act_bit_width
 
         self.use_softmax = use_softmax
-
-
         if not non_quantized:      
             self.conv1  = QuantConv2d(1,  int(24*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width)
             self.conv2  = QuantConv2d(int(24*self.width_multiplier), int(36*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width)

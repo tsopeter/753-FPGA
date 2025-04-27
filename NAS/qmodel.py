@@ -77,24 +77,20 @@ class PilotNet(nn.Module):
             in_features = hidden_sizes[i]
             
         if not non_quantized:
-            self.output = QuantLinear(in_features, out_features=out_features, bias=True, weight_bit_width=self.weight_bit_width)
         else:
             self.output = nn.Linear(in_features, out_features=out_features, bias=True)
         self.softmax = nn.Softmax(dim=1)
 
     def _get_flattened_size(self):
         x = torch.zeros(1,1,self.height,self.width)
-
         if self.used_quantized:
             x = self.quant_inp(x)
-
         for cvz in self.cvz:
             x = cvz(x)
         x = self.flatten(x)
         return x.shape[1]
 
     def forward(self, x):
-
         if self.used_quantized:
             x = self.quant_inp(x)
 
