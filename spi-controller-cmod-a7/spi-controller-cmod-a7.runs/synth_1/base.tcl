@@ -95,10 +95,11 @@ read_verilog -library xil_defaultlib {
   D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/debounce_pulse.v
   D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
   D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_2/hdl/design_2_wrapper.v
-  d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_3/hdl/design_3_wrapper.v
+  D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_3/hdl/design_3_wrapper.v
   D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_camera_axis_wrapper.v
   D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/imports/SPI-Controller/spi_camera_controller.v
   D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_camera_stream_bridge.v
+  D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/yuv422_2_gray8.v
   D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/base.v
 }
 read_vhdl -library xil_defaultlib D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_master.vhd

@@ -18,7 +18,7 @@ set_property -dict { PACKAGE_PIN A17   IOSTANDARD LVCMOS33 } [get_ports { camera
 
 ## Buttons
 set_property -dict { PACKAGE_PIN A18   IOSTANDARD LVCMOS33 } [get_ports { start_capture_in }]; #IO_L19N_T3_VREF_16 Sch=btn[0]
-set_property -dict { PACKAGE_PIN B18   IOSTANDARD LVCMOS33 } [get_ports { reset_camera_in }]; #IO_L19P_T3_16 Sch=btn[1]
+set_property -dict { PACKAGE_PIN B18   IOSTANDARD LVCMOS33 } [get_ports { read_cam_data_in }]; #IO_L19P_T3_16 Sch=btn[1]
 
 ## Pmod Header JA
 set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { spi_clk }]; #IO_L5N_T0_D07_14 Sch=ja[1]

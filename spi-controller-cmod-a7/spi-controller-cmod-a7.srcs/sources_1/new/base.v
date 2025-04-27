@@ -27,17 +27,18 @@ module base(
     output wire spi_mosi,
     input  wire spi_miso,
     input  wire start_capture_in,
-    input  wire reset_camera_in,
+    input  wire read_cam_data_in,
     output wire camera_ready_to_capture
     );
     
     wire start_capture;
-    wire reset_camera;
+    wire read_cam_data;
     
     wire clk;
     wire [7:0] tdata;
     wire tvalid;
     wire tlast;
+    reg  tready = 0;
     
     wire send;
     
@@ -58,7 +59,7 @@ module base(
     design_1_wrapper design_1 (
         .clk_in1_0(sysclk),
         .clk_out1_0(clk),
-        .probe0_0(send),
+        .probe0_0(tready),
         .probe1_0(tdata),
         .probe2_0(tvalid),
         .reset_0(1'h0),
@@ -92,13 +93,13 @@ module base(
         .spi_miso(spi_miso),
         
         .start_capture(start_capture & camera_ready_to_capture),
-        .reset_camera(reset_camera & camera_ready_to_capture),
+        .reset_camera(1'h0),
         .camera_ready_to_capture(camera_ready_to_capture),
         .capture_done(capture_done),
         .m_axis_tdata(tdata),
         .m_axis_tvalid(tvalid), 
         .m_axis_tlast(tlast),
-        .m_axis_tready(1'h1),
+        .m_axis_tready(tready),
         
         .pixel_data(pdata),
         .pixel_last(plast),
@@ -122,9 +123,15 @@ module base(
     debounce_pulse p2 (
       .clk(clk),
       .rst(1'h0),
-      .btn_in(reset_camera_in),
-      .btn_pulse(reset_camera)
+      .btn_in(read_cam_data_in),
+      .btn_pulse(read_cam_data)
     );
+    
+    always @(posedge clk) begin
+        if (read_cam_data) begin
+            tready <= ~tready;
+        end
+    end
     
     
 endmodule

@@ -50,6 +50,23 @@ module spi_camera_axis_wrapper(
     output wire last_flag,
     output wire [31:0] byte_count
 );
+    
+    wire [7:0] gray_data;
+    wire       gray_valid;
+    wire       gray_last;
+    
+    yuv422_2_gray8 cvt (
+        .clk(clk),
+        .rst(rst),
+        
+        .pixel_value(pixel_data),
+        .pixel_valid(pixel_valid),
+        .pixel_last(pixel_last),
+        
+        .data_out(gray_data),
+        .data_valid(gray_valid),
+        .data_last(gray_last)
+    );
 
     spi_camera_controller controller (
         .clk(clk),
@@ -75,9 +92,9 @@ module spi_camera_axis_wrapper(
     
     spi_camera_stream_bridge bridge (
         .clk(clk),
-        .pixel_data(pixel_data),
-        .pixel_valid(pixel_valid),
-        .pixel_last(pixel_last),
+        .pixel_data(gray_data),
+        .pixel_valid(gray_valid),
+        .pixel_last(gray_last),
         
         .m_axis_tdata(m_axis_tdata),
         .m_axis_tvalid(m_axis_tvalid),
