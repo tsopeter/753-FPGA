@@ -21,7 +21,7 @@ class PilotNet(nn.Module):
         self.used_quantized = not non_quantized
 
         self.quant_inp = QuantIdentity(
-            bit_width=self.act_bit_width,
+            bit_width=8,
             act_quant=Int8ActPerTensorFloat,
             return_quant_tensor=True
         )
