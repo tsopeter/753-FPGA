@@ -608,6 +608,7 @@ module spi_camera_controller #(
                     fifo_length  <= 0;
                     read_burst_set_last_flag <= 0;
                     camera_ready_to_capture <= 1;
+                    camera_burst_first_flag <= 0;
                     if (reset_camera) begin
                         camera_ready_to_capture <= 0;
                         state <= SM0;
