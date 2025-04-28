@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Sun Apr 27 20:41:11 2025
-# Process ID: 12824
+# Start of session at: Mon Apr 28 09:47:12 2025
+# Process ID: 2340
 # Current directory: D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1
 # Command line: vivado.exe -log base.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base.tcl
 # Log file: D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/base.vds
@@ -12,7 +12,7 @@
 # Running On: LAPTOP-3I9GNI1F, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 68575 MB
 #-----------------------------------------------------------
 source base.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 471.508 ; gain = 161.035
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 472.590 ; gain = 159.000
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
@@ -28,20 +28,20 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 22400
+INFO: [Synth 8-7075] Helper process launched with PID 6416
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1338.516 ; gain = 410.016
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1340.395 ; gain = 411.660
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'base' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/base.v:23]
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-12824-LAPTOP-3I9GNI1F/realtime/design_1_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-12824-LAPTOP-3I9GNI1F/realtime/design_1_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-2340-LAPTOP-3I9GNI1F/realtime/design_1_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-2340-LAPTOP-3I9GNI1F/realtime/design_1_clk_wiz_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'locked' of module 'design_1_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_1/synth/design_1.v:45]
 WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_0' has 4 connections declared, but only 3 given [d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_1/synth/design_1.v:45]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_1/synth/design_1.v:49]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-12824-LAPTOP-3I9GNI1F/realtime/design_1_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-12824-LAPTOP-3I9GNI1F/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-2340-LAPTOP-3I9GNI1F/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-2340-LAPTOP-3I9GNI1F/realtime/design_1_ila_0_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/base.v:69]
@@ -49,8 +49,8 @@ INFO: [Synth 8-6157] synthesizing module 'design_2_wrapper' [D:/GitHub/753-FPGA/
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_2/hdl/design_2_wrapper.v:46]
 INFO: [Synth 8-6157] synthesizing module 'design_2' [d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_2/synth/design_2.v:13]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_2/synth/design_2.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_2_ila_0_0' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-12824-LAPTOP-3I9GNI1F/realtime/design_2_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_ila_0_0' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-12824-LAPTOP-3I9GNI1F/realtime/design_2_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_ila_0_0' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-2340-LAPTOP-3I9GNI1F/realtime/design_2_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_ila_0_0' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-2340-LAPTOP-3I9GNI1F/realtime/design_2_ila_0_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'design_2' (0#1) [d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_2/synth/design_2.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_2_wrapper' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_2/hdl/design_2_wrapper.v:13]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/base.v:82]
@@ -58,8 +58,8 @@ INFO: [Synth 8-6157] synthesizing module 'design_3_wrapper' [D:/GitHub/753-FPGA/
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_3/hdl/design_3_wrapper.v:22]
 INFO: [Synth 8-6157] synthesizing module 'design_3' [d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_3/synth/design_3.v:13]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_3/synth/design_3.v:25]
-INFO: [Synth 8-6157] synthesizing module 'design_3_ila_0_0' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-12824-LAPTOP-3I9GNI1F/realtime/design_3_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_3_ila_0_0' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-12824-LAPTOP-3I9GNI1F/realtime/design_3_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_3_ila_0_0' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-2340-LAPTOP-3I9GNI1F/realtime/design_3_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_3_ila_0_0' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/.Xil/Vivado-2340-LAPTOP-3I9GNI1F/realtime/design_3_ila_0_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'design_3' (0#1) [d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_3/synth/design_3.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_3_wrapper' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_3/hdl/design_3_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'spi_camera_axis_wrapper' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_camera_axis_wrapper.v:23]
@@ -68,11 +68,11 @@ INFO: [Synth 8-6155] done synthesizing module 'yuv422_2_gray8' (0#1) [D:/GitHub/
 INFO: [Synth 8-6157] synthesizing module 'decimate' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/decimate.v:23]
 	Parameter ROW_MAX bound to: 96 - type: integer 
 	Parameter COL_MAX bound to: 96 - type: integer 
-	Parameter N_BYTES bound to: 4096 - type: integer 
+	Parameter N_BYTES bound to: 4900 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'decimate' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/decimate.v:23]
-WARNING: [Synth 8-7071] port 'row' of module 'decimate' is unconnected for instance 'dec' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_camera_axis_wrapper.v:79]
-WARNING: [Synth 8-7071] port 'col' of module 'decimate' is unconnected for instance 'dec' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_camera_axis_wrapper.v:79]
-WARNING: [Synth 8-7023] instance 'dec' of module 'decimate' has 10 connections declared, but only 8 given [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_camera_axis_wrapper.v:79]
+WARNING: [Synth 8-7071] port 'row' of module 'decimate' is unconnected for instance 'dec' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_camera_axis_wrapper.v:81]
+WARNING: [Synth 8-7071] port 'col' of module 'decimate' is unconnected for instance 'dec' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_camera_axis_wrapper.v:81]
+WARNING: [Synth 8-7023] instance 'dec' of module 'decimate' has 11 connections declared, but only 9 given [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_camera_axis_wrapper.v:81]
 INFO: [Synth 8-6157] synthesizing module 'spi_camera_controller' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/imports/SPI-Controller/spi_camera_controller.v:8]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/imports/SPI-Controller/spi_camera_controller.v:218]
 INFO: [Synth 8-638] synthesizing module 'SPI_MASTER' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_master.vhd:43]
@@ -86,7 +86,7 @@ WARNING: [Synth 8-3919] null assignment ignored
 INFO: [Synth 8-256] done synthesizing module 'SPI_MASTER' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_master.vhd:43]
 INFO: [Synth 8-6155] done synthesizing module 'spi_camera_controller' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/imports/SPI-Controller/spi_camera_controller.v:8]
 INFO: [Synth 8-6157] synthesizing module 'spi_camera_stream_bridge' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_camera_stream_bridge.v:1]
-	Parameter FIFO_DEPTH bound to: 4096 - type: integer 
+	Parameter FIFO_DEPTH bound to: 4900 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'spi_camera_stream_bridge' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_camera_stream_bridge.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'spi_camera_axis_wrapper' (0#1) [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/spi_camera_axis_wrapper.v:23]
 INFO: [Synth 8-6157] synthesizing module 'debounce_pulse' [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/debounce_pulse.v:1]
@@ -99,18 +99,18 @@ WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [D:/GitH
 WARNING: [Synth 8-6014] Unused sequential element col_reg was removed.  [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/imports/SPI-Controller/spi_camera_controller.v:206]
 WARNING: [Synth 8-7129] Port data_in_last in module decimate is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1446.531 ; gain = 518.031
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1446.328 ; gain = 517.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1446.531 ; gain = 518.031
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1446.328 ; gain = 517.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1446.531 ; gain = 518.031
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1446.328 ; gain = 517.594
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1446.531 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1446.328 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -131,22 +131,22 @@ Parsing XDC File [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-
 Finished Parsing XDC File [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1524.406 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1540.293 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1524.406 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1540.293 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -161,7 +161,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1/design_1_i. (constraint 
 Applied set_property KEEP_HIERARCHY = SOFT for design_1/design_1_i/clk_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1/design_1_i/ila_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'present_state_reg' in module 'SPI_MASTER'
 ---------------------------------------------------------------------------------------------------
@@ -175,7 +175,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'present_state_reg' in modul
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'present_state_reg' using encoding 'one-hot' in module 'SPI_MASTER'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -197,7 +197,7 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 31    
 +---RAMs : 
-	              32K Bit	(4096 X 8 bit)          RAMs := 1     
+	              38K Bit	(4900 X 8 bit)          RAMs := 1     
 +---Muxes : 
 	  58 Input   32 Bit        Muxes := 3     
 	   2 Input   32 Bit        Muxes := 3     
@@ -229,7 +229,7 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3936] Found unconnected internal register 'spi_camera/controller/rx_addr_buf_reg' and it is trimmed from '8' to '7' bits. [D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/imports/SPI-Controller/spi_camera_controller.v:281]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -247,7 +247,7 @@ Block RAM: Preliminary Mapping Report (see note below)
 +------------+---------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name | RTL Object                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------+---------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|base        | spi_camera/bridge/fifo_data_reg | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|base        | spi_camera/bridge/fifo_data_reg | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
 +------------+---------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
@@ -258,13 +258,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -274,7 +274,7 @@ Block RAM: Final Mapping Report
 +------------+---------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name | RTL Object                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------+---------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|base        | spi_camera/bridge/fifo_data_reg | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|base        | spi_camera/bridge/fifo_data_reg | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
 +------------+---------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
@@ -283,9 +283,10 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance spi_camera/bridge/fifo_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance spi_camera/bridge/fifo_data_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance spi_camera/bridge/fifo_data_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -303,37 +304,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -357,40 +358,42 @@ Report Cell Usage:
 |2     |design_1_ila_0     |     1|
 |3     |design_2_ila_0     |     1|
 |4     |design_3_ila_0     |     1|
-|5     |CARRY4             |    99|
-|6     |LUT1               |    67|
-|7     |LUT2               |    80|
-|8     |LUT3               |    51|
-|9     |LUT4               |    70|
-|10    |LUT5               |    59|
-|11    |LUT6               |   176|
+|5     |CARRY4             |    90|
+|6     |LUT1               |    66|
+|7     |LUT2               |    65|
+|8     |LUT3               |    32|
+|9     |LUT4               |    60|
+|10    |LUT5               |    53|
+|11    |LUT6               |   170|
 |12    |MUXF7              |     1|
-|13    |RAMB36E1           |     1|
-|14    |FDRE               |   432|
+|13    |RAMB36E1           |     2|
+|14    |FDRE               |   433|
 |15    |IBUF               |     3|
 |16    |OBUF               |     4|
 +------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1540.293 ; gain = 611.559
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:48 . Memory (MB): peak = 1524.406 ; gain = 518.031
-Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1524.406 ; gain = 595.906
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1540.293 ; gain = 517.594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1540.293 ; gain = 611.559
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1524.406 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 101 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1540.293 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 93 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1524.406 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1540.293 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 29bf5647
+Synth Design complete | Checksum: 1b5745b0
 INFO: [Common 17-83] Releasing license: Synthesis
-67 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+68 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:10 . Memory (MB): peak = 1524.406 ; gain = 968.555
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1540.293 ; gain = 982.988
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.runs/synth_1/base.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file base_utilization_synth.rpt -pb base_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 27 20:42:47 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 28 09:48:03 2025...

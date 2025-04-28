@@ -27,6 +27,7 @@ module decimate#(
     )(
     input  wire clk,
     input  wire rst,
+    input  wire [95:0] bitmask,
     
     input  wire [7:0] data_in,
     input  wire       data_in_valid,
@@ -64,7 +65,7 @@ module decimate#(
             
                 data_out <= data_in;
                 
-                if (((row_counter % 3) == 2) || ((col_counter % 3) == 2)) begin
+                if ((bitmask[row_counter] == 0) || (bitmask[col_counter] == 0)) begin
                     data_out_valid <= 0;
                 end else begin
                     data_out_valid <= 1;

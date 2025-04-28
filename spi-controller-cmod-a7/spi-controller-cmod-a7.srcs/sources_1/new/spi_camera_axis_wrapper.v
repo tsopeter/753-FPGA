@@ -72,13 +72,16 @@ module spi_camera_axis_wrapper(
     wire dec_valid;
     wire dec_last;
     
+    wire [95:0] bitmask = 96'b101101110110111011101101110111011011101110110111011101101110111011011101110110111011101101110111;
+    
     decimate #(
         .ROW_MAX(96),
         .COL_MAX(96),
-        .N_BYTES(4096)
+        .N_BYTES(4900)
     ) dec (
         .clk(clk),
         .rst(rst),
+        .bitmask(bitmask),
         
         .data_in(gray_data),
         .data_in_valid(gray_valid),
@@ -112,7 +115,7 @@ module spi_camera_axis_wrapper(
     );    
     
     spi_camera_stream_bridge #(
-        .FIFO_DEPTH(4096)
+        .FIFO_DEPTH(4900)
     ) bridge (
         .clk(clk),
         .pixel_data(dec_out),
