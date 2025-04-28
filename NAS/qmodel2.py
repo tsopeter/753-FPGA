@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from brevitas.nn import QuantConv2d, QuantReLU, QuantLinear, QuantIdentity
+from brevitas.nn import QuantConv2d, QuantReLU, QuantLinear, QuantIdentity, BatchNorm2dToQuantScaleBias
 from brevitas.quant import Int8Bias
 
 class PilotNet(nn.Module):
@@ -31,24 +31,24 @@ class PilotNet(nn.Module):
             min_val=-1.0
         )
 
+        # Always use QuantReLU
         self.relu = QuantReLU(bit_width=act_bit_width, return_quant_tensor=True, act_bit_width=act_bit_width)
 
-        # First two conv layers are always present
-        self.conv1 = QuantConv2d(1, int(24 * width_multiplier), kernel_size=5, stride=2,
-                                 weight_bit_width=weight_bit_width, bias_quant=Int8Bias,
-                                 return_quant_tensor=True, act_bit_width=act_bit_width)
-
-        self.conv2 = QuantConv2d(int(24 * width_multiplier), int(36 * width_multiplier), kernel_size=5, stride=2,
-                                 weight_bit_width=weight_bit_width, bias_quant=Int8Bias,
-                                 return_quant_tensor=True, act_bit_width=act_bit_width)
-
+        # --- Build Convolutional Layers ---
         self.cvz = nn.ModuleList()
-        self.cvz.append(self.conv1)
-        self.cvz.append(self.conv2)
 
-        # Set up dynamic conv3-5 layers
-        last_channels = int(36 * width_multiplier)
+        # First two conv layers are always present
+        in_channels = 1
+        out_channels = int(24 * width_multiplier)
+        self.cvz.append(self._conv_bn_relu_block(in_channels, out_channels, kernel_size=5, stride=2))
 
+        in_channels = out_channels
+        out_channels = int(36 * width_multiplier)
+        self.cvz.append(self._conv_bn_relu_block(in_channels, out_channels, kernel_size=5, stride=2))
+
+        last_channels = out_channels
+
+        # Dynamic conv3, conv4, conv5
         conv_settings = [
             (int(48 * width_multiplier), 5, 2),  # conv3
             (int(64 * width_multiplier), 3, 1),  # conv4
@@ -58,20 +58,14 @@ class PilotNet(nn.Module):
         for idx, flag in enumerate(convz):
             if flag == "1":
                 out_channels, ksize, stride = conv_settings[idx]
-                conv_layer = QuantConv2d(
-                    last_channels, out_channels,
-                    kernel_size=ksize, stride=stride,
-                    weight_bit_width=weight_bit_width, bias_quant=Int8Bias,
-                    return_quant_tensor=True, act_bit_width=act_bit_width
-                )
-                self.cvz.append(conv_layer)
-                last_channels = out_channels  # Update last_channels after each layer
+                self.cvz.append(self._conv_bn_relu_block(last_channels, out_channels, kernel_size=ksize, stride=stride))
+                last_channels = out_channels
 
         self.flatten = nn.Flatten()
 
         self.flattened_size = self._get_flattened_size()
 
-        # Dense layers
+        # --- Build Dense Layers ---
         hidden_sizes = [int(100 * width_multiplier), int(50 * width_multiplier), int(10 * width_multiplier)]
 
         self.fcs = nn.ModuleList()
@@ -79,14 +73,10 @@ class PilotNet(nn.Module):
 
         for idx, flag in enumerate(densez):
             if flag == "1":
-                self.fcs.append(QuantLinear(
-                    in_features, hidden_sizes[idx],
-                    bias=True, weight_bit_width=weight_bit_width,
-                    bias_quant=Int8Bias, return_quant_tensor=True,
-                    act_bit_width=act_bit_width
-                ))
+                self.fcs.append(self._linear_bn_relu_block(in_features, hidden_sizes[idx]))
                 in_features = hidden_sizes[idx]
 
+        # Final output layer (no ReLU after final output)
         self.output = QuantLinear(
             in_features, out_features,
             bias=True, weight_bit_width=weight_bit_width,
@@ -94,12 +84,40 @@ class PilotNet(nn.Module):
             act_bit_width=16
         )
 
+    def _conv_bn_relu_block(self, in_channels, out_channels, kernel_size, stride):
+        return nn.Sequential(
+            QuantConv2d(
+                in_channels, out_channels,
+                kernel_size=kernel_size, stride=stride,
+                weight_bit_width=self.weight_bit_width,
+                bias_quant=Int8Bias,
+                return_quant_tensor=True,
+                act_bit_width=self.act_bit_width
+            ),
+            BatchNorm2dToQuantScaleBias(out_channels),
+            QuantReLU(bit_width=self.act_bit_width, return_quant_tensor=True, act_bit_width=self.act_bit_width)
+        )
+
+    def _linear_bn_relu_block(self, in_features, out_features):
+        return nn.Sequential(
+            QuantLinear(
+                in_features, out_features,
+                bias=True,
+                weight_bit_width=self.weight_bit_width,
+                bias_quant=Int8Bias,
+                return_quant_tensor=True,
+                act_bit_width=self.act_bit_width
+            ),
+            nn.BatchNorm1d(out_features),
+            QuantReLU(bit_width=self.act_bit_width, return_quant_tensor=True, act_bit_width=self.act_bit_width)
+        )
+
     def _get_flattened_size(self):
         with torch.no_grad():
             x = torch.zeros(1, 1, self.height, self.width)
             x = self.quant_inp(x)
-            for layer in self.cvz:
-                x = self.relu(layer(x))
+            for block in self.cvz:
+                x = block(x)
             x = self.flatten(x)
         return x.shape[1]
 
@@ -107,13 +125,13 @@ class PilotNet(nn.Module):
         x = x / 255.0
         x = self.quant_inp(x)
 
-        for layer in self.cvz:
-            x = self.relu(layer(x))
+        for block in self.cvz:
+            x = block(x)
 
         x = self.flatten(x)
 
-        for fc in self.fcs:
-            x = self.relu(fc(x))
+        for block in self.fcs:
+            x = block(x)
 
         x = self.output(x)
         x = self.qnt_output(x)
@@ -122,3 +140,4 @@ class PilotNet(nn.Module):
 
 if __name__ == '__main__':
     model = PilotNet(64, 64, 4, 4, 0.4, "011", "011", 1)
+    print(model)

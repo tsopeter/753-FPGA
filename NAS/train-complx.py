@@ -156,7 +156,7 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
                 else:
                     print(f"  Class {label}: No samples")
 
-            if average_testing_loss > 0.11:
+            if average_testing_loss > 0.2:
                 return False
     return True
 
