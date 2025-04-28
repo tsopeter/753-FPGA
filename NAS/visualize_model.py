@@ -114,15 +114,16 @@ def plot_loss_3d(loss_data):
     plt.tight_layout()
     plt.show()
 
-argv = sys.argv
+if __name__ == '__main__':
+    argv = sys.argv
 
-if len(argv) != 2:
-    print(f'Must give history file path.')
-    exit(-1)
+    if len(argv) != 2:
+        print(f'Must give history file path.')
+        exit(-1)
 
-filename = argv[1]
+    filename = argv[1]
 
-text = open(filename).read()
-history = read_history(text)
-df = get_loss_dataframe(history, mode='min')
-plot_loss_heatmaps(df)
+    text = open(filename).read()
+    history = read_history(text)
+    df = get_loss_dataframe(history, mode='min')
+    plot_loss_heatmaps(df)

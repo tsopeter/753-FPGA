@@ -23,7 +23,7 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model_dir = f'./{network_params["bit_width"]}-bit-mse-quant-8-bit-in-quant-inp'
+model_dir = f'./{network_params["bit_width"]}-bit-(4)-mse-quant-8-bit-in-quant-inp'
 
 bit_width = network_params['bit_width']
 max_value = (2**bit_width)-1

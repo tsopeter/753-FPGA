@@ -28,11 +28,11 @@ class PilotNet(nn.Module):
 
         self.use_softmax = use_softmax
         if not non_quantized:      
-            self.conv1  = QuantConv2d(1,  int(24*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True)
-            self.conv2  = QuantConv2d(int(24*self.width_multiplier), int(36*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True)
-            self.conv3  = QuantConv2d(int(36*self.width_multiplier), int(48*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True)
-            self.conv4  = QuantConv2d(int(48*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True)
-            self.conv5  = QuantConv2d(int(64*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True)
+            self.conv1  = QuantConv2d(1,  int(24*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True, act_bit_width=self.act_bit_width)
+            self.conv2  = QuantConv2d(int(24*self.width_multiplier), int(36*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True, act_bit_width=self.act_bit_width)
+            self.conv3  = QuantConv2d(int(36*self.width_multiplier), int(48*self.width_multiplier), kernel_size=5, stride=2, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True, act_bit_width=self.act_bit_width)
+            self.conv4  = QuantConv2d(int(48*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True, act_bit_width=self.act_bit_width)
+            self.conv5  = QuantConv2d(int(64*self.width_multiplier), int(64*self.width_multiplier), kernel_size=3, stride=1, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True, act_bit_width=self.act_bit_width)
         else:
             self.conv1  = nn.Conv2d(1,  int(24*self.width_multiplier), kernel_size=5, stride=2)
             self.conv2  = nn.Conv2d(int(24*self.width_multiplier), int(36*self.width_multiplier), kernel_size=5, stride=2)
@@ -57,7 +57,7 @@ class PilotNet(nn.Module):
         self.flattened_size = self._get_flattened_size()
 
         if not non_quantized:
-            self.relu1  = QuantReLU(bit_width=self.act_bit_width, return_quant_tensor=True)
+            self.relu1  = QuantReLU(bit_width=self.act_bit_width, return_quant_tensor=True, act_bit_width=self.act_bit_width)
         else:
             self.relu1  = nn.ReLU()
 
@@ -71,13 +71,13 @@ class PilotNet(nn.Module):
 
         for i in range(min(densez, len(hidden_sizes))):
             if not non_quantized:
-                self.fcs.append(QuantLinear(in_features, hidden_sizes[i], bias=True, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True))
+                self.fcs.append(QuantLinear(in_features, hidden_sizes[i], bias=True, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True, act_bit_width=self.act_bit_width))
             else:
                 self.fcs.append(nn.Linear(in_features, hidden_sizes[i], bias=True))
             in_features = hidden_sizes[i]
             
         if not non_quantized:
-            self.output = QuantLinear(in_features, out_features=out_features, bias=True, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True)
+            self.output = QuantLinear(in_features, out_features=out_features, bias=True, weight_bit_width=self.weight_bit_width, bias_quant=Int8Bias, return_quant_tensor=True, act_bit_width=self.act_bit_width)
         else:
             self.output = nn.Linear(in_features, out_features=out_features, bias=True)
         self.softmax = nn.Softmax(dim=1)

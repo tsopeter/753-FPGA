@@ -1,14 +1,18 @@
 import numpy as np
 import sys
 
-argv = sys.argv
+def read_stats(filename):
+    loss   = np.load(f'{filename}-loss.npy')
+    config = np.load(f'{filename}-config.npy')
+    acc    = np.load(f'{filename}-accuracy.npy')
+    print(f'Model {config} has\n\tValidation Loss: {loss}\n\tValidation Accuracy: {acc}')
+    return loss, config, acc
 
-if len(argv) != 2:
-    print(f'Must be <model_date>')
-    exit(-1)
+if __name__ == '__main__':
+    argv = sys.argv
 
-loss   = np.load(f'{argv[1]}-loss.npy')
-config = np.load(f'{argv[1]}-config.npy')
-acc    = np.load(f'{argv[1]}-accuracy.npy')
+    if len(argv) != 2:
+        print(f'Must be <model_date>')
+        exit(-1)
 
-print(f'Model {config} has\n\tValidation Loss: {loss}\n\tValidation Accuracy: {acc}')
+    loss, config, acc = read_stats(argv[1])

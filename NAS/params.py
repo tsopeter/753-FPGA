@@ -17,8 +17,8 @@ network_params = {
     "lstats"               : "../projects/layer_stats",
 
 ## Learning parameters
-    "epoch"                : 64,
-    "lr"                   : 1e-4,
+    "epoch"                : 24,
+    "lr"                   : 1e-3,
     "bsz"                  : 128,
 
 }

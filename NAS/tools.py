@@ -37,8 +37,9 @@ def parse_file(dir: str, image_size=(64, 64)) -> tuple[np.ndarray, np.ndarray]:
 
         # Image translation to match Micro's camera
         img = cv2.resize(gray, (320,240))
+
         img = cv2.flip(img, 1)
-        img = img[0:210,60:190]
+        img = img[0:210, 52:198]
 
         resized = cv2.resize(img, image_size)
         frames.append(resized[np.newaxis, ...])  # shape (1, H, W)
