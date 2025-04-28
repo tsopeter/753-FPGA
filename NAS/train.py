@@ -23,7 +23,7 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model_dir = f'./{network_params["bit_width"]}-bit-(4)-mse-quant-8-bit-in-quant-inp'
+model_dir = f'./{network_params["bit_width"]}-bit-4-mse-fixed'
 
 bit_width = network_params['bit_width']
 max_value = (2**bit_width)-1
@@ -55,7 +55,6 @@ def evaluate(model: PilotNet, val_loader: DataLoader, weights=None) -> None:
 
         for images, turns in val_loader:
             images, turns = images.to(device), turns.to(device)
-            images = images / 255
             #images = torch.round(images / 255.0 * max_value)
             #images = torch.clip(images, 0, max_value)
             turns = turns.unsqueeze(1)
@@ -103,12 +102,14 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
         training_loss = 0.0
         for images, turns in train_loader:
             images, turns = images.to(device), turns.to(device)
-            images = images / 255
+            turns = turns.unsqueeze(1)
+
             #images = torch.round(images / 255.0 * max_value)
             #images = torch.clip(images, 0, max_value)
 
             optim.zero_grad()
             preds = model(images)
+
             loss = lossfn(preds, turns)
 
             loss.backward()
@@ -127,7 +128,7 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
 
             for images, turns in test_loader:
                 images, turns = images.to(device), turns.to(device)
-                images = images / 255
+
                 #images = torch.round(images / 255.0 * max_value)
                 #images = torch.clip(images, 0, max_value)
                 turns = turns.unsqueeze(1)
@@ -159,11 +160,6 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
                     print(f"  Class {label}: {correct}/{total} correct ({acc:.2f}%)")
                 else:
                     print(f"  Class {label}: No samples")
-
-
-def evolution(n_generations: int, stats: PerformanceContrib, train_loader: DataLoader, test_loader: DataLoader, val_loader: DataLoader):
-    # Optional: Evolutionary NAS or tuning
-    pass
 
 def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: DataLoader, val_loader: DataLoader, weights=None):
     n_convs = np.arange(min_conv, max_conv + 1)
@@ -258,7 +254,8 @@ export_qonnx(model, export_path=ready_model_filename, input_t=input_t)
 qonnx_cleanup(ready_model_filename, out_file=ready_model_filename)
 
 model = ModelWrapper(ready_model_filename)
-#model.set_tensor_datatype(model.graph.input[0].name, DataType[f'UINT{network_params["bit_width"]}'])
+model.set_tensor_datatype(model.graph.input[0].name, DataType[f'UINT8'])
+model.set_tensor_datatype(model.graph.output[0].name, DataType["FIXED<9,2>"])
 model.save(ready_model_filename)
 
 config = np.array(config)

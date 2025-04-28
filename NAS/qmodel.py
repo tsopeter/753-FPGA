@@ -20,10 +20,13 @@ class PilotNet(nn.Module):
 
         self.used_quantized = not non_quantized
 
-        self.quant_inp = QuantIdentity(
-            bit_width=8,
-            act_quant=Int8ActPerTensorFloat,
-            return_quant_tensor=True
+        self.qnt_output = QuantIdentity(
+            bit_width=9, 
+            quant_type='int',           # INT quantization, not binary
+            scaling_impl_type='const',  # Fixed scaling
+            scaling_const=1/128.0,      # Because 2^7 = 128, for 7 fractional bits
+            narrow_range=False,         # Allow full range [-1.0, +1.0]
+            signed=True                 # Output is signed
         )
 
         self.use_softmax = use_softmax
@@ -90,10 +93,9 @@ class PilotNet(nn.Module):
             x = cvz(x)
         x = self.flatten(x)
         return x.shape[1]
-
+    
     def forward(self, x):
-        if self.used_quantized:
-            x = self.quant_inp(x)
+        x = x / 255.0   # normalize to 0->1
 
         for cvz in self.cvz:
             x = self.relu1(cvz(x))
@@ -104,5 +106,8 @@ class PilotNet(nn.Module):
 
         if self.use_softmax:
             x = self.softmax(x)
+
+        if self.used_quantized:
+            x = self.qnt_output(x)
 
         return x
