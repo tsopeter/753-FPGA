@@ -95,7 +95,7 @@ class PilotNet(nn.Module):
                 act_bit_width=self.act_bit_width
             ),
             #BatchNorm2dToQuantScaleBias(out_channels),
-            #nn.BatchNorm2d(out_channels),
+            nn.BatchNorm2d(out_channels),
             QuantReLU(bit_width=self.act_bit_width, return_quant_tensor=True, act_bit_width=self.act_bit_width)
         )
 

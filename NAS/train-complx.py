@@ -23,7 +23,7 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model_dir = f'./{network_params["bit_width"]}-bit-4-mse-fixed-complex'
+model_dir = f'./{network_params["bit_width"]}-bit-4-mse-fixed-complex-bn'
 
 bit_width = network_params['bit_width']
 max_value = (2**bit_width)-1
@@ -35,8 +35,8 @@ def get_weighted_mse_loss(weights: torch.Tensor):
     def loss_fn(pred: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
         labels = map_to_labels(target.view(-1)) + 1  # map to {-1,0,1} → {0,1,2}
         per_weights = weights[labels]                # shape: [N]
-        errors = pred.view(-1) - target.view(-1)
-        return torch.mean(per_weights * errors.value ** 2)
+        errors = target.view(-1) - pred.view(-1).value
+        return torch.mean(per_weights * (errors ** 2))
 
     return loss_fn
 
@@ -52,6 +52,7 @@ def evaluate(model: PilotNet, val_loader: DataLoader, weights=None) -> None:
         total_count = 0
         class_correct = defaultdict(int)
         class_total = defaultdict(int)
+        count = 0
 
         for images, turns in val_loader:
             images, turns = images.to(device), turns.to(device)
@@ -60,6 +61,7 @@ def evaluate(model: PilotNet, val_loader: DataLoader, weights=None) -> None:
             preds = model(images)
             loss = lossfn(preds, turns)
             validation_loss += loss.item() * images.size(0)
+            count += images.shape[0]
 
             preds = preds.value
             expected = map_to_labels(preds, limit=LIMIT)
@@ -73,7 +75,7 @@ def evaluate(model: PilotNet, val_loader: DataLoader, weights=None) -> None:
             total_correct += torch.sum(expected == true).item()
             total_count += len(true)
 
-        average_validation_loss = validation_loss / len(val_loader.dataset)
+        average_validation_loss = validation_loss / count
         accuracy = total_correct / total_count
 
         print(f'Validation Loss: {average_validation_loss:.4f}, Accuracy: {100*accuracy:.2f}%')
@@ -99,6 +101,7 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
     for epoch in range(epochs):
         model.train()
         training_loss = 0.0
+        count = 0
         for images, turns in train_loader:
             images, turns = images.to(device), turns.to(device)
             turns = turns.unsqueeze(1)
@@ -112,7 +115,8 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
             optim.step()
 
             training_loss += loss.item() * images.size(0)
-        average_training_loss = training_loss / len(train_loader.dataset)
+            count += images.shape[0]
+        average_training_loss = training_loss / count
 
         model.eval()
         with torch.no_grad():
@@ -121,7 +125,7 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
             total_count = 0
             class_correct = defaultdict(int)
             class_total = defaultdict(int)
-
+            count = 0
             for images, turns in test_loader:
                 images, turns = images.to(device), turns.to(device)
 
@@ -130,6 +134,7 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
                 preds = model(images)
                 loss = lossfn(preds, turns)
                 testing_loss += loss.item() * images.size(0)
+                count += images.size(0)
 
                 preds = preds.value
                 expected = map_to_labels(preds, limit=LIMIT)
@@ -143,7 +148,7 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
                 total_correct += torch.sum(expected == true).item()
                 total_count += len(true)
 
-            average_testing_loss = testing_loss / len(test_loader.dataset)
+            average_testing_loss = testing_loss / count
             accuracy = total_correct / total_count
 
             print(f'Epoch: {epoch+1}: Training Loss: {average_training_loss:.4f}, Testing Loss: {average_testing_loss:.4f}, Accuracy: {100*accuracy:.2f}%')
@@ -187,7 +192,7 @@ def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: Data
         print(f'******************MODEL: {(convz, densez, width)}*****************')
         for i in range(5):
             print(f'\t**************RUN: {i}***************')
-            model = PilotNet(width=64, height=64, weight_bit_width=bit_width, 
+            model = PilotNet(width=70, height=70, weight_bit_width=bit_width, 
                                  act_bit_width=bit_width, 
                                  width_multiplier=width, 
                                  convz=convz, 
@@ -200,7 +205,7 @@ def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: Data
                 print(f'Skipping...')
                 continue
 
-            loss, acc = evaluate(model, val_loader, weights=weights)
+            loss, acc = evaluate(model, test_loader, weights=weights)
 
             history[f'{(convz, densez, np.round(width,decimals=1))}-{i}']=(loss, acc)
 
@@ -215,43 +220,38 @@ def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: Data
 # Load datasets
 #stats = PerformanceContrib(network_params["lstats"])
 stats = None
-dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,9])
+dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,9], img_size=(70,70))
 labels = map_to_labels(dataset.turns) + 1
 indicies = list(range(len(dataset)))
 train_idx, test_idx = train_test_split(
-    indicies, test_size=0.2, stratify=labels.numpy(), random_state=42
+    indicies, test_size=0.35, random_state=0
 )
-
-test_idx, val_idx = train_test_split(
-    test_idx, test_size=0.5, stratify=labels[test_idx].numpy(), random_state=42
-)
+print(f'Dataset length: {len(dataset)}')
 
 train_dataset = Subset(dataset, train_idx)
 test_dataset  = Subset(dataset, test_idx)
-val_dataset   = Subset(dataset, val_idx)
 
-train_labels  = (map_to_labels(train_dataset.dataset.turns) + 1).numpy()
-val_labels    = (map_to_labels(val_dataset.dataset.turns) + 1).numpy()
+train_labels  = (map_to_labels(train_dataset.dataset.turns[train_idx]) + 1).numpy()
+test_vals = test_dataset.dataset.turns[test_idx]
+test_labels   = (map_to_labels(test_vals) + 1).numpy()
 
-weights = class_weight.compute_class_weight('balanced', classes=np.unique(val_labels), y=val_labels)
+np_test_vals = test_vals.numpy()
+
+weights = class_weight.compute_class_weight('balanced', classes=np.unique(train_labels), y=train_labels)
 weights = torch.from_numpy(weights).to(device)
 #weights = torch.tensor([1, 1, 1], dtype=torch.float32).to(device)
-
 print(weights)
 
 train_loader  = DataLoader(train_dataset, network_params["bsz"], shuffle=True)
 test_loader   = DataLoader(test_dataset, network_params["bsz"], shuffle=False)
-val_loader    = DataLoader(val_dataset, network_params["bsz"], shuffle=False)
-
 print(f"Maximums={network_params['maximum_conv_layers'], network_params['maximum_dense_layers'], network_params['maximum_width']}")
 
 # Show dataset distribution
 print(f'Unique Turn values: {torch.unique(train_dataset.dataset.turns)}')
 print(f'\tTraining Dataset: {len(train_dataset)}, {get_dataset_distribution(train_dataset.dataset.turns)}')
 print(f'\tTesting Dataset: {len(test_dataset)}, {get_dataset_distribution(test_dataset.dataset.turns)}')
-print(f'\tValidation Dataset: {len(val_dataset)}, {get_dataset_distribution(val_dataset.dataset.turns)}')
 
-model, loss, acc, config, history = brute(stats, train_loader, test_loader, val_loader, weights)
+model, loss, acc, config, history = brute(stats, train_loader, test_loader, None, weights)
 
 name   = f'{datetime.now()}'.replace(' ', '-').replace(':', '-').replace('.', '-')
 

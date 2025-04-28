@@ -1,7 +1,7 @@
 network_params = {
 ## Network Parameters
-    "image_width"          : 64,
-    "image_height"         : 64,
+    "image_width"          : 70,
+    "image_height"         : 70,
     "minimum_conv_layers"  : 3,
     "maximum_conv_layers"  : 5,
     "minimum_dense_layers" : 1,
