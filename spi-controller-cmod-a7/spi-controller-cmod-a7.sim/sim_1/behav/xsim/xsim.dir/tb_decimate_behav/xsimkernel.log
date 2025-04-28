@@ -2,3 +2,6 @@ Running: xsim.dir/tb_decimate_behav/xsimk.exe -simmode gui -wdb tb_decimate_beha
 Design successfully loaded
 Design Loading Memory Usage: 8256 KB (Peak: 8256 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 8956 KB (Peak: 8956 KB)
+Simulation CPU Usage: 15 ms
