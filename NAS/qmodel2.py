@@ -94,7 +94,8 @@ class PilotNet(nn.Module):
                 return_quant_tensor=True,
                 act_bit_width=self.act_bit_width
             ),
-            BatchNorm2dToQuantScaleBias(out_channels),
+            #BatchNorm2dToQuantScaleBias(out_channels),
+            #nn.BatchNorm2d(out_channels),
             QuantReLU(bit_width=self.act_bit_width, return_quant_tensor=True, act_bit_width=self.act_bit_width)
         )
 
@@ -108,7 +109,7 @@ class PilotNet(nn.Module):
                 return_quant_tensor=True,
                 act_bit_width=self.act_bit_width
             ),
-            nn.BatchNorm1d(out_features),
+            #nn.BatchNorm1d(out_features),
             QuantReLU(bit_width=self.act_bit_width, return_quant_tensor=True, act_bit_width=self.act_bit_width)
         )
 
@@ -139,5 +140,4 @@ class PilotNet(nn.Module):
         return x
 
 if __name__ == '__main__':
-    model = PilotNet(64, 64, 4, 4, 0.4, "011", "011", 1)
-    print(model)
+    model = PilotNet(64, 64, 4, 4, 0.1, "111", "111", 1)

@@ -156,8 +156,9 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
                 else:
                     print(f"  Class {label}: No samples")
 
-            if average_testing_loss > 0.2:
-                return False
+            if (epoch >= 5):
+                if average_testing_loss > 0.12:
+                    return False
     return True
 
 def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: DataLoader, val_loader: DataLoader, weights=None):
@@ -178,7 +179,7 @@ def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: Data
 
     history = {}
 
-    good_models = read_and_filter_models('../projects/layer_stats_complx', max_bram=28, max_lut=4000)
+    good_models = read_and_filter_models('../projects/layer_stats_complx', max_bram=28, max_lut=5000)
     print(f"Number of models to train: {len(good_models)}")
     for params in good_models:
         width, convz, densez, bram, lut, latency = params
@@ -218,7 +219,7 @@ dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,9])
 labels = map_to_labels(dataset.turns) + 1
 indicies = list(range(len(dataset)))
 train_idx, test_idx = train_test_split(
-    indicies, test_size=0.25, stratify=labels.numpy(), random_state=42
+    indicies, test_size=0.2, stratify=labels.numpy(), random_state=42
 )
 
 test_idx, val_idx = train_test_split(
