@@ -70,9 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param tcl.collectionResultDisplayLimit 0
-set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -93,6 +90,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/debounce_pulse.v
+  D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.srcs/sources_1/new/decimate.v
   D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
   D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_2/hdl/design_2_wrapper.v
   D:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_3/hdl/design_3_wrapper.v

@@ -67,6 +67,27 @@ module spi_camera_axis_wrapper(
         .data_valid(gray_valid),
         .data_last(gray_last)
     );
+    
+    wire [7:0] dec_out;
+    wire dec_valid;
+    wire dec_last;
+    
+    decimate #(
+        .ROW_MAX(96),
+        .COL_MAX(96),
+        .N_BYTES(4096)
+    ) dec (
+        .clk(clk),
+        .rst(rst),
+        
+        .data_in(gray_data),
+        .data_in_valid(gray_valid),
+        .data_in_last(gray_last),
+        
+        .data_out(dec_out),
+        .data_out_valid(dec_valid),
+        .data_out_last(dec_last)
+    );
 
     spi_camera_controller controller (
         .clk(clk),
@@ -90,11 +111,13 @@ module spi_camera_axis_wrapper(
         .byte_count_dbg(byte_count)
     );    
     
-    spi_camera_stream_bridge bridge (
+    spi_camera_stream_bridge #(
+        .FIFO_DEPTH(4096)
+    ) bridge (
         .clk(clk),
-        .pixel_data(gray_data),
-        .pixel_valid(gray_valid),
-        .pixel_last(gray_last),
+        .pixel_data(dec_out),
+        .pixel_valid(dec_valid),
+        .pixel_last(dec_last),
         
         .m_axis_tdata(m_axis_tdata),
         .m_axis_tvalid(m_axis_tvalid),
