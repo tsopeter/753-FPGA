@@ -1,7 +1,7 @@
 import torch
 from torch.utils.data import DataLoader
 import cv2
-from model import PilotNet
+from qmodel2 import PilotNet
 from params import network_params
 from dataset import ImageDataset
 from contrib import PerformanceContrib, Stats
@@ -65,3 +65,63 @@ def write_dict_to_txt(d: dict, filename: str) -> None:
     with open(filename, 'w') as f:
         for key, value in d.items():
             f.write(f"{key}: {value}\n")
+
+import json
+import os
+import numpy as np
+
+def read_and_filter_models(folder, max_bram=28, max_lut=4000):
+    """
+    Read all models from a folder and return those that satisfy BRAM and LUT constraints.
+
+    Args:
+        folder: Folder containing .json and .perf.json files.
+        max_bram: Maximum allowed BRAM_18K usage.
+        max_lut: Maximum allowed LUT usage.
+
+    Returns:
+        List of tuples: (width, convz, densez, bram, lut, latency)
+    """
+    good_models = []
+
+    for file_name in os.listdir(folder):
+        if file_name.endswith('.json') and not file_name.endswith('.perf.json'):
+            base_name = file_name[:-5]  # Remove ".json"
+            json_path = os.path.join(folder, f"{base_name}.json")
+            perf_path = os.path.join(folder, f"{base_name}.perf.json")
+
+            if not os.path.exists(perf_path):
+                continue  # Skip if missing perf file
+
+            try:
+                # Parse filename
+                parts = base_name.split('.')
+                width = float(f"{parts[0]}.{parts[1]}")
+                convz = parts[2]
+                densez = parts[3]
+                conv_idx = int(convz, 2)
+                dense_idx = int(densez, 2)
+            except Exception as e:
+                print(f"Skipping {base_name} due to parsing error: {e}")
+                continue
+
+            try:
+                # Load .json
+                with open(json_path, 'r') as f:
+                    json_data = json.load(f)
+                    bram = json_data['total']['BRAM_18K']
+                    lut = json_data['total']['LUT']
+
+                # Load .perf.json
+                with open(perf_path, 'r') as f:
+                    perf_data = json.load(f)
+                    latency = perf_data['estimated_latency_ns']
+            except Exception as e:
+                print(f"Skipping {base_name} due to file read error: {e}")
+                continue
+
+            # Apply filter
+            if bram < max_bram and lut < max_lut:
+                good_models.append((width, convz, densez, bram, lut, latency))
+
+    return good_models

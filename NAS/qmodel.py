@@ -21,12 +21,12 @@ class PilotNet(nn.Module):
         self.used_quantized = not non_quantized
 
         self.qnt_output = QuantIdentity(
-            bit_width=9, 
-            quant_type='int',           # INT quantization, not binary
-            scaling_impl_type='const',  # Fixed scaling
-            scaling_const=1/128.0,      # Because 2^7 = 128, for 7 fractional bits
-            narrow_range=False,         # Allow full range [-1.0, +1.0]
-            signed=True                 # Output is signed
+            bit_width=16,               # 16 bits now
+            quant_type='int',            # Fixed-point quantization
+            scaling_impl_type='const',   # Constant scaling
+            scaling_const=1/16384.0,     # 2^14 = 16384, for 14 fractional bits
+            narrow_range=False,
+            signed=True
         )
 
         self.use_softmax = use_softmax
@@ -86,12 +86,13 @@ class PilotNet(nn.Module):
         self.softmax = nn.Softmax(dim=1)
 
     def _get_flattened_size(self):
-        x = torch.zeros(1,1,self.height,self.width)
-        if self.used_quantized:
-            x = self.quant_inp(x)
-        for cvz in self.cvz:
-            x = cvz(x)
-        x = self.flatten(x)
+        with torch.no_grad():
+            x = torch.zeros(1,1,self.height,self.width)
+            if self.used_quantized:
+                x = self.quant_inp(x)
+            for cvz in self.cvz:
+                x = cvz(x)
+            x = self.flatten(x)
         return x.shape[1]
     
     def forward(self, x):
@@ -111,3 +112,7 @@ class PilotNet(nn.Module):
             x = self.qnt_output(x)
 
         return x
+    
+if __name__ == '__main__':
+    model = PilotNet(64, 64, 4, 4, 0.5, 5, 3, 1, False, False)
+    

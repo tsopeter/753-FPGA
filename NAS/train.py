@@ -255,7 +255,7 @@ qonnx_cleanup(ready_model_filename, out_file=ready_model_filename)
 
 model = ModelWrapper(ready_model_filename)
 model.set_tensor_datatype(model.graph.input[0].name, DataType[f'UINT8'])
-model.set_tensor_datatype(model.graph.output[0].name, DataType["FIXED<9,2>"])
+model.set_tensor_datatype(model.graph.output[0].name, DataType["FIXED<16,2>"])
 model.save(ready_model_filename)
 
 config = np.array(config)
