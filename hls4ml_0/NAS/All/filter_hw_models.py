@@ -48,3 +48,5 @@ for c in dw_conv_str:
 # save file
 df = pd.DataFrame(data_file)
 df.to_csv(filters_file, index=False)
+
+print(f'Number of "good" models: {good_count}/{total_checked}')
