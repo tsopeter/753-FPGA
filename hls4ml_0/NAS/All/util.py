@@ -144,7 +144,7 @@ def networkValues(model):
             'FF': 0,
             'LUT': 0,
             'URAM': 0,
-            'AvailableBRAM_18K': 0,  # avoid divide-by-zero later
+            'AvailableBRAM_18K': 0,
             'AvailableDSP': 0,
             'AvailableFF': 0,
             'AvailableLUT': 0,
