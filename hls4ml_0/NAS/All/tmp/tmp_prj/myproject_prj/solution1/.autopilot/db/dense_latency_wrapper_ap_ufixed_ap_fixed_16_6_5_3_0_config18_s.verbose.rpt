@@ -1,0 +1,509 @@
+
+
+================================================================
+== Vitis HLS Report for 'dense_latency_wrapper_ap_ufixed_ap_fixed_16_6_5_3_0_config18_s'
+================================================================
+* Date:           Mon Apr 28 17:32:14 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        myproject_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  30.00 ns|  11.822 ns|     8.10 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                                            |                                                                  |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                                  Instance                                  |                              Module                              |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |res_dense_latency_ap_ufixed_6_0_4_0_0_ap_fixed_16_6_5_3_0_config18_s_fu_60  |dense_latency_ap_ufixed_6_0_4_0_0_ap_fixed_16_6_5_3_0_config18_s  |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+        +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      -|      -|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   0|      0|    173|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      -|      -|    -|
+|Register         |        -|   -|      -|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   0|      0|    173|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   0|      0|     ~0|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+----+---+-----+-----+
+    |                                  Instance                                  |                              Module                              | BRAM_18K| DSP| FF| LUT | URAM|
+    +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+----+---+-----+-----+
+    |res_dense_latency_ap_ufixed_6_0_4_0_0_ap_fixed_16_6_5_3_0_config18_s_fu_60  |dense_latency_ap_ufixed_6_0_4_0_0_ap_fixed_16_6_5_3_0_config18_s  |        0|   0|  0|  173|    0|
+    +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+----+---+-----+-----+
+    |Total                                                                       |                                                                  |        0|   0|  0|  173|    0|
+    +----------------------------------------------------------------------------+------------------------------------------------------------------+---------+----+---+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------+-----+-----+------------+----------------------------------------------------------------+--------------+
+|  RTL Ports  | Dir | Bits|  Protocol  |                          Source Object                         |    C Type    |
++-------------+-----+-----+------------+----------------------------------------------------------------+--------------+
+|ap_ready     |  out|    1|  ap_ctrl_hs|  dense_latency_wrapper<ap_ufixed,ap_fixed<16,6,5,3,0>,config18>|  return value|
+|ap_return    |  out|   12|  ap_ctrl_hs|  dense_latency_wrapper<ap_ufixed,ap_fixed<16,6,5,3,0>,config18>|  return value|
+|ap_rst       |   in|    1|  ap_ctrl_hs|  dense_latency_wrapper<ap_ufixed,ap_fixed<16,6,5,3,0>,config18>|  return value|
+|data_0_val1  |   in|    6|     ap_none|                                                     data_0_val1|        scalar|
+|data_1_val2  |   in|    6|     ap_none|                                                     data_1_val2|        scalar|
+|data_2_val3  |   in|    6|     ap_none|                                                     data_2_val3|        scalar|
+|data_3_val4  |   in|    6|     ap_none|                                                     data_3_val4|        scalar|
+|data_4_val5  |   in|    6|     ap_none|                                                     data_4_val5|        scalar|
+|data_5_val6  |   in|    6|     ap_none|                                                     data_5_val6|        scalar|
++-------------+-----+-----+------------+----------------------------------------------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 1
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 11.8>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specpipeline_ln13 = specpipeline void @_ssdm_op_SpecPipeline, i32 128, i32 0, i32 0, i32 0, void @empty_0" [firmware/nnet_utils/nnet_dense_stream.h:13]   --->   Operation 2 'specpipeline' 'specpipeline_ln13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%data_5_val6_read = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %data_5_val6" [firmware/nnet_utils/nnet_dense_stream.h:17]   --->   Operation 3 'read' 'data_5_val6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%data_4_val5_read = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %data_4_val5" [firmware/nnet_utils/nnet_dense_stream.h:17]   --->   Operation 4 'read' 'data_4_val5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%data_3_val4_read = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %data_3_val4" [firmware/nnet_utils/nnet_dense_stream.h:17]   --->   Operation 5 'read' 'data_3_val4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%data_2_val3_read = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %data_2_val3" [firmware/nnet_utils/nnet_dense_stream.h:17]   --->   Operation 6 'read' 'data_2_val3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%data_1_val2_read = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %data_1_val2" [firmware/nnet_utils/nnet_dense_stream.h:17]   --->   Operation 7 'read' 'data_1_val2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%data_0_val1_read = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %data_0_val1" [firmware/nnet_utils/nnet_dense_stream.h:17]   --->   Operation 8 'read' 'data_0_val1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (11.8ns)   --->   "%res = call i12 @dense_latency<ap_ufixed<6, 0, 4, 0, 0>, ap_fixed<16, 6, 5, 3, 0>, config18>, i6 %data_0_val1_read, i6 %data_1_val2_read, i6 %data_2_val3_read, i6 %data_3_val4_read, i6 %data_4_val5_read, i6 %data_5_val6_read" [firmware/nnet_utils/nnet_dense_stream.h:17]   --->   Operation 9 'call' 'res' <Predicate = true> <Delay = 11.8> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%ret_ln18 = ret i12 %res" [firmware/nnet_utils/nnet_dense_stream.h:18]   --->   Operation 10 'ret' 'ret_ln18' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 1
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ data_0_val1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ data_1_val2]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ data_2_val3]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ data_3_val4]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ data_4_val5]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ data_5_val6]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+specpipeline_ln13 (specpipeline) [ 00]
+data_5_val6_read  (read        ) [ 00]
+data_4_val5_read  (read        ) [ 00]
+data_3_val4_read  (read        ) [ 00]
+data_2_val3_read  (read        ) [ 00]
+data_1_val2_read  (read        ) [ 00]
+data_0_val1_read  (read        ) [ 00]
+res               (call        ) [ 00]
+ret_ln18          (ret         ) [ 00]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="data_0_val1">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="data_0_val1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="data_1_val2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="data_1_val2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="data_2_val3">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="data_2_val3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="data_3_val4">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="data_3_val4"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="data_4_val5">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="data_4_val5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="data_5_val6">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="data_5_val6"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i6"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dense_latency<ap_ufixed<6, 0, 4, 0, 0>, ap_fixed<16, 6, 5, 3, 0>, config18>"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1004" name="data_5_val6_read_read_fu_24">
+<pin_list>
+<pin id="25" dir="0" index="0" bw="6" slack="0"/>
+<pin id="26" dir="0" index="1" bw="6" slack="0"/>
+<pin id="27" dir="1" index="2" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="data_5_val6_read/1 "/>
+</bind>
+</comp>
+
+<comp id="30" class="1004" name="data_4_val5_read_read_fu_30">
+<pin_list>
+<pin id="31" dir="0" index="0" bw="6" slack="0"/>
+<pin id="32" dir="0" index="1" bw="6" slack="0"/>
+<pin id="33" dir="1" index="2" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="data_4_val5_read/1 "/>
+</bind>
+</comp>
+
+<comp id="36" class="1004" name="data_3_val4_read_read_fu_36">
+<pin_list>
+<pin id="37" dir="0" index="0" bw="6" slack="0"/>
+<pin id="38" dir="0" index="1" bw="6" slack="0"/>
+<pin id="39" dir="1" index="2" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="data_3_val4_read/1 "/>
+</bind>
+</comp>
+
+<comp id="42" class="1004" name="data_2_val3_read_read_fu_42">
+<pin_list>
+<pin id="43" dir="0" index="0" bw="6" slack="0"/>
+<pin id="44" dir="0" index="1" bw="6" slack="0"/>
+<pin id="45" dir="1" index="2" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="data_2_val3_read/1 "/>
+</bind>
+</comp>
+
+<comp id="48" class="1004" name="data_1_val2_read_read_fu_48">
+<pin_list>
+<pin id="49" dir="0" index="0" bw="6" slack="0"/>
+<pin id="50" dir="0" index="1" bw="6" slack="0"/>
+<pin id="51" dir="1" index="2" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="data_1_val2_read/1 "/>
+</bind>
+</comp>
+
+<comp id="54" class="1004" name="data_0_val1_read_read_fu_54">
+<pin_list>
+<pin id="55" dir="0" index="0" bw="6" slack="0"/>
+<pin id="56" dir="0" index="1" bw="6" slack="0"/>
+<pin id="57" dir="1" index="2" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="data_0_val1_read/1 "/>
+</bind>
+</comp>
+
+<comp id="60" class="1004" name="res_dense_latency_ap_ufixed_6_0_4_0_0_ap_fixed_16_6_5_3_0_config18_s_fu_60">
+<pin_list>
+<pin id="61" dir="0" index="0" bw="12" slack="0"/>
+<pin id="62" dir="0" index="1" bw="6" slack="0"/>
+<pin id="63" dir="0" index="2" bw="6" slack="0"/>
+<pin id="64" dir="0" index="3" bw="6" slack="0"/>
+<pin id="65" dir="0" index="4" bw="6" slack="0"/>
+<pin id="66" dir="0" index="5" bw="6" slack="0"/>
+<pin id="67" dir="0" index="6" bw="6" slack="0"/>
+<pin id="68" dir="1" index="7" bw="12" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="res/1 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="28"><net_src comp="20" pin="0"/><net_sink comp="24" pin=0"/></net>
+
+<net id="29"><net_src comp="10" pin="0"/><net_sink comp="24" pin=1"/></net>
+
+<net id="34"><net_src comp="20" pin="0"/><net_sink comp="30" pin=0"/></net>
+
+<net id="35"><net_src comp="8" pin="0"/><net_sink comp="30" pin=1"/></net>
+
+<net id="40"><net_src comp="20" pin="0"/><net_sink comp="36" pin=0"/></net>
+
+<net id="41"><net_src comp="6" pin="0"/><net_sink comp="36" pin=1"/></net>
+
+<net id="46"><net_src comp="20" pin="0"/><net_sink comp="42" pin=0"/></net>
+
+<net id="47"><net_src comp="4" pin="0"/><net_sink comp="42" pin=1"/></net>
+
+<net id="52"><net_src comp="20" pin="0"/><net_sink comp="48" pin=0"/></net>
+
+<net id="53"><net_src comp="2" pin="0"/><net_sink comp="48" pin=1"/></net>
+
+<net id="58"><net_src comp="20" pin="0"/><net_sink comp="54" pin=0"/></net>
+
+<net id="59"><net_src comp="0" pin="0"/><net_sink comp="54" pin=1"/></net>
+
+<net id="69"><net_src comp="22" pin="0"/><net_sink comp="60" pin=0"/></net>
+
+<net id="70"><net_src comp="54" pin="2"/><net_sink comp="60" pin=1"/></net>
+
+<net id="71"><net_src comp="48" pin="2"/><net_sink comp="60" pin=2"/></net>
+
+<net id="72"><net_src comp="42" pin="2"/><net_sink comp="60" pin=3"/></net>
+
+<net id="73"><net_src comp="36" pin="2"/><net_sink comp="60" pin=4"/></net>
+
+<net id="74"><net_src comp="30" pin="2"/><net_sink comp="60" pin=5"/></net>
+
+<net id="75"><net_src comp="24" pin="2"/><net_sink comp="60" pin=6"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: dense_latency_wrapper<ap_ufixed,ap_fixed<16,6,5,3,0>,config18> : data_0_val1 | {1 }
+	Port: dense_latency_wrapper<ap_ufixed,ap_fixed<16,6,5,3,0>,config18> : data_1_val2 | {1 }
+	Port: dense_latency_wrapper<ap_ufixed,ap_fixed<16,6,5,3,0>,config18> : data_2_val3 | {1 }
+	Port: dense_latency_wrapper<ap_ufixed,ap_fixed<16,6,5,3,0>,config18> : data_3_val4 | {1 }
+	Port: dense_latency_wrapper<ap_ufixed,ap_fixed<16,6,5,3,0>,config18> : data_4_val5 | {1 }
+	Port: dense_latency_wrapper<ap_ufixed,ap_fixed<16,6,5,3,0>,config18> : data_5_val6 | {1 }
+  - Chain level:
+	State 1
+		ret_ln18 : 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|----------------------------------------------------------------------------|---------|---------|---------|
+| Operation|                               Functional Unit                              |   DSP   |    FF   |   LUT   |
+|----------|----------------------------------------------------------------------------|---------|---------|---------|
+|   call   | res_dense_latency_ap_ufixed_6_0_4_0_0_ap_fixed_16_6_5_3_0_config18_s_fu_60 |    0    |    0    |   164   |
+|----------|----------------------------------------------------------------------------|---------|---------|---------|
+|          |                         data_5_val6_read_read_fu_24                        |    0    |    0    |    0    |
+|          |                         data_4_val5_read_read_fu_30                        |    0    |    0    |    0    |
+|   read   |                         data_3_val4_read_read_fu_36                        |    0    |    0    |    0    |
+|          |                         data_2_val3_read_read_fu_42                        |    0    |    0    |    0    |
+|          |                         data_1_val2_read_read_fu_48                        |    0    |    0    |    0    |
+|          |                         data_0_val1_read_read_fu_54                        |    0    |    0    |    0    |
+|----------|----------------------------------------------------------------------------|---------|---------|---------|
+|   Total  |                                                                            |    0    |    0    |   164   |
+|----------|----------------------------------------------------------------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |   DSP  |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    0   |    0   |   164  |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |
++-----------+--------+--------+--------+
+|   Total   |    0   |    0   |   164  |
++-----------+--------+--------+--------+

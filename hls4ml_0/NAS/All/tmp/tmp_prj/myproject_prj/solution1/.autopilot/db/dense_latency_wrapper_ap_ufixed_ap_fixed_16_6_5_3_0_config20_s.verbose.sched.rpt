@@ -1,0 +1,113 @@
+
+
+================================================================
+== Vitis HLS Report for 'dense_latency_wrapper_ap_ufixed_ap_fixed_16_6_5_3_0_config20_s'
+================================================================
+* Date:           Mon Apr 28 17:32:10 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        myproject_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  30.00 ns|  3.813 ns|     8.10 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.81>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specpipeline_ln13 = specpipeline void @_ssdm_op_SpecPipeline, i32 128, i32 0, i32 0, i32 0, void @empty_0" [firmware/nnet_utils/nnet_dense_stream.h:13]   --->   Operation 2 'specpipeline' 'specpipeline_ln13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%data_val1_read = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %data_val1" [firmware/nnet_utils/nnet_dense_stream.h:17]   --->   Operation 3 'read' 'data_val1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (3.81ns)   --->   "%res = call i12 @dense_latency<ap_ufixed<6, 0, 4, 0, 0>, ap_fixed<16, 6, 5, 3, 0>, config20>, i6 %data_val1_read" [firmware/nnet_utils/nnet_dense_stream.h:17]   --->   Operation 4 'call' 'res' <Predicate = true> <Delay = 3.81> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%ret_ln18 = ret i12 %res" [firmware/nnet_utils/nnet_dense_stream.h:18]   --->   Operation 5 'ret' 'ret_ln18' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 30.000ns, clock uncertainty: 8.100ns.
+
+ <State 1>: 3.813ns
+The critical path consists of the following:
+	wire read operation ('data_val1_read', firmware/nnet_utils/nnet_dense_stream.h:17) on port 'data_val1' (firmware/nnet_utils/nnet_dense_stream.h:17) [3]  (0.000 ns)
+	'call' operation 12 bit ('res', firmware/nnet_utils/nnet_dense_stream.h:17) to 'dense_latency<ap_ufixed<6, 0, 4, 0, 0>, ap_fixed<16, 6, 5, 3, 0>, config20>' [4]  (3.813 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

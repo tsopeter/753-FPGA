@@ -1,0 +1,131 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'dense_latency_wrapper_ap_fixed_ap_fixed_37_19_5_3_0_config22_s'" level="0">
+<item name = "Date">Mon Apr 28 16:55:21 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">myproject_prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 2.667 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">3, 3, 15.000 ns, 15.000 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 304, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, 431, -, -</column>
+<specialColumn name="Available">100, 90, 41600, 20800, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 1, 1, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln58_46_fu_186_p2">+, 0, 0, 38, 31, 31</column>
+<column name="add_ln58_fu_193_p2">+, 0, 0, 38, 31, 31</column>
+<column name="ap_return">+, 0, 0, 39, 32, 32</column>
+<column name="mul_ln73_34_fu_181_p2">-, 0, 0, 38, 31, 31</column>
+<column name="p_neg12_fu_94_p2">-, 0, 0, 38, 1, 31</column>
+<column name="sub_ln58_fu_164_p2">-, 0, 0, 37, 30, 30</column>
+<column name="sub_ln73_34_fu_158_p2">-, 0, 0, 38, 31, 31</column>
+<column name="sub_ln73_fu_124_p2">-, 0, 0, 38, 31, 31</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln58_46_reg_240">30, 0, 31, 1</column>
+<column name="add_ln58_46_reg_240_pp0_iter2_reg">30, 0, 31, 1</column>
+<column name="add_ln58_reg_245">31, 0, 31, 0</column>
+<column name="data_0_val1_int_reg">27, 0, 27, 0</column>
+<column name="data_1_val2_int_reg">27, 0, 27, 0</column>
+<column name="data_1_val2_read_reg_210">27, 0, 27, 0</column>
+<column name="data_2_val3_int_reg">27, 0, 27, 0</column>
+<column name="data_3_val4_int_reg">27, 0, 27, 0</column>
+<column name="data_4_val5_int_reg">27, 0, 27, 0</column>
+<column name="mul_ln73_34_reg_235">30, 0, 31, 1</column>
+<column name="p_neg12_reg_215">28, 0, 31, 3</column>
+<column name="sub_ln58_reg_230">30, 0, 30, 0</column>
+<column name="sub_ln58_reg_230_pp0_iter1_reg">30, 0, 30, 0</column>
+<column name="sub_ln73_34_reg_225">30, 0, 31, 1</column>
+<column name="sub_ln73_reg_220">30, 0, 31, 1</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, dense_latency_wrapper&lt;ap_fixed,ap_fixed&lt;37,19,5,3,0&gt;,config22&gt;, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, dense_latency_wrapper&lt;ap_fixed,ap_fixed&lt;37,19,5,3,0&gt;,config22&gt;, return value</column>
+<column name="ap_return">out, 32, ap_ctrl_hs, dense_latency_wrapper&lt;ap_fixed,ap_fixed&lt;37,19,5,3,0&gt;,config22&gt;, return value</column>
+<column name="data_0_val1">in, 27, ap_none, data_0_val1, scalar</column>
+<column name="data_1_val2">in, 27, ap_none, data_1_val2, scalar</column>
+<column name="data_2_val3">in, 27, ap_none, data_2_val3, scalar</column>
+<column name="data_3_val4">in, 27, ap_none, data_3_val4, scalar</column>
+<column name="data_4_val5">in, 27, ap_none, data_4_val5, scalar</column>
+</table>
+</item>
+</section>
+</profile>
