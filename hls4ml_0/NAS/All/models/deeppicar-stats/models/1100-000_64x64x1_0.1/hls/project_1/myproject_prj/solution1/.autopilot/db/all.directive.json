@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "myproject",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "myproject"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/petertso/Documents/deeppicarmicro/NAS/All/models/deeppicar-stats/models/1100-000_64x64x1_0.1/hls/project_1/build_prj.tcl",
+    "sourceLine": 184,
+    "success": true
+  }
+]
