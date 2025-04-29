@@ -17,6 +17,8 @@ class PilotNet(nn.Module):
 
         self.quant_inp = QuantIdentity(
             bit_width=8,
+            quant_type='int',
+            signed=False,
             return_quant_tensor=True
         )
 

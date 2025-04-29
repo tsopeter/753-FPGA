@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_finn_behav/xsimk -simmode gui -wdb tb_finn_behav.wdb -simrunnum 0 -socket 54091
+Design successfully loaded
+Design Loading Memory Usage: 203756 KB (Peak: 203756 KB)
+Design Loading CPU Usage: 560 ms

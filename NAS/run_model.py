@@ -62,7 +62,7 @@ for i, (images, turns) in enumerate(val_dataset):
         labels.cpu().detach().numpy()
     
     # images = np.clip(np.round(images / 255.0 * max_value), 0, max_value).astype(np.float32)
-    images = images / 255.0
+    # images = images / 255.0
     #images = np.clip(np.round(images * max_value), 0, max_value)
 
     outputs = qonnx.core.onnx_exec.execute_onnx(model, input_dict={input_name : images})

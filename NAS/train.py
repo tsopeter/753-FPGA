@@ -23,7 +23,7 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model_dir = f'./{network_params["bit_width"]}-bit-4-mse-fixed'
+model_dir = f'./{network_params["bit_width"]}-bit-4-mse-fixed-70x70x1'
 
 bit_width = network_params['bit_width']
 max_value = (2**bit_width)-1
@@ -161,6 +161,11 @@ def train(model: PilotNet, train_loader: DataLoader, test_loader: DataLoader, we
                 else:
                     print(f"  Class {label}: No samples")
 
+            if epoch >= 3:
+                if average_testing_loss > 0.1:
+                    return False
+    return True
+
 def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: DataLoader, val_loader: DataLoader, weights=None):
     n_convs = np.arange(min_conv, max_conv + 1)
     n_dense = np.arange(min_dense, max_dense + 1)
@@ -185,9 +190,15 @@ def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: Data
                 print(f'******************MODEL: {(conv, dense, width)}*****************')
                 for i in range(5):
                     print(f'\t**************RUN: {i}***************')
-                    model = get_network(conv, dense, width, output_features=1, use_softmax=False, quantized=True, check_inputs=True).to(device)
-                    train(model, train_loader, test_loader, weights=weights)
-                    loss, acc = evaluate(model, val_loader, weights=weights)
+                    model = PilotNet(width=70, height=70, weight_bit_width=4, act_bit_width=4, width_multiplier=width, convz=conv, densez=dense, out_features=1, use_softmax=False, non_quantized=False)
+                    model.to(device)
+                    result = train(model, train_loader, test_loader, weights=weights)
+
+                    if (result == False):
+                        print(f'Skipping...')
+                        continue
+
+                    loss, acc = evaluate(model, test_loader, weights=weights)
 
                     history[f'{(conv, dense, np.round(width,decimals=1))}-{i}']=(loss, acc)
 
@@ -202,25 +213,19 @@ def brute(stats: PerformanceContrib, train_loader: DataLoader, test_loader: Data
 # Load datasets
 #stats = PerformanceContrib(network_params["lstats"])
 stats = None
-dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,9])
+dataset = ImageDataset(network_params['dataset_dir'], file_range=[0,9], img_size=(70,70))
 labels = map_to_labels(dataset.turns) + 1
 indicies = list(range(len(dataset)))
 train_idx, test_idx = train_test_split(
     indicies, test_size=0.25, stratify=labels.numpy(), random_state=42
 )
 
-test_idx, val_idx = train_test_split(
-    test_idx, test_size=0.5, stratify=labels[test_idx].numpy(), random_state=42
-)
-
 train_dataset = Subset(dataset, train_idx)
 test_dataset  = Subset(dataset, test_idx)
-val_dataset   = Subset(dataset, val_idx)
 
 train_labels  = (map_to_labels(train_dataset.dataset.turns) + 1).numpy()
-val_labels    = (map_to_labels(val_dataset.dataset.turns) + 1).numpy()
 
-weights = class_weight.compute_class_weight('balanced', classes=np.unique(val_labels), y=val_labels)
+weights = class_weight.compute_class_weight('balanced', classes=np.unique(train_labels), y=train_labels)
 weights = torch.from_numpy(weights).to(device)
 #weights = torch.tensor([1, 1, 1], dtype=torch.float32).to(device)
 
@@ -228,7 +233,6 @@ print(weights)
 
 train_loader  = DataLoader(train_dataset, network_params["bsz"], shuffle=True)
 test_loader   = DataLoader(test_dataset, network_params["bsz"], shuffle=False)
-val_loader    = DataLoader(val_dataset, network_params["bsz"], shuffle=False)
 
 print(f"Maximums={network_params['maximum_conv_layers'], network_params['maximum_dense_layers'], network_params['maximum_width']}")
 
@@ -236,9 +240,7 @@ print(f"Maximums={network_params['maximum_conv_layers'], network_params['maximum
 print(f'Unique Turn values: {torch.unique(train_dataset.dataset.turns)}')
 print(f'\tTraining Dataset: {len(train_dataset)}, {get_dataset_distribution(train_dataset.dataset.turns)}')
 print(f'\tTesting Dataset: {len(test_dataset)}, {get_dataset_distribution(test_dataset.dataset.turns)}')
-print(f'\tValidation Dataset: {len(val_dataset)}, {get_dataset_distribution(val_dataset.dataset.turns)}')
-
-model, loss, acc, config, history = brute(stats, train_loader, test_loader, val_loader, weights)
+model, loss, acc, config, history = brute(stats, train_loader, test_loader, None, weights)
 
 name   = f'{datetime.now()}'.replace(' ', '-').replace(':', '-').replace('.', '-')
 
