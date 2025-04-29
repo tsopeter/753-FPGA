@@ -1,7 +1,10 @@
 # Needed for layer definitions
+from tensorflow.keras.models import load_model
+from qkeras.utils import _add_supported_quantized_objects
 import tensorflow as tf 
 import hls4ml
 import math
+import numpy as np
 
 # Calculate per-layer and total model connections
 #   Input: TF model
@@ -154,6 +157,47 @@ def networkValues(model):
     mr = ModelResources(report, limits=0.9)
     return mr
 
+def deg2rad(deg):
+    return deg * np.pi / 180.0
+def rad2deg(rad):
+    return 180.0 * rad / np.pi
+def get_action(angle_rad):
+    degree = rad2deg(angle_rad)
+    if degree <= -15:
+        return -1
+    if degree >= 15:
+        return 1
+    return 0
+
+def calculate_accuracy(preds : np.ndarray, target : np.ndarray):
+    preds_labels = get_action(preds.reshape(-1))
+    target_labels = get_action(target.reshape(-1))
+
+    return np.sum(preds_labels == target_labels)/len(preds_labels)
+
+def evaluate_hw_model(model_filename):
+    from get_dataset import get_dataset
+
+    co = {}
+    _add_supported_quantized_objects(co)
+    model = load_model(model_filename, custom_objects=co)
+
+    directory = 'tmp/tmp_prj'
+
+    config, hls_model = create_config(model, directory)
+    hls_model.compile()
+
+    imgs_train, imgs_test, vals_train, vals_test = get_dataset('./deeppicar')
+    preds = hls_model.predict(imgs_test.astype(np.float32))
+    vals_test = np.array(vals_test)
+
+    mse = np.mean(
+        (preds.reshape(-1) - vals_test.reshape(-1)) ** 2
+    )
+
+    acc = calculate_accuracy(preds, vals_test)
+
+    return mse, acc
 
 if __name__ == '__main__':
     from pilotnet_nas import createModel
