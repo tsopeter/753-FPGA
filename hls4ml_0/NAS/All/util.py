@@ -1,7 +1,7 @@
 # Needed for layer definitions
 import tensorflow as tf 
 import hls4ml
-
+import math
 
 # Calculate per-layer and total model connections
 #   Input: TF model
@@ -83,14 +83,76 @@ def create_config(model, part='xc7a35tcpg236-1', output_dir='tmp/tmp_prj'):
 
 # Calculate total model connections
 #   Input: TF model
-#   Output: Total model weights and connections
+#   Output: Hardware Resources
+
+class ModelResources:
+    def __init__(self, report, limits : float = 0.9):
+        self.bram = int(report['BRAM_18K'])
+        self.dsp  = int(report['DSP'])
+        self.ff   = int(report['FF'])
+        self.lut  = int(report['LUT'])
+        self.uram = int(report['URAM'])
+
+        self.available_bram = round(int(report['AvailableBRAM_18K']) * limits)
+        self.available_dsp  = round(int(report['AvailableDSP']) * limits)
+        self.available_ff   = round(int(report['AvailableFF']) * limits)
+        self.available_lut  = round(int(report['AvailableLUT']) * limits)
+        self.available_uram = round(int(report['AvailableURAM']) * limits)
+
+
+    def is_okay(self)->bool:
+        if (self.bram >= self.available_bram):
+            return False
+        
+        if (self.dsp >= self.available_dsp):
+            return False
+        
+        if (self.ff >= self.available_ff):
+            return False
+        
+        if (self.lut >= self.available_lut):
+            return False
+        
+        if (self.uram >= self.available_uram):
+            return False
+        
+        return True
+
+import concurrent.futures
+import os
+
 def networkValues(model):
-    bram, lut = 0, 0
 
-    # compile model
+    # Compile model
     model.compile()
+    directory = 'tmp/tmp_prj'
+    config, hls_model = create_config(model, output_dir=directory)
 
-    config = hls4ml.utils.config_from_keras_model(model, granularity='model', backend='Vitis')
+    def build_model():
+        return hls_model.build(csim=False)
+
+    try:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+            future = executor.submit(build_model)
+            report = future.result(timeout=60)
+            report = report['CSynthesisreport']
+    except concurrent.futures.TimeoutError:
+        print("Timeout: HLS synthesis took longer than 60 seconds. Assigning zero to all values.")
+        report = {
+            'BRAM_18K': 0,
+            'DSP': 0,
+            'FF': 0,
+            'LUT': 0,
+            'URAM': 0,
+            'AvailableBRAM_18K': 0,  # avoid divide-by-zero later
+            'AvailableDSP': 0,
+            'AvailableFF': 0,
+            'AvailableLUT': 0,
+            'AvailableURAM': 0,
+        }
+
+    mr = ModelResources(report, limits=0.9)
+    return mr
 
 
 if __name__ == '__main__':
@@ -106,5 +168,7 @@ if __name__ == '__main__':
     hls4ml.report.read_vivado_report(directory)
     
 
+
+    
 
     
