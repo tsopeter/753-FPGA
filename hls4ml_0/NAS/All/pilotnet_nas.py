@@ -9,7 +9,8 @@ from qkeras.qlayers import QActivation
 from qkeras.quantizers import quantized_bits, quantized_relu
 
 # Construct model based on layer strings
-def createModel(dw_conv_str="1111" , fc_str="111", depth_multiplier=1.0, h_len=66, w_len=66, d_len=1):
+def createModel(dw_conv_str="1111" , fc_str="111", depth_multiplier=1.0, h_len=66, w_len=66, d_len=1,
+				bit_width : int = 6):
 
 	dw_conv_arr = []
 	'''
@@ -66,8 +67,8 @@ def createModel(dw_conv_str="1111" , fc_str="111", depth_multiplier=1.0, h_len=6
 	dw_conv_arr.append(QConv2D(
 		round(36 * depth_multiplier), (5, 5),
 		strides=(2, 2),
-		kernel_quantizer=quantized_bits(bits=6, integer=1, alpha=1),
-		bias_quantizer=quantized_bits(bits=6,integer=1, alpha=1),
+		kernel_quantizer=quantized_bits(bits=bit_width, integer=1, alpha=1),
+		bias_quantizer=quantized_bits(bits=bit_width,integer=1, alpha=1),
 		activation=None
 	))
 
@@ -75,24 +76,24 @@ def createModel(dw_conv_str="1111" , fc_str="111", depth_multiplier=1.0, h_len=6
 	dw_conv_arr.append(QConv2D(
 		round(48 * depth_multiplier), (5, 5),
 		strides=(2, 2),
-		kernel_quantizer=quantized_bits(bits=6, integer=1, alpha=1),
-		bias_quantizer=quantized_bits(bits=6,integer=1, alpha=1),
+		kernel_quantizer=quantized_bits(bits=bit_width, integer=1, alpha=1),
+		bias_quantizer=quantized_bits(bits=bit_width,integer=1, alpha=1),
 		activation=None
 	))
 
 	dw_conv_arr.append(QConv2D(
 		round(64 * depth_multiplier), (3, 3),
 		strides=(1, 1),
-		kernel_quantizer=quantized_bits(bits=6, integer=1, alpha=1),
-		bias_quantizer=quantized_bits(bits=6,integer=1, alpha=1),
+		kernel_quantizer=quantized_bits(bits=bit_width, integer=1, alpha=1),
+		bias_quantizer=quantized_bits(bits=bit_width,integer=1, alpha=1),
 		activation=None
 	))
 
 	dw_conv_arr.append(QConv2D(
 		round(64 * depth_multiplier), (3, 3),
 		strides=(1, 1),
-		kernel_quantizer=quantized_bits(bits=6, integer=1, alpha=1),
-		bias_quantizer=quantized_bits(bits=6,integer=1, alpha=1),
+		kernel_quantizer=quantized_bits(bits=bit_width, integer=1, alpha=1),
+		bias_quantizer=quantized_bits(bits=bit_width,integer=1, alpha=1),
 		activation=None
 	))
 
@@ -121,28 +122,29 @@ def createModel(dw_conv_str="1111" , fc_str="111", depth_multiplier=1.0, h_len=6
 
 	fc_arr.append(QDense(
 		round(100 * depth_multiplier),
-		kernel_quantizer=quantized_bits(6, 1, alpha=1),
-		bias_quantizer=quantized_bits(6, 1, alpha=1),
-		activation=quantized_relu(6),
+		kernel_quantizer=quantized_bits(bit_width, 1, alpha=1),
+		bias_quantizer=quantized_bits(bit_width, 1, alpha=1),
+		activation=quantized_relu(bit_width),
 	))
 
 	fc_arr.append(QDense(
 		round(50 * depth_multiplier),
-		kernel_quantizer=quantized_bits(6, 1, alpha=1),
-		bias_quantizer=quantized_bits(6, 1, alpha=1),
-		activation=quantized_relu(6),
+		kernel_quantizer=quantized_bits(bit_width, 1, alpha=1),
+		bias_quantizer=quantized_bits(bit_width, 1, alpha=1),
+		activation=quantized_relu(bit_width),
 	))
 
 	fc_arr.append(QDense(
 		round(10 * depth_multiplier),
-		kernel_quantizer=quantized_bits(6, 1, alpha=1),
-		bias_quantizer=quantized_bits(6, 1, alpha=1),
-		activation=quantized_relu(6),
+		kernel_quantizer=quantized_bits(bit_width, 1, alpha=1),
+		bias_quantizer=quantized_bits(bit_width, 1, alpha=1),
+		activation=quantized_relu(bit_width),
 	))
 
 	# Create model and add input Conv2D layer
 	model = tf.keras.Sequential()
 	model.add(layers.Input(shape=(h_len,w_len,d_len), name='input_1'))
+	model.add(QActivation(quantized_bits(8,0,alpha=1/255.0,keep_negative=False)))
 
 	'''
 	model.add(QDepthwiseConv2D(
@@ -162,8 +164,8 @@ def createModel(dw_conv_str="1111" , fc_str="111", depth_multiplier=1.0, h_len=6
 	model.add(QConv2D(
 		round(24 * depth_multiplier), (5, 5),
 		strides=(2, 2), name="conv1",
-		kernel_quantizer=quantized_bits(6,1,alpha=1),
-		bias_quantizer=quantized_bits(6,1,alpha=1)
+		kernel_quantizer=quantized_bits(bit_width,1,alpha=1),
+		bias_quantizer=quantized_bits(bit_width,1,alpha=1)
 	))
 
 	'''
@@ -188,7 +190,7 @@ def createModel(dw_conv_str="1111" , fc_str="111", depth_multiplier=1.0, h_len=6
 			#model.add(layers.BatchNormalization())
 			#model.add(layers.ReLU())
 
-			model.add(QActivation(activation=quantized_relu(6)))
+			model.add(QActivation(activation=quantized_relu(bit_width)))
 
 	# Add Flatten layer
 	model.add(layers.Flatten())
@@ -201,6 +203,6 @@ def createModel(dw_conv_str="1111" , fc_str="111", depth_multiplier=1.0, h_len=6
 	# Add final output layer
 	#model.add(layers.Dense(1, name="output_1"))
 	model.add(
-		QDense(1, kernel_quantizer=quantized_bits(6,1,alpha=1),bias_quantizer=quantized_bits(6,1,alpha=1),name='output_1')
+		QDense(1, kernel_quantizer=quantized_bits(bit_width,1,alpha=1),bias_quantizer=quantized_bits(bit_width,1,alpha=1),name='output_1')
 	)
 	return model

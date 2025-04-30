@@ -1,4 +1,4 @@
-# DeepPicarMicro
+# DeepPicarMicro (now with FPGA+QKeras)
 
 ## Demo
 

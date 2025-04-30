@@ -1,5 +1,0 @@
-3 warnings and 3 errors generated.
-Error while processing /home/petertso/Documents/deeppicarmicro/NAS/All/models/deeppicar-stats/models/1100-000_64x64x1_0.1/hls/project_1/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp.
-clang-tidy applied 79 of 79 suggested fixes.
-Suppressed 251 warnings (248 in non-user code, 3 with check filters).
-Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

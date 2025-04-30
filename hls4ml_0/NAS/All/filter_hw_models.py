@@ -30,9 +30,9 @@ good_count = 0
 for c in dw_conv_str:
     for f in fc_str:
         for mult in width_mult:
+            print(f'Testing model: {c}, {f}, {mult}')
             model = createModel(c, f, float(mult), height, width)
-            mr = networkValues(model)
-
+            mr = networkValues(model, timeout=30)
             if mr.is_okay():
                 good_count += 1
                 # write to filters_file
@@ -44,9 +44,9 @@ for c in dw_conv_str:
                     "Mult"   : mult,
                     "Good"   : "Yes"
                 })
-
 # save file
 df = pd.DataFrame(data_file)
 df.to_csv(filters_file, index=False)
 
 print(f'Number of "good" models: {good_count}/{total_checked}')
+            

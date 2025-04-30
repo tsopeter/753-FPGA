@@ -63,7 +63,8 @@ def create_config(model, part='xc7a35tcpg236-1', output_dir='tmp/tmp_prj'):
 
     config['Model']['Strategy'] = 'Resource'
     config['LayerName']['input_1']['Precision']['result'] = 'ap_uint<8>'
-    config['LayerName']['output_1']['Precision']['result'] = 'ap_fixed<16,6>'
+    #config['LayerName']['output_1']['Precision']['result'] = 'ap_fixed<16,6>'
+    config['LayerName']['output_1_linear']['Precision']['result'] = 'ap_fixed<16,6>'
 
     '''
     for layername in config['LayerName']:
@@ -124,12 +125,12 @@ class ModelResources:
 import concurrent.futures
 import os
 
-def networkValues(model):
+def networkValues(model, timeout=60, part='xc7a35tcpg236-1'):
 
     # Compile model
     model.compile()
-    directory = 'tmp/tmp_prj'
-    config, hls_model = create_config(model, output_dir=directory)
+    directory = 'tmp/tmp_prj_filter'
+    config, hls_model = create_config(model, output_dir=directory, part=part)
 
     def build_model():
         return hls_model.build(csim=False)
@@ -137,7 +138,7 @@ def networkValues(model):
     try:
         with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
             future = executor.submit(build_model)
-            report = future.result(timeout=60)
+            report = future.result(timeout=timeout)
             report = report['CSynthesisreport']
     except concurrent.futures.TimeoutError:
         print("Timeout: HLS synthesis took longer than 60 seconds. Assigning zero to all values.")
@@ -163,11 +164,13 @@ def rad2deg(rad):
     return 180.0 * rad / np.pi
 def get_action(angle_rad):
     degree = rad2deg(angle_rad)
-    if degree <= -15:
-        return -1
-    if degree >= 15:
-        return 1
-    return 0
+    return np.where(
+        degree <= -15,
+        -1, np.where(
+            degree >= 15,
+            1, 0
+        )
+    )
 
 def calculate_accuracy(preds : np.ndarray, target : np.ndarray):
     preds_labels = get_action(preds.reshape(-1))
@@ -212,7 +215,5 @@ if __name__ == '__main__':
     hls4ml.report.read_vivado_report(directory)
     
 
-
-    
 
     

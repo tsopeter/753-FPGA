@@ -17,7 +17,7 @@ def preprocess(img, resize_vals, input_channels):
 	# For RGB, just need to resize image
 	else:
 		img = cv2.resize(img, dsize=(resize_vals[1], resize_vals[0]))
-	img = img / 255.
+	# img = img / 255.
 	return img
 
 
