@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1745548731" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/base.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1745851628" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/base.dcp">
   <File Type="PA-TCL" Name="base.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="base_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="base_reports.tcl"/>
@@ -33,6 +33,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/debounce_pulse.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/decimate.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -77,6 +84,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/spi_camera_stream_bridge.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/yuv422_2_gray8.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

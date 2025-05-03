@@ -151,6 +151,7 @@ module spi_camera_controller #(
     wire [7:0] CAM_REG_DEBUG_DEVICE_ADDR = 8'h0a;
     wire [7:0] CAM_IMG_PIX_FMT_RGB565 = 8'h02;
     wire [7:0] CAM_IMG_PIX_FMT_GRAY8  = 8'h00;
+    wire [7:0] CAM_IMG_PIX_FMT_YUV422 = 8'h03;
     
     wire [7:0] ARDUCHIP_FIFO = 8'h04;
     wire [7:0] ARDUCHIP_TRIG = 8'h44;
@@ -164,7 +165,7 @@ module spi_camera_controller #(
     
     reg read_burst_set_last_flag = 0;
     
-    wire [7:0] CAM_RES_96x96 = 8'd10;   // 01 -> 320x240
+    wire [7:0] CAM_RES_96x96 = 8'd10;   // 01 -> 320x240 10 -> 96x96
     
     wire [7:0] CAP_DONE_MASK = 8'h04;
     
@@ -417,7 +418,7 @@ module spi_camera_controller #(
                 
                 PIX_FMT_0: begin
                     tx_addr_buf  <= PIXEL_FORMAT_CMD;
-                    tx_data_buf  <= CAM_IMG_PIX_FMT_RGB565;
+                    tx_data_buf  <= CAM_IMG_PIX_FMT_YUV422;
                     state        <= WRITE_REG;
                     return_state <= func_return_state;
                 end
@@ -460,9 +461,9 @@ module spi_camera_controller #(
                 
                 WAIT_TRIGGER_1: begin
                     if ((rx_data_buf & CAP_DONE_MASK) == 8'h00) begin
-                        state <= func_return_state;
-                    end else begin
                         state <= WAIT_TRIGGER_0;
+                    end else begin
+                        state <= func_return_state;
                     end
                 end
                 
@@ -607,6 +608,7 @@ module spi_camera_controller #(
                     fifo_length  <= 0;
                     read_burst_set_last_flag <= 0;
                     camera_ready_to_capture <= 1;
+                    camera_burst_first_flag <= 0;
                     if (reset_camera) begin
                         camera_ready_to_capture <= 0;
                         state <= SM0;
@@ -661,7 +663,7 @@ module spi_camera_controller #(
     assign spi_dout_vld_dbg  = spi_dout_vld;
     assign spi_dout_dbg      = spi_dout;
     assign read_burst_set_last_flag_dbg = read_burst_set_last_flag;
-    assign byte_count_dbg = fifo_length;
+    assign byte_count_dbg = byte_count;
 
     spi_master #(
         .CLK_FREQ(CLK_FREQ),

@@ -149,7 +149,10 @@
             "value": "true"
           },
           "C_DATA_DEPTH": {
-            "value": "4096"
+            "value": "16384"
+          },
+          "C_EN_STRG_QUAL": {
+            "value": "1"
           },
           "C_MONITOR_TYPE": {
             "value": "Native"

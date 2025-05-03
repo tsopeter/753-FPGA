@@ -50,6 +50,47 @@ module spi_camera_axis_wrapper(
     output wire last_flag,
     output wire [31:0] byte_count
 );
+    
+    wire [7:0] gray_data;
+    wire       gray_valid;
+    wire       gray_last;
+    
+    yuv422_2_gray8 cvt (
+        .clk(clk),
+        .rst(rst),
+        
+        .pixel_value(pixel_data),
+        .pixel_valid(pixel_valid),
+        .pixel_last(pixel_last),
+        
+        .data_out(gray_data),
+        .data_valid(gray_valid),
+        .data_last(gray_last)
+    );
+    
+    wire [7:0] dec_out;
+    wire dec_valid;
+    wire dec_last;
+    
+    wire [95:0] bitmask = 96'b101101110110111011101101110111011011101110110111011101101110111011011101110110111011101101110111;
+    
+    decimate #(
+        .ROW_MAX(96),
+        .COL_MAX(96),
+        .N_BYTES(4900)
+    ) dec (
+        .clk(clk),
+        .rst(rst),
+        .bitmask(bitmask),
+        
+        .data_in(gray_data),
+        .data_in_valid(gray_valid),
+        .data_in_last(gray_last),
+        
+        .data_out(dec_out),
+        .data_out_valid(dec_valid),
+        .data_out_last(dec_last)
+    );
 
     spi_camera_controller controller (
         .clk(clk),
@@ -73,11 +114,13 @@ module spi_camera_axis_wrapper(
         .byte_count_dbg(byte_count)
     );    
     
-    spi_camera_stream_bridge bridge (
+    spi_camera_stream_bridge #(
+        .FIFO_DEPTH(4900)
+    ) bridge (
         .clk(clk),
-        .pixel_data(pixel_data),
-        .pixel_valid(pixel_valid),
-        .pixel_last(pixel_last),
+        .pixel_data(dec_out),
+        .pixel_valid(dec_valid),
+        .pixel_last(dec_last),
         
         .m_axis_tdata(m_axis_tdata),
         .m_axis_tvalid(m_axis_tvalid),

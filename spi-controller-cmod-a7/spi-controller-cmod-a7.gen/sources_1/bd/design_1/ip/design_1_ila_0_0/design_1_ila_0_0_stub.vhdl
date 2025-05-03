@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Thu Apr 24 10:13:44 2025
+-- Date        : Sun Apr 27 11:59:15 2025
 -- Host        : LAPTOP-3I9GNI1F running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/GitHub/753-FPGA/spi-controller-cmod-a7/spi-controller-cmod-a7.gen/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0_stub.vhdl

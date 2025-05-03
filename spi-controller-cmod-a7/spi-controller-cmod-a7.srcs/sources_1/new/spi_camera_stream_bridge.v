@@ -1,4 +1,6 @@
-module spi_camera_stream_bridge (
+module spi_camera_stream_bridge #(
+    parameter FIFO_DEPTH = 4096
+)(
     input  wire        clk,
 
     input  wire [7:0]  pixel_data,
@@ -12,8 +14,6 @@ module spi_camera_stream_bridge (
     
     output wire send
 );
-
-    localparam FIFO_DEPTH = 9216;
 
     reg [7:0] fifo_data [0:FIFO_DEPTH-1];
     integer wr_ptr = 0;
