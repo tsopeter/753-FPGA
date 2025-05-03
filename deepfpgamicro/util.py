@@ -8,6 +8,53 @@ import numpy as np
 from pilotnet_nas import createModel
 import subprocess
 from weights_and_connections import weights_and_connections
+import os
+
+def parse_best_accuracy(file_path):
+    """
+    Parse best_accuracy.txt in format:
+    modelname.h5 | Clock: 100-30-50-70 | Accuracy: 0.8436 | MSE: 0.04629492
+    """
+    try:
+        with open(file_path, 'r') as f:
+            line = f.readline().strip()
+        parts = [p.strip() for p in line.split('|')]
+        if len(parts) != 4:
+            return None
+
+        model_file = parts[0]
+        clock = parts[1].replace("Clock:", "").strip()
+        accuracy = float(parts[2].replace("Accuracy:", "").strip())
+        mse = float(parts[3].replace("MSE:", "").strip())
+
+        return {
+            'model_file': model_file,
+            'clock': clock,
+            'accuracy': accuracy,
+            'mse': mse,
+            'folder': os.path.dirname(file_path)
+        }
+    except Exception as e:
+        print(f"Failed to parse {file_path}: {e}")
+        return None
+
+def find_best_model_across_folders(root_dir):
+    best_model = None
+    best_mse = float('inf')
+
+    for folder in os.listdir(root_dir):
+        folder_path = os.path.join(root_dir, folder)
+        if not os.path.isdir(folder_path):
+            continue
+
+        acc_path = os.path.join(folder_path, 'best_accuracy.txt')
+        if os.path.isfile(acc_path):
+            result = parse_best_accuracy(acc_path)
+            if result and result['mse'] < best_mse:
+                best_model = result
+                best_mse = result['mse']
+
+    return best_model
 
 def create_config(model, part='xc7a35tcpg236-1', output_dir='tmp/tmp_prj',
                   default_precision='ap_fixed<4,0>',

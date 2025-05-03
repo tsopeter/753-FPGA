@@ -21,7 +21,7 @@ def preprocess(img, resize_vals, input_channels):
 	return img
 
 
-def get_dataset(dir : str, image_size=(64,64)):
+def get_dataset(dir : str, image_size=(64,64),return_as_is=False):
 
     imgss, valss = [], []
 
@@ -33,6 +33,9 @@ def get_dataset(dir : str, image_size=(64,64)):
             valss.append(vals[j])
 
     imgs, vals = imgss, valss
+
+    if return_as_is:
+        return imgs, vals
 
     imgs_temp = np.array(imgs)
     imgs_train, imgs_test, vals_train, vals_test = train_test_split(imgs_temp, vals, test_size=0.25, random_state=0)
