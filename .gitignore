@@ -1,6 +1,8 @@
 deeppicar/
 hls4ml_0/deeppicar/
 deepfpgamicro/deeppicar/
+deepfpgamicro/tmp/
+deepfpgamicro/__pycache__/
 *.pyc
 NAS/__pycache__/dataset.cpython-310.pyc
 NAS/__pycache__/model.cpython-310.pyc
