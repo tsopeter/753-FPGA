@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat May  3 18:12:07 2025
+# Process ID         : 522245
+# Current directory  : /home/petertso/Documents/753-FPGA/spi-controller-cmod-a7-2024.2/spi-controller-cmod-a7-2024.2.runs/design_4_clk_wiz_0_0_synth_1
+# Command line       : vivado -log design_4_clk_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_4_clk_wiz_0_0.tcl
+# Log file           : /home/petertso/Documents/753-FPGA/spi-controller-cmod-a7-2024.2/spi-controller-cmod-a7-2024.2.runs/design_4_clk_wiz_0_0_synth_1/design_4_clk_wiz_0_0.vds
+# Journal file       : /home/petertso/Documents/753-FPGA/spi-controller-cmod-a7-2024.2/spi-controller-cmod-a7-2024.2.runs/design_4_clk_wiz_0_0_synth_1/vivado.jou
+# Running On         : pop-os
+# Platform           : Pop
+# Operating System   : Pop!_OS 22.04 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13700K
+# CPU Frequency      : 5300.000 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 100975 MB
+# Swap memory        : 37179 MB
+# Total Virtual      : 138155 MB
+# Available Virtual  : 130265 MB
+#-----------------------------------------------------------
+source design_4_clk_wiz_0_0.tcl -notrace

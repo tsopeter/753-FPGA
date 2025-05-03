@@ -1,0 +1,97 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sat May  3 18:14:54 2025
+| Host         : pop-os running 64-bit Pop!_OS 22.04 LTS
+| Command      : report_control_sets -verbose -file base_control_sets_placed.rpt
+| Design       : base
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    19 |
+|    Minimum number of control sets                        |    19 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    48 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    19 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     5 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              25 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              17 |            6 |
+| Yes          | No                    | No                     |              96 |           57 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              78 |           23 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------------+-------------------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+--------------+
+|                 Clock Signal                 |                           Enable Signal                           |                        Set/Reset Signal                        | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------------------------+-------------------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+--------------+
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/spi_if/first_edge_en                        |                                                                |                1 |              1 |         1.00 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/byte_count[31]_i_2_n_0                      |                                                                |                1 |              1 |         1.00 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 |                                                                   | spi_camera/controller/spi_if/sys_clk_cnt_max                   |                2 |              4 |         2.00 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/tx_data_buf[6]_i_1_n_0                      |                                                                |                2 |              5 |         2.50 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/func_return_state[5]_i_1_n_0                |                                                                |                6 |              6 |         1.00 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/tx_addr_buf[5]_i_1_n_0                      |                                                                |                3 |              6 |         2.00 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/return_state[6]_i_1_n_0                     |                                                                |                7 |              7 |         1.00 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/spi_if/FSM_onehot_present_state_reg[0]_2[0] |                                                                |                4 |              7 |         1.75 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/spi_if/state_reg[7]                         |                                                                |                6 |              8 |         1.33 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/spi_if/E[0]                                 |                                                                |                6 |              8 |         1.33 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/spi_if/state_reg[4][0]                      |                                                                |                6 |              8 |         1.33 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/fifo_length[7]_i_1_n_0                      |                                                                |                5 |              8 |         1.60 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/spi_if/shreg[7]_i_1_n_0                     |                                                                |                3 |              9 |         3.00 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 |                                                                   | p1/debounce_counter[12]_i_1_n_0                                |                4 |             13 |         3.25 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/fifo_length[7]_i_1_n_0                      | spi_camera/controller/fifo_length[22]_i_1_n_0                  |                7 |             15 |         2.14 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/delay_timer[0]_i_1_n_0                      |                                                                |                7 |             22 |         3.14 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 |                                                                   |                                                                |               14 |             25 |         1.79 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/byte_count[31]_i_2_n_0                      | spi_camera/controller/byte_count[31]_i_1_n_0                   |                8 |             31 |         3.88 |
+|  design_4/design_4_i/clk_wiz_0/inst/clk_out1 | spi_camera/controller/spi_if/FSM_onehot_present_state_reg[0]_1    | spi_camera/controller/spi_if/FSM_onehot_present_state_reg[0]_0 |                8 |             32 |         4.00 |
++----------------------------------------------+-------------------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+--------------+
+
+
