@@ -56,6 +56,40 @@ def find_best_model_across_folders(root_dir):
 
     return best_model
 
+def find_worst_model_across_folders(root_dir):
+    best_model = None
+    best_mse = -float('inf')
+
+    for folder in os.listdir(root_dir):
+        folder_path = os.path.join(root_dir, folder)
+        if not os.path.isdir(folder_path):
+            continue
+
+        acc_path = os.path.join(folder_path, 'best_accuracy.txt')
+        if os.path.isfile(acc_path):
+            result = parse_best_accuracy(acc_path)
+            if result and result['mse'] > best_mse:
+                best_model = result
+                best_mse = result['mse']
+
+    return best_model
+
+def get_model_performances(root_dir):
+    d = []
+    for folder in os.listdir(root_dir):
+        folder_path = os.path.join(root_dir, folder)
+        if not os.path.isdir(folder_path):
+            continue
+
+        acc_path = os.path.join(folder_path, 'best_accuracy.txt')
+        if os.path.isfile(acc_path):
+            result = parse_best_accuracy(acc_path)
+            if result:
+                d.append(result)
+
+    return d
+
+
 def create_config(model, part='xc7a35tcpg236-1', output_dir='tmp/tmp_prj',
                   default_precision='ap_fixed<4,0>',
                   default_reuse_factor=64,
@@ -100,7 +134,12 @@ class ModelResources:
         self.report = report
 
     def is_okay(self)->bool:
-        return self.report["Valid"]
+        if self.report["Valid"]:
+            if self.lut > self.available_lut:
+                return False
+            else:
+                return True
+        return False
 
 def read_report(report_dir : str, model, valid : bool = True):
     weights, connections = weights_and_connections(model)
