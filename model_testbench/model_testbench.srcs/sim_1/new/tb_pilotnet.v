@@ -38,7 +38,7 @@ wire tready;
 reg [7:0] data_input;
 
 always begin
-    #5;
+    #50;
     clk <= ~clk;
 end
 
