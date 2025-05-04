@@ -1,0 +1,197 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute_output_buffer_2d_array_array_ap_fixed_20_9_5_3_0_2u_config3_s'
+================================================================
+* Date:           Sun May  4 16:36:06 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        myproject_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  30.00 ns|  20.557 ns|     8.10 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        2|       53|  60.000 ns|  1.590 us|    2|   53|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------------------------------+
+        |                                                                                      |                                                                           |  Latency (cycles) |  Latency (absolute) |  Interval |                  Pipeline                 |
+        |                                       Instance                                       |                                   Module                                  |   min   |   max   |    min   |    max   | min | max |                    Type                   |
+        +--------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------------------------------+
+        |call_ln281_shift_line_buffer_array_ap_fixed_8_1_4_0_0_1u_config3_s_fu_131             |shift_line_buffer_array_ap_fixed_8_1_4_0_0_1u_config3_s                    |        0|        0|      0 ns|      0 ns|    1|    1|                                        yes|
+        |grp_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_20_9_5_3_0_config3_mult_s_fu_195  |dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_20_9_5_3_0_config3_mult_s  |       50|       51|  1.500 us|  1.530 us|   50|   50|  loop rewind stp (delay=0 clock cycles(s))|
+        +--------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|    443|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        1|   1|    787|   1296|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      0|     66|    -|
+|Register         |        -|   -|    334|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        1|   1|   1121|   1805|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        1|   1|      2|      8|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+----+-----+-----+-----+
+    |                                       Instance                                       |                                   Module                                  | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+----+-----+-----+-----+
+    |grp_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_20_9_5_3_0_config3_mult_s_fu_195  |dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_20_9_5_3_0_config3_mult_s  |        1|   1|  530|  988|    0|
+    |call_ln281_shift_line_buffer_array_ap_fixed_8_1_4_0_0_1u_config3_s_fu_131             |shift_line_buffer_array_ap_fixed_8_1_4_0_0_1u_config3_s                    |        0|   0|  257|  308|    0|
+    +--------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                                                 |                                                                           |        1|   1|  787| 1296|    0|
+    +--------------------------------------------------------------------------------------+---------------------------------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |add_ln303_fu_342_p2              |         +|   0|  0|  39|          32|           1|
+    |add_ln307_fu_389_p2              |         +|   0|  0|  39|          32|           1|
+    |add_ln313_fu_419_p2              |         +|   0|  0|  39|          32|          32|
+    |add_ln318_fu_366_p2              |         +|   0|  0|  39|          32|          32|
+    |and_ln284_1_fu_319_p2            |       and|   0|  0|   2|           1|           1|
+    |and_ln284_fu_313_p2              |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3                  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state3_on_subcall_done  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_210                 |       and|   0|  0|   2|           1|           1|
+    |ap_condition_288                 |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op22_call_state3    |       and|   0|  0|   2|           1|           1|
+    |icmp_ln284_1_fu_275_p2           |      icmp|   0|  0|  39|          32|           3|
+    |icmp_ln284_2_fu_291_p2           |      icmp|   0|  0|  37|          30|           1|
+    |icmp_ln284_3_fu_307_p2           |      icmp|   0|  0|  37|          30|           1|
+    |icmp_ln284_fu_257_p2             |      icmp|   0|  0|  39|          32|           3|
+    |icmp_ln303_fu_347_p2             |      icmp|   0|  0|  39|          32|           7|
+    |icmp_ln307_fu_394_p2             |      icmp|   0|  0|  39|          32|           7|
+    |icmp_ln313_fu_406_p2             |      icmp|   0|  0|  39|          32|           3|
+    |select_ln313_fu_411_p3           |    select|   0|  0|   2|           1|           2|
+    |select_ln318_fu_359_p3           |    select|   0|  0|   2|           1|           2|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |Total                            |          |   0|  0| 443|         357|         102|
+    +---------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------+----+-----------+-----+-----------+
+    |                 Name                | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                            |  17|          4|    1|          4|
+    |ap_phi_mux_storemerge_phi_fu_124_p4  |  13|          3|   32|         96|
+    |layer3_out_blk_n                     |   9|          2|    1|          2|
+    |pX_3                                 |   9|          2|   32|         64|
+    |pY_3                                 |   9|          2|   32|         64|
+    |sX_3                                 |   9|          2|   32|         64|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |Total                                |  66|         15|  130|        294|
+    +-------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                                Name                                               | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |and_ln284_1_reg_454                                                                                |   1|   0|    1|          0|
+    |ap_CS_fsm                                                                                          |   3|   0|    3|          0|
+    |grp_dense_resource_rf_gt_nin_rem0_ap_fixed_ap_fixed_20_9_5_3_0_config3_mult_s_fu_195_ap_start_reg  |   1|   0|    1|          0|
+    |icmp_ln284_reg_440                                                                                 |   1|   0|    1|          0|
+    |pX_3                                                                                               |  32|   0|   32|          0|
+    |pY_3                                                                                               |  32|   0|   32|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a                  |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_1                |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_10               |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_11               |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_12               |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_13               |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_14               |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_2                |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_3                |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_4                |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_5                |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_6                |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_7                |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_8                |   8|   0|    8|          0|
+    |p_ZZN4nnet24compute_output_buffer_2dINS_5arrayI8ap_fixedILi8ELi1EL9ap_q_mode4EL9a_9                |   8|   0|    8|          0|
+    |sX_3                                                                                               |  32|   0|   32|          0|
+    |sY_3                                                                                               |  32|   0|   32|          0|
+    |void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30                       |   8|   0|    8|          0|
+    |void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31                       |   8|   0|    8|          0|
+    |void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32                       |   8|   0|    8|          0|
+    |void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33                       |   8|   0|    8|          0|
+    |void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34                       |   8|   0|    8|          0|
+    |void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35                       |   8|   0|    8|          0|
+    |void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36                       |   8|   0|    8|          0|
+    |void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37                       |   8|   0|    8|          0|
+    |void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38                       |   8|   0|    8|          0|
+    |void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_39                       |   8|   0|    8|          0|
+    +---------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                              | 334|   0|  334|          0|
+    +---------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+------------------------------------------------------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |                              Source Object                             |    C Type    |
++---------------------------+-----+-----+------------+------------------------------------------------------------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  compute_output_buffer_2d<array,array<ap_fixed<20,9,5,3,0>,2u>,config3>|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  compute_output_buffer_2d<array,array<ap_fixed<20,9,5,3,0>,2u>,config3>|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  compute_output_buffer_2d<array,array<ap_fixed<20,9,5,3,0>,2u>,config3>|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  compute_output_buffer_2d<array,array<ap_fixed<20,9,5,3,0>,2u>,config3>|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  compute_output_buffer_2d<array,array<ap_fixed<20,9,5,3,0>,2u>,config3>|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  compute_output_buffer_2d<array,array<ap_fixed<20,9,5,3,0>,2u>,config3>|  return value|
+|in_elem_0_0_0_0_0_val      |   in|    8|     ap_none|                                                   in_elem_0_0_0_0_0_val|        scalar|
+|layer3_out_din             |  out|   40|     ap_fifo|                                                              layer3_out|       pointer|
+|layer3_out_full_n          |   in|    1|     ap_fifo|                                                              layer3_out|       pointer|
+|layer3_out_write           |  out|    1|     ap_fifo|                                                              layer3_out|       pointer|
+|layer3_out_num_data_valid  |   in|   11|     ap_fifo|                                                              layer3_out|       pointer|
+|layer3_out_fifo_cap        |   in|   11|     ap_fifo|                                                              layer3_out|       pointer|
++---------------------------+-----+-----+------------+------------------------------------------------------------------------+--------------+
+

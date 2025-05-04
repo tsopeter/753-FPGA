@@ -1,0 +1,152 @@
+
+
+================================================================
+== Vitis HLS Report for 'linear_array_ap_uint_1u_array_ap_fixed_8_1_4_0_0_1u_linear_config2_s'
+================================================================
+* Date:           Sun May  4 16:36:06 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        myproject_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  30.00 ns|  7.093 ns|     8.10 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+------+------+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   |  min |  max |                      Type                      |
+    +---------+---------+----------+----------+------+------+------------------------------------------------+
+    |     4097|     4097|  0.123 ms|  0.123 ms|  4096|  4096|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+------+------+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LinearActLoop  |     4095|     4095|         1|          1|          1|  4096|       yes|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|     64|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        -|   -|      -|      -|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      0|     54|    -|
+|Register         |        -|   -|     15|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   0|     15|    118|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      100|  90|  41600|  20800|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   0|     ~0|     ~0|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |i_fu_112_p2                       |         +|   0|  0|  19|          12|           1|
+    |icmp_ln19_fu_118_p2               |      icmp|   0|  0|  19|          12|           2|
+    |icmp_ln29_fu_91_p2                |      icmp|   0|  0|  14|           7|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |or_ln29_fu_97_p2                  |        or|   0|  0|   2|           1|           1|
+    |layer2_out_din                    |    select|   0|  0|   8|           1|           7|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  64|          34|          13|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_done_int               |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i1_load  |   9|          2|   12|         24|
+    |i1_fu_48                  |   9|          2|   12|         24|
+    |input_1_TDATA_blk_n       |   9|          2|    1|          2|
+    |layer2_out_blk_n          |   9|          2|    1|          2|
+    |real_start                |   9|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     |  54|         12|   28|         56|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+----+----+-----+-----------+
+    |      Name      | FF | LUT| Bits| Const Bits|
+    +----------------+----+----+-----+-----------+
+    |ap_CS_fsm       |   1|   0|    1|          0|
+    |ap_done_reg     |   1|   0|    1|          0|
+    |i1_fu_48        |  12|   0|   12|          0|
+    |start_once_reg  |   1|   0|    1|          0|
+    +----------------+----+----+-----+-----------+
+    |Total           |  15|   0|   15|          0|
+    +----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+------------------------------------------------------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |                              Source Object                             |    C Type    |
++---------------------------+-----+-----+------------+------------------------------------------------------------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  linear<array<ap_uint,1u>,array<ap_fixed<8,1,4,0,0>,1u>,linear_config2>|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  linear<array<ap_uint,1u>,array<ap_fixed<8,1,4,0,0>,1u>,linear_config2>|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  linear<array<ap_uint,1u>,array<ap_fixed<8,1,4,0,0>,1u>,linear_config2>|  return value|
+|start_full_n               |   in|    1|  ap_ctrl_hs|  linear<array<ap_uint,1u>,array<ap_fixed<8,1,4,0,0>,1u>,linear_config2>|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  linear<array<ap_uint,1u>,array<ap_fixed<8,1,4,0,0>,1u>,linear_config2>|  return value|
+|ap_continue                |   in|    1|  ap_ctrl_hs|  linear<array<ap_uint,1u>,array<ap_fixed<8,1,4,0,0>,1u>,linear_config2>|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  linear<array<ap_uint,1u>,array<ap_fixed<8,1,4,0,0>,1u>,linear_config2>|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  linear<array<ap_uint,1u>,array<ap_fixed<8,1,4,0,0>,1u>,linear_config2>|  return value|
+|start_out                  |  out|    1|  ap_ctrl_hs|  linear<array<ap_uint,1u>,array<ap_fixed<8,1,4,0,0>,1u>,linear_config2>|  return value|
+|start_write                |  out|    1|  ap_ctrl_hs|  linear<array<ap_uint,1u>,array<ap_fixed<8,1,4,0,0>,1u>,linear_config2>|  return value|
+|input_1_TVALID             |   in|    1|        axis|                                                                 input_1|       pointer|
+|input_1_TDATA              |   in|    8|        axis|                                                                 input_1|       pointer|
+|input_1_TREADY             |  out|    1|        axis|                                                                 input_1|       pointer|
+|layer2_out_din             |  out|    8|     ap_fifo|                                                              layer2_out|       pointer|
+|layer2_out_full_n          |   in|    1|     ap_fifo|                                                              layer2_out|       pointer|
+|layer2_out_write           |  out|    1|     ap_fifo|                                                              layer2_out|       pointer|
+|layer2_out_num_data_valid  |   in|   13|     ap_fifo|                                                              layer2_out|       pointer|
+|layer2_out_fifo_cap        |   in|   13|     ap_fifo|                                                              layer2_out|       pointer|
++---------------------------+-----+-----+------------+------------------------------------------------------------------------+--------------+
+

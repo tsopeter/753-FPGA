@@ -1,0 +1,151 @@
+Backend: Vitis
+ClockPeriod: 30
+ClockUncertainty: 27%
+HLSConfig:
+  LayerName:
+    conv1:
+      ConvImplementation: LineBuffer
+      ParallelizationFactor: 1
+      Precision:
+        accum: auto
+        bias: fixed<6,2,TRN,WRAP,0>
+        result: auto
+        weight: fixed<6,2,TRN,WRAP,0>
+      ReuseFactor: 64
+      Trace: false
+    conv1_linear:
+      Precision:
+        result: auto
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 64
+      TableSize: 1024
+      Trace: false
+    flatten_35:
+      Precision:
+        result: auto
+      Trace: false
+    input_1:
+      Precision:
+        result: ap_uint<8>
+      Trace: false
+    output_1:
+      Precision:
+        accum: auto
+        bias: fixed<6,2,TRN,WRAP,0>
+        result: auto
+        weight: fixed<6,2,TRN,WRAP,0>
+      ReuseFactor: 64
+      Trace: false
+    output_1_linear:
+      Precision:
+        result: ap_fixed<16,6>
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 64
+      TableSize: 1024
+      Trace: false
+    q_activation_139:
+      Precision:
+        result: fixed<8,1,RND_CONV,SAT,0>
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 64
+      TableSize: 1024
+      Trace: false
+    q_activation_140:
+      Precision:
+        result: ufixed<6,0,RND_CONV,SAT,0>
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 64
+      TableSize: 1024
+      Trace: false
+    q_activation_141:
+      Precision:
+        result: ufixed<6,0,RND_CONV,SAT,0>
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 64
+      TableSize: 1024
+      Trace: false
+    q_activation_142:
+      Precision:
+        result: ufixed<6,0,RND_CONV,SAT,0>
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 64
+      TableSize: 1024
+      Trace: false
+    q_activation_143:
+      Precision:
+        result: ufixed<6,0,RND_CONV,SAT,0>
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 64
+      TableSize: 1024
+      Trace: false
+    q_conv2d_140:
+      ConvImplementation: LineBuffer
+      ParallelizationFactor: 1
+      Precision:
+        accum: auto
+        bias: fixed<6,2,TRN,WRAP,0>
+        result: auto
+        weight: fixed<6,2,TRN,WRAP,0>
+      ReuseFactor: 64
+      Trace: false
+    q_conv2d_140_linear:
+      Precision:
+        result: auto
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 64
+      TableSize: 1024
+      Trace: false
+    q_conv2d_141:
+      ConvImplementation: LineBuffer
+      ParallelizationFactor: 1
+      Precision:
+        accum: auto
+        bias: fixed<6,2,TRN,WRAP,0>
+        result: auto
+        weight: fixed<6,2,TRN,WRAP,0>
+      ReuseFactor: 64
+      Trace: false
+    q_conv2d_141_linear:
+      Precision:
+        result: auto
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 64
+      TableSize: 1024
+      Trace: false
+    q_conv2d_143:
+      ConvImplementation: LineBuffer
+      ParallelizationFactor: 1
+      Precision:
+        accum: auto
+        bias: fixed<6,2,TRN,WRAP,0>
+        result: auto
+        weight: fixed<6,2,TRN,WRAP,0>
+      ReuseFactor: 64
+      Trace: false
+    q_conv2d_143_linear:
+      Precision:
+        result: auto
+        table: fixed<18,8,TRN,WRAP,0>
+      ReuseFactor: 64
+      TableSize: 1024
+      Trace: false
+  Model:
+    BramFactor: 1000000000
+    Precision:
+      default: ap_fixed<4,0>
+    ReuseFactor: 64
+    Strategy: Resource
+    TraceOutput: false
+IOType: io_stream
+InputData: null
+KerasModel: !keras_model '../best/best_model_prj/keras_model.keras'
+OutputDir: ../best/best_model_prj
+OutputPredictions: null
+Part: xc7a35tcpg236-1
+ProjectName: myproject
+Stamp: '45777299'
+Version: 1.0.0
+WriterConfig:
+  Namespace: null
+  WriteTar: false
+  WriteWeightsTxt: true
