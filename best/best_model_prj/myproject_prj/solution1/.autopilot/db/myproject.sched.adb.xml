@@ -605,9 +605,9 @@ entry:45 %call_ln72 = call void @relu<array<ap_fixed,6u>,array<ap_ufixed<6,0,4,0
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="330" bw="0" op_0_bw="0" op_1_bw="36" op_2_bw="32" op_3_bw="4" op_4_bw="0" op_5_bw="0">
+<Node id="330" bw="0" op_0_bw="0" op_1_bw="36" op_2_bw="16" op_3_bw="4" op_4_bw="0" op_5_bw="0">
 <![CDATA[
-entry:47 %call_ln75 = call void @dense<array<ap_ufixed,6u>,array<ap_fixed<19,9,5,3,0>,1u>,config16>, i36 %layer14_out, i32 %layer16_out, i4 %w16
+entry:47 %call_ln75 = call void @dense<array<ap_ufixed,6u>,array<ap_fixed<16,6,5,3,0>,1u>,config16>, i36 %layer14_out, i16 %layer16_out, i4 %w16
 
 ]]></Node>
 <StgValue><ssdm name="call_ln75"/></StgValue>
@@ -623,9 +623,9 @@ entry:47 %call_ln75 = call void @dense<array<ap_ufixed,6u>,array<ap_fixed<19,9,5
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="330" bw="0" op_0_bw="0" op_1_bw="36" op_2_bw="32" op_3_bw="4" op_4_bw="0" op_5_bw="0">
+<Node id="330" bw="0" op_0_bw="0" op_1_bw="36" op_2_bw="16" op_3_bw="4" op_4_bw="0" op_5_bw="0">
 <![CDATA[
-entry:47 %call_ln75 = call void @dense<array<ap_ufixed,6u>,array<ap_fixed<19,9,5,3,0>,1u>,config16>, i36 %layer14_out, i32 %layer16_out, i4 %w16
+entry:47 %call_ln75 = call void @dense<array<ap_ufixed,6u>,array<ap_fixed<16,6,5,3,0>,1u>,config16>, i36 %layer14_out, i16 %layer16_out, i4 %w16
 
 ]]></Node>
 <StgValue><ssdm name="call_ln75"/></StgValue>
@@ -701,9 +701,9 @@ entry:3 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %input_1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="287" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<Node id="287" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
 <![CDATA[
-entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %layer16_out, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0
+entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer16_out, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -716,9 +716,9 @@ entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %la
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="288" bw="0" op_0_bw="0" op_1_bw="32">
+<Node id="288" bw="0" op_0_bw="0" op_1_bw="16">
 <![CDATA[
-entry:5 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %layer16_out
+entry:5 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %layer16_out
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>

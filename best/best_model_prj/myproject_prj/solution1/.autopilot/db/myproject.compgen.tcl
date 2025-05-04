@@ -86,7 +86,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler myproject_start_for_dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {start_for_dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0_U}
+	::AP::rtl_comp_handler myproject_start_for_dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {start_for_dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0_U}
 }
 
 
@@ -128,7 +128,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { layer16_out_TDATA { O 32 vector } layer16_out_TVALID { O 1 bit } layer16_out_TREADY { I 1 bit } } \
+    ports { layer16_out_TDATA { O 16 vector } layer16_out_TVALID { O 1 bit } layer16_out_TREADY { I 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'layer16_out'"

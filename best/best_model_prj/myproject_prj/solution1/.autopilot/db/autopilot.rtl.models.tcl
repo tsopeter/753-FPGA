@@ -67,18 +67,18 @@ set SynModuleInfo {
   {SRCNAME compute_output_buffer_2d<array,array<ap_fixed<19,9,5,3,0>,6u>,config12> MODELNAME compute_output_buffer_2d_array_array_ap_fixed_19_9_5_3_0_6u_config12_s RTLNAME myproject_compute_output_buffer_2d_array_array_ap_fixed_19_9_5_3_0_6u_config12_s}
   {SRCNAME conv_2d_cl<array<ap_ufixed,5u>,array<ap_fixed<19,9,5,3,0>,6u>,config12> MODELNAME conv_2d_cl_array_ap_ufixed_5u_array_ap_fixed_19_9_5_3_0_6u_config12_s RTLNAME myproject_conv_2d_cl_array_ap_ufixed_5u_array_ap_fixed_19_9_5_3_0_6u_config12_s}
   {SRCNAME relu<array<ap_fixed,6u>,array<ap_ufixed<6,0,4,0,0>,6u>,relu_config14> MODELNAME relu_array_ap_fixed_6u_array_ap_ufixed_6_0_4_0_0_6u_relu_config14_s RTLNAME myproject_relu_array_ap_fixed_6u_array_ap_ufixed_6_0_4_0_0_6u_relu_config14_s}
-  {SRCNAME dense<array,array<ap_fixed<19,9,5,3,0>,1u>,config16>_Pipeline_DataPrepare MODELNAME dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare RTLNAME myproject_dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare
+  {SRCNAME dense<array,array<ap_fixed<16,6,5,3,0>,1u>,config16>_Pipeline_DataPrepare MODELNAME dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare RTLNAME myproject_dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare
     SUBMODULES {
       {MODELNAME myproject_flow_control_loop_pipe_sequential_init RTLNAME myproject_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME myproject_flow_control_loop_pipe_sequential_init_U}
     }
   }
-  {SRCNAME dense_resource_rf_leq_nin<ap_ufixed,ap_fixed<19,9,5,3,0>,config16> MODELNAME dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s RTLNAME myproject_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s
+  {SRCNAME dense_resource_rf_leq_nin<ap_ufixed,ap_fixed<16,6,5,3,0>,config16> MODELNAME dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s RTLNAME myproject_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s
     SUBMODULES {
       {MODELNAME myproject_sparsemux_109_6_6_1_1 RTLNAME myproject_sparsemux_109_6_6_1_1 BINDTYPE op TYPE sparsemux IMPL compactencoding_dontcare}
-      {MODELNAME myproject_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s_w16_ROM_NPShg RTLNAME myproject_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s_w16_ROM_NPShg BINDTYPE storage TYPE rom_np IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME myproject_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s_w16_ROM_NPShg RTLNAME myproject_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s_w16_ROM_NPShg BINDTYPE storage TYPE rom_np IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME dense<array<ap_ufixed,6u>,array<ap_fixed<19,9,5,3,0>,1u>,config16> MODELNAME dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_s RTLNAME myproject_dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_s}
+  {SRCNAME dense<array<ap_ufixed,6u>,array<ap_fixed<16,6,5,3,0>,1u>,config16> MODELNAME dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_s RTLNAME myproject_dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_s}
   {SRCNAME myproject MODELNAME myproject RTLNAME myproject IS_TOP 1
     SUBMODULES {
       {MODELNAME myproject_fifo_w8_d4096_A RTLNAME myproject_fifo_w8_d4096_A BINDTYPE storage TYPE fifo IMPL memory ALLOW_PRAGMA 1 INSTNAME layer2_out_U}
@@ -98,7 +98,7 @@ set SynModuleInfo {
       {MODELNAME myproject_start_for_relu_array_ap_fixed_5u_array_ap_ufixed_6_0_4_0_0_5u_relu_config11_U0 RTLNAME myproject_start_for_relu_array_ap_fixed_5u_array_ap_ufixed_6_0_4_0_0_5u_relu_config11_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_relu_array_ap_fixed_5u_array_ap_ufixed_6_0_4_0_0_5u_relu_config11_U0_U}
       {MODELNAME myproject_start_for_conv_2d_cl_array_ap_ufixed_5u_array_ap_fixed_19_9_5_3_0_6u_config12UhA RTLNAME myproject_start_for_conv_2d_cl_array_ap_ufixed_5u_array_ap_fixed_19_9_5_3_0_6u_config12UhA BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_conv_2d_cl_array_ap_ufixed_5u_array_ap_fixed_19_9_5_3_0_6u_config12UhA_U}
       {MODELNAME myproject_start_for_relu_array_ap_fixed_6u_array_ap_ufixed_6_0_4_0_0_6u_relu_config14_U0 RTLNAME myproject_start_for_relu_array_ap_fixed_6u_array_ap_ufixed_6_0_4_0_0_6u_relu_config14_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_relu_array_ap_fixed_6u_array_ap_ufixed_6_0_4_0_0_6u_relu_config14_U0_U}
-      {MODELNAME myproject_start_for_dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0 RTLNAME myproject_start_for_dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0_U}
+      {MODELNAME myproject_start_for_dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0 RTLNAME myproject_start_for_dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0_U}
     }
   }
 }

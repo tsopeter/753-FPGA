@@ -1,7 +1,7 @@
 #include "hls_design_meta.h"
 const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("input_1_TDATA", 8, hls_in, 0, "axis", "in_data", 1),
-	Port_Property("layer16_out_TDATA", 32, hls_out, 1, "axis", "out_data", 1),
+	Port_Property("layer16_out_TDATA", 16, hls_out, 1, "axis", "out_data", 1),
 	Port_Property("ap_clk", 1, hls_in, -1, "", "", 1),
 	Port_Property("ap_rst_n", 1, hls_in, -1, "", "", 1),
 	Port_Property("input_1_TVALID", 1, hls_in, 0, "axis", "in_vld", 1),

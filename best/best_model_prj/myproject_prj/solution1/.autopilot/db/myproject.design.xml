@@ -147,20 +147,20 @@
 <ID>1293</ID>
 </Instance>
 <Instance>
-<InstName>dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0</InstName>
-<ModuleName>dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_s</ModuleName>
+<InstName>dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0</InstName>
+<ModuleName>dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_s</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>1299</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255</InstName>
-<ModuleName>dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare</ModuleName>
+<InstName>grp_dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255</InstName>
+<ModuleName>dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>255</ID>
 </Instance>
 <Instance>
-<InstName>grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s_fu_315</InstName>
-<ModuleName>dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s</ModuleName>
+<InstName>grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s_fu_315</InstName>
+<ModuleName>dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s</ModuleName>
 <IsCompInst>true</IsCompInst>
 <ID>315</ID>
 </Instance>
@@ -14046,7 +14046,7 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare</Name>
+<Name>dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare</Name>
 <Loops>
 <DataPrepare></DataPrepare>
 </Loops>
@@ -14116,7 +14116,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>dense&lt;array,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;_Pipeline_DataPrepare</Object>
+<Object>dense&lt;array,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;_Pipeline_DataPrepare</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -14127,7 +14127,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>dense&lt;array,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;_Pipeline_DataPrepare</Object>
+<Object>dense&lt;array,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;_Pipeline_DataPrepare</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -14138,7 +14138,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>dense&lt;array,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;_Pipeline_DataPrepare</Object>
+<Object>dense&lt;array,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;_Pipeline_DataPrepare</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -14149,7 +14149,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>dense&lt;array,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;_Pipeline_DataPrepare</Object>
+<Object>dense&lt;array,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;_Pipeline_DataPrepare</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -14160,7 +14160,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>dense&lt;array,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;_Pipeline_DataPrepare</Object>
+<Object>dense&lt;array,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;_Pipeline_DataPrepare</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -14171,7 +14171,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>dense&lt;array,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;_Pipeline_DataPrepare</Object>
+<Object>dense&lt;array,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;_Pipeline_DataPrepare</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -15426,7 +15426,7 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s</Name>
+<Name>dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s</Name>
 <Loops>
 <ReuseLoop></ReuseLoop>
 </Loops>
@@ -15496,7 +15496,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;19,9,5,3,0&gt;,config16&gt;</Object>
+<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;16,6,5,3,0&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -15507,7 +15507,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;19,9,5,3,0&gt;,config16&gt;</Object>
+<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;16,6,5,3,0&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -15518,7 +15518,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;19,9,5,3,0&gt;,config16&gt;</Object>
+<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;16,6,5,3,0&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -15529,7 +15529,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;19,9,5,3,0&gt;,config16&gt;</Object>
+<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;16,6,5,3,0&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -15540,7 +15540,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;19,9,5,3,0&gt;,config16&gt;</Object>
+<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;16,6,5,3,0&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -15551,7 +15551,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;19,9,5,3,0&gt;,config16&gt;</Object>
+<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;16,6,5,3,0&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -15562,7 +15562,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_return</name>
-<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;19,9,5,3,0&gt;,config16&gt;</Object>
+<Object>dense_resource_rf_leq_nin&lt;ap_ufixed,ap_fixed&lt;16,6,5,3,0&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -16168,12 +16168,12 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_s</Name>
+<Name>dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_s</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>30.00</TargetClockPeriod>
 <ClockUncertainty>8.10</ClockUncertainty>
-<EstimatedClockPeriod>13.202</EstimatedClockPeriod>
+<EstimatedClockPeriod>13.663</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>68</Best-caseLatency>
@@ -16213,7 +16213,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;</Object>
+<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -16224,7 +16224,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;</Object>
+<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -16235,7 +16235,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;</Object>
+<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -16246,7 +16246,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;</Object>
+<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -16257,7 +16257,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_continue</name>
-<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;</Object>
+<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -16268,7 +16268,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;</Object>
+<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -16279,7 +16279,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;</Object>
+<Object>dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -16351,7 +16351,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>32</Bits>
+<Bits>16</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -16472,7 +16472,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>32</Bits>
+<Bits>16</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>

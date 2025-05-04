@@ -47,10 +47,10 @@ Pass:            reflow-recursive-inline
 Name:            RecursiveInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 259, 
                    Column: 9 }
-Function:        _ZN4nnet14dense_resourceI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
+Function:        _ZN4nnet14dense_resourceI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
 Args:            
   - String:          'Performing recursive inline in function '''
-  - Callee:          'nnet::dense_resource<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>'
+  - Callee:          'nnet::dense_resource<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>'
   - String:          ''''
 ...
 --- !Passed
@@ -58,10 +58,10 @@ Pass:            reflow-recursive-inline
 Name:            FunctionPragmaConflictWarn
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 15, 
                    Column: 0 }
-Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
+Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
 Args:            
   - String:          'In function '''
-  - Function:        'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
+  - Function:        'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, 
                        Line: 15, Column: 0 }
   - String:          ''', '
@@ -77,10 +77,10 @@ Pass:            reflow-recursive-inline
 Name:            RecursiveInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 85, 
                    Column: 9 }
-Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
+Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
 Args:            
   - String:          'Performing recursive inline in function '''
-  - Callee:          'nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>'
+  - Callee:          'nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>'
   - String:          ''''
 ...
 --- !Missed
@@ -1191,13 +1191,13 @@ Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 82, 
                    Column: 14 }
-Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
+Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
 Args:            
-  - Callee:          'std::enable_if<!(std::is_same<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_uint<1> >::value), ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::type nnet::cast<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(config16::accum_t)'
+  - Callee:          'std::enable_if<!(std::is_same<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_uint<1> >::value), ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::type nnet::cast<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(config16::accum_t)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_mult.h, Line: 110, 
                        Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
+  - Caller:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, 
                        Line: 15, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
@@ -1207,14 +1207,14 @@ Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 59, 
                    Column: 17 }
-Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
+Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
 Args:            
   - String:          'Inlining function '''
   - Callee:          'nnet::product::mult<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<6, 2, (ap_q_mode)5, (ap_o_mode)3, 0> >::product(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<6, 2, (ap_q_mode)5, (ap_o_mode)3, 0>)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_mult.h, Line: 70, 
                        Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
+  - Caller:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, 
                        Line: 15, Column: 0 }
   - String:          ''''
@@ -1224,13 +1224,13 @@ Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 262, 
                    Column: 9 }
-Function:        _ZN4nnet14dense_resourceI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE.5
+Function:        _ZN4nnet14dense_resourceI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE.5
 Args:            
-  - Callee:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
+  - Callee:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, 
                        Line: 15, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'void nnet::dense_resource<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*) (.5)'
+  - Caller:          'void nnet::dense_resource<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*) (.5)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, 
                        Line: 257, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
@@ -1240,14 +1240,14 @@ Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 24, 
                    Column: 5 }
-Function:        _ZN4nnet22dense_resource_wrapperI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE.4
+Function:        _ZN4nnet22dense_resource_wrapperI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE.4
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'void nnet::dense_resource<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*) (.5)'
+  - Callee:          'void nnet::dense_resource<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*) (.5)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, 
                        Line: 257, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void nnet::dense_resource_wrapper<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*) (.4)'
+  - Caller:          'void nnet::dense_resource_wrapper<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*) (.4)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 23, 
                        Column: 0 }
   - String:          ''''
@@ -1257,13 +1257,13 @@ Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 262, 
                    Column: 9 }
-Function:        _ZN4nnet22dense_resource_wrapperI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE.4
+Function:        _ZN4nnet22dense_resource_wrapperI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE.4
 Args:            
-  - Callee:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
+  - Callee:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, 
                        Line: 15, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'void nnet::dense_resource_wrapper<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*) (.4)'
+  - Caller:          'void nnet::dense_resource_wrapper<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*) (.4)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 23, 
                        Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
@@ -1273,14 +1273,14 @@ Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 75, 
                    Column: 2 }
-Function:        _ZN4nnet9res_writeINS_5arrayI8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEE8config16EEvPNT_10value_typeERN3hls6streamIS8_Li0EEE.1
+Function:        _ZN4nnet9res_writeINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEE8config16EEvPNT_10value_typeERN3hls6streamIS8_Li0EEE.1
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[](unsigned long) (.3)'
+  - Callee:          'nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::operator[](unsigned long) (.3)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_types.h, Line: 17, 
                        Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void nnet::res_write<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::value_type*, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&) (.1)'
+  - Caller:          'void nnet::res_write<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::value_type*, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&) (.1)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 53, 
                        Column: 0 }
   - String:          ''''
@@ -1290,14 +1290,14 @@ Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 93, 
                    Column: 2 }
-Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
+Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
 Args:            
   - String:          'Inlining function '''
   - Callee:          'void nnet::data_prepare<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>::value_type*) (.6)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 28, 
                        Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
+  - Caller:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 84, 
                        Column: 0 }
   - String:          ''''
@@ -1307,14 +1307,14 @@ Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 100, 
                    Column: 5 }
-Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
+Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'void nnet::res_write<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::value_type*, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&) (.1)'
+  - Callee:          'void nnet::res_write<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>::value_type*, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&) (.1)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 53, 
                        Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
+  - Caller:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 84, 
                        Column: 0 }
   - String:          ''''
@@ -1324,14 +1324,14 @@ Pass:            inline
 Name:            AlwaysInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 97, 
                    Column: 9 }
-Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
+Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'void nnet::dense_resource_wrapper<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*) (.4)'
+  - Callee:          'void nnet::dense_resource_wrapper<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*) (.4)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 23, 
                        Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
+  - Caller:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 84, 
                        Column: 0 }
   - String:          ''''
@@ -1341,13 +1341,13 @@ Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 262, 
                    Column: 9 }
-Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
+Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
 Args:            
-  - Callee:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
+  - Callee:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, 
                        Line: 15, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
+  - Caller:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 84, 
                        Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
@@ -1356,13 +1356,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 40, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::linear<nnet::array<ap_uint<8>, 1u>, nnet::array<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, 1u>, linear_config2>(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 17, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -1370,13 +1370,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 44, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::conv_2d_cl<nnet::array<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, 1u>, nnet::array<ap_fixed<20, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 2u>, config3>(hls::stream<nnet::array<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<20, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 2u>, 0>&, config3::weight_t*, config3::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_conv2d_stream.h, 
                        Line: 69, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -1384,13 +1384,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 48, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::relu<nnet::array<ap_fixed<20, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 2u>, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 2u>, relu_config5>(hls::stream<nnet::array<ap_fixed<20, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 2u>, 0>&, hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 2u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 39, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -1398,13 +1398,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 52, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::conv_2d_cl<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 2u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u>, config6>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 2u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u>, 0>&, config6::weight_t*, config6::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_conv2d_stream.h, 
                        Line: 69, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -1412,13 +1412,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 56, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::relu<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u>, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 4u>, relu_config8>(hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u>, 0>&, hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 4u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 39, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -1426,13 +1426,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 60, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::conv_2d_cl<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<20, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 5u>, config9>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 4u>, 0>&, hls::stream<nnet::array<ap_fixed<20, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 5u>, 0>&, config9::weight_t*, config9::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_conv2d_stream.h, 
                        Line: 69, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -1440,13 +1440,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 64, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::relu<nnet::array<ap_fixed<20, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 5u>, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 5u>, relu_config11>(hls::stream<nnet::array<ap_fixed<20, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 5u>, 0>&, hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 5u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 39, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -1454,13 +1454,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 68, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::conv_2d_cl<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 5u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 6u>, config12>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 5u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 6u>, 0>&, config12::weight_t*, config12::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_conv2d_stream.h, 
                        Line: 69, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -1468,13 +1468,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 72, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::relu<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 6u>, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, relu_config14>(hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 39, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -1482,13 +1482,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 75, Column: 5 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
-  - Callee:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
+  - Callee:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 84, 
                        Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -1569,7 +1569,7 @@ Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 37, 
                    Column: 13 }
-Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
+Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
 Args:            
   - String:          'Loop '''
   - LoopName:        DataPackPipeline
@@ -1580,7 +1580,7 @@ Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 55, 
                    Column: 9 }
-Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
+Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
 Args:            
   - String:          'Loop '''
   - LoopName:        MultLoop
@@ -2042,7 +2042,7 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 84, 
                    Column: 0 }
-Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
+Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        ResPackSingle
@@ -2050,7 +2050,7 @@ Args:
   - LoopLoc:         'firmware/nnet_utils/nnet_dense_stream.h:73:9'
   - String:          ') '
   - String:          'in function '''
-  - String:          'nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>'
+  - String:          'nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>'
   - String:          ''' completely with a factor of '
   - Factor:          '1'
 ...
@@ -2059,7 +2059,7 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 84, 
                    Column: 0 }
-Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
+Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        DataPackPipeline
@@ -2067,7 +2067,7 @@ Args:
   - LoopLoc:         'firmware/nnet_utils/nnet_dense_stream.h:37:13'
   - String:          ') '
   - String:          'in function '''
-  - String:          'nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>'
+  - String:          'nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>'
   - String:          ''' completely with a factor of '
   - Factor:          '6'
 ...
@@ -2076,7 +2076,7 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 15, 
                    Column: 0 }
-Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
+Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Result
@@ -2084,7 +2084,7 @@ Args:
   - LoopLoc:         'firmware/nnet_utils/nnet_dense_resource.h:80:5'
   - String:          ') '
   - String:          'in function '''
-  - String:          'nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>'
+  - String:          'nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>'
   - String:          ''' completely with a factor of '
   - Factor:          '1'
 ...
@@ -2093,7 +2093,7 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 15, 
                    Column: 0 }
-Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
+Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        MultLoop
@@ -2101,7 +2101,7 @@ Args:
   - LoopLoc:         'firmware/nnet_utils/nnet_dense_resource.h:55:9'
   - String:          ') '
   - String:          'in function '''
-  - String:          'nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>'
+  - String:          'nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>'
   - String:          ''' completely with a factor of '
   - Factor:          '1'
 ...
@@ -2110,7 +2110,7 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 15, 
                    Column: 0 }
-Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
+Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        InitAccum
@@ -2118,7 +2118,7 @@ Args:
   - LoopLoc:         'firmware/nnet_utils/nnet_dense_resource.h:40:5'
   - String:          ') '
   - String:          'in function '''
-  - String:          'nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>'
+  - String:          'nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>'
   - String:          ''' completely with a factor of '
   - Factor:          '1'
 ...
@@ -5230,13 +5230,13 @@ Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 82, 
                    Column: 14 }
-Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
+Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
 Args:            
-  - Callee:          'std::enable_if<!(std::is_same<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_uint<1> >::value), ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::type nnet::cast<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(config16::accum_t)'
+  - Callee:          'std::enable_if<!(std::is_same<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_uint<1> >::value), ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::type nnet::cast<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(config16::accum_t)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_mult.h, Line: 110, 
                        Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
+  - Caller:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, 
                        Line: 15, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
@@ -5246,13 +5246,13 @@ Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 262, 
                    Column: 9 }
-Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
+Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
 Args:            
-  - Callee:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
+  - Callee:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, 
                        Line: 15, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
+  - Caller:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 84, 
                        Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
@@ -5261,13 +5261,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 40, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::linear<nnet::array<ap_uint<8>, 1u>, nnet::array<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, 1u>, linear_config2>(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 17, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -5275,13 +5275,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 44, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::conv_2d_cl<nnet::array<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, 1u>, nnet::array<ap_fixed<20, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 2u>, config3>(hls::stream<nnet::array<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<20, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 2u>, 0>&, config3::weight_t*, config3::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_conv2d_stream.h, 
                        Line: 69, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -5289,13 +5289,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 48, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::relu<nnet::array<ap_fixed<20, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 2u>, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 2u>, relu_config5>(hls::stream<nnet::array<ap_fixed<20, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 2u>, 0>&, hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 2u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 39, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -5303,13 +5303,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 52, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::conv_2d_cl<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 2u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u>, config6>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 2u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u>, 0>&, config6::weight_t*, config6::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_conv2d_stream.h, 
                        Line: 69, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -5317,13 +5317,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 56, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::relu<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u>, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 4u>, relu_config8>(hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u>, 0>&, hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 4u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 39, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -5331,13 +5331,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 60, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::conv_2d_cl<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<20, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 5u>, config9>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 4u>, 0>&, hls::stream<nnet::array<ap_fixed<20, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 5u>, 0>&, config9::weight_t*, config9::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_conv2d_stream.h, 
                        Line: 69, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -5345,13 +5345,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 64, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::relu<nnet::array<ap_fixed<20, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 5u>, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 5u>, relu_config11>(hls::stream<nnet::array<ap_fixed<20, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 5u>, 0>&, hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 5u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 39, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -5359,13 +5359,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 68, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::conv_2d_cl<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 5u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 6u>, config12>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 5u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 6u>, 0>&, config12::weight_t*, config12::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_conv2d_stream.h, 
                        Line: 69, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -5373,13 +5373,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 72, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::relu<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 6u>, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, relu_config14>(hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 39, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -5387,13 +5387,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 75, Column: 5 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
-  - Callee:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
+  - Callee:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 84, 
                        Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -5402,7 +5402,7 @@ Pass:            inline
 Name:            NeverInline
 Function:        apatb_myproject_ir
 Args:            
-  - Callee:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Callee:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          apatb_myproject_ir
@@ -5787,14 +5787,14 @@ Pass:            reflow-inliner
 Name:            Inline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 15, 
                    Column: 0 }
-Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi19ELi9ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
+Function:        _ZN4nnet25dense_resource_rf_leq_ninI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EE8ap_fixedILi16ELi6ELS2_5ELS3_3ELi0EE8config16EEvPT_PT0_PNT1_8weight_tEPNSC_6bias_tE
 Args:            
   - String:          'Inlining function '''
-  - Callee:          'std::enable_if<!(std::is_same<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_uint<1> >::value), ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0> >::type nnet::cast<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(config16::accum_t)'
+  - Callee:          'std::enable_if<!(std::is_same<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_uint<1> >::value), ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::type nnet::cast<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(config16::accum_t)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_mult.h, Line: 110, 
                        Column: 0 }
   - String:          ''' into '''
-  - Caller:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
+  - Caller:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, 
                        Line: 15, Column: 0 }
   - String:          ''''
@@ -5903,7 +5903,7 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: firmware/weights/b3.h, Line: 12, Column: 0 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -5921,7 +5921,7 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: firmware/weights/b6.h, Line: 12, Column: 0 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -5939,7 +5939,7 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: firmware/weights/b9.h, Line: 12, Column: 0 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -5957,7 +5957,7 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: firmware/weights/b12.h, Line: 12, Column: 0 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -5975,7 +5975,7 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: firmware/weights/b16.h, Line: 12, Column: 0 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -6165,7 +6165,7 @@ Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 87, 
                    Column: 30 }
-Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
+Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -6184,7 +6184,7 @@ Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 90, 
                    Column: 29 }
-Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
+Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -6202,7 +6202,7 @@ Args:
 Pass:            reflow-aggr
 Name:            AggrSucc
 DebugLoc:        { File: firmware/myproject.cpp, Line: 70, Column: 28 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        'fifo (hls::stream)'
@@ -6218,7 +6218,7 @@ Args:
 Pass:            reflow-aggr
 Name:            AggrSucc
 DebugLoc:        { File: firmware/myproject.cpp, Line: 66, Column: 40 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        'fifo (hls::stream)'
@@ -6234,7 +6234,7 @@ Args:
 Pass:            reflow-aggr
 Name:            AggrSucc
 DebugLoc:        { File: firmware/myproject.cpp, Line: 62, Column: 28 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        'fifo (hls::stream)'
@@ -6250,7 +6250,7 @@ Args:
 Pass:            reflow-aggr
 Name:            AggrSucc
 DebugLoc:        { File: firmware/myproject.cpp, Line: 58, Column: 40 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        'fifo (hls::stream)'
@@ -6266,7 +6266,7 @@ Args:
 Pass:            reflow-aggr
 Name:            AggrSucc
 DebugLoc:        { File: firmware/myproject.cpp, Line: 54, Column: 27 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        'fifo (hls::stream)'
@@ -6282,7 +6282,7 @@ Args:
 Pass:            reflow-aggr
 Name:            AggrSucc
 DebugLoc:        { File: firmware/myproject.cpp, Line: 50, Column: 40 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        'fifo (hls::stream)'
@@ -6298,7 +6298,7 @@ Args:
 Pass:            reflow-aggr
 Name:            AggrSucc
 DebugLoc:        { File: firmware/myproject.cpp, Line: 46, Column: 27 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        'fifo (hls::stream)'
@@ -6314,7 +6314,7 @@ Args:
 Pass:            reflow-aggr
 Name:            AggrSucc
 DebugLoc:        { File: firmware/myproject.cpp, Line: 42, Column: 33 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        'fifo (hls::stream)'
@@ -6330,7 +6330,7 @@ Args:
 Pass:            reflow-aggr
 Name:            AggrSucc
 DebugLoc:        { File: firmware/myproject.cpp, Line: 38, Column: 24 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        'fifo (hls::stream)'
@@ -6345,7 +6345,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6360,7 +6360,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6375,7 +6375,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6390,7 +6390,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6405,7 +6405,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6420,7 +6420,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6435,7 +6435,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6450,7 +6450,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6465,7 +6465,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6480,7 +6480,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6495,7 +6495,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6510,7 +6510,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6525,7 +6525,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6540,7 +6540,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6555,7 +6555,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6570,7 +6570,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6585,7 +6585,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6600,7 +6600,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6615,7 +6615,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6630,7 +6630,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6645,7 +6645,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6660,7 +6660,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6675,7 +6675,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6690,7 +6690,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6705,7 +6705,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6720,7 +6720,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6735,7 +6735,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6750,7 +6750,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6765,7 +6765,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6780,7 +6780,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6795,7 +6795,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6810,7 +6810,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6825,7 +6825,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6840,7 +6840,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6855,7 +6855,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6870,7 +6870,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6885,7 +6885,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -6900,7 +6900,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - String:          'Aggregating '
   - HwTyName:        bram
@@ -7289,13 +7289,13 @@ Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, Line: 262, 
                    Column: 9 }
-Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE.1
+Function:        _ZN4nnet5denseINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj6EEENS1_I8ap_fixedILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE8config16EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE.1
 Args:            
-  - Callee:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
+  - Callee:          'void nnet::dense_resource_rf_leq_nin<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config16>(ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, config16::weight_t*, config16::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_resource.h, 
                        Line: 15, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*) (.1)'
+  - Caller:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*) (.1)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 84, 
                        Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
@@ -7304,13 +7304,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 40, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::linear<nnet::array<ap_uint<8>, 1u>, nnet::array<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, 1u>, linear_config2>(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, 1u>, 0>&) (.1)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 17, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -7318,13 +7318,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 44, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::conv_2d_cl<nnet::array<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, 1u>, nnet::array<ap_fixed<20, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 2u>, config3>(hls::stream<nnet::array<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<20, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 2u>, 0>&, config3::weight_t*, config3::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_conv2d_stream.h, 
                        Line: 69, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -7332,13 +7332,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 48, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::relu<nnet::array<ap_fixed<20, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 2u>, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 2u>, relu_config5>(hls::stream<nnet::array<ap_fixed<20, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 2u>, 0>&, hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 2u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 39, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -7346,13 +7346,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 52, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::conv_2d_cl<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 2u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u>, config6>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 2u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u>, 0>&, config6::weight_t*, config6::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_conv2d_stream.h, 
                        Line: 69, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -7360,13 +7360,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 56, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::relu<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u>, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 4u>, relu_config8>(hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u>, 0>&, hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 4u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 39, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -7374,13 +7374,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 60, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::conv_2d_cl<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 4u>, nnet::array<ap_fixed<20, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 5u>, config9>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 4u>, 0>&, hls::stream<nnet::array<ap_fixed<20, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 5u>, 0>&, config9::weight_t*, config9::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_conv2d_stream.h, 
                        Line: 69, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -7388,13 +7388,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 64, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::relu<nnet::array<ap_fixed<20, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 5u>, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 5u>, relu_config11>(hls::stream<nnet::array<ap_fixed<20, 10, (ap_q_mode)5, (ap_o_mode)3, 0>, 5u>, 0>&, hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 5u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 39, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -7402,13 +7402,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 68, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::conv_2d_cl<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 5u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 6u>, config12>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 5u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 6u>, 0>&, config12::weight_t*, config12::bias_t*)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_conv2d_stream.h, 
                        Line: 69, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -7416,13 +7416,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 72, Column: 2 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
   - Callee:          'void nnet::relu<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 6u>, nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, relu_config14>(hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_activation_stream.h, 
                        Line: 39, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -7430,13 +7430,13 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: firmware/myproject.cpp, Line: 75, Column: 5 }
-Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi19ELi9EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
+Function:        _Z9myprojectRN3hls6streamIN4nnet5arrayI7ap_uintILi8EELj1EEELi0EEERNS0_INS2_I8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEELi0EEE
 Args:            
-  - Callee:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*) (.1)'
+  - Callee:          'void nnet::dense<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, config16>(hls::stream<nnet::array<ap_ufixed<6, 0, (ap_q_mode)4, (ap_o_mode)0, 0>, 6u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&, config16::weight_t*, config16::bias_t*) (.1)'
     DebugLoc:        { File: firmware/nnet_utils/nnet_dense_stream.h, Line: 84, 
                        Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<19, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
+  - Caller:          'myproject(hls::stream<nnet::array<ap_uint<8>, 1u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>&)'
     DebugLoc:        { File: firmware/myproject.cpp, Line: 10, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...

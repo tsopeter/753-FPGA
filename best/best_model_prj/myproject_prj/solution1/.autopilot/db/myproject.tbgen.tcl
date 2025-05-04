@@ -19,19 +19,19 @@ set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
 set C_modelArgList {
 	{ input_1 int 8 regular {axi_s 0 volatile  { input_1 Data } }  }
-	{ layer16_out int 32 regular {axi_s 1 volatile  { layer16_out Data } }  }
+	{ layer16_out int 16 regular {axi_s 1 volatile  { layer16_out Data } }  }
 }
 set hasAXIMCache 0
 set l_AXIML2Cache [list]
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
 	{ "Name" : "input_1", "interface" : "axis", "bitwidth" : 8, "direction" : "READONLY"} , 
- 	{ "Name" : "layer16_out", "interface" : "axis", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
+ 	{ "Name" : "layer16_out", "interface" : "axis", "bitwidth" : 16, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
 set portNum 12
 set portList { 
 	{ input_1_TDATA sc_in sc_lv 8 signal 0 } 
-	{ layer16_out_TDATA sc_out sc_lv 32 signal 1 } 
+	{ layer16_out_TDATA sc_out sc_lv 16 signal 1 } 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
 	{ input_1_TVALID sc_in sc_logic 1 invld 0 } 
@@ -45,7 +45,7 @@ set portList {
 }
 set NewPortList {[ 
 	{ "name": "input_1_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "input_1", "role": "TDATA" }} , 
- 	{ "name": "layer16_out_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "layer16_out", "role": "TDATA" }} , 
+ 	{ "name": "layer16_out_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "layer16_out", "role": "TDATA" }} , 
  	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
  	{ "name": "ap_rst_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst_n", "role": "default" }} , 
  	{ "name": "input_1_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "input_1", "role": "TVALID" }} , 
@@ -75,14 +75,14 @@ set RtlHierarchyInfo {[
 		"InputProcess" : [
 			{"ID" : "1", "Name" : "linear_array_ap_uint_1u_array_ap_fixed_8_1_4_0_0_1u_linear_config2_U0"}],
 		"OutputProcess" : [
-			{"ID" : "97", "Name" : "dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0"}],
+			{"ID" : "97", "Name" : "dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0"}],
 		"Port" : [
 			{"Name" : "input_1", "Type" : "Axis", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "1", "SubInstance" : "linear_array_ap_uint_1u_array_ap_fixed_8_1_4_0_0_1u_linear_config2_U0", "Port" : "input_1"}]},
 			{"Name" : "layer16_out", "Type" : "Axis", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "97", "SubInstance" : "dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0", "Port" : "layer16_out"}]},
+					{"ID" : "97", "SubInstance" : "dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0", "Port" : "layer16_out"}]},
 			{"Name" : "void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "4", "SubInstance" : "conv_2d_cl_array_ap_fixed_1u_array_ap_fixed_20_9_5_3_0_2u_config3_U0", "Port" : "void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38"}]},
@@ -922,7 +922,7 @@ set RtlHierarchyInfo {[
 					{"ID" : "73", "SubInstance" : "conv_2d_cl_array_ap_ufixed_5u_array_ap_fixed_19_9_5_3_0_6u_config12_U0", "Port" : "w12"}]},
 			{"Name" : "w16", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "97", "SubInstance" : "dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0", "Port" : "w16"}]}]},
+					{"ID" : "97", "SubInstance" : "dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0", "Port" : "w16"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.linear_array_ap_uint_1u_array_ap_fixed_8_1_4_0_0_1u_linear_config2_U0", "Parent" : "0", "Child" : ["2", "3"],
 		"CDFG" : "linear_array_ap_uint_1u_array_ap_fixed_8_1_4_0_0_1u_linear_config2_s",
 		"Protocol" : "ap_ctrl_hs",
@@ -3803,8 +3803,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "ReLUActLoop", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_state1", "FirstStateIter" : "", "FirstStateBlock" : "ap_ST_fsm_state1_blk", "LastState" : "ap_ST_fsm_state1", "LastStateIter" : "", "LastStateBlock" : "ap_ST_fsm_state1_blk", "QuitState" : "ap_ST_fsm_state1", "QuitStateIter" : "", "QuitStateBlock" : "ap_ST_fsm_state1_blk", "OneDepthLoop" : "1", "has_ap_ctrl" : "1", "has_continue" : "1"}}]},
 	{"ID" : "96", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.relu_array_ap_fixed_6u_array_ap_ufixed_6_0_4_0_0_6u_relu_config14_U0.flow_control_loop_pipe_U", "Parent" : "95"},
-	{"ID" : "97", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0", "Parent" : "0", "Child" : ["98", "100", "104"],
-		"CDFG" : "dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_s",
+	{"ID" : "97", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0", "Parent" : "0", "Child" : ["98", "100", "104"],
+		"CDFG" : "dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_s",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -3818,19 +3818,19 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"StartSource" : "95",
-		"StartFifo" : "start_for_dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0_U",
+		"StartFifo" : "start_for_dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0_U",
 		"Port" : [
 			{"Name" : "layer14_out", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["95"], "DependentChan" : "113", "DependentChanDepth" : "9", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "98", "SubInstance" : "grp_dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255", "Port" : "layer14_out", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
+					{"ID" : "98", "SubInstance" : "grp_dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255", "Port" : "layer14_out", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
 			{"Name" : "layer16_out", "Type" : "Axis", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "layer16_out_TDATA_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "w16", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "100", "SubInstance" : "grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s_fu_315", "Port" : "w16", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}]},
-	{"ID" : "98", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0.grp_dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255", "Parent" : "97", "Child" : ["99"],
-		"CDFG" : "dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare",
+					{"ID" : "100", "SubInstance" : "grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s_fu_315", "Port" : "w16", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}]},
+	{"ID" : "98", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0.grp_dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255", "Parent" : "97", "Child" : ["99"],
+		"CDFG" : "dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -3904,9 +3904,9 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "DataPrepare", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_state1", "FirstStateIter" : "", "FirstStateBlock" : "ap_ST_fsm_state1_blk", "LastState" : "ap_ST_fsm_state1", "LastStateIter" : "", "LastStateBlock" : "ap_ST_fsm_state1_blk", "QuitState" : "ap_ST_fsm_state1", "QuitStateIter" : "", "QuitStateBlock" : "ap_ST_fsm_state1_blk", "OneDepthLoop" : "1", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "99", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0.grp_dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255.flow_control_loop_pipe_sequential_init_U", "Parent" : "98"},
-	{"ID" : "100", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0.grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s_fu_315", "Parent" : "97", "Child" : ["101", "102", "103"],
-		"CDFG" : "dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s",
+	{"ID" : "99", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0.grp_dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255.flow_control_loop_pipe_sequential_init_U", "Parent" : "98"},
+	{"ID" : "100", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0.grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s_fu_315", "Parent" : "97", "Child" : ["101", "102", "103"],
+		"CDFG" : "dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "Rewind", "UnalignedPipeline" : "0", "RewindPipeline" : "1", "ProcessNetwork" : "0",
@@ -3978,10 +3978,10 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "ReuseLoop", "PipelineType" : "rewind",
 				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "has_continue" : "0"}}]},
-	{"ID" : "101", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0.grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s_fu_315.w16_U", "Parent" : "100"},
-	{"ID" : "102", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0.grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s_fu_315.sparsemux_109_6_6_1_1_U587", "Parent" : "100"},
-	{"ID" : "103", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0.grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s_fu_315.mac_muladd_6ns_4s_16s_16_1_1_U588", "Parent" : "100"},
-	{"ID" : "104", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0.regslice_both_layer16_out_U", "Parent" : "97"},
+	{"ID" : "101", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0.grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s_fu_315.w16_U", "Parent" : "100"},
+	{"ID" : "102", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0.grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s_fu_315.sparsemux_109_6_6_1_1_U587", "Parent" : "100"},
+	{"ID" : "103", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0.grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s_fu_315.mac_muladd_6ns_4s_16s_16_1_1_U588", "Parent" : "100"},
+	{"ID" : "104", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0.regslice_both_layer16_out_U", "Parent" : "97"},
 	{"ID" : "105", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.layer2_out_U", "Parent" : "0"},
 	{"ID" : "106", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.layer3_out_U", "Parent" : "0"},
 	{"ID" : "107", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.layer5_out_U", "Parent" : "0"},
@@ -3999,7 +3999,7 @@ set RtlHierarchyInfo {[
 	{"ID" : "119", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.start_for_relu_array_ap_fixed_5u_array_ap_ufixed_6_0_4_0_0_5u_relu_config11_U0_U", "Parent" : "0"},
 	{"ID" : "120", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.start_for_conv_2d_cl_array_ap_ufixed_5u_array_ap_fixed_19_9_5_3_0_6u_config12UhA_U", "Parent" : "0"},
 	{"ID" : "121", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.start_for_relu_array_ap_fixed_6u_array_ap_ufixed_6_0_4_0_0_6u_relu_config14_U0_U", "Parent" : "0"},
-	{"ID" : "122", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.start_for_dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0_U", "Parent" : "0"}]}
+	{"ID" : "122", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.start_for_dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -5394,11 +5394,11 @@ set ArgLastReadFirstWriteLatency {
 	relu_array_ap_fixed_6u_array_ap_ufixed_6_0_4_0_0_6u_relu_config14_s {
 		layer12_out {Type I LastRead 0 FirstWrite -1}
 		layer14_out {Type O LastRead -1 FirstWrite 0}}
-	dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_s {
+	dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_s {
 		layer14_out {Type I LastRead 0 FirstWrite -1}
 		layer16_out {Type O LastRead -1 FirstWrite 3}
 		w16 {Type I LastRead -1 FirstWrite -1}}
-	dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare {
+	dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare {
 		layer14_out {Type I LastRead 0 FirstWrite -1}
 		data_53_out {Type O LastRead -1 FirstWrite 0}
 		data_52_out {Type O LastRead -1 FirstWrite 0}
@@ -5454,7 +5454,7 @@ set ArgLastReadFirstWriteLatency {
 		data_2_out {Type O LastRead -1 FirstWrite 0}
 		data_1_out {Type O LastRead -1 FirstWrite 0}
 		data_out {Type O LastRead -1 FirstWrite 0}}
-	dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s {
+	dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s {
 		data_0_val {Type I LastRead 1 FirstWrite -1}
 		data_1_val {Type I LastRead 1 FirstWrite -1}
 		data_2_val {Type I LastRead 1 FirstWrite -1}
@@ -5523,7 +5523,7 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	input_1 { axis {  { input_1_TDATA in_data 0 8 }  { input_1_TVALID in_vld 0 1 }  { input_1_TREADY in_acc 1 1 } } }
-	layer16_out { axis {  { layer16_out_TDATA out_data 1 32 }  { layer16_out_TVALID out_vld 1 1 }  { layer16_out_TREADY out_acc 0 1 } } }
+	layer16_out { axis {  { layer16_out_TDATA out_data 1 16 }  { layer16_out_TVALID out_vld 1 1 }  { layer16_out_TREADY out_acc 0 1 } } }
 }
 
 set maxi_interface_dict [dict create]

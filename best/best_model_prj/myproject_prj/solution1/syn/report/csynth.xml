@@ -101,7 +101,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>out</Dir>
-            <Bits>32</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -364,21 +364,21 @@
                     <BindInstances>icmp_ln51_fu_223_p2 icmp_ln52_fu_259_p2 or_ln52_fu_281_p2 and_ln52_fu_287_p2 add_ln52_fu_297_p2 icmp_ln52_1_fu_313_p2 not_tmp_51_fu_327_p2 and_ln52_13_fu_333_p2 empty_fu_339_p2 or_ln52_1_fu_345_p2 xor_ln52_fu_351_p2 or_ln52_2_fu_357_p2 select_ln52_fu_363_p3 select_ln52_1_fu_371_p3 select_ln52_2_fu_379_p3 out_data_fu_387_p3 icmp_ln51_1_fu_395_p2 icmp_ln52_2_fu_437_p2 or_ln52_3_fu_459_p2 and_ln52_1_fu_465_p2 add_ln52_1_fu_475_p2 icmp_ln52_3_fu_491_p2 not_tmp_58_fu_505_p2 and_ln52_15_fu_511_p2 empty_45_fu_517_p2 or_ln52_4_fu_523_p2 xor_ln52_1_fu_529_p2 or_ln52_5_fu_535_p2 select_ln52_3_fu_541_p3 select_ln52_4_fu_549_p3 select_ln52_5_fu_557_p3 out_data_1_fu_565_p3 icmp_ln51_2_fu_573_p2 icmp_ln52_4_fu_615_p2 or_ln52_6_fu_637_p2 and_ln52_2_fu_643_p2 add_ln52_2_fu_653_p2 icmp_ln52_5_fu_669_p2 not_tmp_65_fu_683_p2 and_ln52_17_fu_689_p2 empty_46_fu_695_p2 or_ln52_7_fu_701_p2 xor_ln52_2_fu_707_p2 or_ln52_8_fu_713_p2 select_ln52_6_fu_719_p3 select_ln52_7_fu_727_p3 select_ln52_8_fu_735_p3 out_data_2_fu_743_p3 icmp_ln51_3_fu_751_p2 icmp_ln52_6_fu_793_p2 or_ln52_9_fu_815_p2 and_ln52_3_fu_821_p2 add_ln52_3_fu_831_p2 icmp_ln52_7_fu_847_p2 not_tmp_72_fu_861_p2 and_ln52_19_fu_867_p2 empty_47_fu_873_p2 or_ln52_10_fu_879_p2 xor_ln52_3_fu_885_p2 or_ln52_11_fu_891_p2 select_ln52_9_fu_897_p3 select_ln52_10_fu_905_p3 select_ln52_11_fu_913_p3 out_data_3_fu_921_p3 icmp_ln51_4_fu_929_p2 icmp_ln52_8_fu_971_p2 or_ln52_12_fu_993_p2 and_ln52_4_fu_999_p2 add_ln52_4_fu_1009_p2 icmp_ln52_9_fu_1025_p2 not_tmp_79_fu_1039_p2 and_ln52_21_fu_1045_p2 empty_48_fu_1051_p2 or_ln52_13_fu_1057_p2 xor_ln52_4_fu_1063_p2 or_ln52_14_fu_1069_p2 select_ln52_12_fu_1075_p3 select_ln52_13_fu_1083_p3 select_ln52_14_fu_1091_p3 out_data_4_fu_1099_p3 icmp_ln51_5_fu_1107_p2 icmp_ln52_10_fu_1149_p2 or_ln52_15_fu_1171_p2 and_ln52_5_fu_1177_p2 add_ln52_5_fu_1187_p2 icmp_ln52_11_fu_1203_p2 not_tmp_86_fu_1217_p2 and_ln52_23_fu_1223_p2 empty_49_fu_1229_p2 or_ln52_16_fu_1235_p2 xor_ln52_5_fu_1241_p2 or_ln52_17_fu_1247_p2 select_ln52_15_fu_1253_p3 select_ln52_16_fu_1261_p3 select_ln52_17_fu_1269_p3 out_data_5_fu_1277_p3 i_fu_1302_p2 icmp_ln41_fu_1308_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0</InstName>
-                    <ModuleName>dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_s</ModuleName>
+                    <InstName>dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0</InstName>
+                    <ModuleName>dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_s</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>1299</ID>
                     <InstancesList>
                         <Instance>
-                            <InstName>grp_dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255</InstName>
-                            <ModuleName>dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare</ModuleName>
+                            <InstName>grp_dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255</InstName>
+                            <ModuleName>dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>255</ID>
                             <BindInstances>i_in_fu_842_p2 icmp_ln33_fu_1118_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s_fu_315</InstName>
-                            <ModuleName>dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s</ModuleName>
+                            <InstName>grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s_fu_315</InstName>
+                            <ModuleName>dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>315</ID>
                             <BindInstances>sparsemux_109_6_6_1_1_U587 mac_muladd_6ns_4s_16s_16_1_1_U588 mac_muladd_6ns_4s_16s_16_1_1_U588 mac_muladd_6ns_4s_16s_16_1_1_U588 w_index_fu_2047_p2 icmp_ln46_fu_2053_p2 w16_U</BindInstances>
@@ -2183,7 +2183,7 @@
             </BindNodes>
         </Module>
         <Module>
-            <Name>dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare</Name>
+            <Name>dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare</Name>
             <Loops>
                 <DataPrepare/>
             </Loops>
@@ -2255,7 +2255,7 @@
             </BindNodes>
         </Module>
         <Module>
-            <Name>dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s</Name>
+            <Name>dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s</Name>
             <Loops>
                 <ReuseLoop/>
             </Loops>
@@ -2325,19 +2325,19 @@
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ReuseLoop" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_109_6_6_1_1_U587" SOURCE="firmware/nnet_utils/nnet_dense_resource.h:46" STORAGESUBTYPE="" URAM="0" VARIABLE="a" VISIBLE="false"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="0" LOOP="ReuseLoop" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_6ns_4s_16s_16_1_1_U588" SOURCE="firmware/nnet_utils/nnet_mult.h:73" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln73" VISIBLE="true"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="0" LOOP="ReuseLoop" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_6ns_4s_16s_16_1_1_U588" SOURCE="firmware/nnet_utils/nnet_dense_resource.h:58" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln58" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="0" LOOP="ReuseLoop" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_6ns_4s_16s_16_1_1_U588" SOURCE="firmware/nnet_utils/nnet_dense_resource.h:58" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln58" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="0" LOOP="ReuseLoop" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_6ns_4s_16s_16_1_1_U588" SOURCE="firmware/nnet_utils/nnet_dense_resource.h:46" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln46" VISIBLE="true"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ReuseLoop" OPTYPE="add" PRAGMA="" RTLNAME="w_index_fu_2047_p2" SOURCE="firmware/nnet_utils/nnet_dense_resource.h:46" STORAGESUBTYPE="" URAM="0" VARIABLE="w_index" VISIBLE="true"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ReuseLoop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln46_fu_2053_p2" SOURCE="firmware/nnet_utils/nnet_dense_resource.h:46" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln46" VISIBLE="false"/>
                 <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="pragma" RTLNAME="w16_U" SOURCE="" STORAGESIZE="4 54 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_np" URAM="0" VARIABLE="w16" VISIBLE="true"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_s</Name>
+            <Name>dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_s</Name>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>30.00</TargetClockPeriod>
                     <ClockUncertainty>8.10</ClockUncertainty>
-                    <EstimatedClockPeriod>13.202</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>13.663</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>68</Best-caseLatency>
@@ -2583,7 +2583,7 @@
                 <hwRef type="interface" interface="input_1" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="layer16_out" index="1" direction="out" srcType="stream&lt;nnet::array&lt;ap_fixed&lt;19, 9, AP_TRN, AP_WRAP, 0&gt;, 1&gt;, 0&gt;&amp;" srcSize="32">
+        <Arg ArgName="layer16_out" index="1" direction="out" srcType="stream&lt;nnet::array&lt;ap_fixed&lt;16, 6, AP_TRN, AP_WRAP, 0&gt;, 1&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="layer16_out" name="" usage="data" direction="out"/>
             </hwRefs>
@@ -2600,7 +2600,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="input_1"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="layer16_out" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="32" portPrefix="layer16_out_">
+        <Interface InterfaceName="layer16_out" type="axi4stream" busTypeName="axis" mode="master" direction="out" dataWidth="16" portPrefix="layer16_out_">
             <ports>
                 <port>layer16_out_TDATA</port>
                 <port>layer16_out_TREADY</port>
@@ -2654,7 +2654,7 @@
                 <table>
                     <keys size="6">Interface, Direction, Register Mode, TDATA, TREADY, TVALID</keys>
                     <column name="input_1">in, both, 8, 1, 1</column>
-                    <column name="layer16_out">out, both, 32, 1, 1</column>
+                    <column name="layer16_out">out, both, 16, 1, 1</column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
@@ -2673,7 +2673,7 @@
                 <table>
                     <keys size="3">Argument, Direction, Datatype</keys>
                     <column name="input_1">in, stream&lt;nnet::array&lt;ap_uint&lt;8&gt; 1&gt; 0&gt;&amp;</column>
-                    <column name="layer16_out">out, stream&lt;nnet::array&lt;ap_fixed&lt;19 9 AP_TRN AP_WRAP 0&gt; 1&gt; 0&gt;&amp;</column>
+                    <column name="layer16_out">out, stream&lt;nnet::array&lt;ap_fixed&lt;16 6 AP_TRN AP_WRAP 0&gt; 1&gt; 0&gt;&amp;</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">

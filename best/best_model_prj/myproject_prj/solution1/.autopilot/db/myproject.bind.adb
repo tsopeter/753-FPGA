@@ -73,7 +73,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>16</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>0</if_type>
@@ -1717,7 +1717,7 @@
 					<Obj>
 						<type>2</type>
 						<id>379</id>
-						<name>dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_s</name>
+						<name>dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_s</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1741,7 +1741,7 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;19,9,5,3,0&gt;,1u&gt;,config16&gt;&gt;</content>
+				<content>&lt;constant:dense&lt;array&lt;ap_ufixed,6u&gt;,array&lt;ap_fixed&lt;16,6,5,3,0&gt;,1u&gt;,config16&gt;&gt;</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
@@ -4335,7 +4335,7 @@
 					</item>
 					<item class_id_reference="28" object_id="_388">
 						<type>0</type>
-						<name>dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0</name>
+						<name>dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0</name>
 						<ssdmobj_id>330</ssdmobj_id>
 						<pins>
 							<count>1</count>
@@ -4351,7 +4351,7 @@
 								</port>
 								<inst class_id_reference="31" object_id="_391">
 									<type>0</type>
-									<name>dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0</name>
+									<name>dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0</name>
 									<ssdmobj_id>330</ssdmobj_id>
 								</inst>
 							</item>
@@ -6076,7 +6076,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_s_fu_1299</first>
+			<first>grp_dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_s_fu_1299</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>

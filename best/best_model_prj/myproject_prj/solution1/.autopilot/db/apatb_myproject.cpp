@@ -1242,8 +1242,8 @@ void apatb_myproject_hw(void* __xlx_apatb_param_input_1, void* __xlx_apatb_param
   port0.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_1;
   port0.hasWrite = false;
 
-  static hls::sim::Stream<hls::sim::Byte<4>> port1 {
-    .width = 32,
+  static hls::sim::Stream<hls::sim::Byte<2>> port1 {
+    .width = 16,
     .name = "layer16_out",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_layer16_out),
@@ -1253,7 +1253,7 @@ void apatb_myproject_hw(void* __xlx_apatb_param_input_1, void* __xlx_apatb_param
     .gwriter = new hls::sim::Writer(WRAPC_STREAM_EGRESS_STATUS_layer16_out),
 #endif
   };
-  port1.param = (hls::stream<hls::sim::Byte<4>>*)__xlx_apatb_param_layer16_out;
+  port1.param = (hls::stream<hls::sim::Byte<2>>*)__xlx_apatb_param_layer16_out;
   port1.hasWrite = true;
 
   try {

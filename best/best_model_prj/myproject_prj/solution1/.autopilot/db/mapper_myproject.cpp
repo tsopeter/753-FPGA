@@ -248,17 +248,17 @@ unsigned int ap_apatb_layer16_out_cap_bc;
 static AESL_RUNTIME_BC __xlx_layer16_out_V_size_Reader("../tv/stream_size/stream_size_out_layer16_out.dat");
 using hls::sim::Byte;
 struct __cosim_s1__ { char data[1]; };
-struct __cosim_s4__ { char data[4]; };
-extern "C" void myproject(__cosim_s1__*, __cosim_s4__*);
+struct __cosim_s2__ { char data[2]; };
+extern "C" void myproject(__cosim_s1__*, __cosim_s2__*);
 extern "C" void apatb_myproject_hw(volatile void * __xlx_apatb_param_input_1, volatile void * __xlx_apatb_param_layer16_out) {
 using hls::sim::createStream;
 auto* sinput_1 = createStream((hls::stream<__cosim_s1__>*)__xlx_apatb_param_input_1);
   //Create input buffer for layer16_out
   ap_apatb_layer16_out_cap_bc = __xlx_layer16_out_V_size_Reader.read_size();
-  __cosim_s4__* __xlx_layer16_out_input_buffer= new __cosim_s4__[ap_apatb_layer16_out_cap_bc];
-auto* slayer16_out = createStream((hls::stream<__cosim_s4__>*)__xlx_apatb_param_layer16_out);
+  __cosim_s2__* __xlx_layer16_out_input_buffer= new __cosim_s2__[ap_apatb_layer16_out_cap_bc];
+auto* slayer16_out = createStream((hls::stream<__cosim_s2__>*)__xlx_apatb_param_layer16_out);
   // DUT call
-  myproject(sinput_1->data<__cosim_s1__>(), slayer16_out->data<__cosim_s4__>());
+  myproject(sinput_1->data<__cosim_s1__>(), slayer16_out->data<__cosim_s2__>());
 sinput_1->transfer((hls::stream<__cosim_s1__>*)__xlx_apatb_param_input_1);
-slayer16_out->transfer((hls::stream<__cosim_s4__>*)__xlx_apatb_param_layer16_out);
+slayer16_out->transfer((hls::stream<__cosim_s2__>*)__xlx_apatb_param_layer16_out);
 }

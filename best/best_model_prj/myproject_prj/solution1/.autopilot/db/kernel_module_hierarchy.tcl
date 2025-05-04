@@ -56,12 +56,12 @@ set ModuleHierarchy {[{
 	{"Name" : "relu_array_ap_fixed_6u_array_ap_ufixed_6_0_4_0_0_6u_relu_config14_U0","ID" : "33","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "ReLUActLoop","ID" : "34","Type" : "pipeline"},]},
-	{"Name" : "dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0","ID" : "35","Type" : "sequential",
+	{"Name" : "dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0","ID" : "35","Type" : "sequential",
 		"SubInsts" : [
-		{"Name" : "grp_dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255","ID" : "36","Type" : "sequential",
+		{"Name" : "grp_dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255","ID" : "36","Type" : "sequential",
 			"SubLoops" : [
 			{"Name" : "DataPrepare","ID" : "37","Type" : "pipeline"},]},
-		{"Name" : "grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s_fu_315","ID" : "38","Type" : "pipeline",
+		{"Name" : "grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s_fu_315","ID" : "38","Type" : "pipeline",
 			"SubLoops" : [
 			{"Name" : "ReuseLoop","ID" : "39","Type" : "pipeline"},]},]},]
 }]}

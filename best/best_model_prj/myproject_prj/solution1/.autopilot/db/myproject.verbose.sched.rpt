@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'myproject'
 ================================================================
-* Date:           Sun May  4 16:36:06 2025
+* Date:           Sun May  4 16:56:32 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        myproject_prj
@@ -162,18 +162,18 @@ State 19 <SV = 18> <Delay = 4.99>
 ST_19 : Operation 49 [1/2] (4.99ns)   --->   "%call_ln72 = call void @relu<array<ap_fixed,6u>,array<ap_ufixed<6,0,4,0,0>,6u>,relu_config14>, i114 %layer12_out, i36 %layer14_out" [firmware/myproject.cpp:72]   --->   Operation 49 'call' 'call_ln72' <Predicate = true> <Delay = 4.99> <CoreType = "Generic">   --->   Generic Core
 
 State 20 <SV = 19> <Delay = 0.00>
-ST_20 : Operation 50 [2/2] (0.00ns)   --->   "%call_ln75 = call void @dense<array<ap_ufixed,6u>,array<ap_fixed<19,9,5,3,0>,1u>,config16>, i36 %layer14_out, i32 %layer16_out, i4 %w16" [firmware/myproject.cpp:75]   --->   Operation 50 'call' 'call_ln75' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_20 : Operation 50 [2/2] (0.00ns)   --->   "%call_ln75 = call void @dense<array<ap_ufixed,6u>,array<ap_fixed<16,6,5,3,0>,1u>,config16>, i36 %layer14_out, i16 %layer16_out, i4 %w16" [firmware/myproject.cpp:75]   --->   Operation 50 'call' 'call_ln75' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
 State 21 <SV = 20> <Delay = 0.00>
-ST_21 : Operation 51 [1/2] (0.00ns)   --->   "%call_ln75 = call void @dense<array<ap_ufixed,6u>,array<ap_fixed<19,9,5,3,0>,1u>,config16>, i36 %layer14_out, i32 %layer16_out, i4 %w16" [firmware/myproject.cpp:75]   --->   Operation 51 'call' 'call_ln75' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_21 : Operation 51 [1/2] (0.00ns)   --->   "%call_ln75 = call void @dense<array<ap_ufixed,6u>,array<ap_fixed<16,6,5,3,0>,1u>,config16>, i36 %layer14_out, i16 %layer16_out, i4 %w16" [firmware/myproject.cpp:75]   --->   Operation 51 'call' 'call_ln75' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
 State 22 <SV = 21> <Delay = 0.00>
 ST_22 : Operation 52 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln14 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_1" [firmware/myproject.cpp:14]   --->   Operation 52 'specdataflowpipeline' 'specdataflowpipeline_ln14' <Predicate = true> <Delay = 0.00>
 ST_22 : Operation 53 [1/1] (0.00ns)   --->   "%spectopmodule_ln7 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_3" [firmware/myproject.cpp:7]   --->   Operation 53 'spectopmodule' 'spectopmodule_ln7' <Predicate = true> <Delay = 0.00>
 ST_22 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %input_1, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_22 : Operation 55 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %input_1"   --->   Operation 55 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_22 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %layer16_out, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_22 : Operation 57 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %layer16_out"   --->   Operation 57 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer16_out, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 57 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %layer16_out"   --->   Operation 57 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_22 : Operation 58 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @layer2_out_str, i32 1, void @p_str, void @p_str, i32 4096, i32 4096, i8 %layer2_out, i8 %layer2_out"   --->   Operation 58 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
 ST_22 : Operation 59 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %layer2_out, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 59 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_22 : Operation 60 [1/1] (0.00ns)   --->   "%empty_58 = specchannel i32 @_ssdm_op_SpecChannel, void @layer3_out_str, i32 1, void @p_str, void @p_str, i32 900, i32 900, i40 %layer3_out, i40 %layer3_out"   --->   Operation 60 'specchannel' 'empty_58' <Predicate = true> <Delay = 0.00>

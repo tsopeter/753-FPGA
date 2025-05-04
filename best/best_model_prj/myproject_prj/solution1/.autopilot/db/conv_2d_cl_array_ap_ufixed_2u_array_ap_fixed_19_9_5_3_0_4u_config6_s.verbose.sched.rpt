@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv_2d_cl_array_ap_ufixed_2u_array_ap_fixed_19_9_5_3_0_4u_config6_s'
 ================================================================
-* Date:           Sun May  4 16:36:05 2025
+* Date:           Sun May  4 16:56:31 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        myproject_prj
@@ -120,7 +120,7 @@ The critical path consists of the following:
  <State 2>: 5.749ns
 The critical path consists of the following:
 	'load' operation 10 bit ('indvar_flatten_load', firmware/nnet_utils/nnet_conv2d_stream.h:51->firmware/nnet_utils/nnet_conv2d_stream.h:77) on local variable 'indvar_flatten' [72]  (0.000 ns)
-	'icmp' operation 1 bit ('icmp_ln51', firmware/nnet_utils/nnet_conv2d_stream.h:51->firmware/nnet_utils/nnet_conv2d_stream.h:77) [73]  (2.123 ns)
+	'add' operation 10 bit ('add_ln51', firmware/nnet_utils/nnet_conv2d_stream.h:51->firmware/nnet_utils/nnet_conv2d_stream.h:77) [74]  (2.123 ns)
 	'store' operation 0 bit ('store_ln51', firmware/nnet_utils/nnet_conv2d_stream.h:51->firmware/nnet_utils/nnet_conv2d_stream.h:77) of variable 'add_ln51', firmware/nnet_utils/nnet_conv2d_stream.h:51->firmware/nnet_utils/nnet_conv2d_stream.h:77 on local variable 'indvar_flatten' [83]  (1.610 ns)
 	blocking operation 2.016 ns on control path)
 

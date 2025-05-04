@@ -100,6 +100,7 @@ def create_config(model, part='xc7a35tcpg236-1', output_dir='tmp/tmp_prj',
     config['Model']['Strategy'] = 'Resource'
     config['LayerName']['input_1']['Precision']['result'] = 'ap_uint<8>'
     config['LayerName']['output_1_linear']['Precision']['result'] = 'ap_fixed<16,6>'
+    config['LayerName']['output_1']['Precision']['result'] = 'ap_fixed<16,6>'
 
     hls_model = hls4ml.converters.convert_from_keras_model(
         model, hls_config=config, backend='Vitis', output_dir=output_dir, part=part,

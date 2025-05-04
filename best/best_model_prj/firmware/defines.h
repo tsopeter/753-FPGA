@@ -71,7 +71,7 @@ typedef ap_fixed<6,2> bias12_t;
 typedef nnet::array<ap_ufixed<6,0,AP_RND_CONV,AP_SAT,0>, 6*1> layer14_t;
 typedef ap_fixed<18,8> q_activation_143_table_t;
 typedef ap_fixed<19,9> output_1_accum_t;
-typedef nnet::array<ap_fixed<19,9>, 1*1> result_t;
+typedef nnet::array<ap_fixed<16,6>, 1*1> result_t;
 typedef ap_fixed<6,2> weight16_t;
 typedef ap_fixed<6,2> bias16_t;
 typedef ap_uint<1> layer16_index;

@@ -177,7 +177,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0/dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0_activity": {
+				"dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0/dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -188,7 +188,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0/grp_dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255/grp_dense_array_array_ap_fixed_19_9_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255_activity": {
+				"dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0/grp_dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255/grp_dense_array_array_ap_fixed_16_6_5_3_0_1u_config16_Pipeline_DataPrepare_fu_255_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -198,7 +198,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_U0/grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s_fu_315/grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_19_9_5_3_0_config16_s_fu_315_activity": {
+				"dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_U0/grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s_fu_315/grp_dense_resource_rf_leq_nin_ap_ufixed_ap_fixed_16_6_5_3_0_config16_s_fu_315_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

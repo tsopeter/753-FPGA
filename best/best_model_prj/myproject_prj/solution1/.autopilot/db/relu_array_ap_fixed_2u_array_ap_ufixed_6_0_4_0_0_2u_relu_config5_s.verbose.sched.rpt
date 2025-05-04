@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'relu_array_ap_fixed_2u_array_ap_ufixed_6_0_4_0_0_2u_relu_config5_s'
 ================================================================
-* Date:           Sun May  4 16:36:05 2025
+* Date:           Sun May  4 16:56:30 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        myproject_prj
@@ -163,16 +163,16 @@ Target clock period: 30.000ns, clock uncertainty: 8.100ns.
  <State 1>: 13.909ns
 The critical path consists of the following:
 	fifo read operation ('layer3_out_read', firmware/nnet_utils/nnet_activation_stream.h:44) on port 'layer3_out' (firmware/nnet_utils/nnet_activation_stream.h:44) [13]  (3.626 ns)
-	'icmp' operation 1 bit ('icmp_ln52_2', firmware/nnet_utils/nnet_activation_stream.h:52) [46]  (1.777 ns)
-	'or' operation 1 bit ('or_ln52_3', firmware/nnet_utils/nnet_activation_stream.h:52) [49]  (0.000 ns)
-	'and' operation 1 bit ('and_ln52_2', firmware/nnet_utils/nnet_activation_stream.h:52) [50]  (0.000 ns)
-	'add' operation 6 bit ('add_ln52_1', firmware/nnet_utils/nnet_activation_stream.h:52) [52]  (1.946 ns)
-	'or' operation 1 bit ('and_ln52_3', firmware/nnet_utils/nnet_activation_stream.h:52) [57]  (0.000 ns)
-	'and' operation 1 bit ('empty_57', firmware/nnet_utils/nnet_activation_stream.h:52) [58]  (0.978 ns)
-	'or' operation 1 bit ('or_ln52_4', firmware/nnet_utils/nnet_activation_stream.h:52) [59]  (0.000 ns)
-	'select' operation 6 bit ('select_ln52_4', firmware/nnet_utils/nnet_activation_stream.h:52) [63]  (0.978 ns)
-	'select' operation 6 bit ('select_ln52_5', firmware/nnet_utils/nnet_activation_stream.h:52) [64]  (0.000 ns)
-	'select' operation 6 bit ('out_data', firmware/nnet_utils/nnet_activation_stream.h:51) [65]  (0.978 ns)
+	'icmp' operation 1 bit ('icmp_ln52', firmware/nnet_utils/nnet_activation_stream.h:52) [21]  (1.777 ns)
+	'or' operation 1 bit ('or_ln52', firmware/nnet_utils/nnet_activation_stream.h:52) [24]  (0.000 ns)
+	'and' operation 1 bit ('and_ln52', firmware/nnet_utils/nnet_activation_stream.h:52) [25]  (0.000 ns)
+	'add' operation 6 bit ('add_ln52', firmware/nnet_utils/nnet_activation_stream.h:52) [27]  (1.946 ns)
+	'or' operation 1 bit ('and_ln52_1', firmware/nnet_utils/nnet_activation_stream.h:52) [32]  (0.000 ns)
+	'and' operation 1 bit ('empty', firmware/nnet_utils/nnet_activation_stream.h:52) [33]  (0.978 ns)
+	'or' operation 1 bit ('or_ln52_1', firmware/nnet_utils/nnet_activation_stream.h:52) [34]  (0.000 ns)
+	'select' operation 6 bit ('select_ln52_1', firmware/nnet_utils/nnet_activation_stream.h:52) [38]  (0.978 ns)
+	'select' operation 6 bit ('select_ln52_2', firmware/nnet_utils/nnet_activation_stream.h:52) [39]  (0.000 ns)
+	'select' operation 6 bit ('out_data', firmware/nnet_utils/nnet_activation_stream.h:51) [40]  (0.978 ns)
 	fifo write operation ('write_ln57', firmware/nnet_utils/nnet_activation_stream.h:57) on port 'layer5_out' (firmware/nnet_utils/nnet_activation_stream.h:57) [67]  (3.626 ns)
 
 

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'myproject'" level="0">
-<item name = "Date">Sun May  4 16:36:06 2025
+<item name = "Date">Sun May  4 16:56:32 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">myproject_prj</item>
@@ -40,7 +40,7 @@
 <column name="grp_relu_array_ap_fixed_5u_array_ap_ufixed_6_0_4_0_0_5u_relu_config11_s_fu_1161">relu_array_ap_fixed_5u_array_ap_ufixed_6_0_4_0_0_5u_relu_config11_s, 26, 26, 0.780 us, 0.780 us, 25, 25, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 <column name="grp_conv_2d_cl_array_ap_ufixed_5u_array_ap_fixed_19_9_5_3_0_6u_config12_s_fu_1167">conv_2d_cl_array_ap_ufixed_5u_array_ap_fixed_19_9_5_3_0_6u_config12_s, 101, 1251, 3.030 us, 37.530 us, 101, 1251, no</column>
 <column name="grp_relu_array_ap_fixed_6u_array_ap_ufixed_6_0_4_0_0_6u_relu_config14_s_fu_1293">relu_array_ap_fixed_6u_array_ap_ufixed_6_0_4_0_0_6u_relu_config14_s, 10, 10, 0.300 us, 0.300 us, 9, 9, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_s_fu_1299">dense_array_ap_ufixed_6u_array_ap_fixed_19_9_5_3_0_1u_config16_s, 68, 69, 2.040 us, 2.070 us, 68, 69, no</column>
+<column name="grp_dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_s_fu_1299">dense_array_ap_ufixed_6u_array_ap_fixed_16_6_5_3_0_1u_config16_s, 68, 69, 2.040 us, 2.070 us, 68, 69, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

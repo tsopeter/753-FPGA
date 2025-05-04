@@ -6,29 +6,29 @@
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 | Phase         | Step                        | Instructions | Description                                                                            |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
-| Compile/Link  |                             | 8,326        | After all functions are compiled and linked into a single design                       |
+| Compile/Link  |                             | 8,371        | After all functions are compiled and linked into a single design                       |
 |               |                             |              |                                                                                        |
 | Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
-|               | (1) unroll                  | 5,692        | user unroll pragmas are applied                                                        |
-|               | (2) simplification          | 3,108        | simplification of applied user unroll pragmas                                          |
-|               | (3) inline                  | 2,672        | user inline pragmas are applied                                                        |
-|               | (4) simplification          | 2,392        | simplification of applied user inline pragmas                                          |
+|               | (1) unroll                  | 5,693        | user unroll pragmas are applied                                                        |
+|               | (2) simplification          | 3,105        | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  | 2,673        | user inline pragmas are applied                                                        |
+|               | (4) simplification          | 2,393        | simplification of applied user inline pragmas                                          |
 |               |                             |              |                                                                                        |
 | Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
-|               | (1) array partition         | 2,785        | user array partition pragmas are applied                                               |
-|               | (2) simplification          | 2,621        | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
-|               | (3) aggregate/disaggregate  | 2,651        | user struct aggregate/disaggregate pragmas are applied                                 |
-|               | (4) array reshape           | 3,398        | apply array reshape pragmas                                                            |
+|               | (1) array partition         | 2,786        | user array partition pragmas are applied                                               |
+|               | (2) simplification          | 2,622        | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  | 2,652        | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           | 3,399        | apply array reshape pragmas                                                            |
 |               | (5) access patterns         | 3,470        | array access pattern optmizations                                                      |
 |               |                             |              |                                                                                        |
 | Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
 |               | (1) loop simplification     | 3,331        | loop and instruction simplification                                                    |
-|               | (2) parallelization         | 3,111        | loops are unrolled or pipelined to meet performance targets                            |
-|               | (3) array partition         | 2,964        | arrays are partitioned to meet performance targets                                     |
-|               | (4) simplification          | 2,964        | simplification of design after performance transformations                             |
+|               | (2) parallelization         | 3,112        | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         | 2,965        | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          | 2,965        | simplification of design after performance transformations                             |
 |               |                             |              |                                                                                        |
 | HW Transforms |                             |              | After hardware transfomations                                                          |
-|               | (1) lowering                | 2,808        | initial conversion to HW specific instructions                                         |
+|               | (1) lowering                | 2,809        | initial conversion to HW specific instructions                                         |
 |               | (2) optimizations           | 3,115        | high level synthesis optimizations                                                     |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
@@ -36,7 +36,7 @@
 +-----------------------------------------+-----------------------------+----------------+---------------+--------------+-------------+---------------+
 | Function                                | Location                    | Compile/Link   | Unroll/Inline | Array/Struct | Performance | HW Transforms |
 +-----------------------------------------+-----------------------------+----------------+---------------+--------------+-------------+---------------+
-| + myproject                             | myproject.cpp:7             | 8,326          | 2,392         | 3,470        | 2,964       | 3,115         |
+| + myproject                             | myproject.cpp:7             | 8,371          | 2,393         | 3,470        | 2,965       | 3,115         |
 |  + linear<nnet::array<ap_uint<8...      | nnet_activation_stream.h:17 |  439           |   21          |   27         |   27        |   23          |
 |     operator[]                          | nnet_types.h:17             |    6 (2 calls) |               |              |             |               |
 |  + conv_2d_cl<nnet::array<ap_fi...      | nnet_conv2d_stream.h:66     |  923           |  202          |  264         |  233        |  261          |
@@ -103,17 +103,17 @@
 |      dense_resource_rf_leq_nin<ap...    | nnet_dense_resource.h:13    |                |  118          |  146         |  134        |  145          |
 |  + relu<nnet::array<ap_fixed<19...      | nnet_activation_stream.h:39 |  857           |  288          |  328         |  328        |  330          |
 |     operator[]                          | nnet_types.h:17             |   12 (4 calls) |               |              |             |               |
-|  + dense<nnet::array<ap_ufixed<...      | nnet_dense_stream.h:82      |  749           |   71          |  471         |  198        |  206          |
+|  + dense<nnet::array<ap_ufixed<...      | nnet_dense_stream.h:82      |  794           |   72          |  471         |  199        |  206          |
 |   + data_prepare<nnet::array<ap_...     | nnet_dense_stream.h:28      |   75           |               |              |             |               |
 |      operator[]                         | nnet_types.h:17             |    6 (2 calls) |               |              |             |               |
-|   + dense_resource_wrapper<ap_uf...     | nnet_dense_stream.h:21      |  583           |               |              |             |               |
-|    + dense_resource<ap_ufixed<6, ...    | nnet_dense_resource.h:255   |  581           |               |              |             |               |
-|     + dense_resource_rf_leq_nin<ap...   | nnet_dense_resource.h:13    |  579           |               |              |             |               |
+|   + dense_resource_wrapper<ap_uf...     | nnet_dense_stream.h:21      |  628           |               |              |             |               |
+|    + dense_resource<ap_ufixed<6, ...    | nnet_dense_resource.h:255   |  626           |               |              |             |               |
+|     + dense_resource_rf_leq_nin<ap...   | nnet_dense_resource.h:13    |  624           |               |              |             |               |
 |        product                          | nnet_mult.h:70              |  141           |               |              |             |               |
-|        cast<ap_ufixed<6, 0, AP_RND_...  | nnet_mult.h:110             |    3           |               |              |             |               |
+|        cast<ap_ufixed<6, 0, AP_RND_...  | nnet_mult.h:110             |   48           |               |              |             |               |
 |   + res_write<nnet::array<ap_fix...     | nnet_dense_stream.h:53      |   71           |               |              |             |               |
 |      operator[]                         | nnet_types.h:17             |    6 (2 calls) |               |              |             |               |
-|     dense_resource_rf_leq_nin<ap...     | nnet_dense_resource.h:13    |                |   28          |   79         |   23        |   29          |
+|     dense_resource_rf_leq_nin<ap...     | nnet_dense_resource.h:13    |                |   29          |   79         |   24        |   30          |
 +-----------------------------------------+-----------------------------+----------------+---------------+--------------+-------------+---------------+
 
 * Design Size Message Settings
