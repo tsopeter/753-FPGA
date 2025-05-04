@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_pilotnet_behav/xsimk.exe -simmode gui -wdb tb_pilotnet_behav.wdb -simrunnum 0 -socket 51433
+Design successfully loaded
+Design Loading Memory Usage: 11180 KB (Peak: 11180 KB)
+Design Loading CPU Usage: 0 ms

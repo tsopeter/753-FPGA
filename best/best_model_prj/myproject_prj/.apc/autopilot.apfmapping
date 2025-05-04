@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="myproject.cpp" path="D:\GitHub\753-FPGA\best\best_model_prj\firmware\myproject.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_data" path="D:\GitHub\753-FPGA\best\best_model_prj\tb_data"/>
+    <originFiles name="weights" path="D:\GitHub\753-FPGA\best\best_model_prj\firmware\weights"/>
+    <originFiles name="myproject_test.cpp" path="D:\GitHub\753-FPGA\best\best_model_prj\myproject_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

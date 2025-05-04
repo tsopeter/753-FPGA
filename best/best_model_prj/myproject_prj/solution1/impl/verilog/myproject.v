@@ -767,4 +767,16 @@ assign start_for_relu_array_ap_fixed_5u_array_ap_ufixed_6_0_4_0_0_5u_relu_config
 
 assign start_for_relu_array_ap_fixed_6u_array_ap_ufixed_6_0_4_0_0_6u_relu_config14_U0_din = 1'b1;
 
+
+reg find_df_deadlock = 0;
+// synthesis translate_off
+`include "myproject_hls_deadlock_detector.vh"
+// synthesis translate_on
+
+reg find_kernel_block = 0;
+// synthesis translate_off
+`include "myproject_hls_deadlock_kernel_monitor_top.vh"
+// synthesis translate_on
+
 endmodule //myproject
+

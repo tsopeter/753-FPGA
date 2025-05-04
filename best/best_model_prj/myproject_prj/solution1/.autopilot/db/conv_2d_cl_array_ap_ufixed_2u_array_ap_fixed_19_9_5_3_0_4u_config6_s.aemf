@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1746395916640">
+  <ports id="1" name="layer5_out" type="PortType" coreName="FIFO" coreId="4294967295" bitwidth="12" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="layer6_out" type="PortType" coreId="4294967295" bitwidth="76" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="92" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="93" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="96" source_obj="//@ports.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="97" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="100" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="107" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="108" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="109" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@ports.1"/>
+  <edges id="110" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="111" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="112" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="113" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="114" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="117" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="120" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="121" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="122" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="123" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="124" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="125" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="126" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="127" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="128" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="129" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="130" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="131" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="132" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="133" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="134" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="135" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="136" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="137" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="138" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="139" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="140" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="141" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="142" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="143" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="144" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="145" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="146" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="147" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="148" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="149" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="150" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="151" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="152" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="153" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="154" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="155" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="156" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="157" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="158" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="159" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="160" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="161" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="162" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="163" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="164" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="165" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="166" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="167" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="168" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="169" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="170" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="171" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="172" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="173" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="174" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="175" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="176" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="177" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="178" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="179" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="180" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="181" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="182" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="183" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="184" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="185" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="241" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="242" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="243" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="244" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="245" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="246" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="247" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.4"/>
+  <blocks id="71" name="entry" type="BlockType">
+    <controlOutputObjs>for.body12.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="indvar_flatten" coreId="4294967295" bitwidth="10" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="indvar_flatten_write_ln0" coreId="4294967295" opcode="store" m_display="0" m_delay="1.61" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="br_ln51" lineNumber="51" fileName="firmware/nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="conv_2d_buffer_resource_cl_nnet_array_ap_ufixed_6_0_AP_RND_CONV_AP_SAT_0_2_nnet_array_ap_fixed_19_9_AP_TRN_AP_WRAP_0_4_config6_s" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="51" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_buffer_resource_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="77" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <controlInputObjs>for.body12.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="firmware/nnet_utils/nnet_conv2d_stream.h">
+      <validLinenumbers>51</validLinenumbers>
+      <validLinenumbers>77</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="76" name="for.body12.i" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlInputObjs>for.cond.cleanup11.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>_ZN4nnet26conv_2d_buffer_resource_clINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj2EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj4EEE7config6EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE.18.exit</controlOutputObjs>
+    <controlOutputObjs>for.cond.cleanup11.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="indvar_flatten_load" lineNumber="51" fileName="firmware/nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="conv_2d_buffer_resource_cl_nnet_array_ap_ufixed_6_0_AP_RND_CONV_AP_SAT_0_2_nnet_array_ap_fixed_19_9_AP_TRN_AP_WRAP_0_4_config6_s" bitwidth="10" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="51" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_buffer_resource_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="77" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="icmp_ln51" lineNumber="51" fileName="firmware/nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." rtlName="icmp_ln51_fu_318_p2" coreName="Cmp" implIndex="auto" control="no" opType="seteq" coreId="9" contextFuncName="conv_2d_buffer_resource_cl_nnet_array_ap_ufixed_6_0_AP_RND_CONV_AP_SAT_0_2_nnet_array_ap_fixed_19_9_AP_TRN_AP_WRAP_0_4_config6_s" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="2.12" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="51" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_buffer_resource_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="77" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="add_ln51" lineNumber="51" fileName="firmware/nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." rtlName="add_ln51_fu_324_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="conv_2d_buffer_resource_cl_nnet_array_ap_ufixed_6_0_AP_RND_CONV_AP_SAT_0_2_nnet_array_ap_fixed_19_9_AP_TRN_AP_WRAP_0_4_config6_s" bitwidth="10" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.12" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="51" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_buffer_resource_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="77" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="br_ln51" lineNumber="51" fileName="firmware/nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="conv_2d_buffer_resource_cl_nnet_array_ap_ufixed_6_0_AP_RND_CONV_AP_SAT_0_2_nnet_array_ap_fixed_19_9_AP_TRN_AP_WRAP_0_4_config6_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="51" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_buffer_resource_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="77" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>for.cond.cleanup11.i</controlInputObjs>
+      <controlInputObjs>_ZN4nnet26conv_2d_buffer_resource_clINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj2EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj4EEE7config6EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE.18.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="firmware/nnet_utils/nnet_conv2d_stream.h">
+      <validLinenumbers>51</validLinenumbers>
+      <validLinenumbers>77</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="85" name="for.cond.cleanup11.i" type="BlockType">
+    <controlInputObjs>for.body12.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>for.body12.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="layer5_out_read" lineNumber="57" fileName="firmware/nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="77" contextFuncName="conv_2d_buffer_resource_cl_nnet_array_ap_ufixed_6_0_AP_RND_CONV_AP_SAT_0_2_nnet_array_ap_fixed_19_9_AP_TRN_AP_WRAP_0_4_config6_s" bitwidth="12" opcode="read" nodeLabel="1.0" m_display="0" m_delay="3.62" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="57" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_buffer_resource_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="77" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <dataInputObjs>layer5_out</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="trunc_ln57" lineNumber="57" fileName="firmware/nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." rtlName="trunc_ln57_fu_330_p1" coreId="4294967295" contextFuncName="conv_2d_buffer_resource_cl_nnet_array_ap_ufixed_6_0_AP_RND_CONV_AP_SAT_0_2_nnet_array_ap_fixed_19_9_AP_TRN_AP_WRAP_0_4_config6_s" bitwidth="6" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="57" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_buffer_resource_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="77" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="trunc_ln57_8" lineNumber="57" fileName="firmware/nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." rtlName="trunc_ln57_8_reg_366" coreId="4294967295" contextFuncName="conv_2d_buffer_resource_cl_nnet_array_ap_ufixed_6_0_AP_RND_CONV_AP_SAT_0_2_nnet_array_ap_fixed_19_9_AP_TRN_AP_WRAP_0_4_config6_s" bitwidth="6" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="57" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_buffer_resource_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="77" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="_ln57" lineNumber="57" fileName="firmware/nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." rtlName="grp_compute_output_buffer_2d_array_array_ap_fixed_19_9_5_3_0_4u_config6_s_fu_176" coreId="4294967295" contextFuncName="conv_2d_buffer_resource_cl_nnet_array_ap_ufixed_6_0_AP_RND_CONV_AP_SAT_0_2_nnet_array_ap_fixed_19_9_AP_TRN_AP_WRAP_0_4_config6_s" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="57" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_buffer_resource_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="77" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>layer6_out</dataOutputObjs>
+      <constName>compute_output_buffer_2d_array_array_ap_fixed_19_9_5_3_0_4u_config6_s</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="indvar_flatten_write_ln51" lineNumber="51" fileName="firmware/nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="conv_2d_buffer_resource_cl_nnet_array_ap_ufixed_6_0_AP_RND_CONV_AP_SAT_0_2_nnet_array_ap_fixed_19_9_AP_TRN_AP_WRAP_0_4_config6_s" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.61" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="51" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_buffer_resource_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="77" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="br_ln53" lineNumber="53" fileName="firmware/nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="conv_2d_buffer_resource_cl_nnet_array_ap_ufixed_6_0_AP_RND_CONV_AP_SAT_0_2_nnet_array_ap_fixed_19_9_AP_TRN_AP_WRAP_0_4_config6_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="53" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_buffer_resource_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="77" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+      <controlInputObjs>for.body12.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="firmware/nnet_utils/nnet_conv2d_stream.h">
+      <validLinenumbers>57</validLinenumbers>
+      <validLinenumbers>51</validLinenumbers>
+      <validLinenumbers>53</validLinenumbers>
+      <validLinenumbers>77</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="87" name="_ZN4nnet26conv_2d_buffer_resource_clINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4EL9ap_o_mode0ELi0EELj2EEENS1_I8ap_fixedILi19ELi9ELS3_5ELS4_3ELi0EELj4EEE7config6EEvRN3hls6streamIT_Li0EEERNSC_IT0_Li0EEEPNT1_8weight_tEPNSJ_6bias_tE.18.exit" type="BlockType">
+    <controlInputObjs>for.body12.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="_ln79" lineNumber="79" fileName="firmware/nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="conv_2d_cl_nnet_array_ap_ufixed_6_0_AP_RND_CONV_AP_SAT_0_2_nnet_array_ap_fixed_19_9_AP_TRN_AP_WRAP_0_4_config6_s" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_conv2d_stream.h" linenumber="79" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_ufixed&amp;lt;6, 0, AP_RND_CONV, AP_SAT, 0&amp;gt;, 2&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;19, 9, AP_TRN, AP_WRAP, 0&amp;gt;, 4&amp;gt;, config6&amp;gt;"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="firmware/nnet_utils/nnet_conv2d_stream.h">
+      <validLinenumbers>79</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <regnodes realName="trunc_ln57_reg_361">
+    <nodeIds>80</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln57_8_reg_366">
+    <nodeIds>81</nodeIds>
+  </regnodes>
+  <regnodes realName="indvar_flatten_reg_351">
+    <nodeIds>66</nodeIds>
+  </regnodes>
+  <expressionNodes realName="add_ln51_fu_324">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln57_fu_330">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln57_8_fu_335">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="indvar_flatten_fu_166">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln51_fu_318">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_compute_output_buffer_2d_array_array_ap_fixed_19_9_5_3_0_4u_config6_s_fu_176">
+    <nodeIds>82</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="store_ln0_store_fu_310">
+    <nodeIds>69</nodeIds>
+  </ioNodes>
+  <ioNodes realName="layer5_out_read_read_fu_170">
+    <nodeIds>79</nodeIds>
+  </ioNodes>
+  <ioNodes realName="indvar_flatten_load_load_fu_315">
+    <nodeIds>72</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln51_store_fu_346">
+    <nodeIds>83</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="p_ZZN4nnet26conv_2d_buffer_resource_clINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4E_26" portID="100">
+    <nodeIds>82</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_ZZN4nnet26conv_2d_buffer_resource_clINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4E_27" portID="100">
+    <nodeIds>82</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_ZZN4nnet26conv_2d_buffer_resource_clINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4E_28" portID="100">
+    <nodeIds>82</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_ZZN4nnet26conv_2d_buffer_resource_clINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4E_29" portID="100">
+    <nodeIds>82</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_ZZN4nnet26conv_2d_buffer_resource_clINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4E_30" portID="100">
+    <nodeIds>82</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_ZZN4nnet26conv_2d_buffer_resource_clINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4E_31" portID="100">
+    <nodeIds>82</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_ZZN4nnet26conv_2d_buffer_resource_clINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4E_32" portID="100">
+    <nodeIds>82</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_ZZN4nnet26conv_2d_buffer_resource_clINS_5arrayI9ap_ufixedILi6ELi0EL9ap_q_mode4E_33" portID="100">
+    <nodeIds>82</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="w6" portID="100">
+    <nodeIds>82</nodeIds>
+  </memoryPorts>
+  <ioPorts name="layer5_out">
+    <contents name="read">
+      <nodeIds>79</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="layer6_out">
+    <contents name="call">
+      <nodeIds>82</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="2" latency="2"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="2"/>
+      <operations id="84" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="conv_2d_cl_array_ap_ufixed_2u_array_ap_fixed_19_9_5_3_0_4u_config6_s" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="3601" mMaxLatency="49501">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>71</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="ReadInputHeight_ReadInputWidth" mII="-1" mDepth="-1" mMinTripCount="900" mMaxTripCount="900" mMinLatency="3600" mMaxLatency="49500" mType="1">
+      <basicBlocks>76</basicBlocks>
+      <basicBlocks>85</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>87</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

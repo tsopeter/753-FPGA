@@ -1,0 +1,29 @@
+{
+	"version": "1.0",
+	"modules": {
+		"accel": {
+			"proto_instances": {
+				"/myproject_0/input_1": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "input_1_TDATA"},
+						"TREADY": { "actual": "input_1_TREADY"},
+						"TVALID": { "actual": "input_1_TVALID"}
+					}
+				},
+				"/myproject_0/layer16_out": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "layer16_out_TDATA"},
+						"TREADY": { "actual": "layer16_out_TREADY"},
+						"TVALID": { "actual": "layer16_out_TVALID"}
+					}
+				}
+			}
+		}
+	}
+}

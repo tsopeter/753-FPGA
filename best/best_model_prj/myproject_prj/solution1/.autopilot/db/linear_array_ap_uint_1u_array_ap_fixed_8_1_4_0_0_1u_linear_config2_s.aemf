@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1746395916937">
+  <ports id="1" name="input_1" type="PortType" originalName="data" coreId="4294967295" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="layer2_out" type="PortType" coreName="FIFO" coreId="4294967295" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="32" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="33" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="34" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="37" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="38" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="39" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="44" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="46" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="49" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="50" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="51" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="54" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="57" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@ports.1"/>
+  <edges id="58" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="59" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="62" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="65" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="66" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="67" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="68" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="69" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="134" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="135" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="136" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="137" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="138" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="139" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <blocks id="8" name="entry" type="BlockType">
+    <controlOutputObjs>LinearPackLoop.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="i1" coreId="4294967295" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="i1_write_ln0" coreId="4294967295" opcode="store" m_display="0" m_delay="1.61" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="br_ln19" lineNumber="19" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="19" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+      <controlInputObjs>LinearPackLoop.split</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="firmware/nnet_utils/nnet_activation_stream.h">
+      <validLinenumbers>19</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="27" name="for.end9" type="BlockType">
+    <controlInputObjs>LinearPackLoop.split</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="_ln34" lineNumber="34" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" opcode="ret" m_display="0" m_delay="1.61" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="34" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="firmware/nnet_utils/nnet_activation_stream.h">
+      <validLinenumbers>34</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="94" pipe_depth="1" RegionName="LinearActLoop">
+    <basic_blocks id="25" name="LinearPackLoop.split" type="BlockType">
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>LinearPackLoop.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.end9</controlOutputObjs>
+      <controlOutputObjs>LinearPackLoop.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i1_load" lineNumber="19" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" bitwidth="12" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="19" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="input_1_read" lineNumber="22" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreName="regslice" implIndex="reg_slice" control="no" opType="adapter" coreId="135" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" bitwidth="8" opcode="read" m_display="0" m_delay="0.51" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="22" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>input_1</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="trunc_ln29" lineNumber="29" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="trunc_ln29_fu_73_p1" coreId="4294967295" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" bitwidth="1" opcode="trunc" m_display="0" m_topoIndex="6" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="29" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="shl_ln29" lineNumber="29" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="shl_ln29_fu_77_p2" coreId="4294967295" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" bitwidth="8" opcode="shl" m_display="0" m_topoIndex="7" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="29" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="tmp_s" lineNumber="29" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_s_fu_83_p3" coreId="4294967295" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" bitwidth="7" opcode="partselect" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="29" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="icmp_ln29" lineNumber="29" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="icmp_ln29_fu_91_p2" coreName="Cmp" implIndex="auto" control="no" opType="setne" coreId="9" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="2.03" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="29" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="or_ln29" lineNumber="29" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="or_ln29_fu_97_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" bitwidth="1" opcode="or" m_display="0" m_topoIndex="10" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="29" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="select_ln29" lineNumber="29" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="layer2_out_din" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" bitwidth="8" opcode="select" m_display="0" m_delay="1.04" m_topoIndex="11" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="29" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="layer2_out_write_ln32" lineNumber="32" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="77" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" opcode="write" m_display="0" m_delay="3.5" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="32" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>layer2_out</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="i" lineNumber="19" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="i_fu_112_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" bitwidth="12" opcode="add" m_display="0" m_delay="2.13" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="19" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="icmp_ln19" lineNumber="19" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="icmp_ln19_fu_118_p2" coreName="Cmp" implIndex="auto" control="no" opType="seteq" coreId="9" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="2.13" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="19" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="i1_write_ln19" lineNumber="19" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" opcode="store" m_display="0" m_delay="1.61" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="19" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln19" lineNumber="19" fileName="firmware/nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="linear_nnet_array_ap_uint_8_1_nnet_array_ap_fixed_8_1_AP_RND_CONV_AP_SAT_0_1_linear_config2_s" opcode="br" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="firmware/nnet_utils/nnet_activation_stream.h" linenumber="19" fileDirectory="/home/petertso/Documents/753-FPGA/best/best_model_prj" functionName="linear&amp;lt;nnet::array&amp;lt;ap_uint&amp;lt;8&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;8, 1, AP_RND_CONV, AP_SAT, 0&amp;gt;, 1&amp;gt;, linear_config2&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>LinearPackLoop.split</controlInputObjs>
+        <controlInputObjs>for.end9</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="firmware/nnet_utils/nnet_activation_stream.h">
+        <validLinenumbers>19</validLinenumbers>
+        <validLinenumbers>22</validLinenumbers>
+        <validLinenumbers>29</validLinenumbers>
+        <validLinenumbers>32</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <regnodes realName="i1_reg_129">
+    <nodeIds>3</nodeIds>
+  </regnodes>
+  <expressionNodes realName="i1_fu_48">
+    <nodeIds>3</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln29_fu_91">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln29_fu_73">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_s_fu_83">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln19_fu_118">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln29_fu_103">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln29_fu_77">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_112">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln29_fu_97">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln19_store_fu_124">
+    <nodeIds>23</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i1_load_load_fu_70">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="input_1_read_read_fu_52">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_65">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln32_write_fu_58">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioPorts name="input_1">
+    <contents name="read">
+      <nodeIds>13</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="layer2_out">
+    <contents name="write">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="linear_array_ap_uint_1u_array_ap_fixed_8_1_4_0_0_1u_linear_config2_s" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="4097" mMaxLatency="4097">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>8</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="LinearActLoop" mII="1" mDepth="1" mMinTripCount="4096" mMaxTripCount="4096" mMinLatency="4095" mMaxLatency="4095" mType="1">
+      <basicBlocks>25</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>27</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
